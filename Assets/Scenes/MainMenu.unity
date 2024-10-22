@@ -10081,6 +10081,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4486747261223478577, guid: fe6493fc62843ec4fb130396ccbfcbbe, type: 3}
+      propertyPath: ui
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486747261223478577, guid: fe6493fc62843ec4fb130396ccbfcbbe, type: 3}
       propertyPath: localizationKey
       value: Options
       objectReference: {fileID: 0}

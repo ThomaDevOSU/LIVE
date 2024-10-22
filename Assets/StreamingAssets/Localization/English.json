@@ -1,19 +1,22 @@
 {
-    "NewGame": "New Game",
-    "LoadGame": "Load Game",
-    "Options": "Options",
-    "Settings": "Settings",
-    "Exit": "Exit",
-    "Play": "Play",
-    "Language": "Language",
-    "Ready To Begin?": "Ready To Begin?",
-    "No": "No",
-    "Yes": "Yes",
-    "Name": "Name",
-    "Start": "Start",
-    "Save": "Save",
-    "Delete Save?": "Delete Save?",
-    "Back": "Back",
-    "Quit": "Quit",
-    "Load": "Load"
+    "entries": [
+        { "key": "NewGame", "value": "New Game" },
+        { "key": "LoadGame", "value": "Load Game" },
+        { "key": "Options", "value": "Options" },
+        { "key": "Settings", "value": "Settings" },
+        { "key": "Exit", "value": "Exit" },
+        { "key": "Play", "value": "Play" },
+        { "key": "Language", "value": "Language" },
+        { "key": "Ready To Begin?", "value": "Ready To Begin?" },
+        { "key": "No", "value": "No" },
+        { "key": "Yes", "value": "Yes" },
+        { "key": "Name", "value": "Name" },
+        { "key": "Start", "value": "Start" },
+        { "key": "Save", "value": "Save" },
+        { "key": "Delete Save?", "value": "Delete Save?" },
+        { "key": "Back", "value": "Back" },
+        { "key": "Quit", "value": "Quit" },
+        { "key": "Load", "value": "Load" }
+    ]
 }
+

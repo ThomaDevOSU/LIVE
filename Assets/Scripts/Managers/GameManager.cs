@@ -32,8 +32,7 @@ public class GameManager : MonoBehaviour
         {
             LocalizationManager.Instance.LoadLocalizedMenuText(Options.language); // Load LocalizationManager to fill dictionary
 
-            LocalizedText[] localizedTexts = FindObjectsByType<LocalizedText>(FindObjectsSortMode.None);
-            foreach (var localizedText in localizedTexts)
+            foreach (var localizedText in Resources.FindObjectsOfTypeAll(typeof(LocalizedText)) as LocalizedText[])
             {
                 localizedText.UpdateText();
             }

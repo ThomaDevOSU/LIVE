@@ -1,19 +1,21 @@
 {
-    "NewGame": "Nouveau jeu",
-    "LoadGame": "Charger le jeu",
-    "Options": "Possibilités",
-    "Settings": "Paramètres",
-    "Exit": "Sortie",
-    "Play": "Jouer",
-    "Language": "Langue",
-    "Ready To Begin?": "Prêt à commencer ?",
-    "No": "Non",
-    "Yes": "Oui",
-    "Name": "Nom",
-    "Start": "Commencer",
-    "Save": "Sauvegarder",
-    "Delete Save?": "Supprimer Enregistrer ?",
-    "Back": "Dos",
-    "Quit": "Quitter",
-    "Load": "Charger"
-  }
+  "entries": [
+      { "key": "NewGame", "value": "Nouvelle Partie" },
+      { "key": "LoadGame", "value": "Charger Partie" },
+      { "key": "Options", "value": "Options" },
+      { "key": "Settings", "value": "Paramètres" },
+      { "key": "Exit", "value": "Quitter" },
+      { "key": "Play", "value": "Jouer" },
+      { "key": "Language", "value": "Langue" },
+      { "key": "Ready To Begin?", "value": "Prêt à commencer ?" },
+      { "key": "No", "value": "Non" },
+      { "key": "Yes", "value": "Oui" },
+      { "key": "Name", "value": "Nom" },
+      { "key": "Start", "value": "Démarrer" },
+      { "key": "Save", "value": "Sauvegarder" },
+      { "key": "Delete Save?", "value": "Supprimer la sauvegarde ?" },
+      { "key": "Back", "value": "Retour" },
+      { "key": "Quit", "value": "Quitter" },
+      { "key": "Load", "value": "Charger" }
+  ]
+}

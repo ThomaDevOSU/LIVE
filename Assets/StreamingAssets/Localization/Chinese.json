@@ -1,19 +1,21 @@
 {
-    "NewGame": "新游戏",
-    "LoadGame": "加载游戏",
-    "Options": "选项",
-    "Settings": "设置",
-    "Exit": "出口",
-    "Play": "玩",
-    "Language": "语言",
-    "Ready To Begin?": "准备好开始了吗？",
-    "No": "不",
-    "Yes": "是的",
-    "Name": "姓名",
-    "Start": "开始",
-    "Save": "节省",
-    "Delete Save?": "删除保存？",
-    "Back": "后退",
-    "Quit": "辞职",
-    "Load": "加载"
-  }
+  "entries": [
+      { "key": "NewGame", "value": "新游戏" },
+      { "key": "LoadGame", "value": "加载游戏" },
+      { "key": "Options", "value": "选项" },
+      { "key": "Settings", "value": "设置" },
+      { "key": "Exit", "value": "退出" },
+      { "key": "Play", "value": "播放" },
+      { "key": "Language", "value": "语言" },
+      { "key": "Ready To Begin?", "value": "准备开始？" },
+      { "key": "No", "value": "否" },
+      { "key": "Yes", "value": "是" },
+      { "key": "Name", "value": "名称" },
+      { "key": "Start", "value": "开始" },
+      { "key": "Save", "value": "保存" },
+      { "key": "Delete Save?", "value": "删除保存？" },
+      { "key": "Back", "value": "返回" },
+      { "key": "Quit", "value": "退出" },
+      { "key": "Load", "value": "加载" }
+  ]
+}
