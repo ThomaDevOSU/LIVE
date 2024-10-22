@@ -5,6 +5,11 @@ public class OptionsMenu : MonoBehaviour
 {
     public TMP_Dropdown language;
 
+    public void Awake()
+    {
+        language.value = language.options.FindIndex(option => option.text == GameManager.instance.Options.language);
+    }
+
     public void changeLanguage()
     {
         switch (language.value)

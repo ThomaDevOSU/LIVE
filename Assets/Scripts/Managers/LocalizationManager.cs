@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using UnityEngine;
 
 public class LocalizationManager : MonoBehaviour
@@ -13,6 +14,8 @@ public class LocalizationManager : MonoBehaviour
     public Dictionary<string, string> localizedLearningText; // We will keep the current learning language in this dictionary
 
     public string learningLanguage;
+
+    public TMP_FontAsset[] fonts; // 0 is baseline, 1 is eastern supporting, 2 is arabic supporting
 
     private void Awake() // Singleton
     {

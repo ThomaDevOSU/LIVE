@@ -14,9 +14,30 @@ public class LocalizedText : MonoBehaviour
 
     public void UpdateText() // We use TMP in this household
     {
-        TMP_Text textComponent = GetComponent<TMP_Text>();
+        TMP_Text textComponent = GetComponent<TextMeshProUGUI>();
         if (textComponent != null)
         {
+            if(GameManager.instance.Options.language == "Arabic")
+            {
+                textComponent.font = LocalizationManager.Instance.fonts[3];
+                textComponent.isRightToLeftText = true;
+            }
+            else if(GameManager.instance.Options.language == "Chinese")
+            {
+                textComponent.font = LocalizationManager.Instance.fonts[2];
+                textComponent.isRightToLeftText = false;
+            }
+            else if(GameManager.instance.Options.language == "Japanese")
+            {
+                textComponent.font = LocalizationManager.Instance.fonts[1];
+                textComponent.isRightToLeftText = false;
+            }
+            else
+            {
+                textComponent.font = LocalizationManager.Instance.fonts[0];
+                textComponent.isRightToLeftText = false;
+            }
+
             textComponent.text = LocalizationManager.Instance.GetLocalizedValue(localizationKey, ui);
         }
     }
