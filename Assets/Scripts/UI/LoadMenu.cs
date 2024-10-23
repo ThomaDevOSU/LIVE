@@ -54,10 +54,10 @@ public class LoadMenu : MonoBehaviour
     {
         SaveSystem.deleteSave(slot);
 
-        saveButtons[slot].GetComponentInChildren<TMP_Text>().text = LocalizationManager.Instance.GetLocalizedValue("Load", isUI.UI);
-        saveButtons[slot].onClick.RemoveAllListeners();
-        saveButtons[slot].onClick.AddListener(() => CreateChar(slot));
-        trashButtons[slot].gameObject.SetActive(false);
+        saveButtons[slot-1].GetComponentInChildren<TMP_Text>().text = LocalizationManager.Instance.GetLocalizedValue("NewGame", isUI.UI);
+        saveButtons[slot-1].onClick.RemoveAllListeners();
+        saveButtons[slot-1].onClick.AddListener(() => CreateChar(slot));
+        trashButtons[slot-1].gameObject.SetActive(false);
     }
 
     public void LoadGame(int slot) // Loads the playerdata from the provided save slot and sets our language
@@ -65,10 +65,11 @@ public class LoadMenu : MonoBehaviour
         PlayerData data = SaveSystem.LoadGame(slot);
         if (data != null)
         {
-            GameManager.instance.CurrentPlayerData = data; // Store loaded data in GameManager
-            LocalizationManager.Instance.LoadLocalizedLearningText(GameManager.instance.CurrentPlayerData.language); // Load our language
+            GameManager.Instance.CurrentPlayerData = data; // Store loaded data in GameManager
+            LocalizationManager.Instance.LoadLocalizedLearningText(GameManager.Instance.CurrentPlayerData.language); // Load our language
             // Move player to saved position and load the saved scene
-            SceneManager.LoadScene("PlayerHome");
+            GameManager.Instance.setLocation("HOME_SPAWN");
+            TransitionManager.Instance.StartTransition("PlayerHome",TransitionType.FADE);
         }
     }
 
@@ -82,13 +83,13 @@ public class LoadMenu : MonoBehaviour
 
     public void startCharacterCreator() // Sets default values for playerdaya
     {
-        GameManager.instance.CurrentPlayerData.language = "Chinese";
-        GameManager.instance.CurrentPlayerData.name = "Bob";
-        GameManager.instance.CurrentPlayerData.gender = Gender.male;
-        GameManager.instance.CurrentPlayerData.day = 1;
-        GameManager.instance.CurrentPlayerData.currency = 0;
-        GameManager.instance.CurrentPlayerData.score = 0;
-        GameManager.instance.CurrentPlayerData.playerSprite = 0;
+        GameManager.Instance.CurrentPlayerData.language = "Chinese";
+        GameManager.Instance.CurrentPlayerData.name = "Bob";
+        GameManager.Instance.CurrentPlayerData.gender = Gender.male;
+        GameManager.Instance.CurrentPlayerData.day = 1;
+        GameManager.Instance.CurrentPlayerData.currency = 0;
+        GameManager.Instance.CurrentPlayerData.score = 0;
+        GameManager.Instance.CurrentPlayerData.playerSprite = 0;
     }
 
     public Image displayedSprite; // Sprite on display
@@ -99,26 +100,26 @@ public class LoadMenu : MonoBehaviour
     // This section of the loadmenu will be dedicated to managing the character creator
     public void adjustSprite(int x)  //Adjust Chosen Sprite
     {
-        GameManager.instance.CurrentPlayerData.playerSprite += x;
-        if (GameManager.instance.CurrentPlayerData.playerSprite < 0)
+        GameManager.Instance.CurrentPlayerData.playerSprite += x;
+        if (GameManager.Instance.CurrentPlayerData.playerSprite < 0)
         {
-            GameManager.instance.CurrentPlayerData.playerSprite = sprites.Length - 1;
+            GameManager.Instance.CurrentPlayerData.playerSprite = sprites.Length - 1;
         }
-        else if (GameManager.instance.CurrentPlayerData.playerSprite >= sprites.Length) 
+        else if (GameManager.Instance.CurrentPlayerData.playerSprite >= sprites.Length) 
         {
-            GameManager.instance.CurrentPlayerData.playerSprite = 0;
+            GameManager.Instance.CurrentPlayerData.playerSprite = 0;
         }
-        displayedSprite.sprite = sprites[GameManager.instance.CurrentPlayerData.playerSprite];
+        displayedSprite.sprite = sprites[GameManager.Instance.CurrentPlayerData.playerSprite];
     }
 
     public void setGender(int choice) // Gender set via male/female buttons.
     {
-        GameManager.instance.CurrentPlayerData.gender = (Gender)choice;
+        GameManager.Instance.CurrentPlayerData.gender = (Gender)choice;
     }
 
     public void changeName() // Changes the name based on input
     {
-        GameManager.instance.CurrentPlayerData.name = inputName.text;
+        GameManager.Instance.CurrentPlayerData.name = inputName.text;
     }
 
     public void changeLanguage()
@@ -126,28 +127,28 @@ public class LoadMenu : MonoBehaviour
         switch (language.value) 
         {
             case 0:
-                GameManager.instance.CurrentPlayerData.language = "Chinese";
+                GameManager.Instance.CurrentPlayerData.language = "Chinese";
                 break;
             case 1:
-                GameManager.instance.CurrentPlayerData.language = "Spanish";
+                GameManager.Instance.CurrentPlayerData.language = "Spanish";
                 break;
             case 2:
-                GameManager.instance.CurrentPlayerData.language = "English";
+                GameManager.Instance.CurrentPlayerData.language = "English";
                 break;
             case 3:
-                GameManager.instance.CurrentPlayerData.language = "French";
+                GameManager.Instance.CurrentPlayerData.language = "French";
                 break;
             case 4:
-                GameManager.instance.CurrentPlayerData.language = "Japanese";
+                GameManager.Instance.CurrentPlayerData.language = "Japanese";
                 break;
             case 5:
-                GameManager.instance.CurrentPlayerData.language = "German";
+                GameManager.Instance.CurrentPlayerData.language = "German";
                 break;
             case 6:
-                GameManager.instance.CurrentPlayerData.language = "Italian";
+                GameManager.Instance.CurrentPlayerData.language = "Italian";
                 break;
             case 7:
-                GameManager.instance.CurrentPlayerData.language = "Arabic";
+                GameManager.Instance.CurrentPlayerData.language = "Arabic";
                 break;
         }
     }
@@ -155,10 +156,10 @@ public class LoadMenu : MonoBehaviour
 
     public void NewGame(int slot) 
     {
-        SaveSystem.SaveGame(GameManager.instance.CurrentPlayerData, slot);
-        LocalizationManager.Instance.LoadLocalizedLearningText(GameManager.instance.CurrentPlayerData.language); // Load our language
-
-        SceneManager.LoadSceneAsync("PlayerHome");
+        SaveSystem.SaveGame(GameManager.Instance.CurrentPlayerData, slot);
+        LocalizationManager.Instance.LoadLocalizedLearningText(GameManager.Instance.CurrentPlayerData.language); // Load our language
+        GameManager.Instance.setLocation("HOME_SPAWN");
+        TransitionManager.Instance.StartTransition("PlayerHome", TransitionType.FADE);
     }
 
 }

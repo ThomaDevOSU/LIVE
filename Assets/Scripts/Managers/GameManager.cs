@@ -1,22 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager Instance;
 
     public PlayerData CurrentPlayerData;
-
     public OptionData Options;
+
+    private string locationKey = "";
+
+    private GameObject playerGameObject; // This will be the players gameobject
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
 
-            Options = SaveSystem.LoadOptions(); // Attempt to get our option preferences
-            
-            updateOptions();
+            Options = SaveSystem.LoadOptions(); // Attempt to get our option preferences         
+            StartCoroutine(waitForManagers()); // Wait for other managers to load
 
             DontDestroyOnLoad(gameObject);
         }
@@ -26,18 +31,44 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void updateOptions() // Commits any changes made
+    IEnumerator waitForManagers() // This function will allow us to reliably wait for other magement system to initialize before we take actions requiring them
     {
-        if (Options.language != LocalizationManager.Instance.menuLanguage)
-        {
-            LocalizationManager.Instance.LoadLocalizedMenuText(Options.language); // Load LocalizationManager to fill dictionary
+        while (!(TransitionManager.Instance && SpriteManager.Instance && LocalizationManager.Instance)) yield return new WaitForSeconds(0.1f);
 
-            foreach (var localizedText in Resources.FindObjectsOfTypeAll(typeof(LocalizedText)) as LocalizedText[])
+        updateOptions(); // Update all menus and save whatever returned
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode) // This will be used to ensure player transitions to the right location
+    {
+        if (scene.buildIndex == 0) return; // No main menu
+
+        Debug.Log("Loaded into scene");
+
+        playerGameObject = FindFirstObjectByType<PlayerController>().gameObject; // Find play on map
+
+
+        foreach (var spawn in Resources.FindObjectsOfTypeAll(typeof(SpawnPoint)) as SpawnPoint[]) 
+        {
+            if (locationKey == spawn.locationValue) // If we have a match
             {
-                localizedText.UpdateText();
+                Debug.Log($"Found location! {locationKey}");
+                playerGameObject.transform.position = spawn.gameObject.transform.position; // Set our location accordingly
             }
-            SaveSystem.SaveOptions(Options);
         }
+
+    }
+
+    public void setLocation(string loc) // Sets location key
+    {
+        locationKey = loc;
+    }
+
+    public void updateOptions() // When options are updated from a menu all systems update
+    {
+        SaveSystem.SaveOptions(Options);
+        LocalizationManager.Instance.updateLanguageText();
     }
 
 }
+

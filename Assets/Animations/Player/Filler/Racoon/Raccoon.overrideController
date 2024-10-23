@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Raccoon
+  m_Controller: {fileID: 9100000, guid: 1b5f061f6aafc7543a7845cd55f979c7, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d299235a28d66bd4290cedf79e7ede91, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 783e61a0a487a7242b96941ee1b084b0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 566d0fa6c56820943bee1477e9669aca, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b153d55a440058c4585ef6d2aced48dc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0516db6445f07bf41a0cb71127130517, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ff71159417d4db548878346946ddde7d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7ba2770aa04ffd24297551d13d97bbba, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 77792f94d8dbbf04bb0e15c17e02ca9f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9b23d86e3241f2f44a575c2094020f3a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ccb5cc1d62174d64eb9c52074b70deea, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3d35f2d19d575814bb3412d77b28d8d9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 76d82ff3bfa64c9418c404923789b5e1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ec6759d174958ac4e85095b470df379c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6371df2fa4db8b4419dc6855f42c0ac1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0c5e24747d95da043aef008dff1ef0b8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b4711d7b5312b39489ee300e1f5b7ddc, type: 2}

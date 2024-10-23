@@ -7,40 +7,40 @@ public class OptionsMenu : MonoBehaviour
 
     public void Awake()
     {
-        language.value = language.options.FindIndex(option => option.text == GameManager.instance.Options.language);
+        language.value = language.options.FindIndex(option => option.text == GameManager.Instance.Options.language);
     }
 
-    public void changeLanguage()
+    public void changeLanguage() // God I should've used an enum...
     {
         switch (language.value)
         {
             case 0:
-                GameManager.instance.Options.language = "Chinese";
+                GameManager.Instance.Options.language = "Chinese";
                 break;
             case 1:
-                GameManager.instance.Options.language = "Spanish";
+                GameManager.Instance.Options.language = "Spanish";
                 break;
             case 2:
-                GameManager.instance.Options.language = "English";
+                GameManager.Instance.Options.language = "English";
                 break;
             case 3:
-                GameManager.instance.Options.language = "French";
+                GameManager.Instance.Options.language = "French";
                 break;
             case 4:
-                GameManager.instance.Options.language = "Japanese";
+                GameManager.Instance.Options.language = "Japanese";
                 break;
             case 5:
-                GameManager.instance.Options.language = "German";
+                GameManager.Instance.Options.language = "German";
                 break;
             case 6:
-                GameManager.instance.Options.language = "Italian";
+                GameManager.Instance.Options.language = "Italian";
                 break;
             case 7:
-                GameManager.instance.Options.language = "Arabic";
+                GameManager.Instance.Options.language = "Arabic";
                 break;
         }
 
-        GameManager.instance.updateOptions(); // Update Language
+        GameManager.Instance.updateOptions(); // Update Language
     }
 
 }

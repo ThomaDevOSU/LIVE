@@ -9,7 +9,7 @@ public class LocalizedText : MonoBehaviour
 
     private void Start()
     {
-        UpdateText();
+        //UpdateText();
     }
 
     public void UpdateText() // We use TMP in this household
@@ -17,25 +17,29 @@ public class LocalizedText : MonoBehaviour
         TMP_Text textComponent = GetComponent<TextMeshProUGUI>();
         if (textComponent != null)
         {
-            if(GameManager.instance.Options.language == "Arabic")
+            if(GameManager.Instance.Options.language == "Arabic")
             {
                 textComponent.font = LocalizationManager.Instance.fonts[3];
                 textComponent.isRightToLeftText = true;
+                textComponent.fontStyle = TMPro.FontStyles.Bold;
             }
-            else if(GameManager.instance.Options.language == "Chinese")
+            else if(GameManager.Instance.Options.language == "Chinese")
             {
                 textComponent.font = LocalizationManager.Instance.fonts[2];
                 textComponent.isRightToLeftText = false;
+                textComponent.fontStyle = TMPro.FontStyles.Bold;
             }
-            else if(GameManager.instance.Options.language == "Japanese")
+            else if(GameManager.Instance.Options.language == "Japanese")
             {
                 textComponent.font = LocalizationManager.Instance.fonts[1];
                 textComponent.isRightToLeftText = false;
+                textComponent.fontStyle = TMPro.FontStyles.Bold;
             }
             else
             {
                 textComponent.font = LocalizationManager.Instance.fonts[0];
                 textComponent.isRightToLeftText = false;
+                textComponent.fontStyle = TMPro.FontStyles.Normal;
             }
 
             textComponent.text = LocalizationManager.Instance.GetLocalizedValue(localizationKey, ui);

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
@@ -22,12 +23,20 @@ public class LocalizationManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            StartCoroutine(waitForManagers()); // Wait for other managers to load
+
             DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator waitForManagers() // This function will allow us to reliably wait for other magement system to initialize before we take actions requiring them
+    {
+        while (!(TransitionManager.Instance && SpriteManager.Instance && GameManager.Instance)) yield return new WaitForSeconds(0.1f);
+        updateLanguageText(); // Load game managers options
     }
 
     public void LoadLocalizedMenuText(string language) // Attempts to load localized text from file into menu dictionary
@@ -83,6 +92,22 @@ public class LocalizationManager : MonoBehaviour
 
         return "N/A";
     }
+
+
+    public void updateLanguageText() // Sets the language of every text
+    {
+        if (this != null && GameManager.Instance != null && menuLanguage != GameManager.Instance.Options.language) // If our assigned menu language does not match the options value
+        {
+            Debug.Log("Loading Language");
+            LoadLocalizedMenuText(GameManager.Instance.Options.language); // Load LocalizationManager to fill dictionary
+
+            foreach (var localizedText in Resources.FindObjectsOfTypeAll(typeof(LocalizedText)) as LocalizedText[]) // Update all TMP assets to reflect
+            {
+                localizedText.UpdateText();
+            }
+        }
+    }
+
 }
 
 [System.Serializable]
