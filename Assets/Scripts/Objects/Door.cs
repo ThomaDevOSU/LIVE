@@ -10,7 +10,7 @@ public class Door : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Near an interactable object. Press E to interact.");
+            //Debug.Log("Near an interactable object. Press E to interact.");
         }
     }
 
@@ -18,7 +18,7 @@ public class Door : MonoBehaviour
     {
         if (collision.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
-            Debug.Log("Interacting with the door");
+            //Debug.Log("Interacting with the door");
             GameManager.Instance.setLocation(LocationKey); // Set where we should end up
             TransitionManager.Instance.StartTransition(scene,transitionType);
         }

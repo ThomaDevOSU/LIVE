@@ -13,11 +13,13 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        // Get input from the player
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        GetComponent<Animator>().SetFloat("Horizontal", movement.x);
-        GetComponent<Animator>().SetFloat("Vertical", movement.y);
+        if (!MenuManager.Instance.isOpen) { // Dont allow input while menu is open
+            // Get input from the player
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+            GetComponent<Animator>().SetFloat("Horizontal", movement.x);
+            GetComponent<Animator>().SetFloat("Vertical", movement.y);
+        }
     }
 
     private void FixedUpdate()
