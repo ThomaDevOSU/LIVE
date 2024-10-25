@@ -70,5 +70,15 @@ public class GameManager : MonoBehaviour
         LocalizationManager.Instance.updateLanguageText();
     }
 
+    public bool isOnline() 
+    {
+        if (Options.online_mode) // If set to online mode, test for connection
+        {
+            // Fancy code here tests for connection, return true if good connection
+        }
+
+        return false;
+    }
+
 }
 

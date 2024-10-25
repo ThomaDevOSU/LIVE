@@ -16,7 +16,7 @@ public class Door : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && Input.GetKey(KeyCode.E))
+        if (collision.CompareTag("Player") && Input.GetButtonDown("Jump") && !MenuManager.Instance.isPaused && !DialogueManager.Instance.isTalking) // Only if we arent talking
         {
             //Debug.Log("Interacting with the door");
             GameManager.Instance.setLocation(LocationKey); // Set where we should end up

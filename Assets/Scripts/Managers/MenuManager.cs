@@ -1,13 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager Instance;
 
     public GameObject PlayerMenu;
-    public GameObject DialogueMenu;
 
-    public bool isOpen = false;
+    public bool isPaused = false;
 
     private void Awake() // Singleton
     {
@@ -24,11 +27,17 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Cancel")) // Opens or closes the menu
+        if (Input.GetButtonDown("Cancel") && !DialogueManager.Instance.isTalking) // Opens or closes the menu if not talking
         {
-            isOpen = !isOpen;
+            isPaused = !isPaused;
             PlayerMenu.SetActive(!(PlayerMenu.activeSelf));
         }
+    }
+
+    public void unPause() // This is for the button
+    {
+        PlayerMenu.SetActive(!(PlayerMenu.activeSelf));
+        isPaused = !isPaused;
     }
 
 }
