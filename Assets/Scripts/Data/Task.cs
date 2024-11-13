@@ -23,13 +23,10 @@ public class Task
     /// The answer to the task {IE. "Can I buy a loaf of bread?" or "Hello Jake, how is the Weather?"}
     /// </summary>
     public string TaskAnswer { get; set; }
-
     /// <summary>
-    /// The TaskType is used to define what type {IE. Buy, Sell, Ask, etc} of task
-    /// the user has been assigned. The Dictionary loaded from JSON uses this to assign relevant
-    /// Tasks. {IE. Buying only from vendors, and Asking random subject question to other NPCS}
+    /// The difficulty of the task {IE. 1 for easy, 2 for intermediate, etc}
     /// </summary>
-    public string TaskType { get; set; }
+    public int TaskDifficulty { get; set; }
 
     /// <summary>
     /// TRANSLATED: General name for task {IE. Get Bread! Talk about weather! Get Coffee}
@@ -61,11 +58,17 @@ public class Task
     public bool IsCompleted { get; set; }
 
     /// <summary>
+    /// Is the Task custom generated?
+    /// </summary>
+    /// <returns>True if task is custom, false if not</returns>
+    public bool IsCustom { get; set; }
+
+    /// <summary>
     /// printData prints every value of a generated task
     /// </summary>
     public void printData() 
     {
-        Debug.Log($"Printing data about this Task...\n" + $"Task Subject: {TaskSubject}\n" + $"TaskNPC: {TaskNPC}\n" + $"TaskLocation: {TaskLocation}\n" + $"TaskDescription: {TaskDescription}\n" + $"TaskAnswer: {TaskAnswer}");
+        Debug.Log($"Printing data about this Task...\n" + $"Task Subject: {TaskSubject}\n" + $"TaskNPC: {TaskNPC}\n" + $"TaskLocation: {TaskLocation}\n" + $"TaskDescription: {TaskDescription}\n" + $"TaskAnswer: {TaskAnswer}\n" + $"IsCustom: {IsCustom}");
         Debug.Log($"Printing data about this Task but translated...\n" + $"Task Subject: {T_TaskSubject}\n" + $"TaskNPC: {T_TaskNPC}\n" + $"TaskLocation: {T_TaskLocation}\n" + $"TaskDescription: {T_TaskDescription}\n" + $"TaskAnswer: {T_TaskAnswer}");
     }
 }
