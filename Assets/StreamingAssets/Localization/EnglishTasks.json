@@ -1,0 +1,37 @@
+{
+    "entries": [    
+        { 
+            "key": "Buy", 
+            "value": 
+            {
+                "description":"Buy {subject} from {npc}",
+                "answer":"I would like to buy some {subject}."
+            }
+        },
+        { 
+            "key": "AskNPC",
+            "value": 
+            {
+                "description":"Ask {npc} about {subject}",
+                "answer":"What do you think about {subject}."
+            }
+        },
+        { 
+            "key": "AskLoc",
+            "value": 
+            {
+                "description":"Ask anyone at the {location} about {subject}",
+                "answer":"What do you think about {subject}."
+            }
+        },
+        {
+            "key": "SAMPLE", 
+            "value": 
+            {
+                "description":"SAMPLE {subject} SAMPLE NPC {npc} SAMPLE LOCATION {location}",
+                "answer":"SAMPLE SUBJECT {subject}."
+            }
+        }
+    ]
+}
+
