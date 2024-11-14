@@ -2,20 +2,19 @@ using UnityEngine;
 
 public class CompassArrow : MonoBehaviour
 {
-    public Transform player;           // Reference to the player's transform
-    public Transform target;           // Reference to the task objective's transform
-    public RectTransform compassArrow; // Reference to the CompassArrow RectTransform
+    public Transform player;           // Reference to the player
+    public Transform target;           // Reference to the task objective
+    public RectTransform compassArrow; // Reference to the CompassArrow
 
     void Update()
     {
         if (target == null)
         {
-            // Hide the compass arrow when there's no target
+            // Hide compass and show when given a target
             compassArrow.gameObject.SetActive(false);
             return;
         }
 
-        // Show the compass arrow when there is a target
         compassArrow.gameObject.SetActive(true);
 
         // Calculate the direction from the player to the target
@@ -26,13 +25,13 @@ public class CompassArrow : MonoBehaviour
         compassArrow.localRotation = Quaternion.Euler(0, 0, angle - 90);
     }
 
-    // Optional method to set the target dynamically
+    // (For the future) Dynamic Targets
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;
     }
 
-    // Optional method to clear the target and hide the arrow
+    // (For the future) Clear Target
     public void ClearTarget()
     {
         target = null;

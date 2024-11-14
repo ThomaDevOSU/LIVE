@@ -5,12 +5,13 @@ using TMPro;
 
 public class TaskListUI : MonoBehaviour
 {
-    private TMP_Text taskListText;   // Reference to the TMP_Text component
+    private TMP_Text taskListText;      // Reference TMP as I almost forgot and was getting errors
 
     void Start()
     {
         taskListText = GetComponent<TMP_Text>();
 
+        // As TaskManager is a singleton, pass if not relevant
         if (TaskManager.Instance == null)
         {
             Debug.LogError("TaskManager instance not found.");
@@ -26,6 +27,7 @@ public class TaskListUI : MonoBehaviour
         DisplayTasks();
     }
 
+    // Wait until load, give header, and preposition '-' with each task, then newline
     void DisplayTasks()
     {
         string taskDisplay = "Today's Tasks:\n";
