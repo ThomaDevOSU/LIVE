@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject choicePanel; // For when GPT does not work
     public GameObject dialogueButton; // For when GPT does not work
 
+    public GPTService gptService; // The GPT service
     public GameObject onlinePanel; // For when GPT works
     public TMP_InputField inputField; // For when GPT works
 
@@ -45,6 +46,13 @@ public class DialogueManager : MonoBehaviour
         if (isTalking && Input.GetButtonDown("Jump")) // Skip sentence if we press button
         {
             skipSentence = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("Player pressed Enter");
+            string input = inputField.text;
+            inputField.text = "";
+            sendData(input);
         }
     }
 
@@ -94,9 +102,10 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(sentence)); // Start typing the loaded sentence
     }
 
+
     IEnumerator TypeSentence(string sentence)
     {
-        dialogueText.text = ""; // Clear the text 
+        dialogueText.text = ""; // Clear the text
 
         foreach (char letter in sentence.ToCharArray())
         {
@@ -159,9 +168,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void sendData() // This will be the function that initiates the API call
+    public string sendData(string input) // This will be the function that initiates the API call
     {
-        onlinePanel.SetActive(false);
+        Debug.Log("Player input: " + input);
+        // Call the API here
+        gptService = new GPTService();
+        StartCoroutine(gptService.apiCall());
+        return input;
     }
 
 }

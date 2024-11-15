@@ -96,7 +96,7 @@ public class TaskManager : MonoBehaviour
 
     IEnumerator waitForManagers() // This function will allow us to reliably wait for other magement system to initialize before we take actions requiring them
     {
-        while (!(GameManager.Instance && LocalizationManager.Instance)) yield return new WaitForSeconds(0.1f);
+        while (!(GameManager.Instance && LocalizationManager.Instance && LocalizationManager.Instance.localizedLearningText != null)) yield return new WaitForSeconds(0.1f);
         GenerateTasks(5);  
     }
 
