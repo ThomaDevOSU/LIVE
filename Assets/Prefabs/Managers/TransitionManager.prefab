@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2316649091238095499}
   - component: {fileID: 2248992818954141143}
   - component: {fileID: 1098760374993983971}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: fadeBlack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4178883754827730554}
   - component: {fileID: 4935711743823220287}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TransitionManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 8949916853220331102}
   - component: {fileID: 1355988549933250476}
   - component: {fileID: 126279205771772956}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 6846778003392753344}
   - component: {fileID: 75269225852508334}
   - component: {fileID: 4010767170005547942}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: wipeCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,8 +260,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1013819027
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &6846778003392753344
 MonoBehaviour:
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
 --- !u!95 &4010767170005547942
 Animator:
   serializedVersion: 7
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 8153634016440608649}
   - component: {fileID: 4364367115083094425}
   - component: {fileID: 5094026454535204578}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: fadeCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,8 +386,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1013819027
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &7335913288891110595
 MonoBehaviour:

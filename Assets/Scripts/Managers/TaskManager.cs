@@ -101,6 +101,8 @@ public class TaskManager : MonoBehaviour
             }
         }
 
+        // GENERATES 5 TASKS, DISABLE THIS IF YOU WANT AN EMPTY TASK LIST
+        GenerateTasks(5);
         
     }
 

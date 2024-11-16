@@ -7725,30 +7725,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2316649091238095499, guid: a3ec1a272d9bff94284f8039f70b8a4c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10378.237
-      objectReference: {fileID: 0}
-    - target: {fileID: 2316649091238095499, guid: a3ec1a272d9bff94284f8039f70b8a4c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 8.919006
-      objectReference: {fileID: 0}
-    - target: {fileID: 2316649091238095499, guid: a3ec1a272d9bff94284f8039f70b8a4c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1.9540405
-      objectReference: {fileID: 0}
     - target: {fileID: 2522224404013170741, guid: a3ec1a272d9bff94284f8039f70b8a4c, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 451848041}
-    - target: {fileID: 2522224404013170741, guid: a3ec1a272d9bff94284f8039f70b8a4c, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522224404013170741, guid: a3ec1a272d9bff94284f8039f70b8a4c, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1013819027
-      objectReference: {fileID: 0}
     - target: {fileID: 3441285370839460962, guid: a3ec1a272d9bff94284f8039f70b8a4c, type: 3}
       propertyPath: m_Name
       value: TransitionManager
