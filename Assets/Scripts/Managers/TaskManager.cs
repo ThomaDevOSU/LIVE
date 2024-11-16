@@ -88,11 +88,32 @@ public class TaskManager : MonoBehaviour
 
     IEnumerator waitForManagers() // This function will allow us to reliably wait for other magement system to initialize before we take actions requiring them
     {
-        while (!(GameManager.Instance && LocalizationManager.Instance && LocalizationManager.Instance.localizedLearningText != null)) yield return new WaitForSeconds(0.1f);
-        Debug.Log("Testing");
-        TestTaskManager();
+        float wait_time = 0f;
+        while (!(GameManager.Instance && LocalizationManager.Instance && LocalizationManager.Instance.localizedLearningText != null)) 
+        {
+            yield return new WaitForSeconds(0.1f);
+            wait_time += 0.1f;
+            if (wait_time > 3.0f) 
+            {
+                Debug.LogError("ERR: Task Manager Initialization exceeded 3 seconds. Logging Info Below");
+                DumpInfo();
+                yield break;
+            }
+        }
+
+        
     }
 
+    
+    /// <summary>
+    /// Dumps Asserts on why loading failed
+    /// </summary>
+    private void DumpInfo() 
+    {
+        Debug.Assert(GameManager.Instance, "GameManager failed to set Instance");
+        Debug.Assert(LocalizationManager.Instance, "Localization Manager failed to set Instance");
+        Debug.Assert(LocalizationManager.Instance.localizedLearningText != null, "Localization Manager failed to initialize the localizedLearningText Dictionary");
+    }
 
 
     /// <summary>
@@ -548,25 +569,33 @@ public class TaskManager : MonoBehaviour
         Debug.Log("Starting massive test");
         // Test 1: Add a Custom Task
         bool createResult = CreateCustomTask("Baker", null, "Bread", "AskNPC", 2);
+        Debug.Log("Adding Custom Task: " + $"{createResult}");
         Debug.Assert(createResult == true, "CreateCustomTask failed.");
         Debug.Assert(GetTaskList().Count == 1, "Task list should have 1 task after creation.");
 
         // Test 2: Generate a Random Task
         Task randomTask = GenerateTask(1);
+        Debug.Log("Generating random task");
+        randomTask.printData();
         Debug.Assert(randomTask != null, "GenerateTask should return a valid task.");
 
         // Test 3: Complete a Task
         Task taskToComplete = GetTaskList()[0];
         bool completeResult = CompleteTask(taskToComplete);
+        Debug.Log("Completing task: " + $"{completeResult}");
+        Debug.Log("Completed task");
+        taskToComplete.printData();
         Debug.Assert(completeResult == true, "CompleteTask failed.");
         Debug.Assert(GetTaskList().Count == 0, "Task list should be empty after completion.");
         Debug.Assert(CompletedTasks.Count == 1, "CompletedTasks should contain the completed task.");
 
         // Test 4: Clear Non-Custom Uncompleted Tasks
+        Debug.Log("Adding Non-Custom and Custom Task");
         GetTaskList().Add(new Task { IsCustom = false });
         GetTaskList().Add(new Task { IsCustom = true });
-
+        
         int clearedCount = ClearUncompletedTasks();
+        Debug.Log("Clearing all Non-Custom Tasks: " + $"{clearedCount}");
         Debug.Assert(clearedCount == 1, "ClearUncompletedTasks should remove non-custom tasks.");
         Debug.Assert(GetTaskList().Count == 1, "Task list should have 1 task remaining.");
         Debug.Assert(GetTaskList()[0].IsCustom == true, "Custom task was incorrectly removed.");
@@ -576,19 +605,27 @@ public class TaskManager : MonoBehaviour
         CompletedTasks.Clear();
 
         // Test 5: Get Active Task
+        Debug.Log("Creating new Task");
         Task newTask = new Task { TaskNPC = "Barista", TaskSubject = "Coffee" };
+        newTask.printData();
         GetTaskList().Add(newTask);
         SetActiveTask(newTask);
         Task retrievedActiveTask = GetActiveTask();
+        Debug.Log("Setting newTask as Active task, printing active task");
+        retrievedActiveTask.printData();
         Debug.Assert(retrievedActiveTask == newTask, "GetActiveTask returned the wrong task.");
 
         // Test 6: Active Task auto fills to next available task
+        Debug.Log("Testing Active Task Autofill");
         Task newerTask = GenerateTask(1);
         GetTaskList().Add(newerTask);
         CompleteTask(GetTaskList()[0]);
-        Debug.Assert(newerTask == GetTaskList()[0], "GetTaskList()[0] returned the wrong task.");
+        Debug.Log("Creating new task, Completing old task");
+        GetActiveTask().printData();
+        Debug.Assert(newerTask == GetActiveTask(), "GetTaskList()[0] returned the wrong task.");
 
         // Test 7: Active Task sets itself to null when no available task
+        Debug.Log("Testing Active Task autofill to null");
         CompleteTask(GetTaskList()[0]);
         Debug.Assert(GetActiveTask() == null, "GetActiveTask() returned something when it should have been null.");
         Debug.Log("Massive Test Passed!");
