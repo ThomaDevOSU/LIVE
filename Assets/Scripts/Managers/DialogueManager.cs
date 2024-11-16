@@ -49,7 +49,6 @@ public class DialogueManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("Player pressed Enter");
             string input = inputField.text;
             inputField.text = "";
             sendData(input);
@@ -168,13 +167,11 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public string sendData(string input) // This will be the function that initiates the API call
+    public void sendData(string input) // This will be the function that initiates the API call
     {
-        Debug.Log("Player input: " + input);
         // Call the API here
         gptService = new GPTService();
-        StartCoroutine(gptService.apiCall());
-        return input;
+        StartCoroutine(gptService.apiCall(input));
     }
 
 }

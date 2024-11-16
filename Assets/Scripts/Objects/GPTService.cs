@@ -5,24 +5,23 @@ using System.Collections.Generic;
 
 public class GPTService
 {
-    public string apiKey = "APIKEY";
+    public string apiKey = "API-KEY";
     public string api_url = "https://api.openai.com/v1/chat/completions";
     public string playerInput;
     public string prompt, response, request, playerData, NPCData;
     public List<Message> messages = new List<Message>();
 
-    public string GeneratePrompt() // This will be passed playerInput, playerData, and NPCData in the future.
+    public string GeneratePrompt(string playerInput) // This will be passed playerInput, playerData, and NPCData in the future.
     {
-        string prompt = "You are an NPC named Bob the Baker and you should respond to the players input accordingly. Respond with concise realistic messages. Do not break character.";
+        string prompt = "You are a baker named Bob. Respond to the following prompt without breaking character and keep it concise: " + playerInput;
         return prompt;
     }
 
-    public IEnumerator apiCall()
+    public IEnumerator apiCall(string playerInput)
     {
         Debug.Log("Starting API Call");
-        prompt = GeneratePrompt();
-        messages.Add(new Message { role = "user", content = prompt });
-        Debug.Log("Sending prompt to GPT: " + prompt);
+        prompt = GeneratePrompt(playerInput);
+        messages.Add(new Message { role = "user", content = prompt }); // Add the player prompt to the messages list. This should hold all previous player input and GPT responses. Broken!
 
         Headers headers = new Headers
         {
@@ -34,14 +33,13 @@ public class GPTService
         {
             model = "gpt-4o",
             messages = messages.ToArray(),
-            max_tokens = 50
+            max_completion_tokens = 70
         };
+        Debug.Log("Request Body: " + requestBody.messages); // This is broken! Yipee!
 
         // Convert the headers and request body to JSON
         string jsonHeaders = JsonUtility.ToJson(headers);
-        Debug.Log("Headers: " + jsonHeaders);
         string jsonBody = JsonUtility.ToJson(requestBody);
-        Debug.Log("Request Body: " + jsonBody);
         UnityWebRequest request = new UnityWebRequest(api_url, "POST");
         // Convert the body to a byte array.
         byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonBody);
@@ -50,7 +48,6 @@ public class GPTService
         request.SetRequestHeader("Authorization", "Bearer " + apiKey);
         request.SetRequestHeader("Content-Type", "application/json");
 
-        // Recieves four responses. ????
         yield return request.SendWebRequest();
 
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
@@ -60,6 +57,8 @@ public class GPTService
         else
         {
             response = request.downloadHandler.text;
+            // add the response to the messages list
+            messages.Add(new Message { role = "system", content = "Response:" + response });
             Debug.Log("Response: " + response);
         }
     }
@@ -83,8 +82,8 @@ public class GPTService
     {
         public string model; // The model to use for completion. Should usually be "4o". Defaults to "4".
         public Message[] messages; // This includes all player input. The last element is what the NPC will respond to the rest is context.
-        // Optional parameters coming soon.
-        public int max_tokens; // The maximum number of tokens to generate. Requests can use up to 4096 tokens.
+        // Optional parameters
+        public int max_completion_tokens; // The maximum number of tokens to generate.
     }
 }
 
