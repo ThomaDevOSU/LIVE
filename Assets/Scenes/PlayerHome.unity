@@ -2820,6 +2820,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5790077866316187083, guid: 0121f8eedbf003643b2569b11999c047, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7846495029714412992, guid: 0121f8eedbf003643b2569b11999c047, type: 3}
       propertyPath: m_Name
       value: DialogueManager
@@ -2862,6 +2866,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8068877380916816084, guid: 0121f8eedbf003643b2569b11999c047, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8311906269477349443, guid: 0121f8eedbf003643b2569b11999c047, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

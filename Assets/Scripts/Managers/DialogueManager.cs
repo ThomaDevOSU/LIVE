@@ -2,31 +2,79 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine.UI;
 
+/// <summary>
+/// Manages dialogue interactions, including displaying sentences, handling player input, and interacting with the GPTService.
+/// </summary>
 public class DialogueManager : MonoBehaviour
 {
+
     public static DialogueManager Instance;
 
-    public GameObject DialogueMenu; // Our dialogue menu
-    public Queue<string> sentences; // Sentences to be displayed
+    /// <summary>
+    /// The UI panel for displaying the dialogue menu.
+    /// </summary>
+    public GameObject DialogueMenu;
 
-    public TMP_Text dialogueText; // Text that will recieve response
+    /// <summary>
+    /// Queue of sentences to display during dialogue.
+    /// </summary>
+    public Queue<string> sentences;
 
-    public GameObject offlinePanel; // For when GPT does not work 
-    public GameObject choicePanel; // For when GPT does not work
-    public GameObject dialogueButton; // For when GPT does not work
+    /// <summary>
+    /// TextMeshPro element for displaying dialogue text.
+    /// </summary>
+    public TMP_Text dialogueText;
 
-    public GameObject onlinePanel; // For when GPT works
-    public TMP_InputField inputField; // For when GPT works
+    /// <summary>
+    /// UI panel shown in offline mode.
+    /// </summary>
+    public GameObject offlinePanel;
 
-    private DialogueEntry currentDialogue; // The current plugged dialogue
+    /// <summary>
+    /// Panel for displaying choice buttons in offline mode
+    /// </summary>
+    public GameObject choicePanel;
 
-    private bool skipSentence; // Whether we skip to the end of the sentence or move on
+    /// <summary>
+    /// Button for progressing dialogue in offline mode.
+    /// </summary>
+    public GameObject dialogueButton;
 
-    public bool isTalking = false; // Are we currently talking to someone?
+    /// <summary>
+    /// UI panel shown when in online mode.
+    /// </summary>
+    public GameObject onlinePanel;
 
-    private void Awake() // Singleton
+    /// <summary>
+    /// Input field for player text input when in online mode.
+    /// </summary>
+    public TMP_InputField inputField;
+
+    /// <summary>
+    /// Holds the GPTService's response to the player's input.
+    /// </summary>
+    public string response;
+
+    /// <summary>
+    /// The current dialogue entry being displayed.
+    /// </summary>
+    private DialogueEntry currentDialogue;
+
+    /// <summary>
+    /// Flag indicating whether to skip the current sentence.
+    /// </summary>
+    private bool skipSentence;
+
+    /// <summary>
+    /// Indicates whether the player is currently in a dialogue interaction.
+    /// </summary>
+    public bool isTalking = false;
+
+    /// <summary>
+    /// Ensures only one instance of DialogueManager exists and persists across scenes. Singleton pattern.
+    /// </summary>
+    private void Awake()
     {
         if (Instance == null)
         {
@@ -40,21 +88,39 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Monitors player input to skip sentences, send input, or stop dialogue.
+    /// </summary>
     public void Update()
     {
-        if (isTalking && Input.GetButtonDown("Jump")) // Skip sentence if we press button
+        if (isTalking && Input.GetMouseButton(1)) // Right mouse button to skip the current sentence.
         {
             skipSentence = true;
         }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            string input = inputField.text;
+            inputField.text = "";
+            sendData(input);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            StopDialogue();
+        }
     }
 
-
-    public void SkipSentence() // For buttons to call on dialogue window 
+    /// <summary>
+    /// Skips the current sentence in the dialogue.
+    /// </summary>
+    public void SkipSentence()
     {
-        skipSentence=true;
+        skipSentence = true;
     }
 
-    public void StopDialogue() // Disables dialogue menu and sets not talking
+    /// <summary>
+    /// Stops the dialogue, clears data, and hides the dialogue menu.
+    /// </summary>
+    public void StopDialogue()
     {
         isTalking = false;
         sentences.Clear();
@@ -63,47 +129,62 @@ public class DialogueManager : MonoBehaviour
         DialogueMenu.SetActive(false);
     }
 
-    public void StartDialogue(DialogueEntry dialouge) // Starts Dialogue process
+    /// <summary>
+    /// Starts a new dialogue interaction. Currently only works in online mode. Offline mode will require this method take a DialogueEntry as a parameter.
+    /// </summary>
+    public void StartDialogue()
     {
         isTalking = true;
         DialogueMenu.SetActive(true);
         destroyChildren();
 
-        currentDialogue = dialouge; // Set our dialogue variable
+        DialogueEntry dialogue = new DialogueEntry
+        {
+            sentences = new string[] { "Hello, I'm Bob the Baker. Can I offer you a fresh baguette?" } // Placeholder greeting
+        };
 
-        foreach (string s in dialouge.sentences) // Load up our Queue
+        currentDialogue = dialogue;
+
+        // This queue will be populated with dialogue from the DialogueEntry. This is for offline mode.
+        // Currently the dialogue will only contain the most recent response from the GPTService.
+        foreach (string s in dialogue.sentences)
         {
             sentences.Enqueue(s);
         }
-
-        DisplayNextSentence(); // Begin the displaying
+        DisplayNextSentence();
     }
 
+    /// <summary>
+    /// Displays the next sentence in the dialogue queue.
+    /// </summary>
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0) // Check if no sentence are left
+        if (sentences.Count == 0)
         {
-            EndDialogue(); // End dialogue
+            EndDialogue();
             return;
         }
 
-        string sentence = sentences.Dequeue(); // Load the sentence
-
-        StopAllCoroutines();  // Stop previous typing effect if any.
-
-        StartCoroutine(TypeSentence(sentence)); // Start typing the loaded sentence
+        string sentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
     }
 
+    /// <summary>
+    /// Types out a sentence character by character with an adjustable typing speed.
+    /// Allows skipping to the end of the sentence.
+    /// </summary>
+    /// <param name="sentence">The sentence to type out.</param>
     IEnumerator TypeSentence(string sentence)
     {
-        dialogueText.text = ""; // Clear the text 
+        dialogueText.text = "";
 
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.08f);  // Adjustable typing speed.
+            yield return new WaitForSeconds(0.08f); // Typing speed.
 
-            if (skipSentence) // If we opt to skip the sentence
+            if (skipSentence)
             {
                 skipSentence = false;
                 dialogueText.text = sentence;
@@ -114,54 +195,62 @@ public class DialogueManager : MonoBehaviour
         while (!skipSentence) { yield return new WaitForSeconds(0.1f); }
         skipSentence = false;
         DisplayNextSentence();
-
     }
 
+    /// <summary>
+    /// Ends the dialogue and displays appropriate UI panels based on online status.
+    /// </summary>
     void EndDialogue()
     {
         if (GameManager.Instance.isOnline())
         {
             onlinePanel.SetActive(true);
         }
-        else if (currentDialogue.hasChoices)
-        {
-            DisplayChoices(currentDialogue.choices);
-        }
-        else 
+        else
         {
             StopDialogue();
         }
     }
 
-    void DisplayChoices(DialogueChoice[] choices) // Disaplays choice buttons
-    {
-        
-        foreach (var choice in choices)
-        {
-            GameObject button = Instantiate(dialogueButton, choicePanel.transform);
-            button.GetComponentInChildren<TMP_Text>().text = choice.choiceText;
-            button.GetComponent<Button>().onClick.AddListener(() => OnChoiceSelected(choice));
-        }
-
-        choicePanel.SetActive(true);
-    }
-
-    void OnChoiceSelected(DialogueChoice choice) // This will simply start the response dialogue
-    {
-        StartDialogue(choice.nextDialogue);
-    }
-
-    void destroyChildren() 
+    /// <summary>
+    /// Clears all children objects in the choice panel. This is an offline mode method.
+    /// </summary>
+    void destroyChildren()
     {
         foreach (Transform child in choicePanel.transform)
         {
-            Destroy(child.gameObject);  // Clear previous choices.
+            Destroy(child.gameObject);
         }
     }
 
-    public void sendData() // This will be the function that initiates the API call
+    /// <summary>
+    /// Sends the player's input to the GPTService and handles the response.
+    /// </summary>
+    /// <param name="input">The player's input text.</param>
+    public void sendData(string input)
     {
-        onlinePanel.SetActive(false);
+        StopAllCoroutines();
+        GPTService.Instance.response = null;
+        StartCoroutine(GPTService.Instance.apiCall(input));
+        StartCoroutine(WaitForResponse());
     }
 
+    /// <summary>
+    /// Waits for a response from the GPTService and processes it.
+    /// </summary>
+    IEnumerator WaitForResponse()
+    {
+        while (GPTService.Instance.response == null) { yield return new WaitForSeconds(0.1f); }
+        response = GPTService.Instance.response;
+
+        if (response == null)
+        {
+            Debug.Log("GPT failed to respond");
+        }
+        else
+        {
+            sentences.Enqueue(response);
+            DisplayNextSentence();
+        }
+    }
 }
