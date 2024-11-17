@@ -93,7 +93,10 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void Update()
     {
-        if (isTalking && Input.GetMouseButton(1)) // Right mouse button to skip the current sentence.
+        if (isTalking && Input.GetMouseButton(1)) // Right-click to skip dialogue
+        {
+            skipSentence = true;
+        }
         {
             skipSentence = true;
         }
@@ -132,15 +135,17 @@ public class DialogueManager : MonoBehaviour
     /// <summary>
     /// Starts a new dialogue interaction. Currently only works in online mode. Offline mode will require this method take a DialogueEntry as a parameter.
     /// </summary>
+    /// <param name= "playerData"> The current player data </param>
     public void StartDialogue()
     {
         isTalking = true;
         DialogueMenu.SetActive(true);
         destroyChildren();
 
+
         DialogueEntry dialogue = new DialogueEntry
         {
-            sentences = new string[] { "Hello, I'm Bob the Baker. Can I offer you a fresh baguette?" } // Placeholder greeting
+            sentences = new string[] { "Hello, I'm Patty NoPies the baker. Can I offer you a fresh baguette?" } // Placeholder greeting
         };
 
         currentDialogue = dialogue;
@@ -161,7 +166,6 @@ public class DialogueManager : MonoBehaviour
     {
         if (sentences.Count == 0)
         {
-            EndDialogue();
             return;
         }
 

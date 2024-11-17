@@ -3,6 +3,8 @@ using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Unity.VisualScripting;
+using System.Linq;
 
 /// <summary>
 /// Handles communication with the GPT API to generate responses based on player input.
@@ -20,7 +22,8 @@ public class GPTService : MonoBehaviour
     private string apiKey = "API-KEY";
     private string api_url = "https://api.openai.com/v1/chat/completions";
 
-    public string playerInput, prompt, response, request, playerData, NPCData;
+    public string playerInput, prompt, response, request, NPCData;
+    private PlayerData playerData;
 
     /// <summary>
     /// List of messages exchanged with the GPT API to maintain conversation context.
@@ -48,11 +51,33 @@ public class GPTService : MonoBehaviour
     /// </summary>
     /// <param name="playerInput">The input provided by the player.</param>
     /// <returns>A formatted prompt string for the GPT API.</returns>
-    public string GeneratePrompt(string playerInput)
+    public string GeneratePrompt(string playerInput, PlayerData playerData)
     {
-        string prompt = "You are a baker named Bob. Your responses should be simple and not contain any text except the response itself. Use no emojis." +
-            " If asked a question a normal baker would not know feign ignorance" +
-            " Respond to the following prompt without breaking character and keep it concise: " + playerInput; // Hardcoded prompt for now.
+        string prompt = $@"
+    NPC Information:
+    - Name: Patty NoPies
+    - Profession: Baker
+    - Location: Bakery
+    - Personality Traits: Friendly and sweet, Hates pies, 
+    Her hatred for pies is so deep that things, like the letter p, the words crust, apple, sweet, and others remind her of pies.
+    If pies are mentioned, she will become instantly violent and perform a random violent action toward the player.
+    If the player mentions pies again, she will have a full pyschotic break and start mumbling nonsense about pies for several dialogues.
+    Context:
+    - Previous Interactions: {string.Join(", ", messages.Select(m => m.content))}
+    Game State:
+    - Player Name: {playerData.name}
+    - Language Level: Advanced
+    - Current Task: Buy Bread
+    - Task Status: In Progress
+    - Time of Day: Afternoon
+    - Game Language: {playerData.language}
+    Player Input: {playerInput}
+    Instructions:
+    Respond concisely as Patty NoPies in {playerData.language}.
+    When responding with nondialogue use * * as action tags. Example: *picks up the money*. 
+    Do not use any formatting your response should be plain text and only the dialogue itself. Do not use the 'Response:' to being any response.
+    Use a tone that matches the personality traits, remain consistent with previous interactions, and ensure relevance to: Buy Bread";
+
         return prompt;
     }
 
@@ -63,8 +88,20 @@ public class GPTService : MonoBehaviour
     /// <returns>An IEnumerator for coroutine handling. This cannot be used like a typical return value and allows async behavior.</returns>
     public IEnumerator apiCall(string playerInput)
     {
-        prompt = GeneratePrompt(playerInput);
-        messages.Add(new Message { role = "user", content = prompt }); // Add the player's prompt to the message list.
+        prompt = GeneratePrompt(playerInput, RetrievePlayerData());
+        if (messages.Count < 1)
+        {
+            messages.Add(new Message { role = "user", content = prompt }); // Add the player's prompt to the message list.
+        }
+        else
+        {
+            messages.Add(new Message { role = "user", content = playerInput });
+        }
+
+        foreach (var message in messages)
+        {
+            Debug.Log(message.content);
+        }
 
         Headers headers = new Headers
         {
@@ -76,7 +113,7 @@ public class GPTService : MonoBehaviour
         {
             model = "gpt-4o",
             messages = messages.ToArray(),
-            max_completion_tokens = 40
+            max_completion_tokens = 100
         };
 
         string jsonBody = JsonUtility.ToJson(requestBody);
@@ -101,8 +138,27 @@ public class GPTService : MonoBehaviour
         }
     }
 
+    private PlayerData RetrievePlayerData()
+    {
+        playerData = GameManager.Instance.CurrentPlayerData;
+
+        return playerData;
+    }
+
+    private void RetrieveNPCData()
+    {
+        // This will get NPC Data
+    }
+
+    private void RetrieveTask()
+    {
+        // This will get the current task
+        // Use GetActiveTask() from TaskManager
+    }
+
     /// <summary>
     /// Parses the JSON response from the GPT API to extract the content.
+    /// Also removes the "Response: " prefix from the content because the AI will not stop adding it.
     /// </summary>
     /// <param name="jsonResponse">The raw JSON response from the GPT API.</param>
     /// <returns>The extracted content from the response, or null if parsing fails.</returns>
@@ -112,7 +168,13 @@ public class GPTService : MonoBehaviour
         Match match = Regex.Match(jsonResponse, pattern);
         if (match.Success)
         {
-            return match.Groups[1].Value;
+            // The AI will not stop adding "Response: " so we need to remove it. Can't prompt engineer this out 100% of the time.
+            string content = match.Groups[1].Value;
+            if (content.StartsWith("Response: "))
+            {
+                content = content.Substring("Response: ".Length);
+            }
+            return content;
         }
         else
         {

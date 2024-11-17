@@ -8405,6 +8405,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 2363194991718763180, guid: 21ff25f3109af9644a9db1686ef1f12d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363194991718763180, guid: 21ff25f3109af9644a9db1686ef1f12d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3962946958546665469, guid: 21ff25f3109af9644a9db1686ef1f12d, type: 3}
       propertyPath: dialogue.hasChoices
       value: 0
@@ -8432,6 +8440,14 @@ PrefabInstance:
     - target: {fileID: 3962946958546665469, guid: 21ff25f3109af9644a9db1686ef1f12d, type: 3}
       propertyPath: dialogue.choices.Array.data[0].nextDialogue
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7708309558990953891, guid: 21ff25f3109af9644a9db1686ef1f12d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7708309558990953891, guid: 21ff25f3109af9644a9db1686ef1f12d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7708309558990953891, guid: 21ff25f3109af9644a9db1686ef1f12d, type: 3}
       propertyPath: m_LocalPosition.x
