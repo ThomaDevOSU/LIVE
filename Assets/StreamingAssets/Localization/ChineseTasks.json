@@ -1,0 +1,36 @@
+{
+    "entries": [
+        { 
+            "key": "Buy", 
+            "value": 
+            {
+                "description": "从 {npc} 购买 {subject}",
+                "answer": "我想买一些 {subject}。"
+            }
+        },
+        { 
+            "key": "AskNPC",
+            "value": 
+            {
+                "description": "询问 {npc} 关于 {subject}",
+                "answer": "你对 {subject} 有什么看法？"
+            }
+        },
+        { 
+            "key": "AskLoc",
+            "value": 
+            {
+                "description": "询问在 {location} 的任何人关于 {subject}",
+                "answer": "你对 {subject} 有什么看法？"
+            }
+        },
+        {
+            "key": "SAMPLE", 
+            "value": 
+            {
+                "description": "示例 {subject} 示例 NPC {npc} 示例 位置 {location}",
+                "answer": "示例主题 {subject}。"
+            }
+        }
+    ]
+}
