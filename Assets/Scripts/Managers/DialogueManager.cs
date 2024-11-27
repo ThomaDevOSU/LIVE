@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
 
     public static DialogueManager Instance;
 
+    public NPC currentNPC;
+
     /// <summary>
     /// The UI panel for displaying the dialogue menu.
     /// </summary>
@@ -54,7 +56,7 @@ public class DialogueManager : MonoBehaviour
     /// <summary>
     /// Holds the GPTService's response to the player's input.
     /// </summary>
-    public string response;
+    private string response;
 
     /// <summary>
     /// The current dialogue entry being displayed.
@@ -64,12 +66,12 @@ public class DialogueManager : MonoBehaviour
     /// <summary>
     /// Flag indicating whether to skip the current sentence.
     /// </summary>
-    private bool skipSentence;
+    private bool skipSentence = false;
 
     /// <summary>
     /// Indicates whether the player is currently in a dialogue interaction.
     /// </summary>
-    public bool isTalking = false;
+   public bool isTalking = false;
 
     /// <summary>
     /// Ensures only one instance of DialogueManager exists and persists across scenes. Singleton pattern.
@@ -97,9 +99,6 @@ public class DialogueManager : MonoBehaviour
         {
             skipSentence = true;
         }
-        {
-            skipSentence = true;
-        }
         if (Input.GetKeyDown(KeyCode.Return))
         {
             string input = inputField.text;
@@ -110,14 +109,6 @@ public class DialogueManager : MonoBehaviour
         {
             StopDialogue();
         }
-    }
-
-    /// <summary>
-    /// Skips the current sentence in the dialogue.
-    /// </summary>
-    public void SkipSentence()
-    {
-        skipSentence = true;
     }
 
     /// <summary>
@@ -136,8 +127,9 @@ public class DialogueManager : MonoBehaviour
     /// Starts a new dialogue interaction. Currently only works in online mode. Offline mode will require this method take a DialogueEntry as a parameter.
     /// </summary>
     /// <param name= "playerData"> The current player data </param>
-    public void StartDialogue()
+    public void StartDialogue(NPC npc)
     {
+        currentNPC = npc;
         isTalking = true;
         DialogueMenu.SetActive(true);
         destroyChildren();
@@ -145,7 +137,7 @@ public class DialogueManager : MonoBehaviour
 
         DialogueEntry dialogue = new DialogueEntry
         {
-            sentences = new string[] { "Hello, I'm Patty NoPies the baker. Can I offer you a fresh baguette?" } // Placeholder greeting
+            sentences = new string[] {  currentNPC.Greeting } // Placeholder greeting
         };
 
         currentDialogue = dialogue;
@@ -162,7 +154,7 @@ public class DialogueManager : MonoBehaviour
     /// <summary>
     /// Displays the next sentence in the dialogue queue.
     /// </summary>
-    public void DisplayNextSentence()
+    private void DisplayNextSentence()
     {
         if (sentences.Count == 0)
         {
@@ -202,21 +194,6 @@ public class DialogueManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Ends the dialogue and displays appropriate UI panels based on online status.
-    /// </summary>
-    void EndDialogue()
-    {
-        if (GameManager.Instance.isOnline())
-        {
-            onlinePanel.SetActive(true);
-        }
-        else
-        {
-            StopDialogue();
-        }
-    }
-
-    /// <summary>
     /// Clears all children objects in the choice panel. This is an offline mode method.
     /// </summary>
     void destroyChildren()
@@ -235,7 +212,7 @@ public class DialogueManager : MonoBehaviour
     {
         StopAllCoroutines();
         GPTService.Instance.response = null;
-        StartCoroutine(GPTService.Instance.apiCall(input));
+        StartCoroutine(GPTService.Instance.ApiCall(input));
         StartCoroutine(WaitForResponse());
     }
 

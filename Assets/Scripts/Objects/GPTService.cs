@@ -3,7 +3,6 @@ using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Unity.VisualScripting;
 using System.Linq;
 
 /// <summary>
@@ -19,8 +18,8 @@ public class GPTService : MonoBehaviour
     /// <summary>
     /// API key for authenticating requests to the GPT API. This needs to be defined on the GPTService game object. We need a better way to store this.
     /// </summary>
-    private string apiKey = "API-KEY";
-    private string api_url = "https://api.openai.com/v1/chat/completions";
+    private readonly string apiKey = "API-KEY";
+    private readonly string api_url = "https://api.openai.com/v1/chat/completions";
 
     public string playerInput, prompt, response, request, NPCData;
     private PlayerData playerData;
@@ -86,30 +85,27 @@ public class GPTService : MonoBehaviour
     /// </summary>
     /// <param name="playerInput">The input provided by the player.</param>
     /// <returns>An IEnumerator for coroutine handling. This cannot be used like a typical return value and allows async behavior.</returns>
-    public IEnumerator apiCall(string playerInput)
+    public IEnumerator ApiCall(string playerInput)
     {
-        prompt = GeneratePrompt(playerInput, RetrievePlayerData());
-        if (messages.Count < 1)
+        if (messages.Count == 0)
         {
+            Debug.Log("No messages found, generating prompt...");
+            prompt = GeneratePrompt(playerInput, RetrievePlayerData());
             messages.Add(new Message { role = "user", content = prompt }); // Add the player's prompt to the message list.
         }
         else
         {
+            Debug.Log("Messages found, adding player input...");
             messages.Add(new Message { role = "user", content = playerInput });
         }
 
         foreach (var message in messages)
         {
+            Debug.Log(message.role);
             Debug.Log(message.content);
         }
 
-        Headers headers = new Headers
-        {
-            Authorization = "Bearer " + apiKey,
-            ContentType = "application/json"
-        };
-
-        RequestBody requestBody = new RequestBody
+        RequestBody requestBody = new()
         {
             model = "gpt-4o",
             messages = messages.ToArray(),
@@ -117,7 +113,7 @@ public class GPTService : MonoBehaviour
         };
 
         string jsonBody = JsonUtility.ToJson(requestBody);
-        UnityWebRequest request = new UnityWebRequest(api_url, "POST");
+        UnityWebRequest request = new(api_url, "POST");
         byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonBody);
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
@@ -152,8 +148,7 @@ public class GPTService : MonoBehaviour
 
     private void RetrieveTask()
     {
-        // This will get the current task
-        // Use GetActiveTask() from TaskManager
+
     }
 
     /// <summary>
@@ -172,7 +167,7 @@ public class GPTService : MonoBehaviour
             string content = match.Groups[1].Value;
             if (content.StartsWith("Response: "))
             {
-                content = content.Substring("Response: ".Length);
+                content = content["Response: ".Length..];
             }
             return content;
         }
@@ -198,23 +193,6 @@ public class GPTService : MonoBehaviour
         /// The content of the message.
         /// </summary>
         public string content;
-    }
-
-    /// <summary>
-    /// Represents the headers required for the GPT API request.
-    /// </summary>
-    [System.Serializable]
-    public class Headers
-    {
-        /// <summary>
-        /// The authorization token for the API.
-        /// </summary>
-        public string Authorization;
-
-        /// <summary>
-        /// The content type of the request.
-        /// </summary>
-        public string ContentType;
     }
 
     /// <summary>
