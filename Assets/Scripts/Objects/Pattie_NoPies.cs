@@ -10,6 +10,7 @@ public class Pattie_NoPies : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Pattie_NoPies script started");
         Pattie = new NPC
         {
             Greeting = "Hello! I'm Pattie NoPies. I'm a baker.",
@@ -17,10 +18,11 @@ public class Pattie_NoPies : MonoBehaviour
             ID = 1,
             Name = "Pattie NoPies",
             Job = "Baker",
-            Description = "Her hatred for pies is so deep that things, like the letter p, " +
-            "the words crust, apple, sweet, and others remind her of pies. " +
-            "If pies are mentioned, she will become instantly violent and perform a random violent action toward the player. " +
-            "If the player mentions pies again, she will have a full pyschotic break and start mumbling nonsense about pies for several dialogues.",
+            Description = "Pattie is a friendly middle aged women with a slight edge. She has 2 grown children and is a widow." +
+            "She saw the recent addition to the town, Alex, baking sweets in his newly opened coffee shop and is afraid of the competition" +
+            "because the pastries looked amazing. She acts like she doesn't respect Alex but he reminds her of her children" +
+            "Pattie hates pies because of trauma during a reality TV show where a celebrity chef who she refuses to name said mean things about her pie." +
+            "and he said mean things about her pies. She will hint that it was gordon ramsey but will never admit it.",
             Personality = new List<string> { "Friendly", "Sweet", "Hates pies" },
             Schedule = new ScheduleEntry[]
             {
@@ -36,8 +38,9 @@ public class Pattie_NoPies : MonoBehaviour
                 }
             },
             CurrentLocation = "Bakery",
-            CurrentCoordinates = new Vector3(0, 0)
+            CurrentCoordinates = new Vector3(0, 0, 0)
         };
+        NPCManager.Instance.AddNPC(Pattie);
     }
 
     private void OnTriggerStay2D(Collider2D collision)

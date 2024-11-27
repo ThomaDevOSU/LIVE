@@ -21,8 +21,10 @@ public class GPTService : MonoBehaviour
     private readonly string apiKey = "API-KEY";
     private readonly string api_url = "https://api.openai.com/v1/chat/completions";
 
-    public string playerInput, prompt, response, request, NPCData;
+    public string playerInput, prompt, response, request;
     private PlayerData playerData;
+    private NPC NPCData;
+    private Task taskData;
 
     /// <summary>
     /// List of messages exchanged with the GPT API to maintain conversation context.
@@ -50,32 +52,30 @@ public class GPTService : MonoBehaviour
     /// </summary>
     /// <param name="playerInput">The input provided by the player.</param>
     /// <returns>A formatted prompt string for the GPT API.</returns>
-    public string GeneratePrompt(string playerInput, PlayerData playerData)
+    public string GeneratePrompt(string playerInput, PlayerData playerData, NPC NPCData, Task taskData)
     {
         string prompt = $@"
     NPC Information:
-    - Name: Patty NoPies
-    - Profession: Baker
-    - Location: Bakery
-    - Personality Traits: Friendly and sweet, Hates pies, 
-    Her hatred for pies is so deep that things, like the letter p, the words crust, apple, sweet, and others remind her of pies.
-    If pies are mentioned, she will become instantly violent and perform a random violent action toward the player.
-    If the player mentions pies again, she will have a full pyschotic break and start mumbling nonsense about pies for several dialogues.
+    - Name: {NPCData.Name}
+    - Profession: {NPCData.Job}
+    - Location: {NPCData.CurrentLocation}
+    - Personality Traits: {string.Join(", ", NPCData.Personality)} 
+    - Description: {NPCData.Description}
     Context:
     - Previous Interactions: {string.Join(", ", messages.Select(m => m.content))}
     Game State:
     - Player Name: {playerData.name}
     - Language Level: Advanced
-    - Current Task: Buy Bread
-    - Task Status: In Progress
+    - Current Task: {taskData.TaskDescription}
+    - Task Answer: {taskData.TaskAnswer}
     - Time of Day: Afternoon
     - Game Language: {playerData.language}
     Player Input: {playerInput}
     Instructions:
-    Respond concisely as Patty NoPies in {playerData.language}.
+    Respond concisely as {NPCData.Name} in {playerData.language}.
     When responding with nondialogue use * * as action tags. Example: *picks up the money*. 
     Do not use any formatting your response should be plain text and only the dialogue itself. Do not use the 'Response:' to being any response.
-    Use a tone that matches the personality traits, remain consistent with previous interactions, and ensure relevance to: Buy Bread";
+    Use a tone that matches the personality traits, remain consistent with previous interactions, and ensure relevance to: {taskData.TaskDescription}";
 
         return prompt;
     }
@@ -90,8 +90,14 @@ public class GPTService : MonoBehaviour
         if (messages.Count == 0)
         {
             Debug.Log("No messages found, generating prompt...");
-            prompt = GeneratePrompt(playerInput, RetrievePlayerData());
-            messages.Add(new Message { role = "user", content = prompt }); // Add the player's prompt to the message list.
+            playerData = RetrievePlayerData();
+            NPCData = RetrieveNPCData();
+
+            // ** This is temporary until TaskManager is updated to use NPC names.
+            taskData = RetrieveTask(NPCData.Job, NPCData.CurrentLocation);
+
+            prompt = GeneratePrompt(playerInput, playerData, NPCData, taskData);
+            messages.Add(new Message { role = "system", content = prompt }); // Add the player's prompt to the message list.
         }
         else
         {
@@ -107,7 +113,7 @@ public class GPTService : MonoBehaviour
 
         RequestBody requestBody = new()
         {
-            model = "gpt-4o",
+            model = "gpt-4o-mini",
             messages = messages.ToArray(),
             max_completion_tokens = 100
         };
@@ -130,25 +136,52 @@ public class GPTService : MonoBehaviour
         {
             response = request.downloadHandler.text;
             response = ParseResponse(response); // Parse the response content.
-            messages.Add(new Message { role = "system", content = "Response: " + response });
+            messages.Add(new Message { role = "assistant", content = "Response: " + response });
         }
     }
 
     private PlayerData RetrievePlayerData()
     {
         playerData = GameManager.Instance.CurrentPlayerData;
-
         return playerData;
     }
 
-    private void RetrieveNPCData()
+    private NPC RetrieveNPCData()
     {
-        // This will get NPC Data
+        NPCData = NPCManager.Instance.GetCurrentDialogueNPC();
+        return NPCData;
     }
 
-    private void RetrieveTask()
+    private Task RetrieveTask(string npcName, string location)
     {
-
+        // Right now npcName is really the job until TaskManager is updated with NPC names.
+        taskData = TaskManager.Instance.SubjectTask(npcName, location);
+        if (taskData == null)
+        {
+            // This is stricly for testing purposes. Better TaskManager implementation needed.
+            Debug.Log("Task not found for current NPC/Location");
+            taskData = new Task
+            {
+                TaskSubject = "Bread",
+                TaskNPC = NPCData.Name,
+                TaskLocation = NPCData.CurrentLocation,
+                TaskAnswer = "Can I buy a loaf of bread?",
+                TaskDifficulty = 1,
+                T_TaskDescription = "Buy Bread",
+                T_TaskSubject = "Bread",
+                T_TaskNPC = NPCData.Name,
+                T_TaskLocation = NPCData.CurrentLocation,
+                T_TaskAnswer = "Can I buy a loaf of bread?",
+                IsCompleted = false,
+                IsCustom = false
+            };
+        }
+        else
+        {
+            Debug.Log("Task found");
+            taskData.printData();
+        }
+        return taskData;
     }
 
     /// <summary>

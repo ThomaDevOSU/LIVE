@@ -6,17 +6,21 @@ public class NPCManager : MonoBehaviour
     public static NPCManager Instance;
 
     // list of NPCs
+    // NPCs are added to this list when they are spawned. This might be done in the NPCManager in the future.
     public static List<NPC> NPCs;
 
-    void Start()
+    void Awake()
     {
-        // Maybe create a list of NPCs here?
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+            NPCs = new List<NPC>();
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void AddNPC(NPC npc)
