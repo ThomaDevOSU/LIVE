@@ -99,8 +99,10 @@ public class TaskManager : MonoBehaviour
             }
         }
 
-        // GENERATES 5 TASKS, DISABLE THIS IF YOU WANT AN EMPTY TASK LIST
-        GenerateTasks(5);
+        //TestTaskManager();
+        // GENERATES 20 TASKS, DISABLE THIS IF YOU WANT AN EMPTY TASK LIST
+        GenerateTasks(20 , 1);
+        //PrintTaskList();
         
     }
 
@@ -178,28 +180,38 @@ public class TaskManager : MonoBehaviour
     /// String data must be in a format that is easy to translate
     /// </summary>
     /// <param name="skill">The calculate skill level</param>
+    /// <param name="taskNPC">Typically null, allows for generating specfic content</param>
+    /// <param name="taskLocation">Typically null, allows for generating specfic content</param>
     /// <returns>Generates a task, filled with</returns>
-    private Task GenerateTask(int skill) 
+    private Task GenerateTask(int skill, string taskNPC = null, string taskLocation = null) 
     {
         //  Relevant task strings that will be assigned
-        string taskDescription = null, taskNPC = null, taskLocation = null, taskSubject = null, taskAnswer = null;
+        string taskDescription = null, taskSubject = null, taskAnswer = null;
 
         //  Relevant task type, that does not get saved to the task itself
         string taskType = null;
 
         //Flip coin, if it lands on 0, generate Task
-        if (Random.Range(0,2) == 0)
+        if (taskNPC == null && taskLocation == null) //  Do this only if the taskNPC and taskLoc has not been assigned
         {
-            taskNPC = GetRandomNPC().ToString();
+            if (Random.Range(0, 2) == 0)
+            {
+                taskNPC = GetRandomNPC().ToString();
+            }
+            else
+            {
+                taskLocation = GetRandomLocation().ToString();
+            }
+        }
 
+        if (taskNPC != null)    //  taskNPC was assigned
+        {
             //  Generate relevant subject and type
             taskType = GetTaskType(taskNPC);
             taskSubject = GetSubject(NPCSubjects[taskNPC], taskType);
         }
-        else 
+        else    //  taskLocation was assigned
         {
-            taskLocation = GetRandomLocation().ToString();
-
             //  Generate relevant subject and type
             taskType = GetTaskType(taskLocation);
             taskSubject = GetSubject(LocationSubjects[taskLocation], taskType);
@@ -341,6 +353,30 @@ public class TaskManager : MonoBehaviour
         }
 
         return taskTemplates.ContainsKey(taskType) ? taskTemplates[taskType] : null;
+    }
+
+
+    /// <summary>
+    /// Original Task searches through the list of tasks and attempts to generate one
+    /// if one cannot be generated, null is returned
+    /// </summary>
+    /// <param name="difficulty">The desired difficulty of a task</param>
+    /// <returns></returns>
+    private Task OriginalTask(int difficulty)
+    {
+        //  First we search through the list of all NPC possibilities. If one cannot be found for a specific subject, we return a task generated for that
+        foreach (var npc in NPCSubjects) 
+        {
+            if (SubjectTask(npc.Key, null) == null) return GenerateTask(difficulty, taskNPC:npc.Key);
+        }
+
+        //  First we search through the list of all NPC possibilities. If one cannot be found for a specific subject, we return a task generated for that
+        foreach (var loc in LocationSubjects)
+        {
+            if (SubjectTask(null, loc.Key) == null) return GenerateTask(difficulty, taskLocation:loc.Key);
+        }
+
+        return null;    //  We could not find an original task to make
     }
 
     /// <summary>
@@ -512,8 +548,9 @@ public class TaskManager : MonoBehaviour
     {
         foreach (Task task in TaskList)
         {
-            if (task?.TaskNPC == (npc_name ?? "") || task?.TaskLocation == (location ?? ""))
+            if (task.TaskNPC == (npc_name ?? "") || task.TaskLocation == (location ?? ""))
             {
+                //Debug.Log($"Match found in SubjectTask\nTaskNPC :{task.TaskNPC ?? "NULL"}, NPC: {npc_name ?? "NULL"}, TaskLoc :{task.TaskLocation ?? "NULL"}, Loc: {location ?? "NULL"}");
                 return task;
             }
         }
@@ -524,20 +561,31 @@ public class TaskManager : MonoBehaviour
     /// GenerateTasks will generate new tasks based on the count paramater. Each task will be marked as NOT custom
     /// </summary>
     /// <param name="count">The number of tasks to be generated</param>
-    public void GenerateTasks(int count)
+    public void GenerateTasks(int count, int difficulty)
     {
         if (count <= 0) return;
 
         for (int i = 0; i < count; i++)
         {
-            Task task = GenerateTask(1);
-            if (task == null) { Debug.Log("Failed to generate Task"); continue; }
+            Task task = GenerateTask(difficulty);
+            //task.printData();
+            if (SubjectTask(task.TaskNPC, task.TaskLocation) != null) //  This task subject was already in the TaskList
+            {
+                //Debug.Log("New Task Generation attempt");
+                task = OriginalTask(difficulty);
+                //Debug.Log("New Task Generation completed");
+                if (task!=null) task.printData();
+            }  
 
+            if (task == null) { Debug.LogError($"Failed to generate Task!\nSuccesfully generated {i} tasks!"); return; }
+            
             TaskList.Add(task);
             //TaskList[i].printData();  //  Debug for the generated Task
         }
         ActiveTask = TaskList[0];
     }
+
+
 
     /// <summary>
     /// Removes all uncompleted NON-CUSTOM tasks from the task list
@@ -629,6 +677,10 @@ public class TaskManager : MonoBehaviour
         CompleteTask(GetTaskList()[0]);
         Debug.Assert(GetActiveTask() == null, "GetActiveTask() returned something when it should have been null.");
         Debug.Log("Massive Test Passed!");
+
+        // Clearing out TaskList and completed tasks
+        TaskList.Clear();
+        CompletedTasks.Clear();
     }
 
 }
