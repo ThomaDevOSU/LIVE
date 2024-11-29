@@ -16,7 +16,7 @@ public class GPTService : MonoBehaviour
     public static GPTService Instance;
 
     /// <summary>
-    /// API key for authenticating requests to the GPT API. This needs to be defined on the GPTService game object. We need a better way to store this.
+    /// API key for authenticating requests to the GPT API.
     /// </summary>
     private readonly string apiKey = "API-KEY";
     private readonly string api_url = "https://api.openai.com/v1/chat/completions";
@@ -25,14 +25,10 @@ public class GPTService : MonoBehaviour
     private PlayerData playerData;
     private NPC NPCData;
     private Task taskData;
+    private List<Message> messages;
 
     /// <summary>
-    /// List of messages exchanged with the GPT API to maintain conversation context.
-    /// </summary>
-    public List<Message> messages = new List<Message>();
-
-    /// <summary>
-    /// Ensures only one instance of GPTService exists and persists across scenes. Singleton pattern.
+    /// Ensures only one instance of GPTService exists and persists across scenes.
     /// </summary>
     private void Awake()
     {
@@ -48,9 +44,12 @@ public class GPTService : MonoBehaviour
     }
 
     /// <summary>
-    /// Generates a prompt for the GPT API based on the player's input. Currently only supports input but will later take Player and NPC data.
+    /// Generates a prompt for the GPT API.
     /// </summary>
     /// <param name="playerInput">The input provided by the player.</param>
+    /// <param name="playerData">The data of the player.</param>
+    /// <param name="NPCData">The data of the NPC.</param>
+    /// <param name="taskData">The data of the task.</param>
     /// <returns>A formatted prompt string for the GPT API.</returns>
     public string GeneratePrompt(string playerInput, PlayerData playerData, NPC NPCData, Task taskData)
     {
@@ -62,7 +61,7 @@ public class GPTService : MonoBehaviour
     - Personality Traits: {string.Join(", ", NPCData.Personality)} 
     - Description: {NPCData.Description}
     Context:
-    - Previous Interactions: {string.Join(", ", messages.Select(m => m.content))}
+    - Previous Interactions: {string.Join(", ", NPCData.messages.Select(m => m.content))}
     Game State:
     - Player Name: {playerData.name}
     - Language Level: Advanced
@@ -84,28 +83,27 @@ public class GPTService : MonoBehaviour
     /// Sends a request to the GPT API and processes the response.
     /// </summary>
     /// <param name="playerInput">The input provided by the player.</param>
-    /// <returns>An IEnumerator for coroutine handling. This cannot be used like a typical return value and allows async behavior.</returns>
-    public IEnumerator ApiCall(string playerInput)
+    /// <param name="NPCData">The data of the NPC.</param>
+    /// <returns>An IEnumerator for coroutine handling.</returns>
+    public IEnumerator ApiCall(string playerInput, NPC NPCData)
     {
-        if (messages.Count == 0)
+        NPCData.printData();
+        if (NPCData.messages.Count == 0)
         {
-            Debug.Log("No messages found, generating prompt...");
-            playerData = RetrievePlayerData();
-            NPCData = RetrieveNPCData();
-
-            // ** This is temporary until TaskManager is updated to use NPC names.
-            taskData = RetrieveTask(NPCData.Job, NPCData.CurrentLocation);
+            Debug.Log("No NPCData.messages found, generating prompt...");
+            RetrievePlayerData();
+            RetrieveTask(NPCData.Job, NPCData.CurrentLocation);
 
             prompt = GeneratePrompt(playerInput, playerData, NPCData, taskData);
-            messages.Add(new Message { role = "system", content = prompt }); // Add the player's prompt to the message list.
+            NPCData.messages.Add(new Message { role = "system", content = prompt });
         }
         else
         {
             Debug.Log("Messages found, adding player input...");
-            messages.Add(new Message { role = "user", content = playerInput });
+            NPCData.messages.Add(new Message { role = "user", content = playerInput });
         }
 
-        foreach (var message in messages)
+        foreach (var message in NPCData.messages)
         {
             Debug.Log(message.role);
             Debug.Log(message.content);
@@ -113,8 +111,8 @@ public class GPTService : MonoBehaviour
 
         RequestBody requestBody = new()
         {
-            model = "gpt-4o-mini",
-            messages = messages.ToArray(),
+            model = "gpt-4o",
+            messages = NPCData.messages.ToArray(),
             max_completion_tokens = 100
         };
 
@@ -135,30 +133,21 @@ public class GPTService : MonoBehaviour
         else
         {
             response = request.downloadHandler.text;
-            response = ParseResponse(response); // Parse the response content.
-            messages.Add(new Message { role = "assistant", content = "Response: " + response });
+            response = ParseResponse(response);
+            NPCData.messages.Add(new Message { role = "assistant", content = "Response: " + response });
         }
     }
 
-    private PlayerData RetrievePlayerData()
+    private void RetrievePlayerData()
     {
         playerData = GameManager.Instance.CurrentPlayerData;
-        return playerData;
     }
 
-    private NPC RetrieveNPCData()
+    private void RetrieveTask(string npcName, string location)
     {
-        NPCData = NPCManager.Instance.GetCurrentDialogueNPC();
-        return NPCData;
-    }
-
-    private Task RetrieveTask(string npcName, string location)
-    {
-        // Right now npcName is really the job until TaskManager is updated with NPC names.
         taskData = TaskManager.Instance.SubjectTask(npcName, location);
         if (taskData == null)
         {
-            // This is stricly for testing purposes. Better TaskManager implementation needed.
             Debug.Log("Task not found for current NPC/Location");
             taskData = new Task
             {
@@ -181,12 +170,11 @@ public class GPTService : MonoBehaviour
             Debug.Log("Task found");
             taskData.printData();
         }
-        return taskData;
     }
 
     /// <summary>
     /// Parses the JSON response from the GPT API to extract the content.
-    /// Also removes the "Response: " prefix from the content because the AI will not stop adding it.
+    /// This method is necessary because the response often includes irrelevant text that cannot be prompted away.
     /// </summary>
     /// <param name="jsonResponse">The raw JSON response from the GPT API.</param>
     /// <returns>The extracted content from the response, or null if parsing fails.</returns>
@@ -196,7 +184,6 @@ public class GPTService : MonoBehaviour
         Match match = Regex.Match(jsonResponse, pattern);
         if (match.Success)
         {
-            // The AI will not stop adding "Response: " so we need to remove it. Can't prompt engineer this out 100% of the time.
             string content = match.Groups[1].Value;
             if (content.StartsWith("Response: "))
             {
@@ -212,23 +199,6 @@ public class GPTService : MonoBehaviour
     }
 
     /// <summary>
-    /// Represents a message in the GPT API conversation, including the role and content.
-    /// </summary>
-    [System.Serializable]
-    public class Message
-    {
-        /// <summary>
-        /// The role of the message (e.g., "user" for player input or "system" for API responses).
-        /// </summary>
-        public string role;
-
-        /// <summary>
-        /// The content of the message.
-        /// </summary>
-        public string content;
-    }
-
-    /// <summary>
     /// Represents the body of the GPT API request.
     /// </summary>
     [System.Serializable]
@@ -240,7 +210,7 @@ public class GPTService : MonoBehaviour
         public string model;
 
         /// <summary>
-        /// The list of messages to provide context for the conversation. The current player input is the last element.
+        /// The list of messages to provide context for the conversation.
         /// </summary>
         public Message[] messages;
 

@@ -116,6 +116,8 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void StopDialogue()
     {
+        currentNPC.inDialogue = false;
+        currentNPC = null;
         isTalking = false;
         sentences.Clear();
         currentDialogue = null;
@@ -126,7 +128,6 @@ public class DialogueManager : MonoBehaviour
     /// <summary>
     /// Starts a new dialogue interaction. Currently only works in online mode. Offline mode will require this method take a DialogueEntry as a parameter.
     /// </summary>
-    /// <param name= "playerData"> The current player data </param>
     public void StartDialogue(NPC npc)
     {
         currentNPC = npc;
@@ -212,7 +213,7 @@ public class DialogueManager : MonoBehaviour
     {
         StopAllCoroutines();
         GPTService.Instance.response = null;
-        StartCoroutine(GPTService.Instance.ApiCall(input));
+        StartCoroutine(GPTService.Instance.ApiCall(input, currentNPC));
         StartCoroutine(WaitForResponse());
     }
 
