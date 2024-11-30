@@ -63,8 +63,6 @@ public class TaskManager : MonoBehaviour
     private Dictionary<string, Dictionary<string, List<string>>> NPCSubjects;  //  Subject for NPC will be dependant on types
     private Dictionary<string, Dictionary<string, List<string>>> LocationSubjects;  //  Subject for NPC will be dependant on types
 
-
-
     private void Awake() // Singleton
     {
         if (Instance == null)
