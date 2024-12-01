@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
 public class TaskListUI : MonoBehaviour
 {
-    private TMP_Text taskListText;      // Reference TMP as I almost forgot and was getting errors
+    private TMP_Text taskListText;  // Reference TMP as I almost forgot and was getting errors
 
     void Start()
     {
@@ -18,28 +17,29 @@ public class TaskListUI : MonoBehaviour
             return;
         }
 
-        StartCoroutine(DisplayTasksAfterLoad());
+        StartCoroutine(DisplayActiveTaskAfterLoad());
     }
 
-    IEnumerator DisplayTasksAfterLoad()
+    IEnumerator DisplayActiveTaskAfterLoad()
     {
-        yield return new WaitUntil(() => TaskManager.Instance.GetTaskList().Count > 0);
-        DisplayTasks();
+        yield return new WaitUntil(() => TaskManager.Instance.GetActiveTask() != null);
+        UpdateActiveTaskUI();
     }
 
-    // Wait until load, give header, and preposition '-' with each task, then newline
-    void DisplayTasks()
+    // Wait until load, get active task and display
+    public void UpdateActiveTaskUI()
     {
-        string taskDisplay = "Today's Tasks:\n";
+        Task activeTask = TaskManager.Instance.GetActiveTask();
 
-        foreach (Task task in TaskManager.Instance.GetTaskList())
+        if (activeTask != null)
         {
-            taskDisplay += "- " + task.TaskDescription + "\n";
+            string taskDisplay = activeTask.T_TaskDescription;
+            taskListText.text = taskDisplay;
         }
-
-        taskListText.text = taskDisplay;
+        else
+        {
+            taskListText.text = "No active tasks.";
+        }
     }
 }
-
-
 
