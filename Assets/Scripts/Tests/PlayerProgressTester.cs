@@ -14,9 +14,33 @@ public class PlayerProgressTester : MonoBehaviour
             playerProgressManagerObj.AddComponent<PlayerProgressManager>();
         }
 
+        // Load player data from GameManager into PlayerProgressManager
+        if (GameManager.Instance != null && GameManager.Instance.CurrentPlayerData != null)
+        {
+            PlayerProgressManager.Instance.LoadProgressFromPlayerData(GameManager.Instance.CurrentPlayerData);
+            Debug.Log("Loaded player progress data from GameManager.");
+        }
+        else
+        {
+            Debug.LogWarning("GameManager or CurrentPlayerData is null. Unable to load player progress.");
+        }
+
+        // Perform the tests
         TestCurrencyManagement();
         TestRewardSystem();
         TestMissionCompletion();
+
+        // Save the updated player progress back to PlayerData
+        if (GameManager.Instance != null && GameManager.Instance.CurrentPlayerData != null)
+        {
+            PlayerProgressManager.Instance.SaveProgressToPlayerData(GameManager.Instance.CurrentPlayerData);
+            SaveSystem.SaveGame(GameManager.Instance.CurrentPlayerData, 1); // Save to slot 1, for example
+            Debug.Log("Saved player progress data back to GameManager.");
+        }
+        else
+        {
+            Debug.LogWarning("GameManager or CurrentPlayerData is null. Unable to save player progress.");
+        }
     }
 
     void TestCurrencyManagement()
@@ -37,7 +61,7 @@ public class PlayerProgressTester : MonoBehaviour
         // Create sample tasks using TaskManager (assuming tasks are available)
         //TaskManager.Instance.CreateCustomTask("Baker", "Bakery", "Find the Key", "Buy", 2);
         //TaskManager.Instance.CreateCustomTask("Barista", "Cafe", "Serve Coffee", "Serve", 3);
-        TaskManager.Instance.GenerateTasks(1);
+        TaskManager.Instance.GenerateTasks(20, 1);
 
         // Get and print all tasks
         Debug.Log("Testing Mission Completion...");

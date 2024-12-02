@@ -99,6 +99,10 @@ public class PlayerProgressManager : MonoBehaviour
         Debug.LogWarning($"No stats found for task '{taskId}'");
         return null;
     }
+    public Dictionary<string, MissionStats> GetAllMissionStats()
+    {
+        return new Dictionary<string, MissionStats>(missionStats);
+    }
 
     // Reward System Functions
     public void AddReward(string reward)
@@ -119,6 +123,31 @@ public class PlayerProgressManager : MonoBehaviour
     {
         return new List<string>(playerRewards);
     }
+
+    // Method to get the list of completed tasks
+    public List<Task> GetCompletedTasks()
+    {
+        return new List<Task>(completedTasks);
+    }
+
+    // Save Progress to PlayerData
+    public void SaveProgressToPlayerData(PlayerData data)
+    {
+        data.currency = playerCurrency;
+        data.completedTasks = GetCompletedTasks();
+        data.missionStats = GetAllMissionStats();
+        data.playerRewards = GetAllRewards();
+    }
+
+    // Load Progress from PlayerData
+    public void LoadProgressFromPlayerData(PlayerData data)
+    {
+        playerCurrency = data.currency;
+        completedTasks = new List<Task>(data.completedTasks);
+        missionStats = new Dictionary<string, MissionStats>(data.missionStats);
+        playerRewards = new List<string>(data.playerRewards);
+    }
+
 }
 
 // Class to store mission statistics
