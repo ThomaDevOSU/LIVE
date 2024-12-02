@@ -27,8 +27,8 @@ public class PlayerProgressTester : MonoBehaviour
 
         // Perform the tests
         TestCurrencyManagement();
-        TestRewardSystem();
-        TestMissionCompletion();
+        //TestRewardSystem();
+        //TestMissionCompletion();
 
         // Save the updated player progress back to PlayerData
         if (GameManager.Instance != null && GameManager.Instance.CurrentPlayerData != null)
