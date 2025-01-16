@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -5,42 +6,31 @@ public class OptionsMenu : MonoBehaviour
 {
     public TMP_Dropdown language;
 
-    public void Awake()
+    /// <summary>
+    /// When the OptionsMenu first begins, the value assigned is the 
+    /// </summary>
+    private void OnEnable()
     {
-        language.value = language.options.FindIndex(option => option.text == GameManager.Instance.Options.language);
+        language.value = (int)Enum.Parse(typeof(LANGUAGES), GameManager.Instance.Options.language);
     }
 
-    public void changeLanguage() // God I should've used an enum...
+    /// <summary>
+    /// changeLanguage checks the option menus TMP_Dropdown to see what the player has selected, and correspondingly
+    /// assigns the language string of the Options object the value based on an enum
+    /// </summary>
+    public void changeLanguage()
     {
-        switch (language.value)
-        {
-            case 0:
-                GameManager.Instance.Options.language = "Chinese";
-                break;
-            case 1:
-                GameManager.Instance.Options.language = "Spanish";
-                break;
-            case 2:
-                GameManager.Instance.Options.language = "English";
-                break;
-            case 3:
-                GameManager.Instance.Options.language = "French";
-                break;
-            case 4:
-                GameManager.Instance.Options.language = "Japanese";
-                break;
-            case 5:
-                GameManager.Instance.Options.language = "German";
-                break;
-            case 6:
-                GameManager.Instance.Options.language = "Italian";
-                break;
-            case 7:
-                GameManager.Instance.Options.language = "Arabic";
-                break;
-        }
+        GameManager.Instance.Options.language = ((LANGUAGES)language.value).ToString();
 
         GameManager.Instance.updateOptions(); // Update Language
     }
 
 }
+
+/// <summary>
+/// In the options menu for languages, let these values be representative of what language we are referring to.
+/// IE: 
+/// 0 = zh for chinese
+/// 1 = es for spanish
+/// </summary>
+public enum LANGUAGES { zh, es, en, fr, ja, de ,it, ar}

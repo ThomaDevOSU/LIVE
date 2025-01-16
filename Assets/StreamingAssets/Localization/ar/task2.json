@@ -1,0 +1,23 @@
+{
+    "Buy":  
+    {
+        "description":"Buy {{subject}} from {{npc}}",
+        "answer":"I would like to buy some {{subject}}."
+    },
+    "AskNPC":  
+    {
+        "description":"Ask {{npc}} about {{subject}}",
+        "answer":"What do you think about {{subject}}."
+    },
+    "AskLoc":  
+    {
+        "description":"Ask anyone at the {{location}} about {{subject}}",
+        "answer":"What do you think about {{subject}}."
+    },
+    "SAMPLE":  
+    {
+        "description":"SAMPLE {{subject}} SAMPLE NPC {{npc}} SAMPLE LOCATION {{location}}",
+        "answer":"SAMPLE SUBJECT {{subject}}."
+    }
+}
+

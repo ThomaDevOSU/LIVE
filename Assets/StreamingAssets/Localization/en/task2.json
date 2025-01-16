@@ -1,0 +1,32 @@
+{
+    "Buy": {
+        "description": "Buy {{subject}} from {{npc}}",
+        "answer": "I would like to buy some {{subject}}."
+    },
+    "AskNPC": {
+        "description": "Ask {{npc}} about {{subject}}",
+        "answer": "What do you think about {{subject}}?"
+    },
+    "AskLoc": {
+        "description": "Ask anyone at the {{location}} about {{subject}}",
+        "answer": "What do you think about {{subject}}?"
+    },
+    "DiscussRecipes": {
+        "description": "Discuss recipes with {{npc}} related to {{subject}}",
+        "answer": "I would like to discuss recipes about {{subject}}."
+    },
+    "RecommendDrink": {
+        "description": "Ask {{npc}} to recommend a drink for an {{subject}}",
+        "answer": "Could you recommend a drink for an {{subject}}?"
+    },
+    "DiscussMenu": {
+        "description": "Discuss the menu at {{location}} regarding {{subject}}",
+        "answer": "I would like to discuss the menu regarding {{subject}}."
+    },
+    "SAMPLE":  
+    {
+        "description":"SAMPLE {{subject}} SAMPLE NPC {{npc}} SAMPLE LOCATION {{location}}",
+        "answer":"SAMPLE SUBJECT {{subject}}."
+    }
+}
+

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using Newtonsoft.Json;
 
 
 /// <summary>
@@ -59,9 +60,24 @@ public class TaskManager : MonoBehaviour
 
     private Task ActiveTask;    //  Our currently tracked task
 
-    private Dictionary<string, List<string>> Types;
+    /// <summary>
+    /// The Types dictionary is a dictionary of possible task types that a given npc/location can be assigned
+    /// </summary>
+    private Dictionary<int, Dictionary<string, List<string>>> Types;
+
     private Dictionary<string, Dictionary<string, List<string>>> NPCSubjects;  //  Subject for NPC will be dependant on types
     private Dictionary<string, Dictionary<string, List<string>>> LocationSubjects;  //  Subject for NPC will be dependant on types
+
+    /// <summary>
+    /// The following dictionary is loaded from our templatization file into memory. Given a difficulty level {1: Easy, 2: Medium, 3: Hard}
+    /// It links to a new Dictionary whose string corresponds to a task type, and value leads to a Class of description/answer pairs.
+    /// </summary>
+    private Dictionary<int, Dictionary<string, TaskTemplate>> TaskTemplateDictLearning;
+
+    /// <summary>
+    /// This dictionary behaves the same as the top, but is in english for GPT to process.
+    /// </summary>
+    private Dictionary<int, Dictionary<string, TaskTemplate>> TaskTemplateDictEnglish;
 
     private void Awake() // Singleton
     {
@@ -100,8 +116,8 @@ public class TaskManager : MonoBehaviour
         }
 
         //TestTaskManager();
-        // GENERATES 20 TASKS, DISABLE THIS IF YOU WANT AN EMPTY TASK LIST
-        GenerateTasks(20 , 1);
+        // GENERATES 5 TASKS from the Level 3 Task pool, DISABLE THIS IF YOU WANT AN EMPTY TASK LIST
+        GenerateTasks(5 , 3);
         //PrintTaskList();
         
     }
@@ -127,17 +143,42 @@ public class TaskManager : MonoBehaviour
     /// </summary>
     private void CreateTaskDictionaries() 
     {
-        // Add new types to this section
-        Types = new Dictionary<string, List<string>>();
+        Types = new Dictionary<int, Dictionary<string, List<string>>>();
+        // Difficulty 1 Task Types. A subject is given a list of easy tasks types.
+        Types[1] = new Dictionary<string, List<string>>();
 
         // NPC TASK TYPES
-        Types["Baker"] = new List<string> { "Buy" };
-        Types["Barista"] = new List<string> { "Buy" };
+        Types[1]["Baker"] = new List<string> { "Buy" };
+        Types[1]["Barista"] = new List<string> { "Buy" };
 
         // LOCATION TASK TYPES
-        Types["Bakery"] = new List<string> { "AskLoc" };
-        Types["Cafe"] = new List<string> { "AskLoc" };
-        Types["Restaurant"] = new List<string> { "AskLoc" };
+        Types[1]["Bakery"] = new List<string> { "AskLoc" };
+        Types[1]["Cafe"] = new List<string> { "AskLoc" };
+        Types[1]["Restaurant"] = new List<string> { "AskLoc" };
+
+        // Difficulty 2 Task Types. Same subjects as before, with identical task type lists but added medium difficulty task types.
+        Types[2] = new Dictionary<string, List<string>>();
+
+        // NPC TASK TYPES
+        Types[2]["Baker"] = new List<string> { "Buy", "DiscussRecipes" };
+        Types[2]["Barista"] = new List<string> { "Buy", "RecommendDrink" };
+
+        // LOCATION TASK TYPES
+        Types[2]["Bakery"] = new List<string> { "AskLoc", "DiscussMenu" };
+        Types[2]["Cafe"] = new List<string> { "AskLoc", "DiscussMenu" };
+        Types[2]["Restaurant"] = new List<string> { "AskLoc", "DiscussMenu" };
+
+        // Difficulty Type 3, Hard, should have same as previous with some hard additions
+        Types[3] = new Dictionary<string, List<string>>();
+
+        // NPC TASK TYPES
+        Types[3]["Baker"] = new List<string> { "Buy", "DiscussRecipes", "NegotiatePrices" };
+        Types[3]["Barista"] = new List<string> { "Buy", "RecommendDrink", "ExplainIngredients" };
+
+        // LOCATION TASK TYPES
+        Types[3]["Bakery"] = new List<string> { "AskLoc", "DiscussMenu", "PlanEvent" };
+        Types[3]["Cafe"] = new List<string> { "AskLoc", "DiscussMenu", "PlanEvent" };
+        Types[3]["Restaurant"] = new List<string> { "AskLoc", "DiscussMenu", "PlanEvent" };
 
         // Add new NPC subjects to this section
         NPCSubjects = new Dictionary<string, Dictionary<string, List<string>>>();
@@ -146,11 +187,14 @@ public class TaskManager : MonoBehaviour
         NPCSubjects["Baker"] = new Dictionary<string, List<string>>
         {
             { "Buy", new List<string> { "Bread", "Pastry" } },
-            { "AskNPC", new List<string> { "Bread", "Pastry" } }
+            { "DiscussRecipes", new List<string> { "Sourdough", "Croissant" } },
+            { "NegotiatePrices", new List<string> { "Discounts", "Bulk Orders" } }
         };
         NPCSubjects["Barista"] = new Dictionary<string, List<string>>
         {
-            { "Buy", new List<string> { "Coffee", "Tea" } }
+            { "Buy", new List<string> { "Coffee", "Tea" } },
+            { "RecommendDrink", new List<string> { "Latte", "Espresso" } },
+            { "ExplainIngredients", new List<string> { "Espresso Beans", "Milk Alternatives" } }
         };
 
         // Add new Location subjects to this section
@@ -159,18 +203,57 @@ public class TaskManager : MonoBehaviour
         // Initialize Location subjects with their nested dictionaries
         LocationSubjects["Bakery"] = new Dictionary<string, List<string>>
         {
-            { "AskLoc", new List<string> { "Bread", "Pastry" } }
+            { "AskLoc", new List<string> { "Bread", "Pastry" } },
+            { "DiscussMenu", new List<string> { "Seasonal Specials", "Custom Orders" } },
+            { "PlanEvent", new List<string> { "Tasting Session", "Cooking Class" } }
         };
         LocationSubjects["Cafe"] = new Dictionary<string, List<string>>
         {
-            { "AskLoc", new List<string> { "Coffee", "Tea" } }
+            { "AskLoc", new List<string> { "Coffee", "Tea" } },
+            { "DiscussMenu", new List<string> { "Daily Brews", "Signature Drinks" } },
+            { "PlanEvent", new List<string> { "Live Music Night", "Coffee Tasting" } }
         };
         LocationSubjects["Restaurant"] = new Dictionary<string, List<string>>
         {
-            { "AskLoc", new List<string> { "Reservation", "Menu" } }
+            { "AskLoc", new List<string> { "Reservation", "Menu" } },
+            { "DiscussMenu", new List<string> { "Chef's Specials", "Wine Pairings" } },
+            { "PlanEvent", new List<string> { "Private Dining", "Corporate Lunch" } }
         };
+
+        LoadTemplates();
+
     }
 
+    /// <summary>
+    /// Load Templates will load all known task templates into both the
+    /// TaskTemplateDictLearning and TaskTemplateDictEnglish dictionaries.
+    /// These dictionaries can then be used for dynamic task generation
+    /// </summary>
+    private void LoadTemplates() 
+    {
+        TaskTemplateDictLearning = new Dictionary<int, Dictionary<string, TaskTemplate>>();
+        TaskTemplateDictEnglish = new Dictionary<int, Dictionary<string, TaskTemplate>>();
+
+        JsonSerializer serializer = new JsonSerializer() { Formatting = Formatting.Indented };
+
+        string learningpath = Path.Combine(Application.streamingAssetsPath, $"Localization/{LocalizationManager.Instance.learningLanguage}/");
+        string englishpath = Path.Combine(Application.streamingAssetsPath, $"Localization/en/");
+
+        //  Loads from the three difficulties
+        for (int i = 1; i < 4; i++) 
+        {
+            using (StreamReader file = File.OpenText(learningpath + $"task{i}.json"))
+            {
+                TaskTemplateDictLearning[i] = (Dictionary<string, TaskTemplate>)serializer.Deserialize(file, typeof(Dictionary<string, TaskTemplate>));
+            }
+
+            using (StreamReader file = File.OpenText(englishpath + $"task{i}.json"))
+            {
+                TaskTemplateDictEnglish[i] = (Dictionary<string, TaskTemplate>)serializer.Deserialize(file, typeof(Dictionary<string, TaskTemplate>));
+            }
+        }
+
+    }
 
 
     /// <summary>
@@ -207,18 +290,18 @@ public class TaskManager : MonoBehaviour
         if (taskNPC != null)    //  taskNPC was assigned
         {
             //  Generate relevant subject and type
-            taskType = GetTaskType(taskNPC);
+            taskType = GetTaskType(taskNPC, skill);
             taskSubject = GetSubject(NPCSubjects[taskNPC], taskType);
         }
         else    //  taskLocation was assigned
         {
             //  Generate relevant subject and type
-            taskType = GetTaskType(taskLocation);
+            taskType = GetTaskType(taskLocation, skill);
             taskSubject = GetSubject(LocationSubjects[taskLocation], taskType);
         }
 
         //Generate LCLZ class with relevant descriptions and answers
-        var taskDetails = GetTaskTemplates(taskType, "English");
+        var taskDetails = GetTaskTemplates(taskType, skill, true);
         if (taskDetails == null) { Debug.Log($"KEY: {taskType} could not be translated from English"); return null; }
 
         //Debug.Log($"Printing variables, {taskNPC}\n{taskLocation}\n{taskSubject}\n{taskType}\n{taskDetails}");
@@ -226,24 +309,24 @@ public class TaskManager : MonoBehaviour
         //Assign values, replace strings with proper context
         if (taskNPC==null) //   taskLocation is relevant?
         {
-            taskDescription = taskDetails.description.Replace("{subject}", taskSubject).Replace("{location}", taskLocation);
-            taskAnswer = taskDetails.answer.Replace("{subject}", taskSubject).Replace("{location}", taskLocation);
+            taskDescription = taskDetails.description.Replace("{{subject}}", taskSubject).Replace("{{location}}", taskLocation);
+            taskAnswer = taskDetails.answer.Replace("{{subject}}", taskSubject).Replace("{{location}}", taskLocation);
         } 
         else    //  taskNPC is relevant?
         {
-            taskDescription = taskDetails.description.Replace("{npc}", taskNPC).Replace("{subject}", taskSubject);
-            taskAnswer = taskDetails.answer.Replace("{npc}", taskNPC).Replace("{subject}", taskSubject);
+            taskDescription = taskDetails.description.Replace("{{npc}}", taskNPC).Replace("{{subject}}", taskSubject);
+            taskAnswer = taskDetails.answer.Replace("{{npc}}", taskNPC).Replace("{{subject}}", taskSubject);
         }
 
         //  This section is dedicated to the translatable section, this requires that the localizer be loaded
         string t_taskDescription = null, t_taskNPC = null, t_taskLocation = null, t_taskSubject = null, t_taskAnswer = null;
 
         t_taskSubject = LocalizationManager.Instance.localizedLearningText.ContainsKey(taskSubject) ? LocalizationManager.Instance.localizedLearningText[taskSubject] : null;
-        if (t_taskSubject == null) { Debug.Log($"KEY: {t_taskSubject} could not be translated from {LocalizationManager.Instance.learningLanguage}"); return null; }
+        if (t_taskSubject == null) { Debug.Log($"KEY: {taskSubject} could not be translated from {LocalizationManager.Instance.learningLanguage}"); return null; }
 
         //Debug.Log($"Displaying data {taskNPC},\n{taskLocation},\n{taskSubject},\n{taskType},\n{taskDescription},\n{taskAnswer}");
 
-        var t_taskDetails = GetTaskTemplates(taskType, LocalizationManager.Instance.learningLanguage);
+        var t_taskDetails = GetTaskTemplates(taskType, skill);
         if (t_taskDetails == null) { Debug.Log($"KEY: {taskType} could not be translated"); return null; }
 
         if (taskNPC == null)    //   taskLocation is relevant?
@@ -251,16 +334,16 @@ public class TaskManager : MonoBehaviour
             t_taskLocation = LocalizationManager.Instance.localizedLearningText.ContainsKey(taskLocation) ? LocalizationManager.Instance.localizedLearningText[taskLocation] : null;
             if (t_taskLocation == null) { Debug.Log($"KEY: {t_taskLocation} could not be translated"); return null; }
 
-            t_taskDescription = t_taskDetails.description.Replace("{subject}", t_taskSubject).Replace("{location}", t_taskLocation);
-            t_taskAnswer = t_taskDetails.answer.Replace("{subject}", t_taskSubject).Replace("{location}", t_taskLocation);
+            t_taskDescription = t_taskDetails.description.Replace("{{subject}}", t_taskSubject).Replace("{{location}}", t_taskLocation);
+            t_taskAnswer = t_taskDetails.answer.Replace("{{subject}}", t_taskSubject).Replace("{{location}}", t_taskLocation);
         }
         else    //  taskNPC is relevant?
         {
             t_taskNPC = LocalizationManager.Instance.localizedLearningText.ContainsKey(taskNPC) ? LocalizationManager.Instance.localizedLearningText[taskNPC] : null;
             if (t_taskNPC == null) { Debug.Log($"KEY: {t_taskNPC} could not be translated"); return null; }
 
-            t_taskDescription = t_taskDetails.description.Replace("{npc}", t_taskNPC).Replace("{subject}", t_taskSubject);
-            t_taskAnswer = t_taskDetails.answer.Replace("{npc}", t_taskNPC).Replace("{subject}", t_taskSubject);
+            t_taskDescription = t_taskDetails.description.Replace("{{npc}}", t_taskNPC).Replace("{{subject}}", t_taskSubject);
+            t_taskAnswer = t_taskDetails.answer.Replace("{{npc}}", t_taskNPC).Replace("{{subject}}", t_taskSubject);
         }
 
         return new Task
@@ -322,37 +405,32 @@ public class TaskManager : MonoBehaviour
     /// </summary>
     /// <param name="context">The case-sensitive name of either an NPC or location</param>
     /// <returns>Returns random string of relevant task type</returns>
-    private string GetTaskType(string context)
+    private string GetTaskType(string context, int difficulty)
     {
-        return Types.ContainsKey(context) ? Types[context][Random.Range(0, Types[context].Count)] : null;
+        return Types[difficulty].ContainsKey(context) ? Types[difficulty][context][Random.Range(0, Types[difficulty][context].Count)] : null;
     }
 
     /// <summary>
     /// Attempts to return the value at the location
     /// </summary>
     /// <param name="taskType">The Task type of the generated task</param>
-    /// <param name="language">The desired translation language</param>
+    /// <param name="difficulty">The desired difficulty of the template</param>
+    /// <param name="gptver">Whether this is the version for gpt or not</param>
     /// <returns>
     /// Returns a LCLZ_Value class whos attributes contain the description and answer format for our task if the task exists
     /// within the JSON {language}Tasks file. If not, returns NULL
     /// </returns>
-    private LCLZ_Value GetTaskTemplates(string taskType, string language)
+    private TaskTemplate GetTaskTemplates(string taskType, int difficulty, bool gptver = false)
     {
-        // This method would retrieve templates for the task type from a dictionary or JSON file
-        var taskTemplates = new Dictionary<string, LCLZ_Value>();
-        string path = Path.Combine(Application.streamingAssetsPath, $"Localization/{language}Tasks.json");
-
-        if (File.Exists(path))
+        //  if gptver, we search the english dictionary
+        if (gptver)
         {
-            string json = File.ReadAllText(path);
-            taskTemplates = JsonUtility.FromJson<LCLZ_TaskList>(json).ToDictionary(); // Converts json to localizationdata which converts to dictionary
+            return TaskTemplateDictEnglish[difficulty].ContainsKey(taskType) ? TaskTemplateDictEnglish[difficulty][taskType] : null;
         }
-        else
+        else // Otherwise we search the learning dictionary
         {
-            Debug.LogError($"Localization file not found: {path}");
+            return TaskTemplateDictLearning[difficulty].ContainsKey(taskType) ? TaskTemplateDictEnglish[difficulty][taskType] : null;
         }
-
-        return taskTemplates.ContainsKey(taskType) ? taskTemplates[taskType] : null;
     }
 
 
@@ -481,8 +559,8 @@ public class TaskManager : MonoBehaviour
         string description = null, answer = null;
         string t_npc_name = null, t_location = null, t_subject = null, t_description = null, t_answer = null;
 
-        var taskDetails = GetTaskTemplates(type, "English");
-        var t_taskDetails = GetTaskTemplates(type, LocalizationManager.Instance.learningLanguage);
+        var taskDetails = GetTaskTemplates(type, difficulty, true);
+        var t_taskDetails = GetTaskTemplates(type, difficulty);
 
         //  If either of these were null, we exit
         if (taskDetails == null || t_taskDetails == null) { Debug.Log("taskDetails OR t_taskDetails returned NULL"); return false; }
@@ -494,25 +572,25 @@ public class TaskManager : MonoBehaviour
 
         if (npc_name == null) //   taskLocation is relevant?
         {
-            description = taskDetails.description.Replace("{subject}", subject).Replace("{location}", location);
-            answer = taskDetails.answer.Replace("{subject}", subject).Replace("{location}", location);
+            description = taskDetails.description.Replace("{{subject}}", subject).Replace("{{location}}", location);
+            answer = taskDetails.answer.Replace("{{subject}}", subject).Replace("{{location}}", location);
 
             t_location = LocalizationManager.Instance.localizedLearningText.ContainsKey(location) ? LocalizationManager.Instance.localizedLearningText[location] : null;
             if (t_location == null) { Debug.Log($"KEY: {location} could not be translated"); return false; }
 
-            t_description = t_taskDetails.description.Replace("{subject}", t_subject).Replace("{location}", t_location);
-            t_answer = t_taskDetails.answer.Replace("{subject}", t_subject).Replace("{location}", t_location);
+            t_description = t_taskDetails.description.Replace("{{subject}}", t_subject).Replace("{{location}}", t_location);
+            t_answer = t_taskDetails.answer.Replace("{{subject}}", t_subject).Replace("{{location}}", t_location);
         }
         else    //  taskNPC is relevant?
         {
-            description = taskDetails.description.Replace("{npc}", npc_name).Replace("{subject}", subject);
-            answer = taskDetails.answer.Replace("{npc}", npc_name).Replace("{subject}", subject);
+            description = taskDetails.description.Replace("{{npc}}", npc_name).Replace("{{subject}}", subject);
+            answer = taskDetails.answer.Replace("{{npc}}", npc_name).Replace("{{subject}}", subject);
 
             t_npc_name = LocalizationManager.Instance.localizedLearningText.ContainsKey(npc_name) ? LocalizationManager.Instance.localizedLearningText[npc_name] : null;
             if (t_npc_name == null) { Debug.Log($"KEY: {npc_name} could not be translated"); return false; }
 
-            t_description = t_taskDetails.description.Replace("{subject}", t_subject).Replace("{name}", t_npc_name);
-            t_answer = t_taskDetails.answer.Replace("{subject}", t_subject).Replace("{name}", t_npc_name);
+            t_description = t_taskDetails.description.Replace("{subject}", t_subject).Replace("{{name}}", t_npc_name);
+            t_answer = t_taskDetails.answer.Replace("{{subject}}", t_subject).Replace("{{name}}", t_npc_name);
         }
 
 
@@ -676,50 +754,40 @@ public class TaskManager : MonoBehaviour
         Debug.Log("Testing Active Task autofill to null");
         CompleteTask(GetTaskList()[0]);
         Debug.Assert(GetActiveTask() == null, "GetActiveTask() returned something when it should have been null.");
-        Debug.Log("Massive Test Passed!");
 
         // Clearing out TaskList and completed tasks
-        TaskList.Clear();
+        TaskList.Clear();      
         CompletedTasks.Clear();
+
+        // Test 8: Difficulty Scaling Generate 5 difficulty 2 tasks
+        Debug.Log("TESTING LEVEL 2 GENERATION");
+        GenerateTasks(5, 2);
+        PrintTaskList();
+        TaskList.Clear();
+
+        // Test 9: Difficulty Scaling Generate 5 difficulty 3 tasks
+        Debug.Log("TESTING LEVEL 3 GENERATION");
+        GenerateTasks(5, 3);
+        PrintTaskList();
+        TaskList.Clear();
+
+        Debug.Log("FINISHED TEST!");
     }
 
 }
 
 /// <summary>
-/// LCLZ_TaskList is a class whos only responsibility is to be a translation point from JSON
+/// The task template 
 /// </summary>
-[System.Serializable]
-public class LCLZ_TaskList
+class TaskTemplate 
 {
-    public List<LCLZ_Entry> entries;
-
-    public Dictionary<string, LCLZ_Value> ToDictionary()
-    {
-        Dictionary<string, LCLZ_Value> dict = new Dictionary<string, LCLZ_Value>();
-        foreach (var entry in entries)
-        {
-            dict[entry.key] = entry.value;
-        }
-        return dict;
-    }
-}
-
-/// <summary>
-/// LCLZ_Entry will be our entry point into loading our JSON file into a dictionary
-/// </summary>
-[System.Serializable]
-public class LCLZ_Entry
-{
-    public string key;
-    public LCLZ_Value value;
-}
-
-/// <summary>
-/// LCLZ_Value will contain the descriptions and answers
-/// </summary>
-[System.Serializable]
-public class LCLZ_Value 
-{
+    /// <summary>
+    /// The description of a possible task
+    /// </summary>
     public string description;
+
+    /// <summary>
+    /// The templatized answer to a possible task
+    /// </summary>
     public string answer;
 }
