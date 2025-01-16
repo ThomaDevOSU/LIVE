@@ -1,0 +1,92 @@
+﻿{
+    "NewGame": "新しいゲーム",
+    "LoadGame": "ゲームをロードする",
+    "Options": "オプション",
+    "Settings": "設定",
+    "Exit": "出口",
+    "Play": "遊ぶ",
+    "Language": "言語",
+    "Ready To Begin?": "始める準備はできましたか?",
+    "No": "いいえ",
+    "Yes": "はい",
+    "Name": "名前",
+    "Start": "始める",
+    "Save": "保存",
+    "Delete Save?": "削除して保存しますか?",
+    "Back": "戻る",
+    "Quit": "やめる",
+    "Load": "負荷",
+    "Baker": "ベイカー",
+    "Barista": "バリスタ",
+    "Bakery": "ベーカリー",
+    "Cafe": "カフェ",
+    "Restaurant": "レストラン",
+    "Bread": "パン",
+    "Pastry": "ペストリー",
+    "Coffee": "コーヒー",
+    "Tea": "お茶",
+    "Reservation": "予約",
+    "Menu": "メニュー",
+    "Latte": "ラテ",
+    "Espresso": "エスプレッソ",
+    "Sourdough": "サワー種",
+    "Croissant": "クロワッサン",
+    "Discounts": "割引",
+    "Bulk Orders": "大量注文",
+    "Espresso Beans": "エスプレッソ豆",
+    "Milk Alternatives": "牛乳の代替品",
+    "Seasonal Specials": "季節のスペシャル",
+    "Custom Orders": "カスタムオーダー",
+    "Tasting Session": "テイスティングセッション",
+    "Cooking Class": "料理教室",
+    "Daily Brews": "デイリービール",
+    "Signature Drinks": "シグネチャードリンク",
+    "Live Music Night": "ライブミュージックナイト",
+    "Coffee Tasting": "コーヒーの試飲",
+    "Chef's Specials": "シェフのスペシャル",
+    "Wine Pairings": "ワインのペアリング",
+    "Private Dining": "プライベートダイニング",
+    "Corporate Lunch": "コーポレートランチ"
+}
+{
+    "Buy": {
+      "description": "買う {{subject}} から {{npc}}",
+      "answer": "いくつか購入したいのですが {{subject}}。"
+    },
+    "AskNPC": {
+      "description": "聞く {{npc}} について {{subject}}",
+      "answer": "どう思いますか {{subject}}?"
+    },
+    "AskLoc": {
+      "description": "の誰かに聞いてください {{location}} について {{subject}}",
+      "answer": "どう思いますか {{subject}}?"
+    },
+    "DiscussRecipes": {
+      "description": "レシピについて話し合う {{npc}} に関連した {{subject}}",
+      "answer": "についてレシピについて話し合いたいと思います {{subject}}。"
+    },
+    "RecommendDrink": {
+      "description": "聞く {{npc}} 人に飲み物を勧める {{subject}}",
+      "answer": "お勧めの飲み物を教えてください {{subject}}?"
+    },
+    "DiscussMenu": {
+      "description": "メニューについてはこちらでご相談ください {{location}} に関して {{subject}}",
+      "answer": "メニューについて相談したいのですが、 {{subject}}。"
+    },
+    "NegotiatePrices": {
+      "description": "～と価格交渉する {{npc}} のために {{subject}}",
+      "answer": "価格交渉をしたいのですが、 {{subject}} あなたと。"
+    },
+    "ExplainIngredients": {
+      "description": "聞く {{npc}} の成分を説明すると {{subject}}",
+      "answer": "の成分を説明していただけますか {{subject}}?"
+    },
+    "PlanEvent": {
+      "description": "誰にでも聞いてください {{location}} スケジュール設定について {{subject}}",
+      "answer": "スケジュール設定について詳しく知りたい {{subject}} ここ。"
+    },
+    "SAMPLE": {
+      "description": "サンプル {{subject}} サンプルNPC {{npc}} サンプルの場所 {{location}}",
+      "answer": "件名例 {{subject}}。"
+    }
+}

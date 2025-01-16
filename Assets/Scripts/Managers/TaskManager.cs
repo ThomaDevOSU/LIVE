@@ -429,7 +429,7 @@ public class TaskManager : MonoBehaviour
         }
         else // Otherwise we search the learning dictionary
         {
-            return TaskTemplateDictLearning[difficulty].ContainsKey(taskType) ? TaskTemplateDictEnglish[difficulty][taskType] : null;
+            return TaskTemplateDictLearning[difficulty].ContainsKey(taskType) ? TaskTemplateDictLearning[difficulty][taskType] : null;
         }
     }
 

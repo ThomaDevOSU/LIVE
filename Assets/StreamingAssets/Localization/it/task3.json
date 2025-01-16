@@ -1,0 +1,42 @@
+{
+    "Buy": {
+      "description": "Acquistare {{subject}} da {{npc}}",
+      "answer": "Vorrei comprarne alcuni {{subject}}."
+    },
+    "AskNPC": {
+      "description": "Chiedere {{npc}} Di {{subject}}",
+      "answer": "A cosa ne pensi? {{subject}}?"
+    },
+    "AskLoc": {
+      "description": "Chiedi a chiunque al {{location}} Di {{subject}}",
+      "answer": "A cosa ne pensi? {{subject}}?"
+    },
+    "DiscussRecipes": {
+      "description": "Discuti le ricette con {{npc}} relativo a {{subject}}",
+      "answer": "Vorrei discutere di ricette {{subject}}."
+    },
+    "RecommendDrink": {
+      "description": "Chiedere {{npc}} consigliare un drink per un {{subject}}",
+      "answer": "Potresti consigliarmi un drink per un? {{subject}}?"
+    },
+    "DiscussMenu": {
+      "description": "Discuti il ​​menu su {{location}} per quanto riguarda {{subject}}",
+      "answer": "Vorrei discutere il menu in merito {{subject}}."
+    },
+    "NegotiatePrices": {
+      "description": "Negoziare i prezzi con {{npc}} per {{subject}}",
+      "answer": "Vorrei negoziare il prezzo per {{subject}} con te."
+    },
+    "ExplainIngredients": {
+      "description": "Chiedere {{npc}} per spiegare gli ingredienti per {{subject}}",
+      "answer": "Potresti spiegarmi gli ingredienti per {{subject}}?"
+    },
+    "PlanEvent": {
+      "description": "Chiedi a chiunque a {{location}} sulla pianificazione a {{subject}}",
+      "answer": "Vorrei saperne di più sulla pianificazione a {{subject}} Qui."
+    },
+    "SAMPLE": {
+      "description": "CAMPIONE {{subject}} PNG CAMPIONE {{npc}} POSIZIONE DEL CAMPIONE {{location}}",
+      "answer": "SOGGETTO CAMPIONE {{subject}}."
+    }
+}

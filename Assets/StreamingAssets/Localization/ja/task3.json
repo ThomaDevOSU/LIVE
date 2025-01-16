@@ -1,0 +1,42 @@
+{
+    "Buy": {
+      "description": "買う {{subject}} から {{npc}}",
+      "answer": "いくつか購入したいのですが {{subject}}。"
+    },
+    "AskNPC": {
+      "description": "聞く {{npc}} について {{subject}}",
+      "answer": "どう思いますか {{subject}}?"
+    },
+    "AskLoc": {
+      "description": "の誰かに聞いてください {{location}} について {{subject}}",
+      "answer": "どう思いますか {{subject}}?"
+    },
+    "DiscussRecipes": {
+      "description": "レシピについて話し合う {{npc}} に関連した {{subject}}",
+      "answer": "についてレシピについて話し合いたいと思います {{subject}}。"
+    },
+    "RecommendDrink": {
+      "description": "聞く {{npc}} 人に飲み物を勧める {{subject}}",
+      "answer": "お勧めの飲み物を教えてください {{subject}}?"
+    },
+    "DiscussMenu": {
+      "description": "メニューについてはこちらでご相談ください {{location}} に関して {{subject}}",
+      "answer": "メニューについて相談したいのですが、 {{subject}}。"
+    },
+    "NegotiatePrices": {
+      "description": "～と価格交渉する {{npc}} のために {{subject}}",
+      "answer": "価格交渉をしたいのですが、 {{subject}} あなたと。"
+    },
+    "ExplainIngredients": {
+      "description": "聞く {{npc}} の成分を説明すると {{subject}}",
+      "answer": "の成分を説明していただけますか {{subject}}?"
+    },
+    "PlanEvent": {
+      "description": "誰にでも聞いてください {{location}} スケジュール設定について {{subject}}",
+      "answer": "スケジュール設定について詳しく知りたい {{subject}} ここ。"
+    },
+    "SAMPLE": {
+      "description": "サンプル {{subject}} サンプルNPC {{npc}} サンプルの場所 {{location}}",
+      "answer": "件名例 {{subject}}。"
+    }
+}

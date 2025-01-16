@@ -1,0 +1,18 @@
+{
+    "Buy": {
+      "description": "買う {{subject}} から {{npc}}",
+      "answer": "いくつか購入したいのですが {{subject}}。"
+    },
+    "AskNPC": {
+      "description": "聞く {{npc}} について {{subject}}",
+      "answer": "どう思いますか {{subject}}?"
+    },
+    "AskLoc": {
+      "description": "の誰かに聞いてください {{location}} について {{subject}}",
+      "answer": "どう思いますか {{subject}}?"
+    },
+    "SAMPLE": {
+      "description": "サンプル {{subject}} サンプルNPC {{npc}} サンプルの場所 {{location}}",
+      "answer": "件名例 {{subject}}。"
+    }
+}

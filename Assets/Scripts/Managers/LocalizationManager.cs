@@ -17,7 +17,7 @@ public class LocalizationManager : MonoBehaviour
 
     public string learningLanguage;
 
-    public TMP_FontAsset[] fonts; // 0 is baseline, 1 is eastern supporting, 2 is arabic supporting
+    public TMP_FontAsset MasterFont;
 
     private void Awake() // Singleton
     {
@@ -118,3 +118,11 @@ public class LocalizationManager : MonoBehaviour
 }
 
 public enum isUI { UI, NOTUI };
+
+/// <summary>
+/// In the options menu for languages, let these values be representative of what language we are referring to.
+/// IE: 
+/// 0 = zh for chinese
+/// 1 = es for spanish
+/// </summary>
+public enum LANGUAGES { zh, es, en, fr, ja, de, it, ar }

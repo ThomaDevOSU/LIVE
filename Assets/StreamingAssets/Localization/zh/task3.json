@@ -1,0 +1,42 @@
+{
+    "Buy": {
+      "description": "买 {{subject}} 从 {{npc}}",
+      "answer": "我想买一些 {{subject}}。"
+    },
+    "AskNPC": {
+      "description": "问 {{npc}} 关于 {{subject}}",
+      "answer": "你觉得怎么样 {{subject}}？"
+    },
+    "AskLoc": {
+      "description": "询问任何人 {{location}} 关于 {{subject}}",
+      "answer": "你觉得怎么样 {{subject}}？"
+    },
+    "DiscussRecipes": {
+      "description": "与讨论食谱 {{npc}} 相关于 {{subject}}",
+      "answer": "我想讨论一下食谱 {{subject}}。"
+    },
+    "RecommendDrink": {
+      "description": "问 {{npc}} 为某人推荐一杯饮料 {{subject}}",
+      "answer": "你能推荐一杯饮料吗 {{subject}}？"
+    },
+    "DiscussMenu": {
+      "description": "讨论菜单 {{location}} 关于 {{subject}}",
+      "answer": "我想讨论一下菜单 {{subject}}。"
+    },
+    "NegotiatePrices": {
+      "description": "与洽谈价格 {{npc}} 为了 {{subject}}",
+      "answer": "我想协商价格 {{subject}} 与你。"
+    },
+    "ExplainIngredients": {
+      "description": "问 {{npc}} 解释其成分 {{subject}}",
+      "answer": "你能解释一下它的成分吗 {{subject}}？"
+    },
+    "PlanEvent": {
+      "description": "询问任何人 {{location}} 关于安排 {{subject}}",
+      "answer": "我想了解更多关于安排 {{subject}} 这里。"
+    },
+    "SAMPLE": {
+      "description": "样本 {{subject}} NPC样本 {{npc}} 样本位置 {{location}}",
+      "answer": "示例主题 {{subject}}。"
+    }
+}

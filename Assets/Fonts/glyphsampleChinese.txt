@@ -1,0 +1,92 @@
+﻿{
+    "NewGame": "新游戏",
+    "LoadGame": "加载游戏",
+    "Options": "选项",
+    "Settings": "设置",
+    "Exit": "出口",
+    "Play": "玩",
+    "Language": "语言",
+    "Ready To Begin?": "准备好开始了吗？",
+    "No": "不",
+    "Yes": "是的",
+    "Name": "姓名",
+    "Start": "开始",
+    "Save": "节省",
+    "Delete Save?": "删除保存？",
+    "Back": "后退",
+    "Quit": "辞职",
+    "Load": "加载",
+    "Baker": "贝克",
+    "Barista": "咖啡师",
+    "Bakery": "面包店",
+    "Cafe": "咖啡店",
+    "Restaurant": "餐厅",
+    "Bread": "面包",
+    "Pastry": "糕点",
+    "Coffee": "咖啡",
+    "Tea": "茶",
+    "Reservation": "预订",
+    "Menu": "菜单",
+    "Latte": "拿铁",
+    "Espresso": "浓缩咖啡",
+    "Sourdough": "拓荒者",
+    "Croissant": "羊角面包",
+    "Discounts": "折扣",
+    "Bulk Orders": "批量订单",
+    "Espresso Beans": "浓缩咖啡豆",
+    "Milk Alternatives": "牛奶替代品",
+    "Seasonal Specials": "季节性特价",
+    "Custom Orders": "定制订单",
+    "Tasting Session": "品酒会",
+    "Cooking Class": "烹饪班",
+    "Daily Brews": "每日酿造",
+    "Signature Drinks": "招牌饮品",
+    "Live Music Night": "现场音乐之夜",
+    "Coffee Tasting": "咖啡品尝",
+    "Chef's Specials": "主厨特色菜",
+    "Wine Pairings": "葡萄酒搭配",
+    "Private Dining": "私人用餐",
+    "Corporate Lunch": "公司午餐"
+}
+{
+    "Buy": {
+      "description": "买 {{subject}} 从 {{npc}}",
+      "answer": "我想买一些 {{subject}}。"
+    },
+    "AskNPC": {
+      "description": "问 {{npc}} 关于 {{subject}}",
+      "answer": "你觉得怎么样 {{subject}}？"
+    },
+    "AskLoc": {
+      "description": "询问任何人 {{location}} 关于 {{subject}}",
+      "answer": "你觉得怎么样 {{subject}}？"
+    },
+    "DiscussRecipes": {
+      "description": "与讨论食谱 {{npc}} 相关于 {{subject}}",
+      "answer": "我想讨论一下食谱 {{subject}}。"
+    },
+    "RecommendDrink": {
+      "description": "问 {{npc}} 为某人推荐一杯饮料 {{subject}}",
+      "answer": "你能推荐一杯饮料吗 {{subject}}？"
+    },
+    "DiscussMenu": {
+      "description": "讨论菜单 {{location}} 关于 {{subject}}",
+      "answer": "我想讨论一下菜单 {{subject}}。"
+    },
+    "NegotiatePrices": {
+      "description": "与洽谈价格 {{npc}} 为了 {{subject}}",
+      "answer": "我想协商价格 {{subject}} 与你。"
+    },
+    "ExplainIngredients": {
+      "description": "问 {{npc}} 解释其成分 {{subject}}",
+      "answer": "你能解释一下它的成分吗 {{subject}}？"
+    },
+    "PlanEvent": {
+      "description": "询问任何人 {{location}} 关于安排 {{subject}}",
+      "answer": "我想了解更多关于安排 {{subject}} 这里。"
+    },
+    "SAMPLE": {
+      "description": "样本 {{subject}} NPC样本 {{npc}} 样本位置 {{location}}",
+      "answer": "示例主题 {{subject}}。"
+    }
+}

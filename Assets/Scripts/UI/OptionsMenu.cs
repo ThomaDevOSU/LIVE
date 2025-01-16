@@ -26,11 +26,3 @@ public class OptionsMenu : MonoBehaviour
     }
 
 }
-
-/// <summary>
-/// In the options menu for languages, let these values be representative of what language we are referring to.
-/// IE: 
-/// 0 = zh for chinese
-/// 1 = es for spanish
-/// </summary>
-public enum LANGUAGES { zh, es, en, fr, ja, de ,it, ar}

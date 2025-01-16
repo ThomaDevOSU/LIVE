@@ -1,23 +1,30 @@
 {
-    "Buy":  
-    {
-        "description":"Buy {{subject}} from {{npc}}",
-        "answer":"I would like to buy some {{subject}}."
+    "Buy": {
+      "description": "يشتري {{subject}} من {{npc}}",
+      "answer": "أود شراء بعض {{subject}}."
     },
-    "AskNPC":  
-    {
-        "description":"Ask {{npc}} about {{subject}}",
-        "answer":"What do you think about {{subject}}."
+    "AskNPC": {
+      "description": "بسأل {{npc}} عن {{subject}}",
+      "answer": "ما رأيك {{subject}}؟"
     },
-    "AskLoc":  
-    {
-        "description":"Ask anyone at the {{location}} about {{subject}}",
-        "answer":"What do you think about {{subject}}."
+    "AskLoc": {
+      "description": "اسأل أي شخص في {{location}} عن {{subject}}",
+      "answer": "ما رأيك {{subject}}؟"
     },
-    "SAMPLE":  
-    {
-        "description":"SAMPLE {{subject}} SAMPLE NPC {{npc}} SAMPLE LOCATION {{location}}",
-        "answer":"SAMPLE SUBJECT {{subject}}."
+    "DiscussRecipes": {
+      "description": "ناقش الوصفات مع {{npc}} المتعلقة {{subject}}",
+      "answer": "وأود أن مناقشة وصفات حول {{subject}}."
+    },
+    "RecommendDrink": {
+      "description": "بسأل {{npc}} للتوصية بمشروب ل {{subject}}",
+      "answer": "هل يمكن أن توصي بمشروب ل {{subject}}؟"
+    },
+    "DiscussMenu": {
+      "description": "مناقشة القائمة في {{location}} متعلق {{subject}}",
+      "answer": "أود مناقشة القائمة بخصوص {{subject}}."
+    },
+    "SAMPLE": {
+      "description": "عينة {{subject}} عينة من الشخصيات غير القابلة للعب {{npc}} موقع العينة {{location}}",
+      "answer": "موضوع العينة {{subject}}."
     }
 }
-
