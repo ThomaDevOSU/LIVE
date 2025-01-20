@@ -1,0 +1,18 @@
+{
+    "Buy": {
+      "description": "Acquistare {{subject}} da {{npc}}",
+      "answer": "Vorrei comprarne alcuni {{subject}}."
+    },
+    "AskNPC": {
+      "description": "Chiedere {{npc}} Di {{subject}}",
+      "answer": "A cosa ne pensi? {{subject}}?"
+    },
+    "AskLoc": {
+      "description": "Chiedi a chiunque al {{location}} Di {{subject}}",
+      "answer": "A cosa ne pensi? {{subject}}?"
+    },
+    "SAMPLE": {
+      "description": "CAMPIONE {{subject}} PNG CAMPIONE {{npc}} POSIZIONE DEL CAMPIONE {{location}}",
+      "answer": "SOGGETTO CAMPIONE {{subject}}."
+    }
+}

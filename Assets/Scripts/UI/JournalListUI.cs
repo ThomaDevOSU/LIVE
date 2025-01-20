@@ -53,6 +53,7 @@ public class JournalListUI : MonoBehaviour
             GameObject button = Instantiate(taskButtonPrefab, taskListContainer);
             TMP_Text buttonText = button.GetComponentInChildren<TMP_Text>();
             buttonText.text = task.T_TaskDescription;
+            buttonText.font = LocalizationManager.Instance.MasterFont;  //  The master font will support all our different languages
 
             // Highlight
             if (task == currentActiveTask)

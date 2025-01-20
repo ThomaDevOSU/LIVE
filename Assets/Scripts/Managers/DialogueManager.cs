@@ -105,7 +105,7 @@ public class DialogueManager : MonoBehaviour
             inputField.text = "";
             sendData(input);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && currentNPC != null)
         {
             StopDialogue();
         }

@@ -1,0 +1,18 @@
+{
+    "Buy": {
+      "description": "Kaufen {{subject}} aus {{npc}}",
+      "answer": "Ich würde gerne welche kaufen {{subject}}."
+    },
+    "AskNPC": {
+      "description": "Fragen {{npc}} um {{subject}}",
+      "answer": "Woran denken Sie? {{subject}}?"
+    },
+    "AskLoc": {
+      "description": "Fragen Sie jemanden im {{location}} um {{subject}}",
+      "answer": "Woran denken Sie? {{subject}}?"
+    },
+    "SAMPLE": {
+      "description": "PROBE {{subject}} BEISPIEL-NPC {{npc}} PROBENSTANDORT {{location}}",
+      "answer": "BEISPIELGEGENSTAND {{subject}}."
+    }
+}

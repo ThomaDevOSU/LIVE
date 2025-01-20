@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using System.IO;
 using TMPro;
 using UnityEngine;
@@ -16,7 +17,7 @@ public class LocalizationManager : MonoBehaviour
 
     public string learningLanguage;
 
-    public TMP_FontAsset[] fonts; // 0 is baseline, 1 is eastern supporting, 2 is arabic supporting
+    public TMP_FontAsset MasterFont;
 
     private void Awake() // Singleton
     {
@@ -42,13 +43,16 @@ public class LocalizationManager : MonoBehaviour
     public void LoadLocalizedMenuText(string language) // Attempts to load localized text from file into menu dictionary
     {
         menuLanguage = language;
-        string path = Path.Combine(Application.streamingAssetsPath, $"Localization/{language}.json");
+        string path = Path.Combine(Application.streamingAssetsPath, $"Localization/{language}/ui.json");
 
         if (File.Exists(path))
         {
-            string json = File.ReadAllText(path);
-            localizedMenuText = JsonUtility.FromJson<LocalizationData>(json).ToDictionary(); // Converts json to localizationdata which converts to dictionary
-            Debug.Log($"Loaded {language} localization");
+            using (StreamReader file = File.OpenText(path))
+            {
+                JsonSerializer serializer = new JsonSerializer() { Formatting = Formatting.Indented};
+                localizedMenuText = (Dictionary<string, string>)serializer.Deserialize(file, typeof(Dictionary<string, string>));
+                Debug.Log($"Loaded {language} localization");
+            }
         }
         else
         {
@@ -59,13 +63,16 @@ public class LocalizationManager : MonoBehaviour
     public void LoadLocalizedLearningText(string language) // Attempts to load localized text from file into menu dictionary
     {
         learningLanguage = language;
-        string path = Path.Combine(Application.streamingAssetsPath, $"Localization/{language}.json");
+        string path = Path.Combine(Application.streamingAssetsPath, $"Localization/{language}/ui.json");
 
         if (File.Exists(path))
         {
-            string json = File.ReadAllText(path);
-            localizedLearningText = JsonUtility.FromJson<LocalizationData>(json).ToDictionary(); // Converts json to localizationdata which converts to dictionary
-            Debug.Log($"Loaded {language} localization");
+            using (StreamReader file = File.OpenText(path))
+            {
+                JsonSerializer serializer = new JsonSerializer() { Formatting = Formatting.Indented };
+                localizedLearningText = (Dictionary<string, string>)serializer.Deserialize(file, typeof(Dictionary<string, string>));
+                Debug.Log($"Loaded {language} localization as learning text");
+            }
         }
         else
         {
@@ -110,27 +117,12 @@ public class LocalizationManager : MonoBehaviour
 
 }
 
-[System.Serializable]
-public class LocalizationData
-{
-    public List<LocalizationEntry> entries;
-
-    public Dictionary<string, string> ToDictionary()
-    {
-        Dictionary<string, string> dict = new Dictionary<string, string>();
-        foreach (var entry in entries)
-        {
-            dict[entry.key] = entry.value;
-        }
-        return dict;
-    }
-}
-
-[System.Serializable]
-public class LocalizationEntry
-{
-    public string key;
-    public string value;
-}
-
 public enum isUI { UI, NOTUI };
+
+/// <summary>
+/// In the options menu for languages, let these values be representative of what language we are referring to.
+/// IE: 
+/// 0 = zh for chinese
+/// 1 = es for spanish
+/// </summary>
+public enum LANGUAGES { zh, es, en, fr, ja, de, it, ar }
