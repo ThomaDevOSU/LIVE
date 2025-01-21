@@ -46,8 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuLanguage: 
   learningLanguage: 
-  fonts:
-  - {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  - {fileID: 11400000, guid: 4c948bbae45d9ca4cb2a630d8997eec4, type: 2}
-  - {fileID: 11400000, guid: e586e4dbe1a26364f88648e10f5dc21d, type: 2}
-  - {fileID: 11400000, guid: f1b0a1e606c2c9540a0d5f5222864b02, type: 2}
+  MasterFont: {fileID: 11400000, guid: ff620f4591fd59743ba0edc701ec0134, type: 2}

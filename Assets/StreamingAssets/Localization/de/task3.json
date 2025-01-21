@@ -1,0 +1,42 @@
+{
+    "Buy": {
+      "description": "Kaufen {{subject}} aus {{npc}}",
+      "answer": "Ich würde gerne welche kaufen {{subject}}."
+    },
+    "AskNPC": {
+      "description": "Fragen {{npc}} um {{subject}}",
+      "answer": "Woran denken Sie? {{subject}}?"
+    },
+    "AskLoc": {
+      "description": "Fragen Sie jemanden im {{location}} um {{subject}}",
+      "answer": "Woran denken Sie? {{subject}}?"
+    },
+    "DiscussRecipes": {
+      "description": "Besprechen Sie Rezepte mit {{npc}} im Zusammenhang mit {{subject}}",
+      "answer": "Ich würde gerne Rezepte darüber besprechen {{subject}}."
+    },
+    "RecommendDrink": {
+      "description": "Fragen {{npc}} ein Getränk für einen empfehlen {{subject}}",
+      "answer": "Könnten Sie mir ein Getränk empfehlen? {{subject}}?"
+    },
+    "DiscussMenu": {
+      "description": "Besprechen Sie das Menü unter {{location}} hinsichtlich {{subject}}",
+      "answer": "Ich würde gerne das Menü bezüglich besprechen {{subject}}."
+    },
+    "NegotiatePrices": {
+      "description": "Verhandeln Sie Preise mit {{npc}} für {{subject}}",
+      "answer": "Ich würde gerne über den Preis verhandeln {{subject}} mit dir."
+    },
+    "ExplainIngredients": {
+      "description": "Fragen {{npc}} um die Zutaten zu erklären {{subject}}",
+      "answer": "Könnten Sie die Zutaten erklären? {{subject}}?"
+    },
+    "PlanEvent": {
+      "description": "Fragen Sie jemanden unter {{location}} über die Planung von a {{subject}}",
+      "answer": "Ich würde gerne mehr über die Terminplanung erfahren {{subject}} Hier."
+    },
+    "SAMPLE": {
+      "description": "PROBE {{subject}} BEISPIEL-NPC {{npc}} PROBENSTANDORT {{location}}",
+      "answer": "BEISPIELGEGENSTAND {{subject}}."
+    }
+}

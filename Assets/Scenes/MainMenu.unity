@@ -378,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea4da17e6e253848b541e066302a15c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuCanvas: {fileID: 0}
 --- !u!1 &35514157
 GameObject:
   m_ObjectHideFlags: 0
@@ -10799,6 +10800,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2010392649}
+    - target: {fileID: 2522224404013170741, guid: a3ec1a272d9bff94284f8039f70b8a4c, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3441285370839460962, guid: a3ec1a272d9bff94284f8039f70b8a4c, type: 3}
       propertyPath: m_Name
       value: TransitionManager

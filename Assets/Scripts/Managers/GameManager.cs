@@ -5,14 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    /// <summary>
+    /// Singleton for the GameManager Instance
+    /// </summary>
     public static GameManager Instance;
 
+    /// <summary>
+    /// CurrentSaveSlot will keep track of the current active save slot being used in the game state.
+    /// This defaults to 0, but is reassigned in the LoadGame function.
+    /// </summary>
+    public int CurrentSaveSlot = 0;
+
+    /// <summary>
+    /// The CurrentPlayerData object represents the player that has been loaded by the LoadGame function
+    /// </summary>
     public PlayerData CurrentPlayerData;
+
+    /// <summary>
+    /// The Options object represents our active option settings.
+    /// </summary>
     public OptionData Options;
 
+    /// <summary>
+    /// The locationKey can be edited using the SetLocation function, it is used when transporting the player from level to level.
+    /// </summary>
     private string locationKey = "";
 
-    private GameObject playerGameObject; // This will be the players gameobject
+
+    /// <summary>
+    /// The players Gameobject
+    /// </summary>
+    private GameObject playerGameObject;
 
     private void Awake()
     {
@@ -39,7 +62,13 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode) // This will be used to ensure player transitions to the right location
+    /// <summary>
+    /// When a new scene is loaded, The OnSceneLoaded function will check the new scene for different "SpawnPoints" that it can send the player to.
+    /// Whichever SpawnPoints' string matches the current locationKey will be the spawnpoint the player is assigned.
+    /// </summary>
+    /// <param name="scene"></param>
+    /// <param name="mode"></param>
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.buildIndex == 0) return; // No main menu
 
@@ -59,17 +88,29 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void setLocation(string loc) // Sets location key
+    /// <summary>
+    /// Simple setter function for the locationKey
+    /// </summary>
+    /// <param name="loc"></param>
+    public void setLocation(string loc)
     {
         locationKey = loc;
     }
 
-    public void updateOptions() // When options are updated from a menu all systems update
+    /// <summary>
+    /// When options are updated, the new options are saved to file and then the update function for
+    /// the options is called.
+    /// </summary>
+    public void updateOptions()
     {
         SaveSystem.SaveOptions(Options);
         LocalizationManager.Instance.updateLanguageText();
     }
 
+    /// <summary>
+    /// Checker function for online accessibilty, NOT YET IMPLEMENTED
+    /// </summary>
+    /// <returns></returns>
     public bool isOnline() 
     {
         if (Options.online_mode) // If set to online mode, test for connection

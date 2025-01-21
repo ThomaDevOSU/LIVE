@@ -1,0 +1,18 @@
+{
+    "Buy": {
+      "description": "买 {{subject}} 从 {{npc}}",
+      "answer": "我想买一些 {{subject}}。"
+    },
+    "AskNPC": {
+      "description": "问 {{npc}} 关于 {{subject}}",
+      "answer": "你觉得怎么样 {{subject}}。"
+    },
+    "AskLoc": {
+      "description": "询问任何人 {{location}} 关于 {{subject}}",
+      "answer": "你觉得怎么样 {{subject}}。"
+    },
+    "SAMPLE": {
+      "description": "样本 {{subject}} NPC样本 {{npc}} 样本位置 {{location}}",
+      "answer": "示例主题 {{subject}}。"
+    }
+}

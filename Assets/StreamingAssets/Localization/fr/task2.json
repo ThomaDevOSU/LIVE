@@ -1,0 +1,30 @@
+{
+    "Buy": {
+      "description": "Acheter {{subject}} depuis {{npc}}",
+      "answer": "j'aimerais en acheter {{subject}}."
+    },
+    "AskNPC": {
+      "description": "Demander {{npc}} à propos {{subject}}",
+      "answer": "A quoi penses-tu {{subject}}?"
+    },
+    "AskLoc": {
+      "description": "Demandez à n'importe qui au {{location}} à propos {{subject}}",
+      "answer": "A quoi penses-tu {{subject}}?"
+    },
+    "DiscussRecipes": {
+      "description": "Discutez des recettes avec {{npc}} lié à {{subject}}",
+      "answer": "J'aimerais discuter de recettes sur {{subject}}."
+    },
+    "RecommendDrink": {
+      "description": "Demander {{npc}} recommander un verre pour un {{subject}}",
+      "answer": "Pourriez-vous me recommander un verre pour un {{subject}}?"
+    },
+    "DiscussMenu": {
+      "description": "Discutez du menu sur {{location}} concernant {{subject}}",
+      "answer": "J'aimerais discuter du menu concernant {{subject}}."
+    },
+    "SAMPLE": {
+      "description": "ÉCHANTILLON {{subject}} EXEMPLE DE PNJ {{npc}} EXEMPLE D'EMPLACEMENT {{location}}",
+      "answer": "EXEMPLE DE SUJET {{subject}}."
+    }
+}
