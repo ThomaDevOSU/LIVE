@@ -56,7 +56,7 @@ public class DialogueManager : MonoBehaviour
     /// <summary>
     /// Holds the GPTService's response to the player's input.
     /// </summary>
-    private string response;
+    private string response, taskResponse;
 
     /// <summary>
     /// The current dialogue entry being displayed.
@@ -131,6 +131,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(NPC npc)
     {
         currentNPC = npc;
+        Debug.Log("Starting dialogue with " + currentNPC.Name);
         isTalking = true;
         DialogueMenu.SetActive(true);
         destroyChildren();
@@ -213,14 +214,17 @@ public class DialogueManager : MonoBehaviour
     {
         StopAllCoroutines();
         GPTService.Instance.response = null;
-        StartCoroutine(GPTService.Instance.ApiCall(input, currentNPC));
-        StartCoroutine(WaitForResponse());
+        StartCoroutine(GPTService.Instance.DialogueApiCall(input, currentNPC));
+        StartCoroutine(WaitForDialogueResponse());
+        GPTService.Instance.taskResponse = null;
+        StartCoroutine(GPTService.Instance.TaskApiCall(input, currentNPC));
+        StartCoroutine(WaitForTaskResponse());
     }
 
     /// <summary>
     /// Waits for a response from the GPTService and processes it.
     /// </summary>
-    IEnumerator WaitForResponse()
+    IEnumerator WaitForDialogueResponse()
     {
         while (GPTService.Instance.response == null) { yield return new WaitForSeconds(0.1f); }
         response = GPTService.Instance.response;
@@ -235,4 +239,24 @@ public class DialogueManager : MonoBehaviour
             DisplayNextSentence();
         }
     }
+
+    /// <summary>
+    /// Waits for a task response from the GPTService and processes it.
+    /// </summary>
+    IEnumerator WaitForTaskResponse()
+    {
+        while (GPTService.Instance.taskResponse == null) { yield return new WaitForSeconds(0.1f); }
+        taskResponse = GPTService.Instance.taskResponse;
+
+        if (taskResponse == null)
+        {
+            Debug.Log("GPT failed to respond");
+        }
+        else
+        {
+            GPTService.Instance.ProcessTask(taskResponse);
+        }
+    }
 }
+
+

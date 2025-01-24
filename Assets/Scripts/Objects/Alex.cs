@@ -54,6 +54,7 @@ public class Alex_Barista : MonoBehaviour
         if (collision.CompareTag("Player") && Input.GetButton("Jump") && !MenuManager.Instance.isPaused && !DialogueManager.Instance.isTalking)
         {
             Alex.inDialogue = true;
+            Debug.Log("Alex in dialogue");
             DialogueManager.Instance.StartDialogue(Alex);
         }
     }
