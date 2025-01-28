@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 /// <summary>
 /// Handles communication with the GPT API to generate responses based on player input.
@@ -21,7 +22,7 @@ public class GPTService : MonoBehaviour
     private readonly string apiKey = "API-KEY";
     private readonly string api_url = "https://api.openai.com/v1/chat/completions";
 
-    public string playerInput, prompt, response, request;
+    public string playerInput, prompt, response, request, taskResponse;
     private PlayerData playerData;
     private NPC NPCData;
     private Task taskData;
@@ -51,8 +52,25 @@ public class GPTService : MonoBehaviour
     /// <param name="NPCData">The data of the NPC.</param>
     /// <param name="taskData">The data of the task.</param>
     /// <returns>A formatted prompt string for the GPT API.</returns>
-    public string GeneratePrompt(string playerInput, PlayerData playerData, NPC NPCData, Task taskData)
+    public string GenerateDialoguePrompt(string playerInput, PlayerData playerData, NPC NPCData, Task taskData)
     {
+        taskData ??= new Task
+        {
+            TaskDifficulty = 0,
+            TaskDescription = "No task available",
+            TaskSubject = "N/A",
+            TaskNPC = "N/A",
+            TaskLocation = "N/A",
+            TaskAnswer = "N/A",
+
+            T_TaskDescription = "No task available",
+            T_TaskSubject = "N/A",
+            T_TaskNPC = "N/A",
+            T_TaskLocation = "N/A",
+            T_TaskAnswer = "N/A",
+            IsCompleted = false,
+            IsCustom = false
+        };
         string prompt = $@"
     NPC Information:
     - Name: {NPCData.Name}
@@ -72,44 +90,34 @@ public class GPTService : MonoBehaviour
     Player Input: {playerInput}
     Instructions:
     Respond concisely as {NPCData.Name} in {playerData.language}.
-    When responding with nondialogue use * * as action tags. Example: *picks up the money*. 
-    Do not use any formatting your response should be plain text and only the dialogue itself. Do not use the 'Response:' to being any response.
-    Use a tone that matches the personality traits, remain consistent with previous interactions, and ensure relevance to: {taskData.TaskDescription}";
+    Do not use any formatting your response should be plain text and only the dialogue itself. Do not use the text 'Response:' to format the response.
+    Use a tone that matches the personality traits, remain consistent with previous interactions, and subtely maintain relevance to: {taskData.TaskDescription}";
 
         return prompt;
     }
 
     /// <summary>
-    /// Sends a request to the GPT API and processes the response.
+    /// Sends a request to the GPT API for dialogue and processes the response.
     /// </summary>
     /// <param name="playerInput">The input provided by the player.</param>
     /// <param name="NPCData">The data of the NPC.</param>
     /// <returns>An IEnumerator for coroutine handling.</returns>
-    public IEnumerator ApiCall(string playerInput, NPC NPCData)
+    public IEnumerator DialogueApiCall(string playerInput, NPC NPCData)
     {
-        NPCData.printData();
         if (NPCData.messages.Count == 0)
         {
-            Debug.Log("No NPCData.messages found, generating prompt...");
             RetrievePlayerData();
             RetrieveTask(NPCData.Job, NPCData.CurrentLocation);
 
-            prompt = GeneratePrompt(playerInput, playerData, NPCData, taskData);
+            prompt = GenerateDialoguePrompt(playerInput, playerData, NPCData, taskData);
             NPCData.messages.Add(new Message { role = "system", content = prompt });
         }
         else
         {
-            Debug.Log("Messages found, adding player input...");
             NPCData.messages.Add(new Message { role = "user", content = playerInput });
         }
 
-        foreach (var message in NPCData.messages)
-        {
-            Debug.Log(message.role);
-            Debug.Log(message.content);
-        }
-
-        RequestBody requestBody = new()
+        DialogueRequestBody requestBody = new()
         {
             model = "gpt-4o",
             messages = NPCData.messages.ToArray(),
@@ -133,8 +141,101 @@ public class GPTService : MonoBehaviour
         else
         {
             response = request.downloadHandler.text;
-            response = ParseResponse(response);
+            response = ParseDialogueResponse(response);
             NPCData.messages.Add(new Message { role = "assistant", content = "Response: " + response });
+        }
+    }
+
+    public string GenerateTaskPrompt(string playerInput, PlayerData playerData, NPC NPCData, Task taskData)
+    {
+        taskData ??= new Task
+        {
+            TaskDifficulty = 0,
+            TaskDescription = "No task available",
+            TaskSubject = "N/A",
+            TaskNPC = "N/A",
+            TaskLocation = "N/A",
+            TaskAnswer = "N/A",
+
+            T_TaskDescription = "No task available",
+            T_TaskSubject = "N/A",
+            T_TaskNPC = "N/A",
+            T_TaskLocation = "N/A",
+            T_TaskAnswer = "N/A",
+            IsCompleted = false,
+            IsCustom = false
+        };
+        string prompt = $@"
+        NPC and Task Context:
+        - Name: {NPCData.Name}
+        - Profession: {NPCData.Job}
+        - Location: {NPCData.CurrentLocation}
+        - Current Task: {taskData.TaskDescription}
+        - Task Answer: {taskData.TaskAnswer}
+        - Time of Day: Afternoon
+        - Player Input: {playerInput}
+        Instructions:
+        Has the player successfully completed the task based on the task description, NPC's occupation, location, and whether their input loosely matches the intended meaning of the task answer? 
+        Respond with ""true"" or ""false"" only.
+        ";
+        return prompt;
+    }
+
+    /// <summary>
+    /// Sends a request to the GPT API for dialogue and processes the response.
+    /// </summary>
+    /// <param name="playerInput">The input provided by the player.</param>
+    /// <param name="NPCData">The data of the NPC.</param>
+    /// <returns>An IEnumerator for coroutine handling.</returns>
+    public IEnumerator TaskApiCall(string playerInput, NPC NPCData)
+    {
+        RetrievePlayerData();
+        RetrieveTask(NPCData.Job, NPCData.CurrentLocation);
+        prompt = GenerateTaskPrompt(playerInput, playerData, NPCData, taskData);
+        var message = new Message { role = "system", content = prompt };
+        TaskRequestBody requestBody = new()
+        {
+            model = "gpt-4o",
+            messages = new Message[] { message },
+            max_completion_tokens = 100
+        };
+
+        string jsonBody = JsonUtility.ToJson(requestBody);
+        UnityWebRequest request = new(api_url, "POST");
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonBody);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Authorization", "Bearer " + apiKey);
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+        {
+            Debug.LogError($"Error: {request.error}");
+            Debug.LogError($"Response Code: {request.responseCode}");
+            Debug.LogError($"Response: {request.downloadHandler.text}");
+        }
+        else
+        {
+            taskResponse = request.downloadHandler.text;
+            taskResponse = ParseTaskResponse(taskResponse);
+        }
+    }
+
+    /// <summary>
+    /// Processes the task response and take call the appropriate method from TaskManager.
+    /// </summary>
+    public void ProcessTask(string response)
+    {
+        if (response == null)
+        {
+            Debug.Log("GPT failed to respond");
+        }
+        else if (bool.Parse(response) is true)
+        {
+            Debug.Log("Task completed");
+            TaskManager.Instance.CompleteTask(taskData);
         }
     }
 
@@ -145,29 +246,14 @@ public class GPTService : MonoBehaviour
 
     private void RetrieveTask(string npcName, string location)
     {
+        
         taskData = TaskManager.Instance.SubjectTask(npcName, location);
         if (taskData == null)
         {
             Debug.Log("Task not found for current NPC/Location");
-            taskData = new Task
-            {
-                TaskSubject = "Bread",
-                TaskNPC = NPCData.Name,
-                TaskLocation = NPCData.CurrentLocation,
-                TaskAnswer = "Can I buy a loaf of bread?",
-                TaskDifficulty = 1,
-                T_TaskDescription = "Buy Bread",
-                T_TaskSubject = "Bread",
-                T_TaskNPC = NPCData.Name,
-                T_TaskLocation = NPCData.CurrentLocation,
-                T_TaskAnswer = "Can I buy a loaf of bread?",
-                IsCompleted = false,
-                IsCustom = false
-            };
         }
         else
         {
-            Debug.Log("Task found");
             taskData.printData();
         }
     }
@@ -178,7 +264,7 @@ public class GPTService : MonoBehaviour
     /// </summary>
     /// <param name="jsonResponse">The raw JSON response from the GPT API.</param>
     /// <returns>The extracted content from the response, or null if parsing fails.</returns>
-    public string ParseResponse(string jsonResponse)
+    public string ParseDialogueResponse(string jsonResponse)
     {
         string pattern = "\"content\":\\s*\"([^\"]*)\"";
         Match match = Regex.Match(jsonResponse, pattern);
@@ -199,10 +285,32 @@ public class GPTService : MonoBehaviour
     }
 
     /// <summary>
-    /// Represents the body of the GPT API request.
+    /// Parses the JSON response from the GPT API to extract the content.
+    /// </summary>
+    /// <param name="jsonResponse">The raw JSON response from the GPT API.</param>
+    /// <returns>The extracted content from the response, or null if parsing fails.</returns>
+    public string ParseTaskResponse(string jsonResponse)
+    {
+        string pattern = "\"content\":\\s*\"([^\"]*)\"";
+        Match match = Regex.Match(jsonResponse, pattern);
+        if (match.Success)
+        {
+            string content = match.Groups[1].Value;
+            return content;
+        }
+        else
+        {
+            Debug.LogError("Failed to parse response");
+            return null;
+        }
+    }
+}
+
+    /// <summary>
+    /// Represents the body of the dialogue GPT API request.
     /// </summary>
     [System.Serializable]
-    public class RequestBody
+    public class DialogueRequestBody
     {
         /// <summary>
         /// The GPT model to use for the completion request.
@@ -219,4 +327,24 @@ public class GPTService : MonoBehaviour
         /// </summary>
         public int max_completion_tokens;
     }
-}
+
+    /// <summary> 
+    /// Represents the body of the task GPT API request.
+    /// </summary>
+    [System.Serializable]
+    public class TaskRequestBody
+    {
+        /// <summary>
+        /// The GPT model to use for the completion request.
+        /// </summary>
+        public string model;
+        /// <summary>
+        /// The prompt for the task completion request.
+        /// </summary>
+        public Message[] messages;
+        /// <summary>
+        /// The maximum number of tokens to generate in the response.
+        /// </summary>
+        public int max_completion_tokens;
+    }
+
