@@ -150,6 +150,12 @@ public class TaskManager : MonoBehaviour
         // NPC TASK TYPES
         Types[1]["Baker"] = new List<string> { "Buy" };
         Types[1]["Barista"] = new List<string> { "Buy" };
+        Types[1]["Chef"] = new List<string> { "OrderMeal" };
+        Types[1]["Doctor"] = new List<string> { "SeekAdvice" };
+        Types[1]["Waitress"] = new List<string> { "OrderMeal" };
+        Types[1]["Mayor"] = new List<string> { "DiscussPolicy" };
+        Types[1]["Pharmacist"] = new List<string> { "Buy" };
+        Types[1]["Sheriff"] = new List<string> { "ReportIssue" };
 
         // LOCATION TASK TYPES
         Types[1]["Bakery"] = new List<string> { "AskLoc" };
@@ -162,6 +168,12 @@ public class TaskManager : MonoBehaviour
         // NPC TASK TYPES
         Types[2]["Baker"] = new List<string> { "Buy", "DiscussRecipes" };
         Types[2]["Barista"] = new List<string> { "Buy", "RecommendDrink" };
+        Types[2]["Chef"] = new List<string> { "OrderMeal", "DiscussRecipes" };
+        Types[2]["Doctor"] = new List<string> { "SeekAdvice", "RequestMedicine" };
+        Types[2]["Waitress"] = new List<string> { "OrderMeal", "RequestRefill" };
+        Types[2]["Mayor"] = new List<string> { "DiscussPolicy", "SeekApproval" };
+        Types[2]["Pharmacist"] = new List<string> { "Buy", "SeekAdvice" };
+        Types[2]["Sheriff"] = new List<string> { "ReportIssue", "AskForHelp" };
 
         // LOCATION TASK TYPES
         Types[2]["Bakery"] = new List<string> { "AskLoc", "DiscussMenu" };
@@ -174,6 +186,12 @@ public class TaskManager : MonoBehaviour
         // NPC TASK TYPES
         Types[3]["Baker"] = new List<string> { "Buy", "DiscussRecipes", "NegotiatePrices" };
         Types[3]["Barista"] = new List<string> { "Buy", "RecommendDrink", "ExplainIngredients" };
+        Types[3]["Chef"] = new List<string> { "OrderMeal", "DiscussRecipes", "RateDishes" };
+        Types[3]["Doctor"] = new List<string> { "SeekAdvice", "RequestMedicine", "DiscussHealth" };
+        Types[3]["Waitress"] = new List<string> { "OrderMeal", "RequestRefill", "AskSpecials" };
+        Types[3]["Mayor"] = new List<string> { "DiscussPolicy", "SeekApproval", "DebateIssues" };
+        Types[3]["Pharmacist"] = new List<string> { "Buy", "SeekAdvice", "AskAvailability" };
+        Types[3]["Sheriff"] = new List<string> { "ReportIssue", "AskForHelp", "SeekAssistance" };
 
         // LOCATION TASK TYPES
         Types[3]["Bakery"] = new List<string> { "AskLoc", "DiscussMenu", "PlanEvent" };
@@ -190,11 +208,54 @@ public class TaskManager : MonoBehaviour
             { "DiscussRecipes", new List<string> { "Sourdough", "Croissant" } },
             { "NegotiatePrices", new List<string> { "Discounts", "Bulk Orders" } }
         };
+
         NPCSubjects["Barista"] = new Dictionary<string, List<string>>
         {
             { "Buy", new List<string> { "Coffee", "Tea" } },
             { "RecommendDrink", new List<string> { "Latte", "Espresso" } },
             { "ExplainIngredients", new List<string> { "Espresso Beans", "Milk Alternatives" } }
+        };
+
+        NPCSubjects["Chef"] = new Dictionary<string, List<string>>
+        {
+            { "OrderMeal", new List<string> { "Pasta", "Steak" } },
+            { "DiscussRecipes", new List<string> { "Soup", "Sauce" } },
+            { "RateDishes", new List<string> { "Flavor", "Presentation" } }
+        };
+
+        NPCSubjects["Doctor"] = new Dictionary<string, List<string>>
+        {
+            { "SeekAdvice", new List<string> { "Headache", "Flu" } },
+            { "RequestMedicine", new List<string> { "Painkillers", "Antibiotics" } },
+            { "DiscussHealth", new List<string> { "Diet", "Exercise" } }
+        };
+
+        NPCSubjects["Waitress"] = new Dictionary<string, List<string>>
+        {
+            { "OrderMeal", new List<string> { "Soup", "Burger" } },
+            { "RequestRefill", new List<string> { "Water", "Soda" } },
+            { "AskSpecials", new List<string> { "Dessert", "Seasonal Menu" } }
+        };
+
+        NPCSubjects["Mayor"] = new Dictionary<string, List<string>>
+        {
+            { "DiscussPolicy", new List<string> { "Taxes", "Education" } },
+            { "SeekApproval", new List<string> { "Event", "New Business" } },
+            { "DebateIssues", new List<string> { "Crime", "Infrastructure" } }
+        };
+
+        NPCSubjects["Pharmacist"] = new Dictionary<string, List<string>>
+        {
+            { "Buy", new List<string> { "Painkillers", "Vitamins" } },
+            { "SeekAdvice", new List<string> { "Side Effects", "Dosages" } },
+            { "AskAvailability", new List<string> { "Prescriptions", "Supplements" } }
+        };
+
+        NPCSubjects["Sheriff"] = new Dictionary<string, List<string>>
+        {
+            { "ReportIssue", new List<string> { "Lost Item", "Neighborhood Problem" } },
+            { "AskForHelp", new List<string> { "Directions", "Community Event" } },
+            { "SeekAssistance", new List<string> { "Safety Tips", "Local Laws" } }
         };
 
         // Add new Location subjects to this section
