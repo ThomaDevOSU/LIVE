@@ -14,7 +14,12 @@ public class NPCManager : MonoBehaviour
     /// <summary>
     /// List of all NPCs in the game.
     /// </summary>
-    public static List<NPC> NPCs;
+    private static List<NPC> NPCs;
+
+    /// <summary>
+    /// Dictionary to store NPC conversation history.
+    /// </summary>
+    private Dictionary<string, List<Message>> ConversationHistory;
 
     void Awake()
     {
@@ -99,6 +104,36 @@ public class NPCManager : MonoBehaviour
     public List<NPC> GetNPCs()
     {
         return NPCs;
+    }
+
+    /// <summary>
+    /// Retrieve a dictionary of all NPC conversation history.
+    /// This data should eventually be summarized before being stored in PlayerData.
+    /// </summary>
+    /// <returns>
+    /// Dictionary with NPC names as keys and lists of conversation history as values.
+    /// </returns>
+    public Dictionary<string, List<Message>> GetConversationHistory()
+    {
+        foreach (NPC npc in NPCs)
+        {
+            if (!ConversationHistory.ContainsKey(npc.Name))
+            {
+                ConversationHistory.Add(npc.Name, npc.messages);
+            }
+        }
+        return ConversationHistory;
+    }
+
+    /// <summary>
+    /// Load Conversation History from PlayerData.
+    /// </summary>
+    public void LoadConversationHistoryFromPlayerData(PlayerData data)
+    {
+        foreach (NPC npc in NPCs)
+        {
+                npc.messages = data.conversationHistory[npc.Name];
+        }
     }
 
     /// <summary>

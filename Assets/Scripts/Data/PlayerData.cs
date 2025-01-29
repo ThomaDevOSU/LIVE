@@ -17,6 +17,9 @@ public class PlayerData
     public Dictionary<string, MissionStats> missionStats; // Store mission statistics directly
     public List<string> playerRewards; // Store player rewards directly
 
+    // Conversation History
+    public Dictionary<string, List<Message>> conversationHistory;
+
     public PlayerData()
     {
         language = "";
@@ -29,6 +32,7 @@ public class PlayerData
         completedTasks = new List<Task>();
         missionStats = new Dictionary<string, MissionStats>();
         playerRewards = new List<string>();
+        conversationHistory = new Dictionary<string, List<Message>>();
     }
 }
 

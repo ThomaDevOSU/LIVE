@@ -1,8 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Represents an NPC.
+/// </summary>
 public class NPC
 {
+    // The region in which the NPC is currently located.
+    public string region;
+
     public string Greeting;
     public bool inDialogue = false;
     public int ID;
@@ -14,8 +20,10 @@ public class NPC
     public List<Message> messages;
     public string CurrentLocation { get; set; }
     public Vector3 CurrentCoordinates { get; set; }
-    // It may or may not be necessary to add translated fields here
 
+    /// <summary>
+    /// Prints the NPC's data to the debug log.
+    /// </summary>
     public void printData()
     {
         Debug.Log($"Printing data about this NPC...\n" +
@@ -33,29 +41,23 @@ public class NPC
             Debug.Log($"Role: {message.role}\n" + $"Content: {message.content}");
         }
     }
-
 }
 
+/// <summary>
+/// Represents a schedule entry for an NPC.
+/// </summary>
 public class ScheduleEntry
 {
     public Vector2 Coordinates { get; set; }
     public string Location { get; set; }
-    // public string time { get; set; }
 }
 
 /// <summary>
-/// Represents a message in the GPT API conversation, including the role and content.
+/// Represents a message in the GPT API conversation.
 /// </summary>
 [System.Serializable]
 public class Message
 {
-    /// <summary>
-    /// The role of the message (e.g., "user" for player input or "system" for API responses).
-    /// </summary>
-    public string role;
-
-    /// <summary>
-    /// The content of the message.
-    /// </summary>
-    public string content;
+    public string role;    // The role of the message (e.g., "user" or "system").
+    public string content; // The content of the message.
 }
