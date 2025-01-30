@@ -9,6 +9,12 @@ public class JournalListUI : MonoBehaviour
     public GameObject taskButtonPrefab;
     public Transform taskListContainer;
 
+    private void OnEnable()
+        // Added this bad boy to help fix journal freezing when completeing task
+    {
+        DisplayActiveTasks();
+    }
+
     void Start()
     {
         // As TaskManager is a singleton, pass if not relevant
