@@ -54,6 +54,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P)) // Press 'P' to print task list
+        {
+            TaskManager.Instance.PrintTaskList();
+        }
+        if (Input.GetKeyDown(KeyCode.O)) // Press 'O' to print task list
+        {
+            TaskManager.Instance.PrintAllTasksToConsole();
+        }
+        if (Input.GetKeyDown(KeyCode.N)) // Press 'N' to end the day
+        {
+            GameClock.Instance.EndDayNow();
+        }
+    }
+    
+
     IEnumerator waitForManagers() // This function will allow us to reliably wait for other magement system to initialize before we take actions requiring them
     {
         while (!(TransitionManager.Instance && SpriteManager.Instance && LocalizationManager.Instance)) yield return new WaitForSeconds(0.1f);

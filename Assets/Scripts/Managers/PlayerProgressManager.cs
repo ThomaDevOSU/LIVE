@@ -35,11 +35,25 @@ public class PlayerProgressManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Saves the completed task information to track player progress
-    /// </summary>
-    /// <param name="completedTask">The task that has been completed</param>
-    public void SaveCompletedTask(Task completedTask)
+    void Start()
+    {
+        // Load player data from GameManager into PlayerProgressManager
+        if (GameManager.Instance != null && GameManager.Instance.CurrentPlayerData != null)
+        {
+            PlayerProgressManager.Instance.LoadProgressFromPlayerData(GameManager.Instance.CurrentPlayerData);
+            Debug.Log("Loaded player progress data from GameManager.");
+        }
+        else
+        {
+            Debug.LogWarning("GameManager or CurrentPlayerData is null. Unable to load player progress.");
+        }
+    }
+
+/// <summary>
+/// Saves the completed task information to track player progress
+/// </summary>
+/// <param name="completedTask">The task that has been completed</param>
+public void SaveCompletedTask(Task completedTask)
     {
         // Add completed task to the list for tracking
         completedTasks.Add(completedTask);
