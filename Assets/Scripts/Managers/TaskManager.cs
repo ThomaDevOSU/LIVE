@@ -117,7 +117,7 @@ public class TaskManager : MonoBehaviour
 
         //TestTaskManager();
         // GENERATES 5 TASKS from the Level 3 Task pool, DISABLE THIS IF YOU WANT AN EMPTY TASK LIST
-        GenerateTasks(5 , 3);
+        GenerateTasks(5 , GameManager.Instance.CurrentPlayerData.preferredDifficulty);
         //PrintTaskList();
         
     }
@@ -745,6 +745,26 @@ public class TaskManager : MonoBehaviour
         foreach (Task t in TaskList)
         {
             t.printData();
+        }
+    }
+
+    /// <summary>
+    /// Prints all current tasks in the TaskList to the console.
+    /// Useful for debugging purposes.
+    /// </summary>
+    public void PrintAllTasksToConsole()
+    {
+        if (TaskList == null || TaskList.Count == 0)
+        {
+            Debug.Log("TaskManager: No active tasks in the list.");
+            return;
+        }
+
+        Debug.Log($"TaskManager: Printing {TaskList.Count} active tasks...");
+
+        foreach (Task task in TaskList)
+        {
+            Debug.Log($"Task: {task.TaskDescription} | Subject: {task.TaskSubject} | NPC: {task.TaskNPC} | Location: {task.TaskLocation} | Difficulty: {task.TaskDifficulty} | Completed: {task.IsCompleted}");
         }
     }
 

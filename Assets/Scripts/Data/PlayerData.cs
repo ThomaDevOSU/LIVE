@@ -12,6 +12,8 @@ public class PlayerData
     public int score; // How many tasks have we completed?
     public int playerSprite; // What character model is being used?
 
+    public int preferredDifficulty; // Player's chosen difficulty level (1 = Easy, 2 = Medium, 3 = Hard)
+
     // Fields for Player Progress
     public List<Task> completedTasks; // Store completed tasks directly
     public Dictionary<string, MissionStats> missionStats; // Store mission statistics directly
@@ -29,6 +31,7 @@ public class PlayerData
         currency = 0;
         score = 0;
         playerSprite = 0;
+        preferredDifficulty = 1; // Default to Beginner/Easy
         completedTasks = new List<Task>();
         missionStats = new Dictionary<string, MissionStats>();
         playerRewards = new List<string>();
