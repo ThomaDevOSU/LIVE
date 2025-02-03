@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using Newtonsoft.Json;
+using UnityEngine.Events;
+using System;
+using Random = UnityEngine.Random;
 
 
 /// <summary>
@@ -79,6 +82,11 @@ public class TaskManager : MonoBehaviour
     /// </summary>
     private Dictionary<int, Dictionary<string, TaskTemplate>> TaskTemplateDictEnglish;
 
+    /// <summary>
+    /// The completeTask unityEvent is invoked whenever a task is completed
+    /// </summary>
+    private UnityEvent completeTask = new UnityEvent();
+
     private void Awake() // Singleton
     {
         if (Instance == null)
@@ -117,7 +125,7 @@ public class TaskManager : MonoBehaviour
 
         //TestTaskManager();
         // GENERATES 5 TASKS from the Level 3 Task pool, DISABLE THIS IF YOU WANT AN EMPTY TASK LIST
-        GenerateTasks(5 , 3);
+        GenerateTasks(5 , GameManager.Instance.CurrentPlayerData.preferredDifficulty);
         //PrintTaskList();
         
     }
@@ -150,6 +158,12 @@ public class TaskManager : MonoBehaviour
         // NPC TASK TYPES
         Types[1]["Baker"] = new List<string> { "Buy" };
         Types[1]["Barista"] = new List<string> { "Buy" };
+        Types[1]["Chef"] = new List<string> { "OrderMeal" };
+        Types[1]["Doctor"] = new List<string> { "SeekAdvice" };
+        Types[1]["Waitress"] = new List<string> { "OrderMeal" };
+        Types[1]["Mayor"] = new List<string> { "DiscussPolicy" };
+        Types[1]["Pharmacist"] = new List<string> { "Buy" };
+        Types[1]["Sheriff"] = new List<string> { "ReportIssue" };
 
         // LOCATION TASK TYPES
         Types[1]["Bakery"] = new List<string> { "AskLoc" };
@@ -162,6 +176,12 @@ public class TaskManager : MonoBehaviour
         // NPC TASK TYPES
         Types[2]["Baker"] = new List<string> { "Buy", "DiscussRecipes" };
         Types[2]["Barista"] = new List<string> { "Buy", "RecommendDrink" };
+        Types[2]["Chef"] = new List<string> { "OrderMeal", "DiscussRecipes" };
+        Types[2]["Doctor"] = new List<string> { "SeekAdvice", "RequestMedicine" };
+        Types[2]["Waitress"] = new List<string> { "OrderMeal", "RequestRefill" };
+        Types[2]["Mayor"] = new List<string> { "DiscussPolicy", "SeekApproval" };
+        Types[2]["Pharmacist"] = new List<string> { "Buy", "SeekAdvice" };
+        Types[2]["Sheriff"] = new List<string> { "ReportIssue", "AskForHelp" };
 
         // LOCATION TASK TYPES
         Types[2]["Bakery"] = new List<string> { "AskLoc", "DiscussMenu" };
@@ -174,6 +194,12 @@ public class TaskManager : MonoBehaviour
         // NPC TASK TYPES
         Types[3]["Baker"] = new List<string> { "Buy", "DiscussRecipes", "NegotiatePrices" };
         Types[3]["Barista"] = new List<string> { "Buy", "RecommendDrink", "ExplainIngredients" };
+        Types[3]["Chef"] = new List<string> { "OrderMeal", "DiscussRecipes", "RateDishes" };
+        Types[3]["Doctor"] = new List<string> { "SeekAdvice", "RequestMedicine", "DiscussHealth" };
+        Types[3]["Waitress"] = new List<string> { "OrderMeal", "RequestRefill", "AskSpecials" };
+        Types[3]["Mayor"] = new List<string> { "DiscussPolicy", "SeekApproval", "DebateIssues" };
+        Types[3]["Pharmacist"] = new List<string> { "Buy", "SeekAdvice", "AskAvailability" };
+        Types[3]["Sheriff"] = new List<string> { "ReportIssue", "AskForHelp", "SeekAssistance" };
 
         // LOCATION TASK TYPES
         Types[3]["Bakery"] = new List<string> { "AskLoc", "DiscussMenu", "PlanEvent" };
@@ -190,11 +216,54 @@ public class TaskManager : MonoBehaviour
             { "DiscussRecipes", new List<string> { "Sourdough", "Croissant" } },
             { "NegotiatePrices", new List<string> { "Discounts", "Bulk Orders" } }
         };
+
         NPCSubjects["Barista"] = new Dictionary<string, List<string>>
         {
             { "Buy", new List<string> { "Coffee", "Tea" } },
             { "RecommendDrink", new List<string> { "Latte", "Espresso" } },
             { "ExplainIngredients", new List<string> { "Espresso Beans", "Milk Alternatives" } }
+        };
+
+        NPCSubjects["Chef"] = new Dictionary<string, List<string>>
+        {
+            { "OrderMeal", new List<string> { "Pasta", "Steak" } },
+            { "DiscussRecipes", new List<string> { "Soup", "Sauce" } },
+            { "RateDishes", new List<string> { "Flavor", "Presentation" } }
+        };
+
+        NPCSubjects["Doctor"] = new Dictionary<string, List<string>>
+        {
+            { "SeekAdvice", new List<string> { "Headache", "Flu" } },
+            { "RequestMedicine", new List<string> { "Painkillers", "Antibiotics" } },
+            { "DiscussHealth", new List<string> { "Diet", "Exercise" } }
+        };
+
+        NPCSubjects["Waitress"] = new Dictionary<string, List<string>>
+        {
+            { "OrderMeal", new List<string> { "Soup", "Burger" } },
+            { "RequestRefill", new List<string> { "Water", "Soda" } },
+            { "AskSpecials", new List<string> { "Dessert", "Seasonal Menu" } }
+        };
+
+        NPCSubjects["Mayor"] = new Dictionary<string, List<string>>
+        {
+            { "DiscussPolicy", new List<string> { "Taxes", "Education" } },
+            { "SeekApproval", new List<string> { "Event", "New Business" } },
+            { "DebateIssues", new List<string> { "Crime", "Infrastructure" } }
+        };
+
+        NPCSubjects["Pharmacist"] = new Dictionary<string, List<string>>
+        {
+            { "Buy", new List<string> { "Painkillers", "Vitamins" } },
+            { "SeekAdvice", new List<string> { "Side Effects", "Dosages" } },
+            { "AskAvailability", new List<string> { "Prescriptions", "Supplements" } }
+        };
+
+        NPCSubjects["Sheriff"] = new Dictionary<string, List<string>>
+        {
+            { "ReportIssue", new List<string> { "Lost Item", "Neighborhood Problem" } },
+            { "AskForHelp", new List<string> { "Directions", "Community Event" } },
+            { "SeekAssistance", new List<string> { "Safety Tips", "Local Laws" } }
         };
 
         // Add new Location subjects to this section
@@ -516,6 +585,7 @@ public class TaskManager : MonoBehaviour
                 if (TaskList.Count > 0 && ActiveTask == task) ActiveTask = TaskList[0];
                 else ActiveTask = null;
 
+                completeTask?.Invoke();
                 return true;
             }
         }
@@ -688,6 +758,26 @@ public class TaskManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Prints all current tasks in the TaskList to the console.
+    /// Useful for debugging purposes.
+    /// </summary>
+    public void PrintAllTasksToConsole()
+    {
+        if (TaskList == null || TaskList.Count == 0)
+        {
+            Debug.Log("TaskManager: No active tasks in the list.");
+            return;
+        }
+
+        Debug.Log($"TaskManager: Printing {TaskList.Count} active tasks...");
+
+        foreach (Task task in TaskList)
+        {
+            Debug.Log($"Task: {task.TaskDescription} | Subject: {task.TaskSubject} | NPC: {task.TaskNPC} | Location: {task.TaskLocation} | Difficulty: {task.TaskDifficulty} | Completed: {task.IsCompleted}");
+        }
+    }
+
+    /// <summary>
     /// Tests each of the functions in the task manager out
     /// </summary>
     public void TestTaskManager() 
@@ -706,6 +796,8 @@ public class TaskManager : MonoBehaviour
         Debug.Assert(randomTask != null, "GenerateTask should return a valid task.");
 
         // Test 3: Complete a Task
+        // Adding listener for task completion
+        AddTaskCompletionListener(() => { Debug.Log("Pinging completeTask event!"); });
         Task taskToComplete = GetTaskList()[0];
         bool completeResult = CompleteTask(taskToComplete);
         Debug.Log("Completing task: " + $"{completeResult}");
@@ -772,6 +864,17 @@ public class TaskManager : MonoBehaviour
         TaskList.Clear();
 
         Debug.Log("FINISHED TEST!");
+    }
+
+
+    /// <summary>
+    /// AddTaskCompletionListener adds a listener
+    /// </summary>
+    /// <param name="action"></param>
+    public void AddTaskCompletionListener(UnityAction action)
+    {
+        if (action == null) { Debug.LogError("ERROR: ACTION SENT TO COMPLETETASK EVENT NULL"); return; }
+        completeTask.AddListener(action);
     }
 
 }

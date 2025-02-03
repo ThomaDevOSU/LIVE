@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -45,6 +46,19 @@ public class GameClock : MonoBehaviour
         {
             Destroy(gameObject); // Destroy duplicate instances
         }
+    }
+
+    private IEnumerator Start()
+    {
+        // Wait until GameManager is fully initialized
+        while (GameManager.Instance == null || GameManager.Instance.CurrentPlayerData == null)
+        {
+            Debug.LogWarning("Waiting for GameManager and PlayerData to initialize...");
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        LoadGameClockFromSave(GameManager.Instance.CurrentPlayerData);
+        Debug.Log($"Loaded Clock Data from Save: Day {currentDay}");
     }
 
     /// <summary>
@@ -95,6 +109,11 @@ public class GameClock : MonoBehaviour
         }
     }
 
+    public void EndDayNow()
+    {
+        EndDay(); 
+    }
+
     /// <summary>
     /// Ends the current day, resets the game time, and triggers the start of a new day.
     /// </summary>
@@ -105,6 +124,43 @@ public class GameClock : MonoBehaviour
         elapsedGameTime = 0f; // Reset elapsed game time
         currentHour = 8f; // Reset to the start of the next day (8 AM)
         CurrentState = ClockState.Day; // Reset the clock state to Day
+
+        Debug.Log($"Starting new day: {currentDay}");
+
+        // Ensure GameManager & PlayerData exist before saving
+        if (GameManager.Instance != null && GameManager.Instance.CurrentPlayerData != null)
+        {
+            SaveGameClockData(GameManager.Instance.CurrentPlayerData);
+
+            if (PlayerProgressManager.Instance != null)
+            {
+                PlayerProgressManager.Instance.SaveProgressToPlayerData(GameManager.Instance.CurrentPlayerData);
+            }
+            else
+            {
+                Debug.LogError("PlayerProgressManager.Instance is null! Progress not saved.");
+            }
+
+            // Save to slot
+            SaveSystem.SaveGame(GameManager.Instance.CurrentPlayerData, GameManager.Instance.CurrentSaveSlot);
+        }
+        else
+        {
+            Debug.LogError("GameManager or CurrentPlayerData is null! Unable to save game clock data.");
+        }
+
+        // Notify other systems that the day has ended
+        if (TaskManager.Instance != null)
+        {
+            TaskManager.Instance.ClearUncompletedTasks();
+            int playerDifficulty = GameManager.Instance.CurrentPlayerData?.preferredDifficulty ?? 1;
+            TaskManager.Instance.GenerateTasks(5, playerDifficulty);
+        }
+        else
+        {
+            Debug.LogError("TaskManager.Instance is null! Could not generate new tasks.");
+        }
+
         OnDayStart?.Invoke(); // Trigger the start of the new day
     }
 
@@ -133,6 +189,26 @@ public class GameClock : MonoBehaviour
         int minute = Mathf.FloorToInt((currentHour - hour) * 60); // Extract the minute
         return $"{hour:D2}:{minute:D2}"; // Format as HH:mm
     }
+
+    /// <summary>
+    /// Loads the current day and time progress from PlayerData.
+    /// </summary>
+    public void LoadGameClockFromSave(PlayerData data)
+    {
+        currentDay = data.day;
+
+        Debug.Log($"GameClock Loaded: Day {currentDay}, Time {currentHour:F2}");
+    }
+
+    /// <summary>
+    /// Saves the current day and time progress into PlayerData for persistent saving.
+    /// </summary>
+    public void SaveGameClockData(PlayerData data)
+    {
+        //GameManager.Instance.CurrentPlayerData.day = currentDay;
+        data.day = currentDay;
+    }
+
 
     /// <summary>
     /// How to Access and Use GameClock:
