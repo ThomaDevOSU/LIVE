@@ -18,7 +18,7 @@ public class TaskListUI : MonoBehaviour
         }
 
         // Get task notification
-        TaskManager.Instance.AddTaskCompletionListener(UpdateActiveTaskUI);
+        TaskManager.Instance.AddTaskCompletionListener(_ => UpdateActiveTaskUI());
 
         StartCoroutine(DisplayActiveTaskAfterLoad());
     }

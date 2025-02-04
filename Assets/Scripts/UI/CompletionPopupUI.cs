@@ -23,9 +23,11 @@ public class CompletionPopupUI : MonoBehaviour
         }
     }
 
-    public void ShowTaskCompletedPopup()
+    public void ShowTaskCompletedPopup(Task completedTask)
     {
-        popupText.text = "Task Completed!";
+        if (completedTask == null) return;
+
+        popupText.text = $"Congratulations! You've completed: {completedTask.T_TaskDescription}";
         popupPanel.SetActive(true);
         Invoke(nameof(HidePopup), 3f); // Setup auto-hide if they don't click X
     }
