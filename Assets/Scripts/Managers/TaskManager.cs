@@ -85,7 +85,7 @@ public class TaskManager : MonoBehaviour
     /// <summary>
     /// The completeTask unityEvent is invoked whenever a task is completed
     /// </summary>
-    private UnityEvent completeTask = new UnityEvent();
+    private UnityEvent<Task> completeTask = new UnityEvent<Task>();
 
     private void Awake() // Singleton
     {
@@ -123,9 +123,9 @@ public class TaskManager : MonoBehaviour
             }
         }
 
-        //TestTaskManager();
+        TestTaskManager();
         // GENERATES 5 TASKS from the Level 3 Task pool, DISABLE THIS IF YOU WANT AN EMPTY TASK LIST
-        GenerateTasks(5 , GameManager.Instance.CurrentPlayerData.preferredDifficulty);
+        //GenerateTasks(5 , GameManager.Instance.CurrentPlayerData.preferredDifficulty);
         //PrintTaskList();
         
     }
@@ -585,7 +585,7 @@ public class TaskManager : MonoBehaviour
                 if (TaskList.Count > 0 && ActiveTask == task) ActiveTask = TaskList[0];
                 else ActiveTask = null;
 
-                completeTask?.Invoke();
+                completeTask?.Invoke(task);
                 return true;
             }
         }
@@ -797,7 +797,7 @@ public class TaskManager : MonoBehaviour
 
         // Test 3: Complete a Task
         // Adding listener for task completion
-        AddTaskCompletionListener(() => { Debug.Log("Pinging completeTask event!"); });
+        AddTaskCompletionListener((Task t) => { Debug.Log($"Pinging completeTask event! Task Description: {t.TaskDescription}"); });
         Task taskToComplete = GetTaskList()[0];
         bool completeResult = CompleteTask(taskToComplete);
         Debug.Log("Completing task: " + $"{completeResult}");
@@ -871,7 +871,7 @@ public class TaskManager : MonoBehaviour
     /// AddTaskCompletionListener adds a listener
     /// </summary>
     /// <param name="action"></param>
-    public void AddTaskCompletionListener(UnityAction action)
+    public void AddTaskCompletionListener(UnityAction<Task> action)
     {
         if (action == null) { Debug.LogError("ERROR: ACTION SENT TO COMPLETETASK EVENT NULL"); return; }
         completeTask.AddListener(action);
