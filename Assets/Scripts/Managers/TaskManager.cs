@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using Newtonsoft.Json;
+using UnityEngine.Events;
+using System;
+using Random = UnityEngine.Random;
 
 
 /// <summary>
@@ -78,6 +81,11 @@ public class TaskManager : MonoBehaviour
     /// This dictionary behaves the same as the top, but is in english for GPT to process.
     /// </summary>
     private Dictionary<int, Dictionary<string, TaskTemplate>> TaskTemplateDictEnglish;
+
+    /// <summary>
+    /// The completeTask unityEvent is invoked whenever a task is completed
+    /// </summary>
+    private UnityEvent<Task> completeTask = new UnityEvent<Task>();
 
     private void Awake() // Singleton
     {
@@ -577,6 +585,7 @@ public class TaskManager : MonoBehaviour
                 if (TaskList.Count > 0 && ActiveTask == task) ActiveTask = TaskList[0];
                 else ActiveTask = null;
 
+                completeTask?.Invoke(task);
                 return true;
             }
         }
@@ -787,6 +796,8 @@ public class TaskManager : MonoBehaviour
         Debug.Assert(randomTask != null, "GenerateTask should return a valid task.");
 
         // Test 3: Complete a Task
+        // Adding listener for task completion
+        AddTaskCompletionListener((Task t) => { Debug.Log($"Pinging completeTask event! Task Description: {t.TaskDescription}"); });
         Task taskToComplete = GetTaskList()[0];
         bool completeResult = CompleteTask(taskToComplete);
         Debug.Log("Completing task: " + $"{completeResult}");
@@ -853,6 +864,17 @@ public class TaskManager : MonoBehaviour
         TaskList.Clear();
 
         Debug.Log("FINISHED TEST!");
+    }
+
+
+    /// <summary>
+    /// AddTaskCompletionListener adds a listener
+    /// </summary>
+    /// <param name="action"></param>
+    public void AddTaskCompletionListener(UnityAction<Task> action)
+    {
+        if (action == null) { Debug.LogError("ERROR: ACTION SENT TO COMPLETETASK EVENT NULL"); return; }
+        completeTask.AddListener(action);
     }
 
 }
