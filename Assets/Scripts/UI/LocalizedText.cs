@@ -1,6 +1,8 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using ArabicSupport;
 
 public class LocalizedText : MonoBehaviour
 {
@@ -15,34 +17,33 @@ public class LocalizedText : MonoBehaviour
     public void UpdateText() // We use TMP in this household
     {
         TMP_Text textComponent = GetComponent<TextMeshProUGUI>();
-        if (textComponent != null)
+        textComponent.font = LocalizationManager.Instance.MasterFont;
+
+        if (textComponent != null)  //  This component is not null
         {
-            if(GameManager.Instance.Options.language == "Arabic")
-            {
-                textComponent.font = LocalizationManager.Instance.fonts[3];
-                textComponent.isRightToLeftText = true;
-                textComponent.fontStyle = TMPro.FontStyles.Bold;
-            }
-            else if(GameManager.Instance.Options.language == "Chinese")
-            {
-                textComponent.font = LocalizationManager.Instance.fonts[2];
-                textComponent.isRightToLeftText = false;
-                textComponent.fontStyle = TMPro.FontStyles.Bold;
-            }
-            else if(GameManager.Instance.Options.language == "Japanese")
-            {
-                textComponent.font = LocalizationManager.Instance.fonts[1];
-                textComponent.isRightToLeftText = false;
-                textComponent.fontStyle = TMPro.FontStyles.Bold;
-            }
-            else
-            {
-                textComponent.font = LocalizationManager.Instance.fonts[0];
-                textComponent.isRightToLeftText = false;
-                textComponent.fontStyle = TMPro.FontStyles.Normal;
-            }
+            LANGUAGES lan = (LANGUAGES)Enum.Parse(typeof(LANGUAGES), GameManager.Instance.Options.language);
 
             textComponent.text = LocalizationManager.Instance.GetLocalizedValue(localizationKey, ui);
+
+            if (lan == LANGUAGES.ar)   //  If the language requires right to left reading
+            {
+                //textComponent.isRightToLeftText = true;
+                textComponent.text = ArabicFixer.Fix(textComponent.text);
+            }
+            else // Otherwise
+            {
+                textComponent.isRightToLeftText = false;
+            }
+
+            //SECTION FOR DETERMINING BOLDNESS, ANY NON LATIN LANGUAGE SHOULD BE BOLD
+            if (lan == LANGUAGES.zh || lan == LANGUAGES.ja || lan == LANGUAGES.ar) // Make font bold if not english
+            {
+                textComponent.fontStyle = FontStyles.Bold;
+            }
+            else 
+            {
+                textComponent.fontStyle = FontStyles.Normal;
+            }
         }
     }
 }

@@ -1,0 +1,113 @@
+{
+    "Buy": {
+        "description": "Buy {{subject}} from {{npc}}",
+        "answer": "I would like to buy some {{subject}}."
+    },
+    "AskNPC": {
+        "description": "Ask {{npc}} about {{subject}}",
+        "answer": "What do you think about {{subject}}?"
+    },
+    "AskLoc": {
+        "description": "Ask anyone at the {{location}} about {{subject}}",
+        "answer": "What do you think about {{subject}}?"
+    },
+    "DiscussRecipes": {
+        "description": "Discuss recipes with {{npc}} related to {{subject}}",
+        "answer": "I would like to discuss recipes about {{subject}}."
+    },
+    "RecommendDrink": {
+        "description": "Ask {{npc}} to recommend a drink for an {{subject}}",
+        "answer": "Could you recommend a drink for an {{subject}}?"
+    },
+    "DiscussMenu": {
+        "description": "Discuss the menu at {{location}} regarding {{subject}}",
+        "answer": "I would like to discuss the menu regarding {{subject}}."
+    },
+    "NegotiatePrices": {
+        "description": "Negotiate prices with {{npc}} for {{subject}}",
+        "answer": "I would like to negotiate the price for {{subject}} with you."
+    },
+    "ExplainIngredients": {
+        "description": "Ask {{npc}} to explain the ingredients for {{subject}}",
+        "answer": "Could you explain the ingredients for {{subject}}?"
+    },
+    "PlanEvent": {
+        "description": "Ask anyone at {{location}} about scheduling a {{subject}}",
+        "answer": "I would like to know more about scheduling a {{subject}} here."
+    },
+    "OrderMeal":  
+    {
+        "description": "Order {{subject}} from {{npc}}",
+        "answer": "I'd like to order {{subject}}."
+    },
+    "RateDishes":  
+    {
+        "description": "Ask {{npc}} to rate the {{subject}}",
+        "answer": "How would you rate the {{subject}}?"
+    },
+    "SeekAdvice":  
+    {
+        "description": "Seek advice from {{npc}} about {{subject}}",
+        "answer": "What advice do you have about {{subject}}?"
+    },
+    "RequestMedicine":  
+    {
+        "description": "Request {{subject}} from {{npc}}",
+        "answer": "Can I get some {{subject}}?"
+    },
+    "DiscussHealth":  
+    {
+        "description": "Discuss {{subject}} with {{npc}}",
+        "answer": "Can we talk about {{subject}}?"
+    },
+    "RequestRefill":  
+    {
+        "description": "Request a refill for {{subject}} from {{npc}}",
+        "answer": "Can I get a refill for {{subject}}?"
+    },
+    "AskSpecials":  
+    {
+        "description": "Ask {{npc}} about {{subject}} specials",
+        "answer": "What specials do you have for {{subject}}?"
+    },
+    "DiscussPolicy":  
+    {
+        "description": "Discuss {{subject}} policy with {{npc}}",
+        "answer": "Can we discuss policy on {{subject}}?"
+    },
+    "SeekApproval":  
+    {
+        "description": "Seek approval from {{npc}} for {{subject}}",
+        "answer": "Can you approve {{subject}}?"
+    },
+    "DebateIssues":  
+    {
+        "description": "Debate {{subject}} issues with {{npc}}",
+        "answer": "Can we debate issues about {{subject}}?"
+    },
+    "AskAvailability":  
+    {
+        "description": "Ask {{npc}} about {{subject}} availability",
+        "answer": "Is {{subject}} available?"
+    },
+    "ReportIssue":  
+    {
+        "description": "Report a {{subject}} to {{npc}}",
+        "answer": "I'd like to report a {{subject}}."
+    },
+    "AskForHelp":  
+    {
+        "description": "Ask {{npc}} for help with {{subject}}",
+        "answer": "Can you help me with {{subject}}?"
+    },
+    "SeekAssistance":  
+    {
+        "description": "Seek assistance from {{npc}} about {{subject}}",
+        "answer": "Can you provide assistance with {{subject}}?"
+    },
+    "SAMPLE":  
+    {
+        "description":"SAMPLE {{subject}} SAMPLE NPC {{npc}} SAMPLE LOCATION {{location}}",
+        "answer":"SAMPLE SUBJECT {{subject}}."
+    }
+}

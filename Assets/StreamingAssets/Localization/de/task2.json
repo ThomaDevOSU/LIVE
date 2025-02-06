@@ -1,0 +1,30 @@
+{
+    "Buy": {
+      "description": "Kaufen {{subject}} aus {{npc}}",
+      "answer": "Ich würde gerne welche kaufen {{subject}}."
+    },
+    "AskNPC": {
+      "description": "Fragen {{npc}} um {{subject}}",
+      "answer": "Woran denken Sie? {{subject}}?"
+    },
+    "AskLoc": {
+      "description": "Fragen Sie jemanden im {{location}} um {{subject}}",
+      "answer": "Woran denken Sie? {{subject}}?"
+    },
+    "DiscussRecipes": {
+      "description": "Besprechen Sie Rezepte mit {{npc}} im Zusammenhang mit {{subject}}",
+      "answer": "Ich würde gerne Rezepte darüber besprechen {{subject}}."
+    },
+    "RecommendDrink": {
+      "description": "Fragen {{npc}} ein Getränk für einen empfehlen {{subject}}",
+      "answer": "Könnten Sie mir ein Getränk empfehlen? {{subject}}?"
+    },
+    "DiscussMenu": {
+      "description": "Besprechen Sie das Menü unter {{location}} hinsichtlich {{subject}}",
+      "answer": "Ich würde gerne das Menü bezüglich besprechen {{subject}}."
+    },
+    "SAMPLE": {
+      "description": "PROBE {{subject}} BEISPIEL-NPC {{npc}} PROBENSTANDORT {{location}}",
+      "answer": "BEISPIELGEGENSTAND {{subject}}."
+    }
+}

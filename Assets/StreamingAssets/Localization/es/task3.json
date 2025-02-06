@@ -1,0 +1,42 @@
+{
+    "Buy": {
+      "description": "Comprar {{subject}} de {{npc}}",
+      "answer": "me gustaria comprar algunos {{subject}}."
+    },
+    "AskNPC": {
+      "description": "Preguntar {{npc}} acerca de {{subject}}",
+      "answer": "¿Qué piensas acerca de {{subject}}?"
+    },
+    "AskLoc": {
+      "description": "Pregúntale a cualquiera en el {{location}} acerca de {{subject}}",
+      "answer": "¿Qué piensas acerca de {{subject}}?"
+    },
+    "DiscussRecipes": {
+      "description": "Discutir recetas con {{npc}} relacionado con {{subject}}",
+      "answer": "Me gustaría discutir recetas sobre {{subject}}."
+    },
+    "RecommendDrink": {
+      "description": "Preguntar {{npc}} recomendar una bebida para un {{subject}}",
+      "answer": "¿Podrías recomendarme una bebida para una {{subject}}?"
+    },
+    "DiscussMenu": {
+      "description": "Discuta el menú en {{location}} acerca de {{subject}}",
+      "answer": "Me gustaría hablar sobre el menú con respecto a {{subject}}."
+    },
+    "NegotiatePrices": {
+      "description": "Negociar precios con {{npc}} para {{subject}}",
+      "answer": "quisiera negociar el precio {{subject}} contigo."
+    },
+    "ExplainIngredients": {
+      "description": "Preguntar {{npc}} para explicar los ingredientes para {{subject}}",
+      "answer": "¿Podrías explicar los ingredientes para {{subject}}?"
+    },
+    "PlanEvent": {
+      "description": "Pregúntale a cualquiera en {{location}} sobre programar una {{subject}}",
+      "answer": "Me gustaría saber más sobre cómo programar una {{subject}} aquí."
+    },
+    "SAMPLE": {
+      "description": "MUESTRA {{subject}} PNJ DE MUESTRA {{npc}} UBICACIÓN DE LA MUESTRA {{location}}",
+      "answer": "ASUNTO DE MUESTRA {{subject}}."
+    }
+}

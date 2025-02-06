@@ -60,17 +60,24 @@ public class LoadMenu : MonoBehaviour
         trashButtons[slot-1].gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// LoadGame loads the players data from the corresponding data slot.
+    /// </summary>
+    /// <param name="slot"></param>
     public void LoadGame(int slot) // Loads the playerdata from the provided save slot and sets our language
     {
         PlayerData data = SaveSystem.LoadGame(slot);
         if (data != null)
         {
+            GameManager.Instance.CurrentSaveSlot = slot;    // Set slot
             GameManager.Instance.CurrentPlayerData = data; // Store loaded data in GameManager
             LocalizationManager.Instance.LoadLocalizedLearningText(GameManager.Instance.CurrentPlayerData.language); // Load our language
             // Move player to saved position and load the saved scene
             GameManager.Instance.setLocation("HOME_SPAWN");
-            TransitionManager.Instance.StartTransition("PlayerHome",TransitionType.FADE);
+            TransitionManager.Instance.StartTransition("PlayerHome", TransitionType.FADE);
+            return;
         }
+        Debug.LogError("LoadGame function in LoadMenu failed, data was corrupt");
     }
 
     public void CreateChar(int slot) // I know it's dirty passing the int slot over like this
@@ -83,7 +90,7 @@ public class LoadMenu : MonoBehaviour
 
     public void startCharacterCreator() // Sets default values for playerdaya
     {
-        GameManager.Instance.CurrentPlayerData.language = "Chinese";
+        GameManager.Instance.CurrentPlayerData.language = "zh";
         GameManager.Instance.CurrentPlayerData.name = "Bob";
         GameManager.Instance.CurrentPlayerData.gender = Gender.male;
         GameManager.Instance.CurrentPlayerData.day = 1;
@@ -124,33 +131,7 @@ public class LoadMenu : MonoBehaviour
 
     public void changeLanguage()
     {
-        switch (language.value) 
-        {
-            case 0:
-                GameManager.Instance.CurrentPlayerData.language = "Chinese";
-                break;
-            case 1:
-                GameManager.Instance.CurrentPlayerData.language = "Spanish";
-                break;
-            case 2:
-                GameManager.Instance.CurrentPlayerData.language = "English";
-                break;
-            case 3:
-                GameManager.Instance.CurrentPlayerData.language = "French";
-                break;
-            case 4:
-                GameManager.Instance.CurrentPlayerData.language = "Japanese";
-                break;
-            case 5:
-                GameManager.Instance.CurrentPlayerData.language = "German";
-                break;
-            case 6:
-                GameManager.Instance.CurrentPlayerData.language = "Italian";
-                break;
-            case 7:
-                GameManager.Instance.CurrentPlayerData.language = "Arabic";
-                break;
-        }
+        GameManager.Instance.CurrentPlayerData.language = ((LANGUAGES) language.value).ToString();
     }
 
 

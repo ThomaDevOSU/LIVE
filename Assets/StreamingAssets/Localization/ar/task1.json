@@ -1,0 +1,18 @@
+{
+    "Buy": {
+      "description": "يشتري {{subject}} من {{npc}}",
+      "answer": "أود شراء بعض {{subject}}."
+    },
+    "AskNPC": {
+      "description": "بسأل {{npc}} عن {{subject}}",
+      "answer": "ما رأيك {{subject}}؟"
+    },
+    "AskLoc": {
+      "description": "اسأل أي شخص في {{location}} عن {{subject}}",
+      "answer": "ما رأيك {{subject}}؟"
+    },
+    "SAMPLE": {
+      "description": "عينة {{subject}} عينة من الشخصيات غير القابلة للعب {{npc}} موقع العينة {{location}}",
+      "answer": "موضوع العينة {{subject}}."
+    }
+}

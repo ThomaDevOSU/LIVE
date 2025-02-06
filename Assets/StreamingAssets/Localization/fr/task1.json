@@ -1,0 +1,18 @@
+{
+    "Buy": {
+      "description": "Acheter {{subject}} depuis {{npc}}",
+      "answer": "j'aimerais en acheter {{subject}}."
+    },
+    "AskNPC": {
+      "description": "Demander {{npc}} à propos {{subject}}",
+      "answer": "A quoi penses-tu {{subject}}?"
+    },
+    "AskLoc": {
+      "description": "Demandez à n'importe qui au {{location}} à propos {{subject}}",
+      "answer": "A quoi penses-tu {{subject}}?"
+    },
+    "SAMPLE": {
+      "description": "ÉCHANTILLON {{subject}} EXEMPLE DE PNJ {{npc}} EXEMPLE D'EMPLACEMENT {{location}}",
+      "answer": "EXEMPLE DE SUJET {{subject}}."
+    }
+}

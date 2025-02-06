@@ -1,0 +1,72 @@
+{
+    "Buy": {
+        "description": "Buy {{subject}} from {{npc}}",
+        "answer": "I would like to buy some {{subject}}."
+    },
+    "AskNPC": {
+        "description": "Ask {{npc}} about {{subject}}",
+        "answer": "What do you think about {{subject}}?"
+    },
+    "AskLoc": {
+        "description": "Ask anyone at the {{location}} about {{subject}}",
+        "answer": "What do you think about {{subject}}?"
+    },
+    "DiscussRecipes": {
+        "description": "Discuss recipes with {{npc}} related to {{subject}}",
+        "answer": "I would like to discuss recipes about {{subject}}."
+    },
+    "RecommendDrink": {
+        "description": "Ask {{npc}} to recommend a drink for an {{subject}}",
+        "answer": "Could you recommend a drink for an {{subject}}?"
+    },
+    "DiscussMenu": {
+        "description": "Discuss the menu at {{location}} regarding {{subject}}",
+        "answer": "I would like to discuss the menu regarding {{subject}}."
+    },
+    "OrderMeal":  
+    {
+        "description": "Order {{subject}} from {{npc}}",
+        "answer": "I'd like to order {{subject}}."
+    },
+    "SeekAdvice":  
+    {
+        "description": "Seek advice from {{npc}} about {{subject}}",
+        "answer": "What advice do you have about {{subject}}?"
+    },
+    "RequestMedicine":  
+    {
+        "description": "Request {{subject}} from {{npc}}",
+        "answer": "Can I get some {{subject}}?"
+    },
+    "RequestRefill":  
+    {
+        "description": "Request a refill for {{subject}} from {{npc}}",
+        "answer": "Can I get a refill for {{subject}}?"
+    },
+    "DiscussPolicy":  
+    {
+        "description": "Discuss {{subject}} policy with {{npc}}",
+        "answer": "Can we discuss policy on {{subject}}?"
+    },
+    "SeekApproval":  
+    {
+        "description": "Seek approval from {{npc}} for {{subject}}",
+        "answer": "Can you approve {{subject}}?"
+    },
+    "ReportIssue":  
+    {
+        "description": "Report a {{subject}} to {{npc}}",
+        "answer": "I'd like to report a {{subject}}."
+    },
+    "AskForHelp":  
+    {
+        "description": "Ask {{npc}} for help with {{subject}}",
+        "answer": "Can you help me with {{subject}}?"
+    },
+    "SAMPLE":  
+    {
+        "description":"SAMPLE {{subject}} SAMPLE NPC {{npc}} SAMPLE LOCATION {{location}}",
+        "answer":"SAMPLE SUBJECT {{subject}}."
+    }
+}
+

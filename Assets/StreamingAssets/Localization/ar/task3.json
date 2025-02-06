@@ -1,0 +1,42 @@
+{
+    "Buy": {
+      "description": "يشتري {{subject}} من {{npc}}",
+      "answer": "أود شراء بعض {{subject}}."
+    },
+    "AskNPC": {
+      "description": "بسأل {{npc}} عن {{subject}}",
+      "answer": "ما رأيك {{subject}}؟"
+    },
+    "AskLoc": {
+      "description": "اسأل أي شخص في {{location}} عن {{subject}}",
+      "answer": "ما رأيك {{subject}}؟"
+    },
+    "DiscussRecipes": {
+      "description": "ناقش الوصفات مع {{npc}} المتعلقة {{subject}}",
+      "answer": "وأود أن مناقشة وصفات حول {{subject}}."
+    },
+    "RecommendDrink": {
+      "description": "بسأل {{npc}} للتوصية بمشروب ل {{subject}}",
+      "answer": "هل يمكن أن توصي بمشروب ل {{subject}}؟"
+    },
+    "DiscussMenu": {
+      "description": "مناقشة القائمة في {{location}} متعلق {{subject}}",
+      "answer": "أود مناقشة القائمة بخصوص {{subject}}."
+    },
+    "NegotiatePrices": {
+      "description": "التفاوض على الأسعار مع {{npc}} ل {{subject}}",
+      "answer": "أود التفاوض على السعر {{subject}} معك."
+    },
+    "ExplainIngredients": {
+      "description": "بسأل {{npc}} لشرح مكونات {{subject}}",
+      "answer": "ممكن توضحي مكوناته {{subject}}؟"
+    },
+    "PlanEvent": {
+      "description": "اسأل أي شخص في {{location}} حول جدولة أ {{subject}}",
+      "answer": "أود أن أعرف المزيد عن جدولة أ {{subject}} هنا."
+    },
+    "SAMPLE": {
+      "description": "عينة {{subject}} عينة من الشخصيات غير القابلة للعب {{npc}} موقع العينة {{location}}",
+      "answer": "موضوع العينة {{subject}}."
+    }
+}

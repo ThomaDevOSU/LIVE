@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
 public class TaskListUI : MonoBehaviour
 {
-    private TMP_Text taskListText;      // Reference TMP as I almost forgot and was getting errors
+    private TMP_Text taskListText;  // Reference TMP as I almost forgot and was getting errors
+    private Task lastActiveTask = null; // Add a tracker for last task to help resource management
 
     void Start()
     {
@@ -18,28 +18,44 @@ public class TaskListUI : MonoBehaviour
             return;
         }
 
-        StartCoroutine(DisplayTasksAfterLoad());
+        StartCoroutine(DisplayActiveTaskAfterLoad());
     }
 
-    IEnumerator DisplayTasksAfterLoad()
+    IEnumerator DisplayActiveTaskAfterLoad()
     {
-        yield return new WaitUntil(() => TaskManager.Instance.GetTaskList().Count > 0);
-        DisplayTasks();
-    }
+        yield return new WaitUntil(() => TaskManager.Instance.GetActiveTask() != null);
+        UpdateActiveTaskUI();
+        lastActiveTask = TaskManager.Instance.GetActiveTask();
 
-    // Wait until load, give header, and preposition '-' with each task, then newline
-    void DisplayTasks()
-    {
-        string taskDisplay = "Today's Tasks:\n";
-
-        foreach (Task task in TaskManager.Instance.GetTaskList())
+        // Changed to look at active
+        while (true)
         {
-            taskDisplay += "- " + task.TaskDescription + "\n";
-        }
+            yield return new WaitForSeconds(1f);
+            Task currentActiveTask = TaskManager.Instance.GetActiveTask();
 
-        taskListText.text = taskDisplay;
+            // Only update UI when changed
+            if (currentActiveTask != lastActiveTask)
+            {
+                UpdateActiveTaskUI();
+            }
+        }
+        lastActiveTask = TaskManager.Instance.GetActiveTask();
+    }
+
+    // Wait until load, get active task and display
+    public void UpdateActiveTaskUI()
+    {
+        Task activeTask = TaskManager.Instance.GetActiveTask();
+
+        if (activeTask != null)
+        {
+            string taskDisplay = activeTask.T_TaskDescription;
+            taskListText.text = taskDisplay;
+        }
+        else
+        {
+            taskListText.text = "No active tasks.";
+        }
     }
 }
-
-
 
