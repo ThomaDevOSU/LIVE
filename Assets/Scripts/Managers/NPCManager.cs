@@ -21,6 +21,11 @@ public class NPCManager : MonoBehaviour
     /// </summary>
     private Dictionary<string, List<Message>> ConversationHistory;
 
+    /// <summary>
+    ///  Gameclock instance
+    /// </summary>
+    GameClock gameClock = GameClock.Instance;
+
     void Awake()
     {
         if (Instance == null)
@@ -50,7 +55,7 @@ public class NPCManager : MonoBehaviour
     {
         foreach (NPC npc in NPCs)
         {
-           
+            // Move NPC to next location. Next Sprint.
         }
     }
 
