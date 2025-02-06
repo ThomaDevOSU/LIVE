@@ -6,8 +6,7 @@ using UnityEngine;
 /// </summary>
 public class NPC
 {
-    // The region in which the NPC is currently located.
-    public string region;
+    public string location;
 
     public string Greeting;
     public bool inDialogue = false;
@@ -19,7 +18,7 @@ public class NPC
     public ScheduleEntry[] Schedule;
     public List<Message> messages;
     public string CurrentLocation { get; set; }
-    public Vector3 CurrentCoordinates { get; set; }
+    public Vector2 CurrentCoordinates { get; set; }
 
     /// <summary>
     /// Prints the NPC's data to the debug log.
@@ -48,8 +47,8 @@ public class NPC
 /// </summary>
 public class ScheduleEntry
 {
-    public Vector2 Coordinates { get; set; }
-    public string Location { get; set; }
+    public Vector2 Coordinates;
+    public string Location;
 }
 
 /// <summary>

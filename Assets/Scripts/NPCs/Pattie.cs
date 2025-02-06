@@ -4,7 +4,7 @@ using System.Collections.Generic;
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
 /// </summary>
-public class Pattie_NoPies : MonoBehaviour
+public class Pattie_Baker : MonoBehaviour
 {
     /// <summary>
     /// The NPC instance representing Pattie.
@@ -21,36 +21,40 @@ public class Pattie_NoPies : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Pattie_NoPies script started");
+        Debug.Log("Pattie_Baker script started");
         Pattie = new NPC
         {
-            Greeting = "Hello! I'm Pattie NoPies. I'm a baker.",
+            Greeting = "Hello, dear! Looking for something sweet? Just don’t mention pies.",
             inDialogue = false,
             ID = 1,
             Name = "Pattie NoPies",
             Job = "Baker",
-            Description = "Pattie is a friendly middle aged women with a slight edge. She has 2 grown children and is a widow." +
-            "She saw the recent addition to the town, Alex, baking sweets in his newly opened coffee shop and is afraid of the competition" +
-            "because the pastries looked amazing. She acts like she doesn't respect Alex but he reminds her of her children" +
-            "Pattie hates pies because of trauma during a reality TV show where a celebrity chef who she refuses to name said mean things about her pie." +
-            "and he said mean things about her pies. She will hint that it was Gordon Ramsey but will never admit it.",
-            Personality = new List<string> { "Friendly", "Sweet", "Hates pies" },
+            Description = "Pattie is a warm and friendly baker who is well-loved in Babel for her delicious treats—except pies, which she refuses to make. " +
+            "Once a contestant on a reality cooking show, she suffered a humiliating critique from a famous British chef, leaving her with a deep aversion to pies. " +
+            "She finds joy in mentoring young bakers like Alex, even though she pretends to see him as competition. She enjoys community gatherings, " +
+            "offering free pastries to those in need, and keeping the town well-fed with her kindness and humor.",
+            Personality = new List<string> { "Friendly", "Empathetic", "Loyal", "Avoids talking about pies" },
             Schedule = new ScheduleEntry[]
             {
                 new ScheduleEntry
                 {
-                    Coordinates = new Vector3(0, 0, 0),
+                    Coordinates = new Vector2(0, 0),
                     Location = "Bakery"
                 },
                 new ScheduleEntry
                 {
-                    Coordinates = new Vector3(10, 10, 0),
-                    Location = "Overworld"
+                    Coordinates = new Vector2(8, 12),
+                    Location = "Town Square"
+                },
+                new ScheduleEntry
+                {
+                    Coordinates = new Vector2(15, 5),
+                    Location = "Ronny's Round-Up"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Bakery",
-            CurrentCoordinates = new Vector3(0, 0, 0)
+            CurrentCoordinates = new Vector2(0, 0)
         };
         NPCManager.Instance.AddNPC(Pattie);
     }
@@ -69,3 +73,4 @@ public class Pattie_NoPies : MonoBehaviour
         }
     }
 }
+
