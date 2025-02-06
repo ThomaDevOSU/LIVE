@@ -36,6 +36,25 @@ public class NPCManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Update location of all NPCs.
+    /// </summary>
+    void Update()
+    {
+        // Update location of all NPCs. Not sure how to do this yet
+    }
+
+    /// <summary>
+    /// Trigger Movement of all NPCs.
+    /// </summary>
+    private void MoveNPCs()
+    {
+        foreach (NPC npc in NPCs)
+        {
+           
+        }
+    }
+
+    /// <summary>
     /// Adds an NPC to the list.
     /// </summary>
     /// <param name="npc">The NPC to add.</param>
