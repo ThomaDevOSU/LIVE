@@ -21,6 +21,11 @@ public class NPCManager : MonoBehaviour
     /// </summary>
     private Dictionary<string, List<Message>> ConversationHistory;
 
+    /// <summary>
+    ///  Gameclock instance
+    /// </summary>
+    GameClock gameClock = GameClock.Instance;
+
     void Awake()
     {
         if (Instance == null)
@@ -32,6 +37,25 @@ public class NPCManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    /// <summary>
+    /// Update location of all NPCs.
+    /// </summary>
+    void Update()
+    {
+        // Update location of all NPCs. Not sure how to do this yet
+    }
+
+    /// <summary>
+    /// Trigger Movement of all NPCs.
+    /// </summary>
+    private void MoveNPCs()
+    {
+        foreach (NPC npc in NPCs)
+        {
+            // Move NPC to next location. Next Sprint.
         }
     }
 

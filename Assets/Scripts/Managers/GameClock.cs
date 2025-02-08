@@ -14,6 +14,7 @@ public class GameClock : MonoBehaviour
 
     // Configuration: Adjust the real-time to game-time multiplier and the duration of a game day (in seconds)
     public float realTimeToGameTimeMultiplier = 1f; // How many seconds in real time equals one second in game time
+    private float originalTimeMultiplier = 1f; // Store the original speed when paused
     public float gameDayDuration = 14f * 60f; // Total duration of a game day in real seconds (default: 14 minutes)
     private const float gameHoursPerDay = 24f; // Total in-game hours in a day
 
@@ -176,6 +177,31 @@ public class GameClock : MonoBehaviour
         if (elapsedGameTime >= gameDayDuration) // If skipping exceeds the current day duration
         {
             EndDay(); // End the day and reset the clock
+        }
+    }
+
+    /// <summary>
+    /// Pauses the in-game clock by setting the time multiplier to 0.
+    /// </summary>
+    public void PauseClock()
+    {
+        if (realTimeToGameTimeMultiplier != 0f) // Prevent overwriting pause state
+        {
+            originalTimeMultiplier = realTimeToGameTimeMultiplier; // Store current speed
+            realTimeToGameTimeMultiplier = 0f; // Stop time progression
+            Debug.Log("GameClock paused.");
+        }
+    }
+
+    /// <summary>
+    /// Resumes the in-game clock by restoring the previous time multiplier.
+    /// </summary>
+    public void ResumeClock()
+    {
+        if (realTimeToGameTimeMultiplier == 0f) // Only resume if actually paused
+        {
+            realTimeToGameTimeMultiplier = originalTimeMultiplier; // Restore time speed
+            Debug.Log("GameClock resumed.");
         }
     }
 
