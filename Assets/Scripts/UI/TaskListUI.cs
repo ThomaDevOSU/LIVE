@@ -5,7 +5,6 @@ using TMPro;
 public class TaskListUI : MonoBehaviour
 {
     private TMP_Text taskListText;  // Reference TMP as I almost forgot and was getting errors
-    private Task lastActiveTask = null; // Add a tracker for last task to help resource management
 
     void Start()
     {
@@ -18,6 +17,9 @@ public class TaskListUI : MonoBehaviour
             return;
         }
 
+        // Get task notification
+        TaskManager.Instance.AddTaskCompletionListener(_ => UpdateActiveTaskUI());
+
         StartCoroutine(DisplayActiveTaskAfterLoad());
     }
 
@@ -25,21 +27,6 @@ public class TaskListUI : MonoBehaviour
     {
         yield return new WaitUntil(() => TaskManager.Instance.GetActiveTask() != null);
         UpdateActiveTaskUI();
-        lastActiveTask = TaskManager.Instance.GetActiveTask();
-
-        // Changed to look at active
-        while (true)
-        {
-            yield return new WaitForSeconds(1f);
-            Task currentActiveTask = TaskManager.Instance.GetActiveTask();
-
-            // Only update UI when changed
-            if (currentActiveTask != lastActiveTask)
-            {
-                UpdateActiveTaskUI();
-            }
-        }
-        lastActiveTask = TaskManager.Instance.GetActiveTask();
     }
 
     // Wait until load, get active task and display
