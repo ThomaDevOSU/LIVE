@@ -64,7 +64,7 @@ public class JournalListUI : MonoBehaviour
             // Highlight
             if (task == currentActiveTask)
             {
-                button.GetComponent<Image>().color = new Color(1f, 0.75f, 0.8f);
+                button.GetComponent<Image>().color = new Color(170f / 255f, 121f / 255f, 89f / 255f);
             }
 
             // Listener and refresh
