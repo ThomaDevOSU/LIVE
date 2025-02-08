@@ -1702,6 +1702,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1209098923972178090, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209098923972178090, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209098923972178090, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 626026994}
+    - target: {fileID: 1209098923972178090, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209098923972178090, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209098923972178090, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209098923972178090, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2919772347843678185, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
       propertyPath: m_Name
       value: MenuManager
@@ -1767,6 +1795,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
+--- !u!114 &626026994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9120777313225347499, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
+  m_PrefabInstance: {fileID: 626026993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea4da17e6e253848b541e066302a15c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &741164264
 PrefabInstance:
   m_ObjectHideFlags: 0
