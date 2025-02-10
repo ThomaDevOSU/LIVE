@@ -1,0 +1,717 @@
+fileFormatVersion: 2
+guid: f6f5c7f0fc5c3f24b80b8f06d68d5ec2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5568329384265771488
+    second: Dumpster_2_full_48x48_0
+  - first:
+      213: -4887603416995828565
+    second: Dumpster_2_full_48x48_1
+  - first:
+      213: -6022577152812008941
+    second: Dumpster_2_full_48x48_2
+  - first:
+      213: -4063838809578138219
+    second: Dumpster_2_full_48x48_3
+  - first:
+      213: -5605212046425644297
+    second: Dumpster_2_full_48x48_4
+  - first:
+      213: -546928659955225707
+    second: Dumpster_2_full_48x48_5
+  - first:
+      213: 4045911106749591969
+    second: Dumpster_2_full_48x48_6
+  - first:
+      213: -4937121759438672241
+    second: Dumpster_2_full_48x48_7
+  - first:
+      213: 4902142772843408295
+    second: Dumpster_2_full_48x48_8
+  - first:
+      213: -7392544307686820468
+    second: Dumpster_2_full_48x48_9
+  - first:
+      213: 1355364856932491962
+    second: Dumpster_2_full_48x48_10
+  - first:
+      213: 6115691060219584492
+    second: Dumpster_2_full_48x48_11
+  - first:
+      213: -5644612716429982859
+    second: Dumpster_2_full_48x48_12
+  - first:
+      213: 208953747973037650
+    second: Dumpster_2_full_48x48_13
+  - first:
+      213: -7191639512663123914
+    second: Dumpster_2_full_48x48_14
+  - first:
+      213: 1132693938721821444
+    second: Dumpster_2_full_48x48_15
+  - first:
+      213: -5085050878877055646
+    second: Dumpster_2_full_48x48_16
+  - first:
+      213: 2033151024211832652
+    second: Dumpster_2_full_48x48_17
+  - first:
+      213: -179024867576480235
+    second: Dumpster_2_full_48x48_18
+  - first:
+      213: 8782783137813662628
+    second: Dumpster_2_full_48x48_19
+  - first:
+      213: -6739348279418146486
+    second: Dumpster_2_full_48x48_20
+  - first:
+      213: 5353489581452225340
+    second: Dumpster_2_full_48x48_21
+  - first:
+      213: -6350094061588597690
+    second: Dumpster_2_full_48x48_22
+  - first:
+      213: 6740397085769759846
+    second: Dumpster_2_full_48x48_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02618726de159b2b0800000000000000
+      internalID: -5568329384265771488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac6afe769ebb2cb0800000000000000
+      internalID: -4887603416995828565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ab14e0df18b6ca0800000000000000
+      internalID: -6022577152812008941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59516a242285a97c0800000000000000
+      internalID: -4063838809578138219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 0
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f22f0a67594632b0800000000000000
+      internalID: -5605212046425644297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 0
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b63e1184be868f0800000000000000
+      internalID: -546928659955225707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 0
+        width: 89
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a1fd9627b6f52830800000000000000
+      internalID: 4045911106749591969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 0
+        width: 89
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e6ec3fae1db7bb0800000000000000
+      internalID: -4937121759438672241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 0
+        width: 89
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab649511e8e70440800000000000000
+      internalID: 4902142772843408295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 0
+        width: 89
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c85bdf99e18686990800000000000000
+      internalID: -7392544307686820468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 0
+        width: 89
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2628608293fc210800000000000000
+      internalID: 1355364856932491962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 0
+        width: 89
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef9b60fd9c4fd450800000000000000
+      internalID: 6115691060219584492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 0
+        width: 89
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 573c98e04ae4aa1b0800000000000000
+      internalID: -5644612716429982859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 0
+        width: 89
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e5b62a35a56e200800000000000000
+      internalID: 208953747973037650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 0
+        width: 89
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6381d0757f9223c90800000000000000
+      internalID: -7191639512663123914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 0
+        width: 89
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40390c0d22328bf00800000000000000
+      internalID: 1132693938721821444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 0
+        width: 89
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 265cebbda254e69b0800000000000000
+      internalID: -5085050878877055646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 0
+        width: 89
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f2edc9514373c10800000000000000
+      internalID: 2033151024211832652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 0
+        width: 89
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51e742ad4d9f38df0800000000000000
+      internalID: -179024867576480235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 1826
+        y: 0
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab8cac0bb6b2e970800000000000000
+      internalID: 8782783137813662628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_20
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 0
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4134ab42760972a0800000000000000
+      internalID: -6739348279418146486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_21
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 0
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3be63b096a6b4a40800000000000000
+      internalID: 5353489581452225340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_22
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 0
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 644b1b0681fefd7a0800000000000000
+      internalID: -6350094061588597690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dumpster_2_full_48x48_23
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 0
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c7266ff63ba8d50800000000000000
+      internalID: 6740397085769759846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

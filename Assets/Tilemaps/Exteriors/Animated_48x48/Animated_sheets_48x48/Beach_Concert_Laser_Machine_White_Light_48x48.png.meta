@@ -1,0 +1,617 @@
+fileFormatVersion: 2
+guid: 686168e7f0a90a14d9298e52f02a4d15
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2145090623919105089
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_0
+  - first:
+      213: 2787103846278540713
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_1
+  - first:
+      213: -2092575869029517807
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_2
+  - first:
+      213: 1073914591672641689
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_3
+  - first:
+      213: 5141640789069014888
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_4
+  - first:
+      213: 1639630382224706621
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_5
+  - first:
+      213: -2945389427116473359
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_6
+  - first:
+      213: 8098330807954068380
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_7
+  - first:
+      213: -1285351243295425241
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_8
+  - first:
+      213: 788968084411494418
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_9
+  - first:
+      213: 7471310925221512089
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_10
+  - first:
+      213: 4737379179762906878
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_11
+  - first:
+      213: -5503402747954259064
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_12
+  - first:
+      213: 7078928310883682697
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_13
+  - first:
+      213: 5784694656324843318
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_14
+  - first:
+      213: -762206951793862417
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_15
+  - first:
+      213: -6218909904813271459
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_16
+  - first:
+      213: 117549995196209033
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_17
+  - first:
+      213: 3706630417416179154
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_18
+  - first:
+      213: 5034166179614515152
+    second: Beach_Concert_Laser_Machine_White_Light_48x48_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 296
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbbd746517b1b32e0800000000000000
+      internalID: -2145090623919105089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 0
+        width: 296
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9adae857e28cda620800000000000000
+      internalID: 2787103846278540713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 0
+        width: 296
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116f0f4855da5f2e0800000000000000
+      internalID: -2092575869029517807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 0
+        width: 299
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998a1cb91af47ee00800000000000000
+      internalID: 1073914591672641689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 0
+        width: 317
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8672e1b5e07ca5740800000000000000
+      internalID: 5141640789069014888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 0
+        width: 335
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c017f352321c610800000000000000
+      internalID: 1639630382224706621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 2345
+        y: 0
+        width: 317
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f3088fdbefdf17d0800000000000000
+      internalID: -2945389427116473359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 0
+        width: 299
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9354b986fc036070800000000000000
+      internalID: 8098330807954068380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 3131
+        y: 0
+        width: 281
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72df4c3bad3892ee0800000000000000
+      internalID: -1285351243295425241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 3524
+        y: 0
+        width: 269
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 210b77aea4af2fa00800000000000000
+      internalID: 788968084411494418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 3920
+        y: 0
+        width: 248
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993c258a3bd6fa760800000000000000
+      internalID: 7471310925221512089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 4307
+        y: 0
+        width: 236
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef67918a34d8eb140800000000000000
+      internalID: 4737379179762906878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 4682
+        y: 0
+        width: 251
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b1748eb5cff93b0800000000000000
+      internalID: -5503402747954259064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 5057
+        y: 0
+        width: 269
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9898da00bc76d3260800000000000000
+      internalID: 7078928310883682697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 5432
+        y: 0
+        width: 287
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637b75c242d574050800000000000000
+      internalID: 5784694656324843318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 5807
+        y: 0
+        width: 305
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe85ef0d0d81c65f0800000000000000
+      internalID: -762206951793862417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 6188
+        y: 0
+        width: 299
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d565279046ef1b9a0800000000000000
+      internalID: -6218909904813271459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 6563
+        y: 0
+        width: 299
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987d40b091f91a100800000000000000
+      internalID: 117549995196209033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 6938
+        y: 0
+        width: 299
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ddcfbfd9b8907330800000000000000
+      internalID: 3706630417416179154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Concert_Laser_Machine_White_Light_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 7313
+        y: 0
+        width: 299
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df553cd773fcd540800000000000000
+      internalID: 5034166179614515152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

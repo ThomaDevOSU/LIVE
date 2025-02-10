@@ -1,0 +1,417 @@
+fileFormatVersion: 2
+guid: 736363c54a61b424ea16eda52c08194b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6569058294379002098
+    second: animated_hospital_xrayscreen_head_48x48_0
+  - first:
+      213: -4066294750144315647
+    second: animated_hospital_xrayscreen_head_48x48_1
+  - first:
+      213: 2199205900025042639
+    second: animated_hospital_xrayscreen_head_48x48_2
+  - first:
+      213: -9090550024440849721
+    second: animated_hospital_xrayscreen_head_48x48_3
+  - first:
+      213: 4484828064852900720
+    second: animated_hospital_xrayscreen_head_48x48_4
+  - first:
+      213: 2911518500107052666
+    second: animated_hospital_xrayscreen_head_48x48_5
+  - first:
+      213: 4623761242500533395
+    second: animated_hospital_xrayscreen_head_48x48_6
+  - first:
+      213: 4660537140739597775
+    second: animated_hospital_xrayscreen_head_48x48_7
+  - first:
+      213: -1067886870293557676
+    second: animated_hospital_xrayscreen_head_48x48_8
+  - first:
+      213: 1040182910829450517
+    second: animated_hospital_xrayscreen_head_48x48_9
+  - first:
+      213: -8854856377051877405
+    second: animated_hospital_xrayscreen_head_48x48_10
+  - first:
+      213: 5585798645423332982
+    second: animated_hospital_xrayscreen_head_48x48_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 43
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07c4be194406d4a0800000000000000
+      internalID: -6569058294379002098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 29
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10fbc99087e9197c0800000000000000
+      internalID: -4066294750144315647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 29
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc69fea3d16258e10800000000000000
+      internalID: 2199205900025042639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 29
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cad844aae0e7d180800000000000000
+      internalID: -9090550024440849721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 29
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b72440d5f4d3e30800000000000000
+      internalID: 4484828064852900720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 29
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a76ebd366aac76820800000000000000
+      internalID: 2911518500107052666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 29
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c86713a56ea2040800000000000000
+      internalID: 4623761242500533395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 29
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc56c4046dd8da040800000000000000
+      internalID: 4660537140739597775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 29
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e49d3ac8a1e21f0800000000000000
+      internalID: -1067886870293557676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 29
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 515db65a8d87f6e00800000000000000
+      internalID: 1040182910829450517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 29
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef68b44a0b3d1580800000000000000
+      internalID: -8854856377051877405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xrayscreen_head_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 29
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ed05fe54eb48d40800000000000000
+      internalID: 5585798645423332982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

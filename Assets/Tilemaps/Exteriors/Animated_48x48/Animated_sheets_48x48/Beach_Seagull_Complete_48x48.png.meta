@@ -1,0 +1,817 @@
+fileFormatVersion: 2
+guid: 77edef6d115d631419bc6f6d21862240
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5722594753639525793
+    second: Beach_Seagull_Complete_48x48_0
+  - first:
+      213: 7679122103517689005
+    second: Beach_Seagull_Complete_48x48_1
+  - first:
+      213: 7964517265981809970
+    second: Beach_Seagull_Complete_48x48_2
+  - first:
+      213: 1266808295363926965
+    second: Beach_Seagull_Complete_48x48_3
+  - first:
+      213: 7066464315360782159
+    second: Beach_Seagull_Complete_48x48_4
+  - first:
+      213: 686223426991723760
+    second: Beach_Seagull_Complete_48x48_5
+  - first:
+      213: 7986310193593801780
+    second: Beach_Seagull_Complete_48x48_6
+  - first:
+      213: -2251284656696739671
+    second: Beach_Seagull_Complete_48x48_7
+  - first:
+      213: -2018803841841764877
+    second: Beach_Seagull_Complete_48x48_8
+  - first:
+      213: -1407359938247932852
+    second: Beach_Seagull_Complete_48x48_9
+  - first:
+      213: -3808664900760551291
+    second: Beach_Seagull_Complete_48x48_10
+  - first:
+      213: 9099919113260213589
+    second: Beach_Seagull_Complete_48x48_11
+  - first:
+      213: 1888154577380300818
+    second: Beach_Seagull_Complete_48x48_12
+  - first:
+      213: -3517193381159073138
+    second: Beach_Seagull_Complete_48x48_13
+  - first:
+      213: -4089412275629406046
+    second: Beach_Seagull_Complete_48x48_14
+  - first:
+      213: 2097260731567971532
+    second: Beach_Seagull_Complete_48x48_15
+  - first:
+      213: -4481599122965424848
+    second: Beach_Seagull_Complete_48x48_16
+  - first:
+      213: 1248877716695717381
+    second: Beach_Seagull_Complete_48x48_17
+  - first:
+      213: -6804386961857775809
+    second: Beach_Seagull_Complete_48x48_18
+  - first:
+      213: -5913039030328128080
+    second: Beach_Seagull_Complete_48x48_19
+  - first:
+      213: 2759696265044921098
+    second: Beach_Seagull_Complete_48x48_20
+  - first:
+      213: 2122620210794349174
+    second: Beach_Seagull_Complete_48x48_21
+  - first:
+      213: -4015993601673284626
+    second: Beach_Seagull_Complete_48x48_22
+  - first:
+      213: 6346003398445445221
+    second: Beach_Seagull_Complete_48x48_23
+  - first:
+      213: -7529653543487709325
+    second: Beach_Seagull_Complete_48x48_24
+  - first:
+      213: -7122876681704611971
+    second: Beach_Seagull_Complete_48x48_25
+  - first:
+      213: -8193583735961539327
+    second: Beach_Seagull_Complete_48x48_26
+  - first:
+      213: 1897060384211627301
+    second: Beach_Seagull_Complete_48x48_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 98
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ada23cdb9dba6f40800000000000000
+      internalID: 5722594753639525793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 98
+        width: 47
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4b50f0ed8b19a60800000000000000
+      internalID: 7679122103517689005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 98
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235af4e6146a78e60800000000000000
+      internalID: 7964517265981809970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 98
+        width: 47
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb5fabce6b949110800000000000000
+      internalID: 1266808295363926965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47ad07eadf111260800000000000000
+      internalID: 7066464315360782159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 2
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f494623294f58900800000000000000
+      internalID: 686223426991723760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 2
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c5d3bcec215de60800000000000000
+      internalID: 7986310193593801780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 2
+        width: 71
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a8bd455884d1c0e0800000000000000
+      internalID: -2251284656696739671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 2
+        width: 71
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5e3d71a94cbf3e0800000000000000
+      internalID: -2018803841841764877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 2
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44cd99b79d087ce0800000000000000
+      internalID: -1407359938247932852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 2
+        width: 47
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5804ba1b377e42bc0800000000000000
+      internalID: -3808664900760551291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 2
+        width: 47
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555a9a65838694e70800000000000000
+      internalID: 9099919113260213589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 2
+        width: 47
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 218d7c19592143a10800000000000000
+      internalID: 1888154577380300818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 5
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a88a5314b603fc0800000000000000
+      internalID: -3517193381159073138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 5
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8ccf2b33d7f37c0800000000000000
+      internalID: -4089412275629406046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 2
+        width: 47
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc1c7a0687fa1d10800000000000000
+      internalID: 2097260731567971532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 2
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03591f997592ec1c0800000000000000
+      internalID: -4481599122965424848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 2
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5069c8f9aa7e45110800000000000000
+      internalID: 1248877716695717381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 2
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f37fa200c16f191a0800000000000000
+      internalID: -6804386961857775809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 2
+        width: 71
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd854e945aa0fda0800000000000000
+      internalID: -5913039030328128080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_20
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 2
+        width: 71
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b89fda1296c4620800000000000000
+      internalID: 2759696265044921098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_21
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 2
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6724679e5df057d10800000000000000
+      internalID: 2122620210794349174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_22
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 2
+        width: 47
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3b500d8135448c0800000000000000
+      internalID: -4015993601673284626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_23
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 2
+        width: 47
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56033c3e778811850800000000000000
+      internalID: 6346003398445445221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_24
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 2
+        width: 47
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f57aafefb418790800000000000000
+      internalID: -7529653543487709325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_25
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 2
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f55188565762d90800000000000000
+      internalID: -7122876681704611971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_26
+      rect:
+        serializedVersion: 2
+        x: 2138
+        y: 2
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d289ce00b8a4e80800000000000000
+      internalID: -8193583735961539327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Seagull_Complete_48x48_27
+      rect:
+        serializedVersion: 2
+        x: 2234
+        y: 2
+        width: 47
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d666e4e56b35a10800000000000000
+      internalID: 1897060384211627301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

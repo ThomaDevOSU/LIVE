@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: a627d423481ad0f4183c1c3a26a90320
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3390129902082611852
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_0
+  - first:
+      213: 3492184534917615032
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_1
+  - first:
+      213: 2645584286741929802
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_2
+  - first:
+      213: -4870313757843995791
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_3
+  - first:
+      213: -3204377872389097238
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_4
+  - first:
+      213: 7347176747306810782
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_5
+  - first:
+      213: 3805662821185958767
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_6
+  - first:
+      213: 721562420505878052
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_7
+  - first:
+      213: 5817978623067742621
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_8
+  - first:
+      213: -2085382335739184352
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_9
+  - first:
+      213: 4578057334244837803
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_10
+  - first:
+      213: -6798512634855957571
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_11
+  - first:
+      213: 1521159457961573165
+    second: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 125
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 475afe3d0d6d3f0d0800000000000000
+      internalID: -3390129902082611852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 104
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd80e5055bb67030800000000000000
+      internalID: 3492184534917615032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 104
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f9b9254e007b420800000000000000
+      internalID: 2645584286741929802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173c207f07b296cb0800000000000000
+      internalID: -4870313757843995791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 0
+        width: 134
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae830267d43c783d0800000000000000
+      internalID: -3204377872389097238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 0
+        width: 95
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d7b3d135a66f560800000000000000
+      internalID: 7347176747306810782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 77
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6333bf2c2e60d430800000000000000
+      internalID: 3805662821185958767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 0
+        width: 107
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e168dc231830a00800000000000000
+      internalID: 721562420505878052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 77
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91e4c29bbc9db050800000000000000
+      internalID: 5817978623067742621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 50
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b346180db3f03e0800000000000000
+      internalID: -2085382335739184352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 50
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba90901d3e6888f30800000000000000
+      internalID: 4578057334244837803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 35
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbbd76657c4d6a1a0800000000000000
+      internalID: -6798512634855957571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Hydrant_Water_Jet_Modular_Top_Part_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b7682b77e3c1510800000000000000
+      internalID: 1521159457961573165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

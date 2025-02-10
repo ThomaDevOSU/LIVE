@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: a56f1440f518a3b49beb75e4f1b4da67
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4785980411400473176
+    second: animated_hospital_resonance_machine_48x48_0
+  - first:
+      213: 4859264494246537552
+    second: animated_hospital_resonance_machine_48x48_1
+  - first:
+      213: -4448103026313378030
+    second: animated_hospital_resonance_machine_48x48_2
+  - first:
+      213: -1953280480935369958
+    second: animated_hospital_resonance_machine_48x48_3
+  - first:
+      213: 996745207755257134
+    second: animated_hospital_resonance_machine_48x48_4
+  - first:
+      213: -2550447289551275308
+    second: animated_hospital_resonance_machine_48x48_5
+  - first:
+      213: 1438964445806871579
+    second: animated_hospital_resonance_machine_48x48_6
+  - first:
+      213: 7187727698305082308
+    second: animated_hospital_resonance_machine_48x48_7
+  - first:
+      213: -8087181414046133635
+    second: animated_hospital_resonance_machine_48x48_8
+  - first:
+      213: 5223624456495142903
+    second: animated_hospital_resonance_machine_48x48_9
+  - first:
+      213: -1623488866457042854
+    second: animated_hospital_resonance_machine_48x48_10
+  - first:
+      213: 88970281482602211
+    second: animated_hospital_resonance_machine_48x48_11
+  - first:
+      213: -5045152211597717126
+    second: animated_hospital_resonance_machine_48x48_12
+  - first:
+      213: 2952397970300295109
+    second: animated_hospital_resonance_machine_48x48_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 14
+        width: 92
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a53f7c4c28c49db0800000000000000
+      internalID: -4785980411400473176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 17
+        width: 92
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059ab31ef439f6340800000000000000
+      internalID: 4859264494246537552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 20
+        width: 92
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21740485dd92542c0800000000000000
+      internalID: -4448103026313378030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 26
+        width: 92
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13a42360cd84e4e0800000000000000
+      internalID: -1953280480935369958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 29
+        width: 92
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2533d74c7625dd00800000000000000
+      internalID: 996745207755257134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 29
+        width: 92
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da30f7f3bdfa9cd0800000000000000
+      internalID: -2550447289551275308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 29
+        width: 92
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b144cbc1a8a38f310800000000000000
+      internalID: 1438964445806871579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 29
+        width: 92
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3e5b76240ffb360800000000000000
+      internalID: 7187727698305082308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 29
+        width: 92
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7293a50a5f84cf80800000000000000
+      internalID: -8087181414046133635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 29
+        width: 92
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f79f6964ca0e7840800000000000000
+      internalID: 5223624456495142903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 29
+        width: 92
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a50c6024a753879e0800000000000000
+      internalID: -1623488866457042854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 26
+        width: 92
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e64657eff51c3100800000000000000
+      internalID: 88970281482602211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 20
+        width: 92
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7111fd3bc40cf9b0800000000000000
+      internalID: -5045152211597717126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_resonance_machine_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 17
+        width: 92
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7555fbf4609f820800000000000000
+      internalID: 2952397970300295109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

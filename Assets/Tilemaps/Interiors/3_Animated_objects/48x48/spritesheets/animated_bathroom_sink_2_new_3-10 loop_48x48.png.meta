@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: 6e3603ca426a54c4d9fe951473fcbddd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2487580975235428135
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_0
+  - first:
+      213: -94598491689592709
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_1
+  - first:
+      213: 2388630150835863743
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_2
+  - first:
+      213: -5158743839780765190
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_3
+  - first:
+      213: 2605994294139283989
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_4
+  - first:
+      213: -5211658451199699569
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_5
+  - first:
+      213: 5269515690184131713
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_6
+  - first:
+      213: 1025522169057555296
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_7
+  - first:
+      213: -4163890688019541280
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_8
+  - first:
+      213: -9211292075247998277
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_9
+  - first:
+      213: 7378962421107124999
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_10
+  - first:
+      213: -4953231896957151802
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_11
+  - first:
+      213: -2638837332536618352
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_12
+  - first:
+      213: -4403983852355579500
+    second: animated_bathroom_sink_2_new_3-10 loop_48x48_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f6dea97b9a58220800000000000000
+      internalID: 2487580975235428135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b78dd8a4c2befaef0800000000000000
+      internalID: -94598491689592709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb00c58777e162120800000000000000
+      internalID: 2388630150835863743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af102a65fc57868b0800000000000000
+      internalID: -5158743839780765190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51aeddcd00a5a2420800000000000000
+      internalID: 2605994294139283989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85549d40487ca7b0800000000000000
+      internalID: -5211658451199699569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184c5c3e994112940800000000000000
+      internalID: 5269515690184131713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063b6f3baf26b3e00800000000000000
+      internalID: 1025522169057555296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2d9010b73e636c0800000000000000
+      internalID: -4163890688019541280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbae87c39aaea2080800000000000000
+      internalID: -9211292075247998277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70beb010a37576660800000000000000
+      internalID: 7378962421107124999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c51cb345d5924bb0800000000000000
+      internalID: -4953231896957151802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 20
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0929d1e5d67f06bd0800000000000000
+      internalID: -2638837332536618352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathroom_sink_2_new_3-10 loop_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 20
+        width: 94
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4911ac30508e1e2c0800000000000000
+      internalID: -4403983852355579500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
