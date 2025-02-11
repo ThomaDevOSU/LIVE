@@ -1,0 +1,617 @@
+fileFormatVersion: 2
+guid: e60bc9562ba12044eb5fa4004dae03af
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5902792586048024161
+    second: Subway_Tunnel_Neon_Light_2_48x48_0
+  - first:
+      213: 9082943822696867211
+    second: Subway_Tunnel_Neon_Light_2_48x48_1
+  - first:
+      213: -6428128407083515327
+    second: Subway_Tunnel_Neon_Light_2_48x48_2
+  - first:
+      213: 165532542461830315
+    second: Subway_Tunnel_Neon_Light_2_48x48_3
+  - first:
+      213: -4496811403613532059
+    second: Subway_Tunnel_Neon_Light_2_48x48_4
+  - first:
+      213: 795085712433921103
+    second: Subway_Tunnel_Neon_Light_2_48x48_5
+  - first:
+      213: 8373973245643000295
+    second: Subway_Tunnel_Neon_Light_2_48x48_6
+  - first:
+      213: -8810304156812759040
+    second: Subway_Tunnel_Neon_Light_2_48x48_7
+  - first:
+      213: -5705367188894947768
+    second: Subway_Tunnel_Neon_Light_2_48x48_8
+  - first:
+      213: -3062571721764568216
+    second: Subway_Tunnel_Neon_Light_2_48x48_9
+  - first:
+      213: -7847812590724432148
+    second: Subway_Tunnel_Neon_Light_2_48x48_10
+  - first:
+      213: -8643050887424142105
+    second: Subway_Tunnel_Neon_Light_2_48x48_11
+  - first:
+      213: 6093994694265114256
+    second: Subway_Tunnel_Neon_Light_2_48x48_12
+  - first:
+      213: 6929388224687971782
+    second: Subway_Tunnel_Neon_Light_2_48x48_13
+  - first:
+      213: -2643595021967819581
+    second: Subway_Tunnel_Neon_Light_2_48x48_14
+  - first:
+      213: -2586931639249196604
+    second: Subway_Tunnel_Neon_Light_2_48x48_15
+  - first:
+      213: -1794755858064983380
+    second: Subway_Tunnel_Neon_Light_2_48x48_16
+  - first:
+      213: 5518069189925666500
+    second: Subway_Tunnel_Neon_Light_2_48x48_17
+  - first:
+      213: -5185832587443792725
+    second: Subway_Tunnel_Neon_Light_2_48x48_18
+  - first:
+      213: -70342717682494345
+    second: Subway_Tunnel_Neon_Light_2_48x48_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ea33a259eeae150800000000000000
+      internalID: 5902792586048024161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b85eca288491d0e70800000000000000
+      internalID: 9082943822696867211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 142803d7543bac6a0800000000000000
+      internalID: -6428128407083515327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4643868f61c4200800000000000000
+      internalID: 165532542461830315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56090b18add1891c0800000000000000
+      internalID: -4496811403613532059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4cbc9f2e36b80b00800000000000000
+      internalID: 795085712433921103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 26
+        width: 89
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e90d29bc44563470800000000000000
+      internalID: 8373973245643000295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00037026c038bb580800000000000000
+      internalID: -8810304156812759040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 26
+        width: 89
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8466fb025c672d0b0800000000000000
+      internalID: -5705367188894947768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8630119ce3f8f75d0800000000000000
+      internalID: -3062571721764568216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 26
+        width: 89
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cee380a3708f61390800000000000000
+      internalID: -7847812590724432148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4957fb207bd0880800000000000000
+      internalID: -8643050887424142105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e89c613e7329450800000000000000
+      internalID: 6093994694265114256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd1d4b70e12a2060800000000000000
+      internalID: 6929388224687971782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ccfd997550105bd0800000000000000
+      internalID: -2643595021967819581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c92558516f591cd0800000000000000
+      internalID: -2586931639249196604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caa3c7d5e0fb717e0800000000000000
+      internalID: -1794755858064983380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cefb8731be149c40800000000000000
+      internalID: 5518069189925666500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba494c8ccb83808b0800000000000000
+      internalID: -5185832587443792725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Subway_Tunnel_Neon_Light_2_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 26
+        width: 86
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774dff3cba7160ff0800000000000000
+      internalID: -70342717682494345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

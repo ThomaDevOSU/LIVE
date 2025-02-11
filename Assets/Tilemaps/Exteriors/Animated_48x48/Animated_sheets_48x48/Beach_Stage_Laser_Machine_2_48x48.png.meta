@@ -1,0 +1,617 @@
+fileFormatVersion: 2
+guid: e2f296c568e37df43b5b6990633416ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4841883804781527938
+    second: Beach_Stage_Laser_Machine_2_48x48_0
+  - first:
+      213: -7874367669921914798
+    second: Beach_Stage_Laser_Machine_2_48x48_1
+  - first:
+      213: -4307114043927726872
+    second: Beach_Stage_Laser_Machine_2_48x48_2
+  - first:
+      213: -4405736113082925080
+    second: Beach_Stage_Laser_Machine_2_48x48_3
+  - first:
+      213: 8853068616147169878
+    second: Beach_Stage_Laser_Machine_2_48x48_4
+  - first:
+      213: 6468278047828228499
+    second: Beach_Stage_Laser_Machine_2_48x48_5
+  - first:
+      213: -8065276226240419225
+    second: Beach_Stage_Laser_Machine_2_48x48_6
+  - first:
+      213: 8023528223272160653
+    second: Beach_Stage_Laser_Machine_2_48x48_7
+  - first:
+      213: -5945528434134816037
+    second: Beach_Stage_Laser_Machine_2_48x48_8
+  - first:
+      213: 638547127327228411
+    second: Beach_Stage_Laser_Machine_2_48x48_9
+  - first:
+      213: 8698536885294512214
+    second: Beach_Stage_Laser_Machine_2_48x48_10
+  - first:
+      213: -139130533833104428
+    second: Beach_Stage_Laser_Machine_2_48x48_11
+  - first:
+      213: 6760163156784745464
+    second: Beach_Stage_Laser_Machine_2_48x48_12
+  - first:
+      213: 981703018892951442
+    second: Beach_Stage_Laser_Machine_2_48x48_13
+  - first:
+      213: 8986080171621332871
+    second: Beach_Stage_Laser_Machine_2_48x48_14
+  - first:
+      213: 1839008004272840518
+    second: Beach_Stage_Laser_Machine_2_48x48_15
+  - first:
+      213: -30325039706115322
+    second: Beach_Stage_Laser_Machine_2_48x48_16
+  - first:
+      213: 1461300403415976437
+    second: Beach_Stage_Laser_Machine_2_48x48_17
+  - first:
+      213: -7929998814696888002
+    second: Beach_Stage_Laser_Machine_2_48x48_18
+  - first:
+      213: -633996204136180525
+    second: Beach_Stage_Laser_Machine_2_48x48_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 296
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7cb74c355c2eccb0800000000000000
+      internalID: -4841883804781527938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 0
+        width: 296
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250eb7b0350a8b290800000000000000
+      internalID: -7874367669921914798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 0
+        width: 296
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4779cd89e0a34c0800000000000000
+      internalID: -4307114043927726872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 0
+        width: 299
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eff495095eabd2c0800000000000000
+      internalID: -4405736113082925080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 0
+        width: 317
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6527c95300b6cda70800000000000000
+      internalID: 8853068616147169878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 0
+        width: 335
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39932453d90f3c950800000000000000
+      internalID: 6468278047828228499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 2345
+        y: 0
+        width: 317
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a698ff002621090800000000000000
+      internalID: -8065276226240419225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 0
+        width: 299
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d4579986c495f60800000000000000
+      internalID: 8023528223272160653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 3131
+        y: 0
+        width: 281
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdae861d36d3d7da0800000000000000
+      internalID: -5945528434134816037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 3524
+        y: 0
+        width: 269
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf18fa8aa339cd800800000000000000
+      internalID: 638547127327228411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 3920
+        y: 0
+        width: 248
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 658bc99d53967b870800000000000000
+      internalID: 8698536885294512214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 4307
+        y: 0
+        width: 236
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3a7714485b11ef0800000000000000
+      internalID: -139130533833104428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 4682
+        y: 0
+        width: 251
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb86dff29ce0dd50800000000000000
+      internalID: 6760163156784745464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 5057
+        y: 0
+        width: 269
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ffa04c1b5bf9d00800000000000000
+      internalID: 981703018892951442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 5432
+        y: 0
+        width: 287
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 787bba84e48f4bc70800000000000000
+      internalID: 8986080171621332871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 5807
+        y: 0
+        width: 305
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f58c15908758910800000000000000
+      internalID: 1839008004272840518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 6188
+        y: 0
+        width: 299
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603748c7983449ff0800000000000000
+      internalID: -30325039706115322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 6563
+        y: 0
+        width: 299
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f98ebf79f4974410800000000000000
+      internalID: 1461300403415976437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 6938
+        y: 0
+        width: 299
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3929bcc71cf2f190800000000000000
+      internalID: -7929998814696888002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach_Stage_Laser_Machine_2_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 7313
+        y: 0
+        width: 299
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d45487bfc79337f0800000000000000
+      internalID: -633996204136180525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: 69efa70ea89003e4c8e83670d27570c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6975811691352951952
+    second: "animated_Christmas_tree_lights_48x48\xF9_0"
+  - first:
+      213: 7750341669495092481
+    second: "animated_Christmas_tree_lights_48x48\xF9_1"
+  - first:
+      213: 750676567280958570
+    second: "animated_Christmas_tree_lights_48x48\xF9_2"
+  - first:
+      213: -6505986969232397907
+    second: "animated_Christmas_tree_lights_48x48\xF9_3"
+  - first:
+      213: -3064102791060376235
+    second: "animated_Christmas_tree_lights_48x48\xF9_4"
+  - first:
+      213: 2900643795444623545
+    second: "animated_Christmas_tree_lights_48x48\xF9_5"
+  - first:
+      213: -7895836356731364406
+    second: "animated_Christmas_tree_lights_48x48\xF9_6"
+  - first:
+      213: -8424143891274551532
+    second: "animated_Christmas_tree_lights_48x48\xF9_7"
+  - first:
+      213: -8334549830511789650
+    second: "animated_Christmas_tree_lights_48x48\xF9_8"
+  - first:
+      213: 8914732635016576242
+    second: "animated_Christmas_tree_lights_48x48\xF9_9"
+  - first:
+      213: 3179368087838074867
+    second: "animated_Christmas_tree_lights_48x48\xF9_10"
+  - first:
+      213: -7208201402839174438
+    second: "animated_Christmas_tree_lights_48x48\xF9_11"
+  - first:
+      213: -8050243254778552844
+    second: "animated_Christmas_tree_lights_48x48\xF9_12"
+  - first:
+      213: -7437255312322171671
+    second: "animated_Christmas_tree_lights_48x48\xF9_13"
+  - first:
+      213: 8047110850363628154
+    second: "animated_Christmas_tree_lights_48x48\xF9_14"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_0"
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 59
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073f3e4e930f03f90800000000000000
+      internalID: -6975811691352951952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_1"
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 77
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105b9227faebe8b60800000000000000
+      internalID: 7750341669495092481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_2"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 65
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6cbdf55c50fa6a00800000000000000
+      internalID: 750676567280958570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_3"
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 65
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da92599525716b5a0800000000000000
+      internalID: -6505986969232397907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_4"
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 77
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555309feebe1a75d0800000000000000
+      internalID: -3064102791060376235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_5"
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 59
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b8ea67e928214820800000000000000
+      internalID: 2900643795444623545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_6"
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 53
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb9960eaaa5c6290800000000000000
+      internalID: -7895836356731364406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_7"
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 38
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41fadcf83cd671b80800000000000000
+      internalID: -8424143891274551532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_8"
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 53
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea97d85661bb55c80800000000000000
+      internalID: -8334549830511789650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_9"
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 41
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fcbeb9691e77bb70800000000000000
+      internalID: 8914732635016576242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_10"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 38
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f72dcd4e626f1c20800000000000000
+      internalID: 3179368087838074867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_11"
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 29
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad27c4ac30357fb90800000000000000
+      internalID: -7208201402839174438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_12"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 38
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd907b696ac74090800000000000000
+      internalID: -8050243254778552844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_13"
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 29
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec662d92bf89c890800000000000000
+      internalID: -7437255312322171671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "animated_Christmas_tree_lights_48x48\xF9_14"
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 20
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a9d18dea41daf60800000000000000
+      internalID: 8047110850363628154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

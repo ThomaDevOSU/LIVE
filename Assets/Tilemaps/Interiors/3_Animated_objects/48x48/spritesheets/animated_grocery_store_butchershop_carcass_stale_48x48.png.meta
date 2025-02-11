@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 5ad081b95c2720d4e8827c43dc63d8d5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -607830685238662907
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_0
+  - first:
+      213: -1203751109338624949
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_1
+  - first:
+      213: 4179264409734052036
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_2
+  - first:
+      213: 1722042612638642847
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_3
+  - first:
+      213: 6831349307237618654
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_4
+  - first:
+      213: 2252824035058979552
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_5
+  - first:
+      213: -8331507019015507884
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_6
+  - first:
+      213: -2664296411913659569
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_7
+  - first:
+      213: -7255744136168926368
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_8
+  - first:
+      213: -373340484436807326
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_9
+  - first:
+      213: -5975155635529052003
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_10
+  - first:
+      213: -6077743571510474697
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_11
+  - first:
+      213: -903430112735814222
+    second: animated_grocery_store_butchershop_carcass_stale_48x48_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50964c2563d8097f0800000000000000
+      internalID: -607830685238662907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4c83e96eba6b4fe0800000000000000
+      internalID: -1203751109338624949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c871a486dabff930800000000000000
+      internalID: 4179264409734052036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f927966e1ace5e710800000000000000
+      internalID: 1722042612638642847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3528a3004ddce50800000000000000
+      internalID: 6831349307237618654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2172f1683a34f10800000000000000
+      internalID: 2252824035058979552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45038e7228a806c80800000000000000
+      internalID: -8331507019015507884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4bd9878784860bd0800000000000000
+      internalID: -2664296411913659569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0631786962b6e4b90800000000000000
+      internalID: -7255744136168926368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2613fd4bec0a1daf0800000000000000
+      internalID: -373340484436807326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d901e927b9bf31da0800000000000000
+      internalID: -5975155635529052003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 23
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73844384c6487aba0800000000000000
+      internalID: -6077743571510474697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_butchershop_carcass_stale_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 576
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd9dfa591f5673f0800000000000000
+      internalID: -903430112735814222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

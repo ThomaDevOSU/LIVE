@@ -1,0 +1,917 @@
+fileFormatVersion: 2
+guid: fa65ade71f32bc24a98651d51c5cf7f4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8434247144282786379
+    second: Crabs_48x48_0
+  - first:
+      213: 3207466510726663880
+    second: Crabs_48x48_1
+  - first:
+      213: -5760375543619730188
+    second: Crabs_48x48_2
+  - first:
+      213: -7160846435213915759
+    second: Crabs_48x48_3
+  - first:
+      213: -6122058144421012203
+    second: Crabs_48x48_4
+  - first:
+      213: 1474488600699069410
+    second: Crabs_48x48_5
+  - first:
+      213: 4784903902685595067
+    second: Crabs_48x48_6
+  - first:
+      213: 5451992363781701381
+    second: Crabs_48x48_7
+  - first:
+      213: -3100417367308352928
+    second: Crabs_48x48_8
+  - first:
+      213: 5134284681036166497
+    second: Crabs_48x48_9
+  - first:
+      213: 5910916646959290676
+    second: Crabs_48x48_10
+  - first:
+      213: -4867554774295807481
+    second: Crabs_48x48_11
+  - first:
+      213: -3740680202944352139
+    second: Crabs_48x48_12
+  - first:
+      213: 2674259074566824161
+    second: Crabs_48x48_13
+  - first:
+      213: 7444223391596383465
+    second: Crabs_48x48_14
+  - first:
+      213: 5192705934835981276
+    second: Crabs_48x48_15
+  - first:
+      213: 6476809386556860428
+    second: Crabs_48x48_16
+  - first:
+      213: -3021499470524516979
+    second: Crabs_48x48_17
+  - first:
+      213: -7166026919546677650
+    second: Crabs_48x48_18
+  - first:
+      213: 2264168609519952613
+    second: Crabs_48x48_19
+  - first:
+      213: 5831257529446255011
+    second: Crabs_48x48_20
+  - first:
+      213: 4868982369984478138
+    second: Crabs_48x48_21
+  - first:
+      213: -2157140268595548514
+    second: Crabs_48x48_22
+  - first:
+      213: -457630009947861727
+    second: Crabs_48x48_23
+  - first:
+      213: -7149811808108789038
+    second: Crabs_48x48_24
+  - first:
+      213: 663622285025942243
+    second: Crabs_48x48_25
+  - first:
+      213: -5984268350009165285
+    second: Crabs_48x48_26
+  - first:
+      213: -7925412306439655739
+    second: Crabs_48x48_27
+  - first:
+      213: -7964029482401653875
+    second: Crabs_48x48_28
+  - first:
+      213: -5264679696360740832
+    second: Crabs_48x48_29
+  - first:
+      213: -2906371953403035134
+    second: Crabs_48x48_30
+  - first:
+      213: -781727085458397891
+    second: Crabs_48x48_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Crabs_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 149
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a04d657177c0570800000000000000
+      internalID: 8434247144282786379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 149
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce03d03cc5338c20800000000000000
+      internalID: 3207466510726663880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 149
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4c2bd76f80f00b0800000000000000
+      internalID: -5760375543619730188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 149
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199c3f16b109f9c90800000000000000
+      internalID: -7160846435213915759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 149
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51d9f7fbd841a0ba0800000000000000
+      internalID: -6122058144421012203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 149
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e3e706f19f667410800000000000000
+      internalID: 1474488600699069410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 149
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb584fb7fb4676240800000000000000
+      internalID: 4784903902685595067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 149
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50fb9514b2e59ab40800000000000000
+      internalID: 5451992363781701381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 149
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0624226c4da19f4d0800000000000000
+      internalID: -3100417367308352928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 149
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165f3ecf6b4a04740800000000000000
+      internalID: 5134284681036166497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 98
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43993fe7f5bc70250800000000000000
+      internalID: 5910916646959290676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 101
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a7751e8b8f27cb0800000000000000
+      internalID: -4867554774295807481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 98
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5707a25ac2f661cc0800000000000000
+      internalID: -3740680202944352139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 98
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0abe0a570ec1520800000000000000
+      internalID: 2674259074566824161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 101
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec81c4cbb13f4760800000000000000
+      internalID: 7444223391596383465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 98
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdb16fc1982301840800000000000000
+      internalID: 5192705934835981276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 53
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0823ab42df32e950800000000000000
+      internalID: 6476809386556860428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 53
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d85fa5a7d3a7116d0800000000000000
+      internalID: -3021499470524516979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 53
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e669881eb782d8c90800000000000000
+      internalID: -7166026919546677650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 53
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2e602ba51fb6f10800000000000000
+      internalID: 2264168609519952613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_20
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 53
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a94774e3d9cce050800000000000000
+      internalID: 5831257529446255011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_21
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 53
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb70942ba9129340800000000000000
+      internalID: 4868982369984478138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_22
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 53
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9eebafca5c4012e0800000000000000
+      internalID: -2157140268595548514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_23
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 53
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12dcf7a3eeb26a9f0800000000000000
+      internalID: -457630009947861727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_24
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 53
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d248c6ba04c6cc90800000000000000
+      internalID: -7149811808108789038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_25
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 53
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea1104c3f8a53900800000000000000
+      internalID: 663622285025942243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_26
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 2
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1a371544ab93fca0800000000000000
+      internalID: -5984268350009165285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_27
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 5
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cea7287f77430290800000000000000
+      internalID: -7925412306439655739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_28
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 2
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b16b881651a7190800000000000000
+      internalID: -7964029482401653875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_29
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 2
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028e43aa5b910f6b0800000000000000
+      internalID: -5264679696360740832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_30
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 5
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20201446b1e7aa7d0800000000000000
+      internalID: -2906371953403035134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crabs_48x48_31
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 2
+        width: 47
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3563f78b5fb625f0800000000000000
+      internalID: -781727085458397891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

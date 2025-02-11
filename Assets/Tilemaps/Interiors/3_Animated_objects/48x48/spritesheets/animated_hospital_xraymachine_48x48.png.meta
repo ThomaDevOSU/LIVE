@@ -1,0 +1,642 @@
+fileFormatVersion: 2
+guid: 797f3e3ff0d27fa409307821e12cae79
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3774847275989714628
+    second: animated_hospital_xraymachine_48x48_0
+  - first:
+      213: -5433296348755753312
+    second: animated_hospital_xraymachine_48x48_1
+  - first:
+      213: -576880677003822004
+    second: animated_hospital_xraymachine_48x48_2
+  - first:
+      213: -1652771963156275254
+    second: animated_hospital_xraymachine_48x48_3
+  - first:
+      213: 2043431199414905607
+    second: animated_hospital_xraymachine_48x48_4
+  - first:
+      213: 8625431459172083805
+    second: animated_hospital_xraymachine_48x48_5
+  - first:
+      213: -7240084713621440796
+    second: animated_hospital_xraymachine_48x48_6
+  - first:
+      213: -5574799825066690671
+    second: animated_hospital_xraymachine_48x48_7
+  - first:
+      213: -2153778349524066546
+    second: animated_hospital_xraymachine_48x48_8
+  - first:
+      213: -7538323245528010945
+    second: animated_hospital_xraymachine_48x48_9
+  - first:
+      213: -3173606799393998564
+    second: animated_hospital_xraymachine_48x48_10
+  - first:
+      213: -4304328029191623825
+    second: animated_hospital_xraymachine_48x48_11
+  - first:
+      213: 1800697526212532481
+    second: animated_hospital_xraymachine_48x48_12
+  - first:
+      213: -8350134229950848022
+    second: animated_hospital_xraymachine_48x48_13
+  - first:
+      213: 1261895562528535748
+    second: animated_hospital_xraymachine_48x48_14
+  - first:
+      213: 1225187397549193989
+    second: animated_hospital_xraymachine_48x48_15
+  - first:
+      213: -2528109472324732081
+    second: animated_hospital_xraymachine_48x48_16
+  - first:
+      213: -4320746672281395519
+    second: animated_hospital_xraymachine_48x48_17
+  - first:
+      213: -7262602464355593175
+    second: animated_hospital_xraymachine_48x48_18
+  - first:
+      213: -1884274372539302360
+    second: animated_hospital_xraymachine_48x48_19
+  - first:
+      213: -2423350898276204041
+    second: animated_hospital_xraymachine_48x48_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11
+        width: 127
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c393849076c0d9bc0800000000000000
+      internalID: -3774847275989714628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a68cf4f1cd0994b0800000000000000
+      internalID: -5433296348755753312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4c7669a4128ef7f0800000000000000
+      internalID: -576880677003822004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf585108ac2019e0800000000000000
+      internalID: -1652771963156275254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b631c69d9bb5c10800000000000000
+      internalID: 2043431199414905607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d586e6e6630b3b770800000000000000
+      internalID: 8625431459172083805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6bbd4005d068b90800000000000000
+      internalID: -7240084713621440796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1977dfc781552a2b0800000000000000
+      internalID: -5574799825066690671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0fd0b7900e3c12e0800000000000000
+      internalID: -2153778349524066546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3fab3ca2fe726790800000000000000
+      internalID: -7538323245528010945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c193b513e6515f3d0800000000000000
+      internalID: -3173606799393998564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ba6477674f344c0800000000000000
+      internalID: -4304328029191623825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10992dd0cdc5df810800000000000000
+      internalID: 1800697526212532481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae323f4a82d5e1c80800000000000000
+      internalID: -8350134229950848022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4b72c0457238110800000000000000
+      internalID: 1261895562528535748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b743e527db00110800000000000000
+      internalID: 1225187397549193989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4bb8c454d95aecd0800000000000000
+      internalID: -2528109472324732081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 2447
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce573a3bcf9904c0800000000000000
+      internalID: -4320746672281395519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924553f998d063b90800000000000000
+      internalID: -7262602464355593175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 2735
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e3c650176b9d5e0800000000000000
+      internalID: -1884274372539302360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_xraymachine_48x48_20
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 11
+        width: 128
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f18f1e82378e5ed0800000000000000
+      internalID: -2423350898276204041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

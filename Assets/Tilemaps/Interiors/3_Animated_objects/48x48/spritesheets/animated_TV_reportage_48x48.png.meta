@@ -1,0 +1,717 @@
+fileFormatVersion: 2
+guid: a05b5addd2100c646a3d29d62bdea9d5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7420609551933274940
+    second: animated_TV_reportage_48x48_0
+  - first:
+      213: 1961141917329269872
+    second: animated_TV_reportage_48x48_1
+  - first:
+      213: -449091590584475864
+    second: animated_TV_reportage_48x48_2
+  - first:
+      213: 122363412273151092
+    second: animated_TV_reportage_48x48_3
+  - first:
+      213: -4943457441373594024
+    second: animated_TV_reportage_48x48_4
+  - first:
+      213: -8997192234879990011
+    second: animated_TV_reportage_48x48_5
+  - first:
+      213: 5340319047503758677
+    second: animated_TV_reportage_48x48_6
+  - first:
+      213: -717301393705895684
+    second: animated_TV_reportage_48x48_7
+  - first:
+      213: -5951803783052489187
+    second: animated_TV_reportage_48x48_8
+  - first:
+      213: 6125511543544646337
+    second: animated_TV_reportage_48x48_9
+  - first:
+      213: 2814431374860249608
+    second: animated_TV_reportage_48x48_10
+  - first:
+      213: 8255359153288516326
+    second: animated_TV_reportage_48x48_11
+  - first:
+      213: -482920847436065371
+    second: animated_TV_reportage_48x48_12
+  - first:
+      213: 309423740856867535
+    second: animated_TV_reportage_48x48_13
+  - first:
+      213: -8465863777813954012
+    second: animated_TV_reportage_48x48_14
+  - first:
+      213: 4950422375754142678
+    second: animated_TV_reportage_48x48_15
+  - first:
+      213: -2446054075705746638
+    second: animated_TV_reportage_48x48_16
+  - first:
+      213: -3828985252361391332
+    second: animated_TV_reportage_48x48_17
+  - first:
+      213: 3058811959239923340
+    second: animated_TV_reportage_48x48_18
+  - first:
+      213: 3529722858464577679
+    second: animated_TV_reportage_48x48_19
+  - first:
+      213: 4248561258990159518
+    second: animated_TV_reportage_48x48_20
+  - first:
+      213: -2915946594995608474
+    second: animated_TV_reportage_48x48_21
+  - first:
+      213: 6318815093610859140
+    second: animated_TV_reportage_48x48_22
+  - first:
+      213: 862080259983944957
+    second: animated_TV_reportage_48x48_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b7ad7421d4bf660800000000000000
+      internalID: 7420609551933274940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0742a88ee20673b10800000000000000
+      internalID: 1961141917329269872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82fd897e39184c9f0800000000000000
+      internalID: -449091590584475864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47cbb0a00e8b2b100800000000000000
+      internalID: 122363412273151092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e5aac06af456bb0800000000000000
+      internalID: -4943457441373594024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5074310e45d832380800000000000000
+      internalID: -8997192234879990011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555c6b521ef9c1a40800000000000000
+      internalID: 5340319047503758677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf8744fce22ab06f0800000000000000
+      internalID: -717301393705895684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1e845a4ef1f66da0800000000000000
+      internalID: -5951803783052489187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca88846b40320550800000000000000
+      internalID: 6125511543544646337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a62478c6ede0720800000000000000
+      internalID: 2814431374860249608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e21801496de09270800000000000000
+      internalID: 8255359153288516326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a551f14c025c49f0800000000000000
+      internalID: -482920847436065371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca98deb04b4b4400800000000000000
+      internalID: 309423740856867535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4228d868fb5338a80800000000000000
+      internalID: -8465863777813954012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 2162
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d398fa1cee63b440800000000000000
+      internalID: 4950422375754142678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b992427cedd0ed0800000000000000
+      internalID: -2446054075705746638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c133ac62336bcdac0800000000000000
+      internalID: -3828985252361391332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8656394545137a20800000000000000
+      internalID: 3058811959239923340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 2738
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f888b5e0d381cf030800000000000000
+      internalID: 3529722858464577679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_20
+      rect:
+        serializedVersion: 2
+        x: 2882
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96489884fbe5fa30800000000000000
+      internalID: 4248561258990159518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_21
+      rect:
+        serializedVersion: 2
+        x: 3026
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664e64d650a7887d0800000000000000
+      internalID: -2915946594995608474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_22
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a4d0069d0f0b750800000000000000
+      internalID: 6318815093610859140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_TV_reportage_48x48_23
+      rect:
+        serializedVersion: 2
+        x: 3314
+        y: 29
+        width: 140
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc2830dd69b6fb00800000000000000
+      internalID: 862080259983944957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

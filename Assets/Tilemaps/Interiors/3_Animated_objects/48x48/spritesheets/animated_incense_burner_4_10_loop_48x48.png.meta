@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: 36a82747a941178498193c208da75c97
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1637345709698508054
+    second: animated_incense_burner_4_10_loop_48x48_0
+  - first:
+      213: 3580723818139997229
+    second: animated_incense_burner_4_10_loop_48x48_1
+  - first:
+      213: -3190778479261088515
+    second: animated_incense_burner_4_10_loop_48x48_2
+  - first:
+      213: 7416902116255158791
+    second: animated_incense_burner_4_10_loop_48x48_3
+  - first:
+      213: 326354009895571260
+    second: animated_incense_burner_4_10_loop_48x48_4
+  - first:
+      213: -601997471196521477
+    second: animated_incense_burner_4_10_loop_48x48_5
+  - first:
+      213: 5971664340520109047
+    second: animated_incense_burner_4_10_loop_48x48_6
+  - first:
+      213: 1492779869214844493
+    second: animated_incense_burner_4_10_loop_48x48_7
+  - first:
+      213: -6556349803834159326
+    second: animated_incense_burner_4_10_loop_48x48_8
+  - first:
+      213: -107240444147184002
+    second: animated_incense_burner_4_10_loop_48x48_9
+  - first:
+      213: 628332153481125538
+    second: animated_incense_burner_4_10_loop_48x48_10
+  - first:
+      213: 9112691073293790271
+    second: animated_incense_burner_4_10_loop_48x48_11
+  - first:
+      213: -7060387689406713083
+    second: animated_incense_burner_4_10_loop_48x48_12
+  - first:
+      213: -6779703420078019419
+    second: animated_incense_burner_4_10_loop_48x48_13
+  - first:
+      213: 473208211442407471
+    second: animated_incense_burner_4_10_loop_48x48_14
+  - first:
+      213: -460519648609138366
+    second: animated_incense_burner_4_10_loop_48x48_15
+  - first:
+      213: -8013030758425138673
+    second: animated_incense_burner_4_10_loop_48x48_16
+  - first:
+      213: 4149934540459032931
+    second: animated_incense_burner_4_10_loop_48x48_17
+  - first:
+      213: -5322493106774127631
+    second: animated_incense_burner_4_10_loop_48x48_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 5
+        width: 41
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 615e6197f3509b610800000000000000
+      internalID: 1637345709698508054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 5
+        width: 35
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24d303575941b130800000000000000
+      internalID: 3580723818139997229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 5
+        width: 35
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df48eaae0e318b3d0800000000000000
+      internalID: -3190778479261088515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 107
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7025b35ad212ee660800000000000000
+      internalID: 7416902116255158791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 5
+        width: 44
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f89de2e31778400800000000000000
+      internalID: 326354009895571260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 95
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfbd5ad4d7645a7f0800000000000000
+      internalID: -601997471196521477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 5
+        width: 35
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f38196141d9fd250800000000000000
+      internalID: 5971664340520109047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 5
+        width: 41
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46a768c16b67b410800000000000000
+      internalID: 1492779869214844493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 5
+        width: 44
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22f4347279a2305a0800000000000000
+      internalID: -6556349803834159326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 47
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e4d0d5261038ef0800000000000000
+      internalID: -107240444147184002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 50
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aed239b3c848b800800000000000000
+      internalID: 628332153481125538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 5
+        width: 35
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3cac830048c67e70800000000000000
+      internalID: 9112691073293790271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 5
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5033f54ddc6740e90800000000000000
+      internalID: -7060387689406713083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 44
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5acafbbe8a7a9e1a0800000000000000
+      internalID: -6779703420078019419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 47
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2892d37c5c219600800000000000000
+      internalID: 473208211442407471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 249809cc1d7eb99f0800000000000000
+      internalID: -460519648609138366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 5
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a6ac5eafefbc090800000000000000
+      internalID: -8013030758425138673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 5
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3614f2d2a77879930800000000000000
+      internalID: 4149934540459032931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_incense_burner_4_10_loop_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 5
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb434b18b4b226b0800000000000000
+      internalID: -5322493106774127631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

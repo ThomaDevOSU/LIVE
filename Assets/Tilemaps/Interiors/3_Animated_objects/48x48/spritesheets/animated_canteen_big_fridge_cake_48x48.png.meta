@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: 563a1ea5eb6db4f448e99318370aa941
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7521579007933988693
+    second: animated_canteen_big_fridge_cake_48x48_0
+  - first:
+      213: -4488554458707194662
+    second: animated_canteen_big_fridge_cake_48x48_1
+  - first:
+      213: 7540113178503922265
+    second: animated_canteen_big_fridge_cake_48x48_2
+  - first:
+      213: -383993921946283818
+    second: animated_canteen_big_fridge_cake_48x48_3
+  - first:
+      213: 5662987479555916998
+    second: animated_canteen_big_fridge_cake_48x48_4
+  - first:
+      213: 88067679948383048
+    second: animated_canteen_big_fridge_cake_48x48_5
+  - first:
+      213: 5292335888250709848
+    second: animated_canteen_big_fridge_cake_48x48_6
+  - first:
+      213: 7399008236739827573
+    second: animated_canteen_big_fridge_cake_48x48_7
+  - first:
+      213: -7216495617433411710
+    second: animated_canteen_big_fridge_cake_48x48_8
+  - first:
+      213: 8180743160698125455
+    second: animated_canteen_big_fridge_cake_48x48_9
+  - first:
+      213: -7524991351961483366
+    second: animated_canteen_big_fridge_cake_48x48_10
+  - first:
+      213: -6488359480448700022
+    second: animated_canteen_big_fridge_cake_48x48_11
+  - first:
+      213: -4523747380274571823
+    second: animated_canteen_big_fridge_cake_48x48_12
+  - first:
+      213: -8314465657410631392
+    second: animated_canteen_big_fridge_cake_48x48_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba04f0a4ebbfd9790800000000000000
+      internalID: -7521579007933988693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc03cd408375b1c0800000000000000
+      internalID: -4488554458707194662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952c7f29cfcd3a860800000000000000
+      internalID: 7540113178503922265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d09b7eff87cbaaf0800000000000000
+      internalID: -383993921946283818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c44a6edb19f69e40800000000000000
+      internalID: 5662987479555916998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843248b9611e83100800000000000000
+      internalID: 88067679948383048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8572c3b4377227940800000000000000
+      internalID: 5292335888250709848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57711192ace8ea660800000000000000
+      internalID: 7399008236739827573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28fd7b7787bd9db90800000000000000
+      internalID: -7216495617433411710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c3e1caf86d78170800000000000000
+      internalID: 8180743160698125455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9703780c3cd19790800000000000000
+      internalID: -7524991351961483366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8131d8ed67b4f5a0800000000000000
+      internalID: -6488359480448700022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 20
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d55129b9bb6831c0800000000000000
+      internalID: -4523747380274571823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_canteen_big_fridge_cake_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 20
+        width: 94
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029cad859851d9c80800000000000000
+      internalID: -8314465657410631392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

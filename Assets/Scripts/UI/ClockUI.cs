@@ -4,7 +4,7 @@ using TMPro;
 public class GameClockUI : MonoBehaviour
 {
     private TextMeshProUGUI clockTMP;
-
+    private int lastDisplayedMinute = -1;           // Store last displayed
     private void Awake()
     {
         clockTMP = GetComponent<TextMeshProUGUI>();
@@ -20,8 +20,8 @@ public class GameClockUI : MonoBehaviour
         30 Minutes: 24f * 2f
         */
 
-        // For every five minutes
-        float GameTime = (GameClock.Instance.gameDayDuration / (24f * 12f));
+        // Every seccond for now as it bugs
+        float GameTime = (GameClock.Instance.gameDayDuration / (24f * 60f));
 
         // Update dat UI
         InvokeRepeating(nameof(UpdateClock), 0f, GameTime);
@@ -32,8 +32,24 @@ public class GameClockUI : MonoBehaviour
         // Get the GameClock singleton and set dat time up
         if (GameClock.Instance != null)
         {
-            clockTMP.text = GameClock.Instance.GetFormattedTime();
+            // Get the time
+            string formattedTime = GameClock.Instance.GetFormattedTime();
+            int currentMinute = GetMinutesFromFormattedTime(formattedTime);
+
+            // Only update clock if five
+            if (currentMinute % 5 == 0 && currentMinute != lastDisplayedMinute)
+            {
+                clockTMP.text = formattedTime;
+                lastDisplayedMinute = currentMinute;
+            }
         }
+    }
+
+    private int GetMinutesFromFormattedTime(string time)
+    {
+        // Needed this to help
+        string[] timeParts = time.Split(':');
+        return int.Parse(timeParts[1]);
     }
 
     /*
@@ -49,6 +65,6 @@ public class GameClockUI : MonoBehaviour
         return $"{hour12}:{minute} {period}";
     }
     */
-    }
+}
 
 

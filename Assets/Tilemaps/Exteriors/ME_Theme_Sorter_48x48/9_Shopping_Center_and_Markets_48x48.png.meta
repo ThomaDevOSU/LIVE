@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: 615d5337ee4da4e42bd6fe41cdf8e82e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5868317340529319911
+    second: 9_Shopping_Center_and_Markets_48x48_0
+  - first:
+      213: 4055220248523204645
+    second: 9_Shopping_Center_and_Markets_48x48_1
+  - first:
+      213: -1358569603082332166
+    second: 9_Shopping_Center_and_Markets_48x48_2
+  - first:
+      213: -1231797930593809392
+    second: 9_Shopping_Center_and_Markets_48x48_3
+  - first:
+      213: 2886654439518952256
+    second: 9_Shopping_Center_and_Markets_48x48_4
+  - first:
+      213: 851953979098590570
+    second: 9_Shopping_Center_and_Markets_48x48_5
+  - first:
+      213: 7204853992271086814
+    second: 9_Shopping_Center_and_Markets_48x48_6
+  - first:
+      213: -5819749399361148122
+    second: 9_Shopping_Center_and_Markets_48x48_7
+  - first:
+      213: 4645406209106718263
+    second: 9_Shopping_Center_and_Markets_48x48_8
+  - first:
+      213: 2074488074955075479
+    second: 9_Shopping_Center_and_Markets_48x48_9
+  - first:
+      213: -5194798592100590679
+    second: 9_Shopping_Center_and_Markets_48x48_10
+  - first:
+      213: 3458567085471634700
+    second: 9_Shopping_Center_and_Markets_48x48_11
+  - first:
+      213: 8180137972085008982
+    second: 9_Shopping_Center_and_Markets_48x48_12
+  - first:
+      213: -4792086758272168842
+    second: 9_Shopping_Center_and_Markets_48x48_13
+  - first:
+      213: 3572377446720455407
+    second: 9_Shopping_Center_and_Markets_48x48_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2159
+        width: 947
+        height: 971
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9102c70787c8f8ea0800000000000000
+      internalID: -5868317340529319911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 2975
+        width: 194
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528623f9459074830800000000000000
+      internalID: 4055220248523204645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 2831
+        width: 194
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af752add424652de0800000000000000
+      internalID: -1358569603082332166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 2687
+        width: 290
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01c05e7fe46c7eee0800000000000000
+      internalID: -1231797930593809392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2159
+        width: 188
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04bd4d82be47f0820800000000000000
+      internalID: 2886654439518952256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 2111
+        width: 242
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6de62151afb2db00800000000000000
+      internalID: 851953979098590570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1631
+        width: 481
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed48fd37888ccf360800000000000000
+      internalID: 7204853992271086814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 1631
+        width: 482
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b294171c81c3fa0800000000000000
+      internalID: -5819749399361148122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 1631
+        width: 481
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e2333b55cc77040800000000000000
+      internalID: 4645406209106718263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1151
+        width: 673
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f2b7eb9ef0acc10800000000000000
+      internalID: 2074488074955075479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1151
+        width: 674
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab1526243e58e7b0800000000000000
+      internalID: -5194798592100590679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 575
+        width: 673
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c051561a07c4fff20800000000000000
+      internalID: 3458567085471634700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 575
+        width: 674
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65aafc73520b58170800000000000000
+      internalID: 8180137972085008982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 673
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c8550ab761f7db0800000000000000
+      internalID: -4792086758272168842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Shopping_Center_and_Markets_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 0
+        width: 674
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe2c36b4c52a39130800000000000000
+      internalID: 3572377446720455407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: ef7c1b9432ccf024e859a97ae0b067d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3814345700098392272
+    second: animated_control_room_facebook_scrolling_48x48_0
+  - first:
+      213: -3253504113551841794
+    second: animated_control_room_facebook_scrolling_48x48_1
+  - first:
+      213: -5840102264541009503
+    second: animated_control_room_facebook_scrolling_48x48_2
+  - first:
+      213: 8164129128851772590
+    second: animated_control_room_facebook_scrolling_48x48_3
+  - first:
+      213: -3280336989273041497
+    second: animated_control_room_facebook_scrolling_48x48_4
+  - first:
+      213: -5408844151306002457
+    second: animated_control_room_facebook_scrolling_48x48_5
+  - first:
+      213: 6389308759626946589
+    second: animated_control_room_facebook_scrolling_48x48_6
+  - first:
+      213: -7387908076069827024
+    second: animated_control_room_facebook_scrolling_48x48_7
+  - first:
+      213: 6535162476069882056
+    second: animated_control_room_facebook_scrolling_48x48_8
+  - first:
+      213: -1659217712406940646
+    second: animated_control_room_facebook_scrolling_48x48_9
+  - first:
+      213: -2565469386031465687
+    second: animated_control_room_facebook_scrolling_48x48_10
+  - first:
+      213: 3573949338913578273
+    second: animated_control_room_facebook_scrolling_48x48_11
+  - first:
+      213: -6500806791033254276
+    second: animated_control_room_facebook_scrolling_48x48_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 46
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03fb8178bc8b01bc0800000000000000
+      internalID: -3814345700098392272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 20
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef5687c1f3b39d2d0800000000000000
+      internalID: -3253504113551841794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 20
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a9241ebee9c3fea0800000000000000
+      internalID: -5840102264541009503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 20
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea411a1ff20dc4170800000000000000
+      internalID: 8164129128851772590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 20
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a55ec263e6e972d0800000000000000
+      internalID: -3280336989273041497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 20
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7efd4f3d6ecefe4b0800000000000000
+      internalID: -5408844151306002457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 20
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d181bd107726ba850800000000000000
+      internalID: 6389308759626946589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 20
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e4e946fb0e87990800000000000000
+      internalID: -7387908076069827024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 20
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c88b9fa5af81ba50800000000000000
+      internalID: 6535162476069882056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 20
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14b2fe084649f8e0800000000000000
+      internalID: -1659217712406940646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 20
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b74739f2f956cd0800000000000000
+      internalID: -2565469386031465687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 20
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12d9f27fcf7399130800000000000000
+      internalID: 3573949338913578273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_control_room_facebook_scrolling_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 20
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e04039aae78c5a0800000000000000
+      internalID: -6500806791033254276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

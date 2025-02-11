@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: 92fda56409d086443b6f2df134d93b54
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2487161406229247245
+    second: animated_grocery_store_fridge_glass_right_48x48_0
+  - first:
+      213: 3792424618186851840
+    second: animated_grocery_store_fridge_glass_right_48x48_1
+  - first:
+      213: 7546875519804478972
+    second: animated_grocery_store_fridge_glass_right_48x48_2
+  - first:
+      213: 745972899190139126
+    second: animated_grocery_store_fridge_glass_right_48x48_3
+  - first:
+      213: 5107656828197681259
+    second: animated_grocery_store_fridge_glass_right_48x48_4
+  - first:
+      213: 3437116341779255613
+    second: animated_grocery_store_fridge_glass_right_48x48_5
+  - first:
+      213: 638373052353561774
+    second: animated_grocery_store_fridge_glass_right_48x48_6
+  - first:
+      213: 8920499239840094702
+    second: animated_grocery_store_fridge_glass_right_48x48_7
+  - first:
+      213: -7177250474839824504
+    second: animated_grocery_store_fridge_glass_right_48x48_8
+  - first:
+      213: -8914083389862310955
+    second: animated_grocery_store_fridge_glass_right_48x48_9
+  - first:
+      213: 5042274679984819108
+    second: animated_grocery_store_fridge_glass_right_48x48_10
+  - first:
+      213: -486063974493387950
+    second: animated_grocery_store_fridge_glass_right_48x48_11
+  - first:
+      213: -5775974259947866474
+    second: animated_grocery_store_fridge_glass_right_48x48_12
+  - first:
+      213: 7784625719620546279
+    second: animated_grocery_store_fridge_glass_right_48x48_13
+  - first:
+      213: 4206130517423881452
+    second: animated_grocery_store_fridge_glass_right_48x48_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 44
+        width: 62
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa05aae0e3db7dd0800000000000000
+      internalID: -2487161406229247245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 44
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 006497cd81661a430800000000000000
+      internalID: 3792424618186851840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 32
+        width: 26
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5990adc43ebb860800000000000000
+      internalID: 7546875519804478972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 44
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8eb44466a3a5a00800000000000000
+      internalID: 745972899190139126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 26
+        width: 20
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68325fd2da02e640800000000000000
+      internalID: 5107656828197681259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 44
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31517b2a1713bf20800000000000000
+      internalID: 3437116341779255613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 23
+        width: 11
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea447bba8e4fbd800800000000000000
+      internalID: 638373052353561774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 44
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee99fc9bbcafbcb70800000000000000
+      internalID: 8920499239840094702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 20
+        width: 11
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8872b2748b8456c90800000000000000
+      internalID: -7177250474839824504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 44
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5db0c01c260da4480800000000000000
+      internalID: -8914083389862310955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 23
+        width: 11
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab01783b12c9f540800000000000000
+      internalID: 5042274679984819108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 44
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2530536f3672149f0800000000000000
+      internalID: -486063974493387950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 26
+        width: 20
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 696f104530e97dfa0800000000000000
+      internalID: -5775974259947866474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 44
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee2a57e8db880c60800000000000000
+      internalID: 7784625719620546279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_grocery_store_fridge_glass_right_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 32
+        width: 26
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cecfaf9ab6d2f5a30800000000000000
+      internalID: 4206130517423881452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

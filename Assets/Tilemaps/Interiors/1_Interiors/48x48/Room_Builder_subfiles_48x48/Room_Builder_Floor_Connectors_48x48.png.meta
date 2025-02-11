@@ -1,0 +1,892 @@
+fileFormatVersion: 2
+guid: 4507905ddda2c6941a71486c8268f1ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7264556245574908355
+    second: Room_Builder_Floor_Connectors_48x48_0
+  - first:
+      213: 5811560582914758806
+    second: Room_Builder_Floor_Connectors_48x48_1
+  - first:
+      213: -2524908750266033372
+    second: Room_Builder_Floor_Connectors_48x48_2
+  - first:
+      213: 1306762246161026232
+    second: Room_Builder_Floor_Connectors_48x48_3
+  - first:
+      213: -3590788497158039252
+    second: Room_Builder_Floor_Connectors_48x48_4
+  - first:
+      213: -8301081620323248495
+    second: Room_Builder_Floor_Connectors_48x48_5
+  - first:
+      213: -5660807109534082332
+    second: Room_Builder_Floor_Connectors_48x48_6
+  - first:
+      213: 7193010987606114518
+    second: Room_Builder_Floor_Connectors_48x48_7
+  - first:
+      213: -3198785408637545001
+    second: Room_Builder_Floor_Connectors_48x48_8
+  - first:
+      213: 967249619240014959
+    second: Room_Builder_Floor_Connectors_48x48_9
+  - first:
+      213: 1256423883609086047
+    second: Room_Builder_Floor_Connectors_48x48_10
+  - first:
+      213: -4223796370064568847
+    second: Room_Builder_Floor_Connectors_48x48_11
+  - first:
+      213: 5224335215648047944
+    second: Room_Builder_Floor_Connectors_48x48_12
+  - first:
+      213: -7013387492348582133
+    second: Room_Builder_Floor_Connectors_48x48_13
+  - first:
+      213: 3360717547508403331
+    second: Room_Builder_Floor_Connectors_48x48_14
+  - first:
+      213: 3927990449543829973
+    second: Room_Builder_Floor_Connectors_48x48_15
+  - first:
+      213: 4696526289701681362
+    second: Room_Builder_Floor_Connectors_48x48_16
+  - first:
+      213: 5407795454960956266
+    second: Room_Builder_Floor_Connectors_48x48_17
+  - first:
+      213: -213834705014976828
+    second: Room_Builder_Floor_Connectors_48x48_18
+  - first:
+      213: -5189905258605392941
+    second: Room_Builder_Floor_Connectors_48x48_19
+  - first:
+      213: -3481463080266201569
+    second: Room_Builder_Floor_Connectors_48x48_20
+  - first:
+      213: -2958652983324749525
+    second: Room_Builder_Floor_Connectors_48x48_21
+  - first:
+      213: 6936094309861760284
+    second: Room_Builder_Floor_Connectors_48x48_22
+  - first:
+      213: 244986108380429096
+    second: Room_Builder_Floor_Connectors_48x48_23
+  - first:
+      213: 5034030388548694194
+    second: Room_Builder_Floor_Connectors_48x48_24
+  - first:
+      213: -234283265191014513
+    second: Room_Builder_Floor_Connectors_48x48_25
+  - first:
+      213: 5854149426318734633
+    second: Room_Builder_Floor_Connectors_48x48_26
+  - first:
+      213: 5159943025302097632
+    second: Room_Builder_Floor_Connectors_48x48_27
+  - first:
+      213: 8814320173471153993
+    second: Room_Builder_Floor_Connectors_48x48_28
+  - first:
+      213: 1000281228209969469
+    second: Room_Builder_Floor_Connectors_48x48_29
+  - first:
+      213: 5240301892432896671
+    second: Room_Builder_Floor_Connectors_48x48_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1685
+        width: 289
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c976548a63e0d460800000000000000
+      internalID: 7264556245574908355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1637
+        width: 289
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 698db472f8fc6a050800000000000000
+      internalID: 5811560582914758806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1589
+        width: 289
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b1e128ed8b5fcd0800000000000000
+      internalID: -2524908750266033372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1541
+        width: 289
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcc150e65d822210800000000000000
+      internalID: 1306762246161026232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1493
+        width: 289
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29165bf2e4fa2ec0800000000000000
+      internalID: -3590788497158039252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1445
+        width: 289
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196db115f32accc80800000000000000
+      internalID: -8301081620323248495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1397
+        width: 289
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ea17361de5c071b0800000000000000
+      internalID: -5660807109534082332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1349
+        width: 289
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d08ebd0265b2d360800000000000000
+      internalID: 7193010987606114518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1301
+        width: 289
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d5d4756e91ab93d0800000000000000
+      internalID: -3198785408637545001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1253
+        width: 289
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f64deeb676c5c6d00800000000000000
+      internalID: 967249619240014959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1205
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5816d58dd6bf6110800000000000000
+      internalID: 1256423883609086047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1205
+        width: 92
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd87be749f0265c0800000000000000
+      internalID: -4223796370064568847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1205
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843044ce231908840800000000000000
+      internalID: 5224335215648047944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1013
+        width: 289
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b072566fb317bae90800000000000000
+      internalID: -7013387492348582133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 971
+        width: 46
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38c09a9bdcaa3ae20800000000000000
+      internalID: 3360717547508403331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 971
+        width: 47
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d9df22a086038630800000000000000
+      internalID: 3927990449543829973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 971
+        width: 47
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d8b3f7f6c96d2140800000000000000
+      internalID: 4696526289701681362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 971
+        width: 46
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a637be680595c0b40800000000000000
+      internalID: 5407795454960956266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 920
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce8eeef77e480df0800000000000000
+      internalID: -213834705014976828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 920
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbc4e22aa0c9f7b0800000000000000
+      internalID: -5189905258605392941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_20
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 920
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f16881a26cb5fafc0800000000000000
+      internalID: -3481463080266201569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_21
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 920
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b21574b89c0c0f6d0800000000000000
+      internalID: -2958652983324749525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 725
+        width: 145
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d1beb9605f14060800000000000000
+      internalID: 6936094309861760284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_23
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 725
+        width: 145
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82bbbec419d566300800000000000000
+      internalID: 244986108380429096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 683
+        width: 46
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b077f987f77cd540800000000000000
+      internalID: 5034030388548694194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_25
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 683
+        width: 47
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f88719c98afbcf0800000000000000
+      internalID: -234283265191014513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 632
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925f8c9f2ed1e3150800000000000000
+      internalID: 5854149426318734633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_27
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 632
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eec26cc7dccb9740800000000000000
+      internalID: 5159943025302097632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 437
+        width: 145
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94fbe4c5f71c25a70800000000000000
+      internalID: 8814320173471153993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 335
+        width: 289
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3952f23a76b1ed00800000000000000
+      internalID: 1000281228209969469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Room_Builder_Floor_Connectors_48x48_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 239
+        width: 289
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f92254e8eca49b840800000000000000
+      internalID: 5240301892432896671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

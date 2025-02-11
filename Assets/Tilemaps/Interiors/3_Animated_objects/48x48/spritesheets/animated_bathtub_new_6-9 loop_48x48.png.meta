@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: 2242df40458e414489ab1777c722ed26
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6377240427897033198
+    second: animated_bathtub_new_6-9 loop_48x48_0
+  - first:
+      213: -5589195235133558201
+    second: animated_bathtub_new_6-9 loop_48x48_1
+  - first:
+      213: -4693778458838716686
+    second: animated_bathtub_new_6-9 loop_48x48_2
+  - first:
+      213: 7070631838570422133
+    second: animated_bathtub_new_6-9 loop_48x48_3
+  - first:
+      213: -4113012236029900225
+    second: animated_bathtub_new_6-9 loop_48x48_4
+  - first:
+      213: -925399260281227447
+    second: animated_bathtub_new_6-9 loop_48x48_5
+  - first:
+      213: 3791399292290495704
+    second: animated_bathtub_new_6-9 loop_48x48_6
+  - first:
+      213: 7632571858908444764
+    second: animated_bathtub_new_6-9 loop_48x48_7
+  - first:
+      213: -8798594448637743227
+    second: animated_bathtub_new_6-9 loop_48x48_8
+  - first:
+      213: 8497267041720136945
+    second: animated_bathtub_new_6-9 loop_48x48_9
+  - first:
+      213: 140081379291123279
+    second: animated_bathtub_new_6-9 loop_48x48_10
+  - first:
+      213: 2683520160069988533
+    second: animated_bathtub_new_6-9 loop_48x48_11
+  - first:
+      213: 2212763055366035861
+    second: animated_bathtub_new_6-9 loop_48x48_12
+  - first:
+      213: -6587718995772266968
+    second: animated_bathtub_new_6-9 loop_48x48_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21eefef6e9d7f77a0800000000000000
+      internalID: -6377240427897033198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 742fe85eb803f62b0800000000000000
+      internalID: -5589195235133558201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fea9824c595cdeb0800000000000000
+      internalID: -4693778458838716686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f9e83023eef1260800000000000000
+      internalID: 7070631838570422133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a4a9ab925abe6c0800000000000000
+      internalID: -4113012236029900225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 947378796425823f0800000000000000
+      internalID: -925399260281227447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d474a29191cd9430800000000000000
+      internalID: 3791399292290495704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5871e4aaa75ce960800000000000000
+      internalID: 7632571858908444764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f293647fc15e580800000000000000
+      internalID: -8798594448637743227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f4fc5f9a5b5ce570800000000000000
+      internalID: 8497267041720136945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e4b44b54ba1f100800000000000000
+      internalID: 140081379291123279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b032902e57cd3520800000000000000
+      internalID: 2683520160069988533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 599533f664055be10800000000000000
+      internalID: 2212763055366035861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_bathtub_new_6-9 loop_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 32
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826a6e00a78b394a0800000000000000
+      internalID: -6587718995772266968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 90712f1ad22fe0c48b2727f64e556736
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1553797755856101490
+    second: Kiosk_Mushroom_Shutter_48x48_0
+  - first:
+      213: 3095788834626844826
+    second: Kiosk_Mushroom_Shutter_48x48_1
+  - first:
+      213: -2428852086846491408
+    second: Kiosk_Mushroom_Shutter_48x48_2
+  - first:
+      213: 7992632900847213754
+    second: Kiosk_Mushroom_Shutter_48x48_3
+  - first:
+      213: -5782738173158060279
+    second: Kiosk_Mushroom_Shutter_48x48_4
+  - first:
+      213: 9193221730520332595
+    second: Kiosk_Mushroom_Shutter_48x48_5
+  - first:
+      213: -7876805518369497417
+    second: Kiosk_Mushroom_Shutter_48x48_6
+  - first:
+      213: -3166605058396101335
+    second: Kiosk_Mushroom_Shutter_48x48_7
+  - first:
+      213: -4016419589158234088
+    second: Kiosk_Mushroom_Shutter_48x48_8
+  - first:
+      213: -1750911133868703532
+    second: Kiosk_Mushroom_Shutter_48x48_9
+  - first:
+      213: 8146540073103109409
+    second: Kiosk_Mushroom_Shutter_48x48_10
+  - first:
+      213: 3206029292027115272
+    second: Kiosk_Mushroom_Shutter_48x48_11
+  - first:
+      213: 6597915597938021636
+    second: Kiosk_Mushroom_Shutter_48x48_12
+  - first:
+      213: 1015351953483983149
+    second: Kiosk_Mushroom_Shutter_48x48_13
+  - first:
+      213: -8940375363245784375
+    second: Kiosk_Mushroom_Shutter_48x48_14
+  - first:
+      213: 6779266249170613655
+    second: Kiosk_Mushroom_Shutter_48x48_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8fd5656c2dcf6ae0800000000000000
+      internalID: -1553797755856101490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98bd8bfa8376fa20800000000000000
+      internalID: 3095788834626844826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f47c8745ebfa4ed0800000000000000
+      internalID: -2428852086846491408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc191bc6498bee60800000000000000
+      internalID: 7992632900847213754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f82df05469fbfa0800000000000000
+      internalID: -5782738173158060279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339f015c472e49f70800000000000000
+      internalID: 9193221730520332595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bedfb83d17ffa290800000000000000
+      internalID: -7876805518369497417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925685e0a75fd04d0800000000000000
+      internalID: -3166605058396101335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8189d4fd9afc248c0800000000000000
+      internalID: -4016419589158234088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d0ca78b99383b7e0800000000000000
+      internalID: -1750911133868703532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12dabc5c8035e0170800000000000000
+      internalID: 8146540073103109409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 2654
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807f5c2a7aa1e7c20800000000000000
+      internalID: 3206029292027115272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 2894
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 405da117741809b50800000000000000
+      internalID: 6597915597938021636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 3134
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29696dd831471e00800000000000000
+      internalID: 1015351953483983149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 3374
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2c41ba9f76de380800000000000000
+      internalID: -8940375363245784375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kiosk_Mushroom_Shutter_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 0
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795fb9b4cbac41e50800000000000000
+      internalID: 6779266249170613655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
