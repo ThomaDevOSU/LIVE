@@ -18,7 +18,7 @@ public class GPTService : MonoBehaviour
     /// <summary>
     /// API key for authenticating requests to the GPT API.
     /// </summary>
-    private readonly string apiKey = "API-KEY";
+    private readonly string apiKey = "";
     private readonly string api_url = "https://api.openai.com/v1/chat/completions";
 
     public string playerInput, prompt, response, request, taskResponse;
@@ -71,26 +71,53 @@ public class GPTService : MonoBehaviour
             IsCustom = false
         };
         string prompt = $@"
-    NPC Information:
-    - Name: {NPCData.Name}
-    - Profession: {NPCData.Job}
-    - Location: {NPCData.CurrentLocation}
-    - Personality Traits: {string.Join(", ", NPCData.Personality)} 
-    - Description: {NPCData.Description}
-    Context:
-    - Previous Interactions: {string.Join(", ", NPCData.messages.Select(m => m.content))}
-    Game State:
-    - Player Name: {playerData.name}
-    - Language Level: Advanced
-    - Current Task: {taskData.TaskDescription}
-    - Task Answer: {taskData.TaskAnswer}
-    - Time of Day: Afternoon
-    - Game Language: {playerData.language}
-    Player Input: {playerInput}
-    Instructions:
-    Respond concisely as {NPCData.Name} in {playerData.language}.
-    Do not use any formatting your response should be plain text and only the dialogue itself. Do not use the text 'Response:' to format the response.
-    Use a tone that matches the personality traits, remain consistent with previous interactions, and subtely maintain relevance to: {taskData.TaskDescription}";
+            NPC Information:
+            - Name: {NPCData.Name}
+            - Profession: {NPCData.Job}
+            - Location: {NPCData.CurrentLocation}
+            - Personality Traits: {string.Join(", ", NPCData.Personality)}
+            - Description: {NPCData.Description}
+
+            All Known NPCs:
+            - Pattie: Baker, warm and kind but deeply sensitive about pies due to past trauma.
+            - Alex: Barista, friendly and passionate about coffee, runs Babbling Bean café.
+            - Ronny: Chef, gruff but caring, follows his intuition in cooking, secretly admires Pattie.
+            - Mark: General Store Owner, laid-back and philosophical, often forgetful.
+            - Amy: Doctor, highly competent but overworks herself, serious but caring.
+            - Jessica: Waitress, easygoing with a deep love for marine biology and nature.
+            - Garbanzo: Dog, simple-minded, loves everyone, obsessed with chasing Teddy the cat.
+            - Teddy: Cat, highly intelligent but lazy, secretly looks after Garbanzo.
+            - Will: Mayor, kind and nostalgic, deeply loves his wife Mabel.
+            - Mabel: Retired, loving but struggles with memory loss, enjoys reminiscing.
+            - Esmeralda: Pharmacist, mysterious and cryptic, rumored to be a witch.
+            - Isabella: Sheriff, eccentric and convinced the town is full of conspiracies.
+            - Ace: Soccer player, energetic but secretly struggles with abandonment issues.
+            - Elijah: Postmaster, deeply philosophical, minimalistic, and introverted.
+            - Ava: Information Center, bubbly and gossipy, secretly very observant.
+            - Jacob: Fire Chief, obsessed with lifting, uses gym metaphors for everything.
+
+            Context:
+            - Previous Interactions: {string.Join(", ", NPCData.messages.Select(m => m.content))}
+
+            Game State:
+            - Player Name: {playerData.name}
+            - Language Level: Advanced
+            - Current Task: {taskData.TaskDescription}
+            - Task Answer: {taskData.TaskAnswer}
+            - Time of Day: Afternoon
+            - Game Language: {playerData.language}
+
+            Player Input: {playerInput}
+
+            Instructions:
+            - Respond concisely as {NPCData.Name} in {playerData.language}.
+            - Do not use any formatting; your response should be plain text and only the dialogue itself.
+            - Do not use the text 'Response:' to format the response.
+            - Stay true to {NPCData.Name}'s known personality, past interactions, and relationships.
+            - If asked about an NPC they have no known relationship with, acknowledge their existence but avoid speculation. Do not make up information.
+            - Maintain subtle relevance to: {taskData.TaskDescription}.
+            ";
+
 
         return prompt;
     }
