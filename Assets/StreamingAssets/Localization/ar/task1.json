@@ -1,18 +1,42 @@
 {
-    "Buy": {
-      "description": "يشتري {{subject}} من {{npc}}",
-      "answer": "أود شراء بعض {{subject}}."
+    "Buy":  
+    {
+        "description":"شراء {{subject}} من {{npc}}",
+        "answer":"أرید شراء بعض {{subject}}."
     },
-    "AskNPC": {
-      "description": "بسأل {{npc}} عن {{subject}}",
-      "answer": "ما رأيك {{subject}}؟"
+    "AskNPC":  
+    {
+        "description":"اسأل {{npc}} عن {{subject}}",
+        "answer":"ما رأيك في {{subject}}."
     },
-    "AskLoc": {
-      "description": "اسأل أي شخص في {{location}} عن {{subject}}",
-      "answer": "ما رأيك {{subject}}؟"
+    "AskLoc":  
+    {
+        "description":"اسأل أي شخص في {{location}} عن {{subject}}",
+        "answer":"ما رأيك في {{subject}}."
     },
-    "SAMPLE": {
-      "description": "عينة {{subject}} عينة من الشخصيات غير القابلة للعب {{npc}} موقع العينة {{location}}",
-      "answer": "موضوع العينة {{subject}}."
+    "OrderMeal":  
+    {
+        "description": "اطلب {{subject}} من {{npc}}",
+        "answer": "أريد أن أطلب {{subject}}."
+    },
+    "SeekAdvice":  
+    {
+        "description": "اطلب النصيحة من {{npc}} حول {{subject}}",
+        "answer": "ما هي النصيحة التي لديك حول {{subject}}؟"
+    },
+    "DiscussPolicy":  
+    {
+        "description": "ناقش سياسة {{subject}} مع {{npc}}",
+        "answer": "هل يمكننا مناقشة سياسة {{subject}}؟"
+    },
+    "ReportIssue":  
+    {
+        "description": "بلغ عن {{subject}} إلى {{npc}}",
+        "answer": "أرغب في الإبلاغ عن {{subject}}."
+    },
+    "SAMPLE":  
+    {
+        "description":"عينة {{subject}} عينة NPC {{npc}} عينة موقع {{location}}",
+        "answer":"عينة موضوع {{subject}}."
     }
 }
