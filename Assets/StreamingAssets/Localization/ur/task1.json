@@ -1,0 +1,34 @@
+{
+    "Buy": {
+        "description": "خریدیں {{subject}} سے {{npc}}",
+        "answer": "میں {{subject}} خریدنا چاہوں گا۔"
+    },
+    "AskNPC": {
+        "description": "{{npc}} سے {{subject}} کے بارے میں پوچھیں",
+        "answer": "آپ {{subject}} کے بارے میں کیا سوچتے ہیں؟"
+    },
+    "AskLoc": {
+        "description": "{{location}} میں کسی سے {{subject}} کے بارے میں پوچھیں",
+        "answer": "آپ {{subject}} کے بارے میں کیا سوچتے ہیں؟"
+    },
+    "OrderMeal": {
+        "description": "{{subject}} کا آرڈر دیں {{npc}} سے",
+        "answer": "میں {{subject}} کا آرڈر دینا چاہوں گا۔"
+    },
+    "SeekAdvice": {
+        "description": "{{npc}} سے {{subject}} کے بارے میں مشورہ لیں",
+        "answer": "آپ کے پاس {{subject}} کے بارے میں کیا مشورہ ہے؟"
+    },
+    "DiscussPolicy": {
+        "description": "{{subject}} کی پالیسی پر {{npc}} سے بات چیت کریں",
+        "answer": "کیا ہم {{subject}} کی پالیسی پر بات کر سکتے ہیں؟"
+    },
+    "ReportIssue": {
+        "description": "{{subject}} کی اطلاع دیں {{npc}} کو",
+        "answer": "میں {{subject}} کی اطلاع دینا چاہوں گا۔"
+    },
+    "SAMPLE": {
+        "description": "نمونہ {{subject}} نمونہ NPC {{npc}} نمونہ مقام {{location}}",
+        "answer": "نمونہ موضوع {{subject}}."
+    }
+}
