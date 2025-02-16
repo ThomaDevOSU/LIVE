@@ -1,18 +1,34 @@
 {
     "Buy": {
-      "description": "Acquistare {{subject}} da {{npc}}",
-      "answer": "Vorrei comprarne alcuni {{subject}}."
+        "description": "Acquistare {{subject}} da {{npc}}",
+        "answer": "Vorrei comprare {{subject}}."
     },
     "AskNPC": {
-      "description": "Chiedere {{npc}} Di {{subject}}",
-      "answer": "A cosa ne pensi? {{subject}}?"
+        "description": "Chiedere a {{npc}} informazioni su {{subject}}",
+        "answer": "Cosa ne pensi di {{subject}}?"
     },
     "AskLoc": {
-      "description": "Chiedi a chiunque al {{location}} Di {{subject}}",
-      "answer": "A cosa ne pensi? {{subject}}?"
+        "description": "Chiedere a qualcuno in {{location}} informazioni su {{subject}}",
+        "answer": "Cosa ne pensi di {{subject}}?"
+    },
+    "OrderMeal": {
+        "description": "Ordinare {{subject}} da {{npc}}",
+        "answer": "Vorrei ordinare {{subject}}."
+    },
+    "SeekAdvice": {
+        "description": "Chiedere consiglio a {{npc}} riguardo a {{subject}}",
+        "answer": "Che consiglio hai su {{subject}}?"
+    },
+    "DiscussPolicy": {
+        "description": "Discutere la politica su {{subject}} con {{npc}}",
+        "answer": "Possiamo discutere la politica su {{subject}}?"
+    },
+    "ReportIssue": {
+        "description": "Segnalare un problema di {{subject}} a {{npc}}",
+        "answer": "Vorrei segnalare un problema di {{subject}}."
     },
     "SAMPLE": {
-      "description": "CAMPIONE {{subject}} PNG CAMPIONE {{npc}} POSIZIONE DEL CAMPIONE {{location}}",
-      "answer": "SOGGETTO CAMPIONE {{subject}}."
+        "description": "ESEMPIO {{subject}} ESEMPIO NPC {{npc}} ESEMPIO LUOGO {{location}}",
+        "answer": "ESEMPIO SOGGETTO {{subject}}."
     }
 }
