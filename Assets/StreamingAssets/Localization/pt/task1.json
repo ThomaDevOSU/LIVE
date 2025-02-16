@@ -1,0 +1,34 @@
+{
+    "Buy": {
+        "description": "Comprar {{subject}} de {{npc}}",
+        "answer": "Gostaria de comprar {{subject}}."
+    },
+    "AskNPC": {
+        "description": "Perguntar a {{npc}} sobre {{subject}}",
+        "answer": "O que você acha de {{subject}}?"
+    },
+    "AskLoc": {
+        "description": "Perguntar a alguém em {{location}} sobre {{subject}}",
+        "answer": "O que você acha de {{subject}}?"
+    },
+    "OrderMeal": {
+        "description": "Pedir {{subject}} para {{npc}}",
+        "answer": "Eu gostaria de pedir {{subject}}."
+    },
+    "SeekAdvice": {
+        "description": "Pedir conselho a {{npc}} sobre {{subject}}",
+        "answer": "Que conselho você tem sobre {{subject}}?"
+    },
+    "DiscussPolicy": {
+        "description": "Discutir a política de {{subject}} com {{npc}}",
+        "answer": "Podemos discutir a política sobre {{subject}}?"
+    },
+    "ReportIssue": {
+        "description": "Reportar um(a) {{subject}} para {{npc}}",
+        "answer": "Gostaria de reportar um(a) {{subject}}."
+    },
+    "SAMPLE": {
+        "description": "AMOSTRA {{subject}} AMOSTRA NPC {{npc}} AMOSTRA LOCALIZAÇÃO {{location}}",
+        "answer": "AMOSTRA ASSUNTO {{subject}}."
+    }
+}
