@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,11 +33,20 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private string locationKey = "";
 
-
     /// <summary>
     /// The players Gameobject
     /// </summary>
     private GameObject playerGameObject;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public bool DeveloperModeEnabled { get; private set; } = false;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public event Action OnDeveloperModeToggled;
 
     private void Awake()
     {
@@ -56,17 +67,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P)) // Press 'P' to print task list
+        HandleDeveloperModeToggle();
+        if (DeveloperModeEnabled)
         {
-            TaskManager.Instance.PrintTaskList();
-        }
-        if (Input.GetKeyDown(KeyCode.O)) // Press 'O' to print task list
-        {
-            TaskManager.Instance.PrintAllTasksToConsole();
-        }
-        if (Input.GetKeyDown(KeyCode.N)) // Press 'N' to end the day
-        {
-            GameClock.Instance.EndDayNow();
+            HandleDeveloperTools();
         }
     }
     
@@ -138,5 +142,63 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
+    private void HandleDeveloperModeToggle()
+    {
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            DeveloperModeEnabled = !DeveloperModeEnabled;
+            OnDeveloperModeToggled?.Invoke();
+            Debug.Log($"Developer Mode {(DeveloperModeEnabled ? "Enabled" : "Disabled")}");
+            if (DeveloperModeEnabled)
+            {
+                PrintDeveloperHotkeys();
+            }
+        }
+    }
+    private void HandleDeveloperTools()
+    {
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            TaskManager.Instance.PrintTaskList();
+        }
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            TaskManager.Instance.PrintAllTasksToConsole();
+        }
+        if (Input.GetKeyDown(KeyCode.F4))
+        {
+            GameClock.Instance.GoToSleep();
+        }        
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            GameClock.Instance.SkipTime(1);
+        }
+        if (Input.GetKeyDown(KeyCode.F6))
+        {
+            GameClock.Instance.SkipTime(4);
+        }
+        if (Input.GetKeyDown(KeyCode.F7))
+        {
+            GameClock.Instance.SetDay(GameClock.Instance.currentDay + 1);
+        }
+        if (Input.GetKeyDown(KeyCode.F12))
+        {
+            GameClock.Instance.ForceSleep();
+        }
+    }
+
+    private void PrintDeveloperHotkeys()
+    {
+        Debug.Log("Developer Mode Hotkeys:\n" +
+                  "F2 - Print Task List\n" +
+                  "F3 - Print All Tasks\n" +
+                  "F4 - Go To Sleep (End Day)\n" +
+                  "F5 - Skip 1 Hour\n" +
+                  "F6 - Skip 4 Hours\n" +
+                  "F7 - Set Next Day\n" +
+                  "F9 - Toggle Verbose Clock Logging\n" +
+                  "F12 - Force Sleep & End Day\n");
+    }
 }
+
 

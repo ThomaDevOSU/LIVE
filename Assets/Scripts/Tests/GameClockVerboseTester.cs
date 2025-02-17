@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameClockVerboseTester : MonoBehaviour
 {
     private GameClock gameClock;
+    private bool verboseLoggingEnabled = false;
 
     private void Start()
     {
@@ -22,11 +23,10 @@ public class GameClockVerboseTester : MonoBehaviour
 
     private void Update()
     {
-        // Check for manual time skip input
-        if (Input.GetKeyDown(KeyCode.T))
+        if (GameManager.Instance != null && GameManager.Instance.DeveloperModeEnabled && Input.GetKeyDown(KeyCode.F9))
         {
-            Debug.Log("Manual time skipping triggered: Skipping 3 hours...");
-            gameClock.SkipTime(3f); // Skip 3 game hours
+            verboseLoggingEnabled = !verboseLoggingEnabled;
+            Debug.Log($"Verbose Clock Logging {(verboseLoggingEnabled ? "Enabled" : "Disabled")}");
         }
     }
 
@@ -34,22 +34,25 @@ public class GameClockVerboseTester : MonoBehaviour
     {
         while (true)
         {
-            // Print game clock details every 5 seconds
-            Debug.Log($"[Game Clock Update] Day: {gameClock.currentDay}, Hour: {gameClock.currentHour:F2}");
-            Debug.Log($"Elapsed Game Time: {gameClock.elapsedGameTime:F2}s / {gameClock.gameDayDuration}s");
-            Debug.Log($"Current State: {gameClock.CurrentState}");
-
-            // Test day/night transitions
-            if (gameClock.CurrentState == GameClock.ClockState.Night)
+            if (GameManager.Instance != null && GameManager.Instance.DeveloperModeEnabled && verboseLoggingEnabled)
             {
-                Debug.Log("It's nighttime! Players should head to bed.");
-            }
-            else if (gameClock.CurrentState == GameClock.ClockState.Day)
-            {
-                Debug.Log("It's daytime! Time to explore and complete tasks.");
+                // Print game clock details every 5 seconds only if Developer Mode and Verbose Logging are enabled
+                Debug.Log($"[Game Clock Update] Day: {gameClock.currentDay}, Hour: {gameClock.currentHour:F2}");
+                Debug.Log($"Elapsed Game Time: {gameClock.elapsedGameTime:F2}s / {gameClock.gameDayDuration}s");
+                Debug.Log($"Current State: {gameClock.CurrentState}");
+
+                // Test day/night transitions
+                if (gameClock.CurrentState == GameClock.ClockState.Night)
+                {
+                    Debug.Log("It's nighttime! Players should head to bed.");
+                }
+                else if (gameClock.CurrentState == GameClock.ClockState.Day)
+                {
+                    Debug.Log("It's daytime! Time to explore and complete tasks.");
+                }
             }
 
-            // Add a delay of 15 real seconds before next update
+            // Add a delay of 5 real seconds before the next update
             yield return new WaitForSeconds(5f);
         }
     }
