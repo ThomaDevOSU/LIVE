@@ -21,7 +21,6 @@ public class Alex_Barista : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Alex_Barista script started");
         Alex = new NPC
         {
             Greeting = "Hey there! Need a caffeine boost, or just here for the vibes?",
@@ -34,22 +33,25 @@ public class Alex_Barista : MonoBehaviour
             "He looks up to Pattie for baking guidance but teases her about her refusal to make pies, unaware of her past. " +
             "Friendly and energetic, Alex enjoys chatting with customers and making sure everyone gets just the right drink for their mood.",
             Personality = new List<string> { "Friendly", "Enthusiastic", "Health-conscious", "Passionate about coffee" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(5, 5),
-                    Location = "Babbling Bean Café"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(10, 10),
-                    Location = "Town Square"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
                 },
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(7, 3),
-                    Location = "Bakery"
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

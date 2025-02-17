@@ -21,7 +21,6 @@ public class Teddy_Cat : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Teddy script started");
         Teddy = new NPC
         {
             Greeting = "What do you want? Make it quick.",
@@ -35,17 +34,25 @@ public class Teddy_Cat : MonoBehaviour
             "get into trouble. Teddy enjoys observing the town, judging humans from a safe distance, and engaging " +
             "in silent intellectual battles with Esmeralda.",
             Personality = new List<string> { "Aloof", "Intelligent", "Secretly Caring", "Judgmental" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(2, 2),
-                    Location = "Restaurant"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(6, 6),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
+                },
+                new ()
+                {
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

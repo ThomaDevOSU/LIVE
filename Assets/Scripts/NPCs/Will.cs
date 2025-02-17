@@ -21,7 +21,6 @@ public class Will_Mayor : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Will script started");
         Will = new NPC
         {
             Greeting = "Ah, another fine day in Babel! Have I ever told you about the time we built this town from the ground up?",
@@ -34,17 +33,25 @@ public class Will_Mayor : MonoBehaviour
             "he is beloved by the community and works hard to support it. He dotes on his wife, Mabel, and is protective " +
             "of her as her memory fades.",
             Personality = new List<string> { "Kind", "Talkative", "Sentimental", "Dedicated" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(4, 4),
-                    Location = "Town Hall"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(8, 8),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
+                },
+                new ()
+                {
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

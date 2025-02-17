@@ -21,7 +21,6 @@ public class Jacob_Firefighter : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Jacob script started");
         Jacob = new NPC
         {
             Greeting = "Stay strong, stay fit! Have you been lifting today?",
@@ -38,17 +37,25 @@ public class Jacob_Firefighter : MonoBehaviour
             "He loves picking up Garbanzo and spinning him, calling him 'Lightweight Champ'. " +
             "He tries to get Ace to lift, but Ace insists soccer is enough exercise.",
             Personality = new List<string> { "Energetic", "Dedicated", "Fitness-Obsessed" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(12, 12),
-                    Location = "Fire Station"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(15, 15),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
+                },
+                new ()
+                {
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

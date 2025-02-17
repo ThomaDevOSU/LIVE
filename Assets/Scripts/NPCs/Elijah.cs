@@ -21,7 +21,6 @@ public class Elijah_Postmaster : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Elijah script started");
         Elijah = new NPC
         {
             Greeting = "Ah, another letter sent. Another reminder of impermanence.",
@@ -36,22 +35,27 @@ public class Elijah_Postmaster : MonoBehaviour
             "Esmeralda fascinates him, though he suspects she understands more about the universe than she lets on. " +
             "He is frequently interrogated by Isabella, who is convinced he is hiding something, though he answers only in riddles.",
             Personality = new List<string> { "Philosophical", "Stoic", "Observant", "Minimalist" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
                 new ScheduleEntry
                 {
-                    Coordinates = new Vector2(3, 3),
-                    Location = "Post Office"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
                 new ScheduleEntry
                 {
-                    Coordinates = new Vector2(7, 7),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
+                },
+                new ScheduleEntry
+                {
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
-            },
-            messages = new List<Message>(),
-            CurrentLocation = "Post Office",
-            CurrentCoordinates = new Vector2(3, 3)
+            }
         };
         NPCManager.Instance.AddNPC(Elijah);
     }

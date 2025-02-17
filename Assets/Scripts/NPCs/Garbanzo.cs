@@ -21,7 +21,6 @@ public class Garbanzo_Dog : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Garbanzo script started");
         Garbanzo = new NPC
         {
             Greeting = "Woof! Play? Stick? Ball? Teddy?",
@@ -35,17 +34,25 @@ public class Garbanzo_Dog : MonoBehaviour
             "playing soccer with Ace, where he mysteriously seems to understand the rules. He rarely speaks " +
             "more than a few words but expresses pure joy in every movement.",
             Personality = new List<string> { "Energetic", "Loyal", "Innocent", "Playful" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(5, 5),
-                    Location = "Park"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(3, 3),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
+                },
+                new ()
+                {
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

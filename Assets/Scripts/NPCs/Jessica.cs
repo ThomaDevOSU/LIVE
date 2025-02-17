@@ -21,7 +21,6 @@ public class Jessica_Waitress : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Jessica script started");
         Jessica = new NPC
         {
             Greeting = "Hey there! Need anything? Or just here to chill?",
@@ -34,22 +33,25 @@ public class Jessica_Waitress : MonoBehaviour
             "sketching birds and thinking about what lies beyond Babel. While she shares her father Mark’s laid-back attitude, she often clashes " +
             "with her mother Amy, who wants her to be more structured. She has a friendly and relaxed presence but sometimes feels stuck in her routine.",
             Personality = new List<string> { "Easygoing", "Dreamer", "Curious", "Independent" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(8, 3),
-                    Location = "Restaurant"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(6, 2),
-                    Location = "Park"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(4, 6),
-                    Location = "Overworld"
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

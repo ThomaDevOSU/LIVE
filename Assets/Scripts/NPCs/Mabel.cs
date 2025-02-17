@@ -21,7 +21,6 @@ public class Mabel_Retired : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Mabel script started");
         Mabel = new NPC
         {
             Greeting = "Oh, hello dear! Have I met you before? Oh well, it's always nice to chat!",
@@ -34,17 +33,25 @@ public class Mabel_Retired : MonoBehaviour
             "Though her memory is fading, she still loves reminiscing about the past and enjoys watching the town's young people grow." +
             "Adores her husband Will.",
             Personality = new List<string> { "Gentle", "Forgetful", "Nostalgic", "Caring" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(6, 6),
-                    Location = "Park"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(4, 4),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
+                },
+                new ()
+                {
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),
