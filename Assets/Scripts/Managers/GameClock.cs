@@ -23,8 +23,10 @@ public class GameClock : MonoBehaviour
     public int currentDay { get; private set; } = 1; // Tracks the current day number
     public float currentHour { get; private set; } = 8f; // Current in-game hour (starts at 8 AM)
 
+    private bool manualSleepMode = true; // Default to manual mode
+
     // Game clock states for day/night transitions
-    public enum ClockState { Day, Evening, Night }
+    public enum ClockState { Day, Evening, Night, SleepPending }
     public ClockState CurrentState { get; private set; } = ClockState.Day;
 
     // Events for day/night state transitions and day progression
@@ -32,6 +34,7 @@ public class GameClock : MonoBehaviour
     public event Action OnEveningStart; // Triggered when the evening starts
     public event Action OnNightStart; // Triggered when the night starts
     public event Action OnDayEnd; // Triggered when the day ends
+    public event Action OnSleepPending; // Triggered when game day time stops
 
     /// <summary>
     /// Ensures the GameClock is a singleton and persists across scenes.
@@ -76,14 +79,26 @@ public class GameClock : MonoBehaviour
     /// <param name="deltaTime">Time elapsed since the last frame in real seconds</param>
     private void UpdateGameTime(float deltaTime)
     {
+        if (CurrentState == ClockState.SleepPending) return;
+
         elapsedGameTime += deltaTime * realTimeToGameTimeMultiplier; // Adjust elapsed game time
-        currentHour = 8f + (elapsedGameTime / gameDayDuration) * gameHoursPerDay; // Calculate current hour
+        currentHour = Mathf.Min(8f + (elapsedGameTime / gameDayDuration) * gameHoursPerDay, 24f); // Ensures hour never exceeds 24
 
         UpdateClockState(); // Check and trigger state transitions
 
         if (currentHour >= 24f) // End the day if the hour exceeds 24
         {
-            EndDay();
+            if (manualSleepMode)
+            {
+                CurrentState = ClockState.SleepPending;
+                OnSleepPending?.Invoke();
+                Debug.Log("Time is now frozen in SleepPending state. Player must trigger sleep.");
+                return;
+            }
+            else
+            {
+                EndDay();
+            }
         }
     }
 
@@ -110,9 +125,23 @@ public class GameClock : MonoBehaviour
         }
     }
 
-    public void EndDayNow()
+    /// <summary>
+    /// Manual Player Sleep Function, forces sleep end-of day from any state. 
+    /// </summary>
+    public void ForceSleep()
     {
-        EndDay(); 
+        EndDay();
+    }
+
+    /// <summary>
+    /// Normal Player Sleep Function, available in SleepPending State at the end of day.
+    /// </summary>
+    public void GoToSleep()
+    {
+        if (CurrentState == ClockState.SleepPending)
+        {
+            EndDay();
+        }
     }
 
     /// <summary>
@@ -165,6 +194,12 @@ public class GameClock : MonoBehaviour
         OnDayStart?.Invoke(); // Trigger the start of the new day
     }
 
+    public void SetManualSleepMode(bool enable)
+    {
+        manualSleepMode = enable;
+        Debug.Log($"Manual Sleep Mode: {(manualSleepMode ? "Enabled" : "Disabled")}");
+    }
+
     /// <summary>
     /// Skips a specified number of in-game hours. If skipping exceeds the current day, the day ends.
     /// </summary>
@@ -178,6 +213,12 @@ public class GameClock : MonoBehaviour
         {
             EndDay(); // End the day and reset the clock
         }
+    }
+
+    public void SetDay(int dayNumber)
+    {
+        currentDay = dayNumber;
+        Debug.Log($"Manually set day to: {currentDay}");
     }
 
     /// <summary>
