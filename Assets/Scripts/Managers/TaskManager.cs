@@ -600,12 +600,18 @@ public class TaskManager : MonoBehaviour
     {
         return CompletedTasks.Dequeue();
     }
+
     /// <summary>
     /// PeekCompletedTask peeks at the most recently completed task
     /// </summary>
     /// <returns>A completed task</returns>
     public Task PeekCompletedTask()
     {
+        if (CompletedTasks.Count == 0)
+        {
+            Debug.LogWarning("CompletedTasks queue is empty. Nothing to peek at.");
+            return null;
+        }
         return CompletedTasks.Peek();
     }
 
@@ -774,6 +780,28 @@ public class TaskManager : MonoBehaviour
         foreach (Task task in TaskList)
         {
             Debug.Log($"Task: {task.TaskDescription} | Subject: {task.TaskSubject} | NPC: {task.TaskNPC} | Location: {task.TaskLocation} | Difficulty: {task.TaskDifficulty} | Completed: {task.IsCompleted}");
+        }
+    }
+
+    /// <summary>
+    /// Prints the currently active task to the console.
+    /// If no active task is set, it prints a message indicating no active task.
+    /// </summary>
+    public void PrintActiveTask()
+    {
+        if (ActiveTask != null)
+        {
+            Debug.Log($"Active Task:\n" +
+                      $"Description: {ActiveTask.TaskDescription}\n" +
+                      $"Subject: {ActiveTask.TaskSubject}\n" +
+                      $"NPC: {ActiveTask.TaskNPC}\n" +
+                      $"Location: {ActiveTask.TaskLocation}\n" +
+                      $"Difficulty: {ActiveTask.TaskDifficulty}\n" +
+                      $"Completed: {ActiveTask.IsCompleted}");
+        }
+        else
+        {
+            Debug.Log("No active task is currently set.");
         }
     }
 
