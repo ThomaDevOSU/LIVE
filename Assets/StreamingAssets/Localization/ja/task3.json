@@ -1,42 +1,98 @@
 {
     "Buy": {
-      "description": "買う {{subject}} から {{npc}}",
-      "answer": "いくつか購入したいのですが {{subject}}。"
+        "description": "{{npc}} سے {{subject}} خریدیں",
+        "answer": "میں کچھ {{subject}} خریدنا چاہتا/چاہتی ہوں۔"
     },
     "AskNPC": {
-      "description": "聞く {{npc}} について {{subject}}",
-      "answer": "どう思いますか {{subject}}?"
+        "description": "{{npc}} سے {{subject}} کے بارے میں پوچھیں",
+        "answer": "آپ {{subject}} کے بارے میں کیا سوچتے ہیں؟"
     },
     "AskLoc": {
-      "description": "の誰かに聞いてください {{location}} について {{subject}}",
-      "answer": "どう思いますか {{subject}}?"
+        "description": "{{location}} پر کسی سے {{subject}} کے بارے میں پوچھیں",
+        "answer": "آپ {{subject}} کے بارے میں کیا سوچتے ہیں؟"
     },
     "DiscussRecipes": {
-      "description": "レシピについて話し合う {{npc}} に関連した {{subject}}",
-      "answer": "についてレシピについて話し合いたいと思います {{subject}}。"
+        "description": "{{npc}} کے ساتھ {{subject}} سے متعلق ترکیبوں پر بات کریں",
+        "answer": "میں {{subject}} سے متعلق ترکیبوں پر بات کرنا چاہتا/چاہتی ہوں۔"
     },
     "RecommendDrink": {
-      "description": "聞く {{npc}} 人に飲み物を勧める {{subject}}",
-      "answer": "お勧めの飲み物を教えてください {{subject}}?"
+        "description": "{{npc}} سے {{subject}} کے لیے ایک مشروب کی سفارش کرنے کو کہیں",
+        "answer": "کیا آپ {{subject}} کے لیے ایک مشروب کی سفارش کر سکتے ہیں؟"
     },
     "DiscussMenu": {
-      "description": "メニューについてはこちらでご相談ください {{location}} に関して {{subject}}",
-      "answer": "メニューについて相談したいのですが、 {{subject}}。"
+        "description": "{{location}} کے مینو پر {{subject}} کے بارے میں بات کریں",
+        "answer": "میں {{subject}} کے بارے میں مینو پر بات کرنا چاہتا/چاہتی ہوں۔"
     },
     "NegotiatePrices": {
-      "description": "～と価格交渉する {{npc}} のために {{subject}}",
-      "answer": "価格交渉をしたいのですが、 {{subject}} あなたと。"
+        "description": "{{npc}} کے ساتھ {{subject}} کی قیمت پر بات چیت کریں",
+        "answer": "میں آپ کے ساتھ {{subject}} کی قیمت پر بات چیت کرنا چاہتا/چاہتی ہوں۔"
     },
     "ExplainIngredients": {
-      "description": "聞く {{npc}} の成分を説明すると {{subject}}",
-      "answer": "の成分を説明していただけますか {{subject}}?"
+        "description": "{{npc}} سے {{subject}} کے اجزاء کی وضاحت کرنے کو کہیں",
+        "answer": "کیا آپ {{subject}} کے اجزاء کی وضاحت کر سکتے ہیں؟"
     },
     "PlanEvent": {
-      "description": "誰にでも聞いてください {{location}} スケジュール設定について {{subject}}",
-      "answer": "スケジュール設定について詳しく知りたい {{subject}} ここ。"
+        "description": "{{location}} پر کسی سے {{subject}} کی منصوبہ بندی کے بارے میں پوچھیں",
+        "answer": "میں یہاں {{subject}} کی منصوبہ بندی کے بارے میں مزید جاننا چاہتا/چاہتی ہوں۔"
+    },
+    "OrderMeal": {
+        "description": "{{npc}} سے {{subject}} کا آرڈر دیں",
+        "answer": "میں {{subject}} کا آرڈر دینا چاہتا/چاہتی ہوں۔"
+    },
+    "RateDishes": {
+        "description": "{{npc}} سے {{subject}} کی درجہ بندی کرنے کو کہیں",
+        "answer": "آپ {{subject}} کی درجہ بندی کیسے کریں گے؟"
+    },
+    "SeekAdvice": {
+        "description": "{{npc}} سے {{subject}} کے بارے میں مشورہ طلب کریں",
+        "answer": "{{subject}} کے بارے میں آپ کا کیا مشورہ ہے؟"
+    },
+    "RequestMedicine": {
+        "description": "{{npc}} سے {{subject}} کی درخواست کریں",
+        "answer": "کیا میں کچھ {{subject}} حاصل کر سکتا/سکتی ہوں؟"
+    },
+    "DiscussHealth": {
+        "description": "{{npc}} کے ساتھ {{subject}} پر بات کریں",
+        "answer": "کیا ہم {{subject}} کے بارے میں بات کر سکتے ہیں؟"
+    },
+    "RequestRefill": {
+        "description": "{{npc}} سے {{subject}} کے لیے ریفِل کی درخواست کریں",
+        "answer": "کیا میں {{subject}} کے لیے ریفِل حاصل کر سکتا/سکتی ہوں؟"
+    },
+    "AskSpecials": {
+        "description": "{{npc}} سے {{subject}} کے خصوصی آفرز کے بارے میں پوچھیں",
+        "answer": "{{subject}} کے لیے آپ کے پاس کیا خصوصی آفرز ہیں؟"
+    },
+    "DiscussPolicy": {
+        "description": "{{npc}} کے ساتھ {{subject}} کی پالیسی پر بات کریں",
+        "answer": "کیا ہم {{subject}} کی پالیسی پر بات کر سکتے ہیں؟"
+    },
+    "SeekApproval": {
+        "description": "{{npc}} سے {{subject}} کے لیے منظوری طلب کریں",
+        "answer": "کیا آپ {{subject}} کو منظور کر سکتے ہیں؟"
+    },
+    "DebateIssues": {
+        "description": "{{npc}} کے ساتھ {{subject}} کے مسائل پر بحث کریں",
+        "answer": "کیا ہم {{subject}} کے مسائل پر بحث کر سکتے ہیں؟"
+    },
+    "AskAvailability": {
+        "description": "{{npc}} سے {{subject}} کی دستیابی کے بارے میں پوچھیں",
+        "answer": "کیا {{subject}} دستیاب ہے؟"
+    },
+    "ReportIssue": {
+        "description": "{{npc}} کو {{subject}} کے مسئلے کی رپورٹ کریں",
+        "answer": "میں {{subject}} کے مسئلے کی رپورٹ کرنا چاہتا/چاہتی ہوں۔"
+    },
+    "AskForHelp": {
+        "description": "{{npc}} سے {{subject}} کے لیے مدد طلب کریں",
+        "answer": "کیا آپ مجھے {{subject}} میں مدد کر سکتے ہیں؟"
+    },
+    "SeekAssistance": {
+        "description": "{{npc}} سے {{subject}} کے لیے مدد طلب کریں",
+        "answer": "کیا آپ {{subject}} میں مدد فراہم کر سکتے ہیں؟"
     },
     "SAMPLE": {
-      "description": "サンプル {{subject}} サンプルNPC {{npc}} サンプルの場所 {{location}}",
-      "answer": "件名例 {{subject}}。"
+        "description": "نمونہ {{subject}} نمونہ NPC {{npc}} نمونہ مقام {{location}}",
+        "answer": "نمونہ موضوع {{subject}}۔"
     }
 }
