@@ -1,42 +1,98 @@
 {
     "Buy": {
-      "description": "买 {{subject}} 从 {{npc}}",
-      "answer": "我想买一些 {{subject}}。"
+        "description": "从{{npc}}购买{{subject}}",
+        "answer": "我想买一些{{subject}}。"
     },
     "AskNPC": {
-      "description": "问 {{npc}} 关于 {{subject}}",
-      "answer": "你觉得怎么样 {{subject}}？"
+        "description": "向{{npc}}询问关于{{subject}}",
+        "answer": "你对{{subject}}有什么看法？"
     },
     "AskLoc": {
-      "description": "询问任何人 {{location}} 关于 {{subject}}",
-      "answer": "你觉得怎么样 {{subject}}？"
+        "description": "向{{location}}的任何人询问关于{{subject}}",
+        "answer": "你对{{subject}}有什么看法？"
     },
     "DiscussRecipes": {
-      "description": "与讨论食谱 {{npc}} 相关于 {{subject}}",
-      "answer": "我想讨论一下食谱 {{subject}}。"
+        "description": "与{{npc}}讨论关于{{subject}}的食谱",
+        "answer": "我想讨论关于{{subject}}的食谱。"
     },
     "RecommendDrink": {
-      "description": "问 {{npc}} 为某人推荐一杯饮料 {{subject}}",
-      "answer": "你能推荐一杯饮料吗 {{subject}}？"
+        "description": "请{{npc}}为{{subject}}推荐一种饮品",
+        "answer": "你能为{{subject}}推荐一种饮品吗？"
     },
     "DiscussMenu": {
-      "description": "讨论菜单 {{location}} 关于 {{subject}}",
-      "answer": "我想讨论一下菜单 {{subject}}。"
+        "description": "讨论{{location}}关于{{subject}}的菜单",
+        "answer": "我想讨论关于{{subject}}的菜单。"
     },
     "NegotiatePrices": {
-      "description": "与洽谈价格 {{npc}} 为了 {{subject}}",
-      "answer": "我想协商价格 {{subject}} 与你。"
+        "description": "与{{npc}}协商{{subject}}的价格",
+        "answer": "我想和你协商{{subject}}的价格。"
     },
     "ExplainIngredients": {
-      "description": "问 {{npc}} 解释其成分 {{subject}}",
-      "answer": "你能解释一下它的成分吗 {{subject}}？"
+        "description": "请{{npc}}解释{{subject}}的原料",
+        "answer": "你能解释一下{{subject}}的原料吗？"
     },
     "PlanEvent": {
-      "description": "询问任何人 {{location}} 关于安排 {{subject}}",
-      "answer": "我想了解更多关于安排 {{subject}} 这里。"
+        "description": "向{{location}}的任何人询问安排{{subject}}的事宜",
+        "answer": "我想了解更多关于在这里安排{{subject}}的信息。"
+    },
+    "OrderMeal": {
+        "description": "向{{npc}}点{{subject}}",
+        "answer": "我想点{{subject}}。"
+    },
+    "RateDishes": {
+        "description": "请{{npc}}评价{{subject}}",
+        "answer": "你会如何评价{{subject}}？"
+    },
+    "SeekAdvice": {
+        "description": "向{{npc}}寻求关于{{subject}}的建议",
+        "answer": "关于{{subject}}，你有什么建议吗？"
+    },
+    "RequestMedicine": {
+        "description": "向{{npc}}请求{{subject}}",
+        "answer": "我可以拿一些{{subject}}吗？"
+    },
+    "DiscussHealth": {
+        "description": "与{{npc}}讨论{{subject}}",
+        "answer": "我们可以谈谈{{subject}}吗？"
+    },
+    "RequestRefill": {
+        "description": "向{{npc}}请求补充{{subject}}",
+        "answer": "我可以补充{{subject}}吗？"
+    },
+    "AskSpecials": {
+        "description": "向{{npc}}询问关于{{subject}}的特价",
+        "answer": "你们有什么{{subject}}的特价吗？"
+    },
+    "DiscussPolicy": {
+        "description": "与{{npc}}讨论关于{{subject}}的政策",
+        "answer": "我们可以讨论关于{{subject}}的政策吗？"
+    },
+    "SeekApproval": {
+        "description": "向{{npc}}寻求对{{subject}}的批准",
+        "answer": "你能批准{{subject}}吗？"
+    },
+    "DebateIssues": {
+        "description": "与{{npc}}辩论关于{{subject}}的问题",
+        "answer": "我们可以辩论关于{{subject}}的问题吗？"
+    },
+    "AskAvailability": {
+        "description": "向{{npc}}询问{{subject}}的可用性",
+        "answer": "{{subject}}有货吗？"
+    },
+    "ReportIssue": {
+        "description": "向{{npc}}报告{{subject}}",
+        "answer": "我想报告一个{{subject}}。"
+    },
+    "AskForHelp": {
+        "description": "向{{npc}}寻求帮助，关于{{subject}}",
+        "answer": "你能帮我处理{{subject}}吗？"
+    },
+    "SeekAssistance": {
+        "description": "向{{npc}}寻求关于{{subject}}的帮助",
+        "answer": "你能提供关于{{subject}}的帮助吗？"
     },
     "SAMPLE": {
-      "description": "样本 {{subject}} NPC样本 {{npc}} 样本位置 {{location}}",
-      "answer": "示例主题 {{subject}}。"
+        "description": "示例{{subject}} 示例NPC {{npc}} 示例地点 {{location}}",
+        "answer": "示例主题 {{subject}}。"
     }
 }

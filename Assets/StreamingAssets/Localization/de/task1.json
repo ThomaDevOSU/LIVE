@@ -1,18 +1,42 @@
 {
-    "Buy": {
-      "description": "Kaufen {{subject}} aus {{npc}}",
-      "answer": "Ich würde gerne welche kaufen {{subject}}."
+    "Buy":  
+    {
+        "description":"Kaufe {{subject}} von {{npc}}",
+        "answer":"Ich möchte etwas {{subject}} kaufen."
     },
-    "AskNPC": {
-      "description": "Fragen {{npc}} um {{subject}}",
-      "answer": "Woran denken Sie? {{subject}}?"
+    "AskNPC":  
+    {
+        "description":"Frage {{npc}} über {{subject}}",
+        "answer":"Was denkst du über {{subject}}?"
     },
-    "AskLoc": {
-      "description": "Fragen Sie jemanden im {{location}} um {{subject}}",
-      "answer": "Woran denken Sie? {{subject}}?"
+    "AskLoc":  
+    {
+        "description":"Frage jemanden am {{location}} über {{subject}}",
+        "answer":"Was denkst du über {{subject}}?"
     },
-    "SAMPLE": {
-      "description": "PROBE {{subject}} BEISPIEL-NPC {{npc}} PROBENSTANDORT {{location}}",
-      "answer": "BEISPIELGEGENSTAND {{subject}}."
+    "OrderMeal":  
+    {
+        "description": "Bestelle {{subject}} von {{npc}}",
+        "answer": "Ich möchte {{subject}} bestellen."
+    },
+    "SeekAdvice":  
+    {
+        "description": "Hole Rat von {{npc}} über {{subject}}",
+        "answer": "Welchen Rat hast du zu {{subject}}?"
+    },
+    "DiscussPolicy":  
+    {
+        "description": "Diskutiere {{subject}}-Richtlinien mit {{npc}}",
+        "answer": "Können wir die Richtlinien zu {{subject}} besprechen?"
+    },
+    "ReportIssue":  
+    {
+        "description": "Melde ein {{subject}} an {{npc}}",
+        "answer": "Ich möchte ein {{subject}} melden."
+    },
+    "SAMPLE":  
+    {
+        "description":"BEISPIEL {{subject}} BEISPIEL NPC {{npc}} BEISPIEL ORT {{location}}",
+        "answer":"BEISPIEL THEMA {{subject}}."
     }
 }

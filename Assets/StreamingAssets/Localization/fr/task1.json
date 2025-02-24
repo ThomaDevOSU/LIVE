@@ -1,18 +1,42 @@
 {
-    "Buy": {
-      "description": "Acheter {{subject}} depuis {{npc}}",
-      "answer": "j'aimerais en acheter {{subject}}."
+    "Buy":  
+    {
+        "description":"Acheter {{subject}} auprès de {{npc}}",
+        "answer":"Je voudrais acheter du {{subject}}."
     },
-    "AskNPC": {
-      "description": "Demander {{npc}} à propos {{subject}}",
-      "answer": "A quoi penses-tu {{subject}}?"
+    "AskNPC":  
+    {
+        "description":"Demander à {{npc}} à propos de {{subject}}",
+        "answer":"Que penses-tu de {{subject}} ?"
     },
-    "AskLoc": {
-      "description": "Demandez à n'importe qui au {{location}} à propos {{subject}}",
-      "answer": "A quoi penses-tu {{subject}}?"
+    "AskLoc":  
+    {
+        "description":"Demander à quelqu'un à {{location}} à propos de {{subject}}",
+        "answer":"Que penses-tu de {{subject}} ?"
     },
-    "SAMPLE": {
-      "description": "ÉCHANTILLON {{subject}} EXEMPLE DE PNJ {{npc}} EXEMPLE D'EMPLACEMENT {{location}}",
-      "answer": "EXEMPLE DE SUJET {{subject}}."
+    "OrderMeal":  
+    {
+        "description": "Commander {{subject}} auprès de {{npc}}",
+        "answer": "Je voudrais commander {{subject}}."
+    },
+    "SeekAdvice":  
+    {
+        "description": "Demander conseil à {{npc}} à propos de {{subject}}",
+        "answer": "Quel conseil as-tu à propos de {{subject}} ?"
+    },
+    "DiscussPolicy":  
+    {
+        "description": "Discuter de la politique de {{subject}} avec {{npc}}",
+        "answer": "Pouvons-nous discuter de la politique sur {{subject}} ?"
+    },
+    "ReportIssue":  
+    {
+        "description": "Signaler un {{subject}} à {{npc}}",
+        "answer": "Je voudrais signaler un {{subject}}."
+    },
+    "SAMPLE":  
+    {
+        "description":"EXEMPLE {{subject}} EXEMPLE NPC {{npc}} EXEMPLE LIEU {{location}}",
+        "answer":"EXEMPLE SUJET {{subject}}."
     }
 }

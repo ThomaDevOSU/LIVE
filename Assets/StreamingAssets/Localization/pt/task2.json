@@ -1,0 +1,62 @@
+{
+    "Buy": {
+        "description": "Comprar {{subject}} de {{npc}}",
+        "answer": "Eu gostaria de comprar algum {{subject}}."
+    },
+    "AskNPC": {
+        "description": "Perguntar a {{npc}} sobre {{subject}}",
+        "answer": "O que você acha de {{subject}}?"
+    },
+    "AskLoc": {
+        "description": "Perguntar a alguém em {{location}} sobre {{subject}}",
+        "answer": "O que você acha de {{subject}}?"
+    },
+    "DiscussRecipes": {
+        "description": "Discutir receitas com {{npc}} relacionadas a {{subject}}",
+        "answer": "Eu gostaria de discutir receitas sobre {{subject}}."
+    },
+    "RecommendDrink": {
+        "description": "Pedir a {{npc}} para recomendar uma bebida para um {{subject}}",
+        "answer": "Você poderia recomendar uma bebida para um {{subject}}?"
+    },
+    "DiscussMenu": {
+        "description": "Discutir o cardápio em {{location}} sobre {{subject}}",
+        "answer": "Eu gostaria de discutir o cardápio sobre {{subject}}."
+    },
+    "OrderMeal": {
+        "description": "Pedir {{subject}} de {{npc}}",
+        "answer": "Eu gostaria de pedir {{subject}}."
+    },
+    "SeekAdvice": {
+        "description": "Pedir conselhos a {{npc}} sobre {{subject}}",
+        "answer": "Que conselhos você tem sobre {{subject}}?"
+    },
+    "RequestMedicine": {
+        "description": "Solicitar {{subject}} de {{npc}}",
+        "answer": "Posso receber algum {{subject}}?"
+    },
+    "RequestRefill": {
+        "description": "Solicitar um reabastecimento para {{subject}} de {{npc}}",
+        "answer": "Posso receber um reabastecimento para {{subject}}?"
+    },
+    "DiscussPolicy": {
+        "description": "Discutir a política de {{subject}} com {{npc}}",
+        "answer": "Podemos discutir a política sobre {{subject}}?"
+    },
+    "SeekApproval": {
+        "description": "Pedir aprovação de {{npc}} para {{subject}}",
+        "answer": "Você pode aprovar {{subject}}?"
+    },
+    "ReportIssue": {
+        "description": "Relatar um {{subject}} para {{npc}}",
+        "answer": "Eu gostaria de relatar um {{subject}}."
+    },
+    "AskForHelp": {
+        "description": "Pedir ajuda a {{npc}} com {{subject}}",
+        "answer": "Você pode me ajudar com {{subject}}?"
+    },
+    "SAMPLE": {
+        "description": "EXEMPLO {{subject}} EXEMPLO NPC {{npc}} EXEMPLO LOCAL {{location}}",
+        "answer": "EXEMPLO ASSUNTO {{subject}}."
+    }
+}

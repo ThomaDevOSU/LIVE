@@ -1,30 +1,62 @@
 {
     "Buy": {
-      "description": "買う {{subject}} から {{npc}}",
-      "answer": "いくつか購入したいのですが {{subject}}。"
+        "description": "{{npc}}から{{subject}}を購入する",
+        "answer": "{{subject}}を購入したいです。"
     },
     "AskNPC": {
-      "description": "聞く {{npc}} について {{subject}}",
-      "answer": "どう思いますか {{subject}}?"
+        "description": "{{npc}}に{{subject}}について尋ねる",
+        "answer": "{{subject}}についてどう思いますか？"
     },
     "AskLoc": {
-      "description": "の誰かに聞いてください {{location}} について {{subject}}",
-      "answer": "どう思いますか {{subject}}?"
+        "description": "{{location}}の誰かに{{subject}}について尋ねる",
+        "answer": "{{subject}}についてどう思いますか？"
     },
     "DiscussRecipes": {
-      "description": "レシピについて話し合う {{npc}} に関連した {{subject}}",
-      "answer": "についてレシピについて話し合いたいと思います {{subject}}。"
+        "description": "{{npc}}と{{subject}}に関連するレシピについて話し合う",
+        "answer": "{{subject}}に関するレシピについて話し合いたいです。"
     },
     "RecommendDrink": {
-      "description": "聞く {{npc}} 人に飲み物を勧める {{subject}}",
-      "answer": "お勧めの飲み物を教えてください {{subject}}?"
+        "description": "{{npc}}に{{subject}}に合う飲み物を薦めてもらう",
+        "answer": "{{subject}}に合う飲み物を教えてもらえますか？"
     },
     "DiscussMenu": {
-      "description": "メニューについてはこちらでご相談ください {{location}} に関して {{subject}}",
-      "answer": "メニューについて相談したいのですが、 {{subject}}。"
+        "description": "{{location}}のメニューについて{{subject}}に関して話し合う",
+        "answer": "{{subject}}に関してメニューについて話し合いたいです。"
+    },
+    "OrderMeal": {
+        "description": "{{npc}}に{{subject}}を注文する",
+        "answer": "{{subject}}を注文したいです。"
+    },
+    "SeekAdvice": {
+        "description": "{{npc}}に{{subject}}について助言を求める",
+        "answer": "{{subject}}についてアドバイスをいただけますか？"
+    },
+    "RequestMedicine": {
+        "description": "{{npc}}に{{subject}}をリクエストする",
+        "answer": "{{subject}}をいただけますか？"
+    },
+    "RequestRefill": {
+        "description": "{{npc}}に{{subject}}の補充をリクエストする",
+        "answer": "{{subject}}の補充をいただけますか？"
+    },
+    "DiscussPolicy": {
+        "description": "{{npc}}と{{subject}}のポリシーについて話し合う",
+        "answer": "{{subject}}のポリシーについて話し合えますか？"
+    },
+    "SeekApproval": {
+        "description": "{{npc}}に{{subject}}の承認を求める",
+        "answer": "{{subject}}を承認していただけますか？"
+    },
+    "ReportIssue": {
+        "description": "{{npc}}に{{subject}}の問題を報告する",
+        "answer": "{{subject}}の問題を報告したいです。"
+    },
+    "AskForHelp": {
+        "description": "{{npc}}に{{subject}}の助けを求める",
+        "answer": "{{subject}}について手伝っていただけますか？"
     },
     "SAMPLE": {
-      "description": "サンプル {{subject}} サンプルNPC {{npc}} サンプルの場所 {{location}}",
-      "answer": "件名例 {{subject}}。"
+        "description": "サンプル {{subject}} サンプル NPC {{npc}} サンプル場所 {{location}}",
+        "answer": "サンプル主題 {{subject}}。"
     }
 }
