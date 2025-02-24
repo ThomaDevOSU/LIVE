@@ -3002,7 +3002,7 @@ PrefabInstance:
     - target: {fileID: 1209098923972178090, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 626026994}
+      objectReference: {fileID: 0}
     - target: {fileID: 1209098923972178090, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -3071,6 +3071,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7295445936385024736, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7337536143275050346, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3081,11 +3085,11 @@ PrefabInstance:
       objectReference: {fileID: 1692509285}
     - target: {fileID: 8925708601140949114, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.4445
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8930993346460776946, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -3096,17 +3100,6 @@ PrefabInstance:
       addedObject: {fileID: 2096612113}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
---- !u!114 &626026994 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9120777313225347499, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
-  m_PrefabInstance: {fileID: 626026993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea4da17e6e253848b541e066302a15c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &626026995 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6476574346008484779, guid: d37352c904bb7074fa28dd79f9517706, type: 3}
@@ -7364,6 +7357,10 @@ PrefabInstance:
     - target: {fileID: 7244150003177807234, guid: f22ab47dc24a90c45b851a2274040f68, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529412167752493894, guid: f22ab47dc24a90c45b851a2274040f68, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -428
       objectReference: {fileID: 0}
     - target: {fileID: 8461363405713023821, guid: f22ab47dc24a90c45b851a2274040f68, type: 3}
       propertyPath: m_Pivot.x
