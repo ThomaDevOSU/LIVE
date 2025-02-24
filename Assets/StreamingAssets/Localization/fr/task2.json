@@ -1,30 +1,62 @@
 {
     "Buy": {
-      "description": "Acheter {{subject}} depuis {{npc}}",
-      "answer": "j'aimerais en acheter {{subject}}."
+        "description": "Acheter {{subject}} auprès de {{npc}}",
+        "answer": "Je voudrais acheter du {{subject}}."
     },
     "AskNPC": {
-      "description": "Demander {{npc}} à propos {{subject}}",
-      "answer": "A quoi penses-tu {{subject}}?"
+        "description": "Demander à {{npc}} à propos de {{subject}}",
+        "answer": "Que pensez-vous de {{subject}} ?"
     },
     "AskLoc": {
-      "description": "Demandez à n'importe qui au {{location}} à propos {{subject}}",
-      "answer": "A quoi penses-tu {{subject}}?"
+        "description": "Demander à quelqu'un à {{location}} à propos de {{subject}}",
+        "answer": "Que pensez-vous de {{subject}} ?"
     },
     "DiscussRecipes": {
-      "description": "Discutez des recettes avec {{npc}} lié à {{subject}}",
-      "answer": "J'aimerais discuter de recettes sur {{subject}}."
+        "description": "Discuter des recettes avec {{npc}} concernant {{subject}}",
+        "answer": "Je voudrais discuter des recettes sur {{subject}}."
     },
     "RecommendDrink": {
-      "description": "Demander {{npc}} recommander un verre pour un {{subject}}",
-      "answer": "Pourriez-vous me recommander un verre pour un {{subject}}?"
+        "description": "Demander à {{npc}} de recommander une boisson pour un {{subject}}",
+        "answer": "Pourriez-vous recommander une boisson pour un {{subject}} ?"
     },
     "DiscussMenu": {
-      "description": "Discutez du menu sur {{location}} concernant {{subject}}",
-      "answer": "J'aimerais discuter du menu concernant {{subject}}."
+        "description": "Discuter du menu à {{location}} concernant {{subject}}",
+        "answer": "Je voudrais discuter du menu concernant {{subject}}."
+    },
+    "OrderMeal": {
+        "description": "Commander {{subject}} auprès de {{npc}}",
+        "answer": "Je voudrais commander {{subject}}."
+    },
+    "SeekAdvice": {
+        "description": "Demander des conseils à {{npc}} à propos de {{subject}}",
+        "answer": "Quels conseils avez-vous à propos de {{subject}} ?"
+    },
+    "RequestMedicine": {
+        "description": "Demander {{subject}} auprès de {{npc}}",
+        "answer": "Puis-je obtenir du {{subject}} ?"
+    },
+    "RequestRefill": {
+        "description": "Demander un réapprovisionnement pour {{subject}} auprès de {{npc}}",
+        "answer": "Puis-je obtenir un réapprovisionnement pour {{subject}} ?"
+    },
+    "DiscussPolicy": {
+        "description": "Discuter de la politique sur {{subject}} avec {{npc}}",
+        "answer": "Pouvons-nous discuter de la politique sur {{subject}} ?"
+    },
+    "SeekApproval": {
+        "description": "Demander l'approbation de {{npc}} pour {{subject}}",
+        "answer": "Pouvez-vous approuver {{subject}} ?"
+    },
+    "ReportIssue": {
+        "description": "Signaler un {{subject}} à {{npc}}",
+        "answer": "Je voudrais signaler un {{subject}}."
+    },
+    "AskForHelp": {
+        "description": "Demander de l'aide à {{npc}} pour {{subject}}",
+        "answer": "Pouvez-vous m'aider avec {{subject}} ?"
     },
     "SAMPLE": {
-      "description": "ÉCHANTILLON {{subject}} EXEMPLE DE PNJ {{npc}} EXEMPLE D'EMPLACEMENT {{location}}",
-      "answer": "EXEMPLE DE SUJET {{subject}}."
+        "description": "EXEMPLE {{subject}} EXEMPLE NPC {{npc}} EXEMPLE LIEU {{location}}",
+        "answer": "EXEMPLE SUJET {{subject}}."
     }
 }
