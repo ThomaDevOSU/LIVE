@@ -1,18 +1,42 @@
 {
-    "Buy": {
-      "description": "买 {{subject}} 从 {{npc}}",
-      "answer": "我想买一些 {{subject}}。"
+    "Buy":  
+    {
+        "description":"从{{npc}}购买{{subject}}",
+        "answer":"我想买一些{{subject}}。"
     },
-    "AskNPC": {
-      "description": "问 {{npc}} 关于 {{subject}}",
-      "answer": "你觉得怎么样 {{subject}}。"
+    "AskNPC":  
+    {
+        "description":"向{{npc}}询问关于{{subject}}",
+        "answer":"你对{{subject}}有什么看法？"
     },
-    "AskLoc": {
-      "description": "询问任何人 {{location}} 关于 {{subject}}",
-      "answer": "你觉得怎么样 {{subject}}。"
+    "AskLoc":  
+    {
+        "description":"向{{location}}的任何人询问关于{{subject}}",
+        "answer":"你对{{subject}}有什么看法？"
     },
-    "SAMPLE": {
-      "description": "样本 {{subject}} NPC样本 {{npc}} 样本位置 {{location}}",
-      "answer": "示例主题 {{subject}}。"
+    "OrderMeal":  
+    {
+        "description": "向{{npc}}点{{subject}}",
+        "answer": "我想点{{subject}}。"
+    },
+    "SeekAdvice":  
+    {
+        "description": "向{{npc}}寻求关于{{subject}}的建议",
+        "answer": "关于{{subject}}，你有什么建议吗？"
+    },
+    "DiscussPolicy":  
+    {
+        "description": "与{{npc}}讨论{{subject}}政策",
+        "answer": "我们可以讨论关于{{subject}}的政策吗？"
+    },
+    "ReportIssue":  
+    {
+        "description": "向{{npc}}报告{{subject}}",
+        "answer": "我想报告一个{{subject}}。"
+    },
+    "SAMPLE":  
+    {
+        "description":"示例{{subject}} 示例NPC {{npc}} 示例地点 {{location}}",
+        "answer":"示例主题 {{subject}}。"
     }
 }
