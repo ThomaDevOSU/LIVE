@@ -1,0 +1,113 @@
+{
+    "Buy": {
+        "description": "Купить {{subject}} у {{npc}}",
+        "answer": "Я хотел бы купить что-то из {{subject}}."
+    },
+    "AskNPC": {
+        "description": "Спросить у {{npc}} о {{subject}}",
+        "answer": "Что вы думаете о {{subject}}?"
+    },
+    "AskLoc": {
+        "description": "Спросить кого-то в {{location}} о {{subject}}",
+        "answer": "Что вы думаете о {{subject}}?"
+    },
+    "DiscussRecipes": {
+        "description": "Обсудить рецепты с {{npc}} по поводу {{subject}}",
+        "answer": "Я хотел бы обсудить рецепты о {{subject}}."
+    },
+    "RecommendDrink": {
+        "description": "Попросить {{npc}} порекомендовать напиток для {{subject}}",
+        "answer": "Не могли бы вы порекомендовать напиток для {{subject}}?"
+    },
+    "DiscussMenu": {
+        "description": "Обсудить меню в {{location}} по поводу {{subject}}",
+        "answer": "Я хотел бы обсудить меню по поводу {{subject}}."
+    },
+    "NegotiatePrices": {
+        "description": "Переговорить цены с {{npc}} за {{subject}}",
+        "answer": "Я хотел бы обсудить цену за {{subject}} с вами."
+    },
+    "ExplainIngredients": {
+        "description": "Попросить {{npc}} объяснить ингредиенты для {{subject}}",
+        "answer": "Не могли бы вы объяснить ингредиенты для {{subject}}?"
+    },
+    "PlanEvent": {
+        "description": "Спросить кого-то в {{location}} о планировании {{subject}}",
+        "answer": "Я хотел бы узнать больше о планировании {{subject}} здесь."
+    },
+    "OrderMeal":  
+    {
+        "description": "Заказать {{subject}} у {{npc}}",
+        "answer": "Я хотел бы заказать {{subject}}."
+    },
+    "RateDishes":  
+    {
+        "description": "Попросить {{npc}} оценить {{subject}}",
+        "answer": "Как бы вы оценили {{subject}}?"
+    },
+    "SeekAdvice":  
+    {
+        "description": "Попросить совета у {{npc}} по поводу {{subject}}",
+        "answer": "Какой совет у вас есть по поводу {{subject}}?"
+    },
+    "RequestMedicine":  
+    {
+        "description": "Попросить {{subject}} у {{npc}}",
+        "answer": "Могу ли я получить что-то из {{subject}}?"
+    },
+    "DiscussHealth":  
+    {
+        "description": "Обсудить {{subject}} с {{npc}}",
+        "answer": "Можем ли мы поговорить о {{subject}}?"
+    },
+    "RequestRefill":  
+    {
+        "description": "Попросить {{npc}} пополнить {{subject}}",
+        "answer": "Могу ли я получить пополнение {{subject}}?"
+    },
+    "AskSpecials":  
+    {
+        "description": "Спросить у {{npc}} о спецпредложениях для {{subject}}",
+        "answer": "Какие спецпредложения у вас есть для {{subject}}?"
+    },
+    "DiscussPolicy":  
+    {
+        "description": "Обсудить политику {{subject}} с {{npc}}",
+        "answer": "Можем ли мы обсудить политику по поводу {{subject}}?"
+    },
+    "SeekApproval":  
+    {
+        "description": "Попросить одобрения у {{npc}} для {{subject}}",
+        "answer": "Можете ли вы одобрить {{subject}}?"
+    },
+    "DebateIssues":  
+    {
+        "description": "Обсудить проблемы {{subject}} с {{npc}}",
+        "answer": "Можем ли мы обсудить проблемы по поводу {{subject}}?"
+    },
+    "AskAvailability":  
+    {
+        "description": "Спросить у {{npc}} о наличии {{subject}}",
+        "answer": "Доступно ли {{subject}}?"
+    },
+    "ReportIssue":  
+    {
+        "description": "Сообщить о {{subject}} {{npc}}",
+        "answer": "Я хотел бы сообщить о {{subject}}."
+    },
+    "AskForHelp":  
+    {
+        "description": "Попросить помощи у {{npc}} с {{subject}}",
+        "answer": "Можете ли вы помочь мне с {{subject}}?"
+    },
+    "SeekAssistance":  
+    {
+        "description": "Попросить помощи у {{npc}} по поводу {{subject}}",
+        "answer": "Можете ли вы оказать помощь с {{subject}}?"
+    },
+    "SAMPLE":  
+    {
+        "description": "SAMPLE {{subject}} SAMPLE NPC {{npc}} SAMPLE МЕСТО {{location}}",
+        "answer": "SAMPLE ТЕМА {{subject}}."
+    }
+}

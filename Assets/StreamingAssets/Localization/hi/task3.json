@@ -1,0 +1,98 @@
+{
+    "Buy": {
+        "description": "{{npc}} से {{subject}} खरीदें",
+        "answer": "मैं कुछ {{subject}} खरीदना चाहता/चाहती हूँ।"
+    },
+    "AskNPC": {
+        "description": "{{npc}} से {{subject}} के बारे में पूछें",
+        "answer": "{{subject}} के बारे में आप क्या सोचते हैं?"
+    },
+    "AskLoc": {
+        "description": "{{location}} पर किसी से {{subject}} के बारे में पूछें",
+        "answer": "{{subject}} के बारे में आप क्या सोचते हैं?"
+    },
+    "DiscussRecipes": {
+        "description": "{{npc}} के साथ {{subject}} से संबंधित व्यंजनों पर चर्चा करें",
+        "answer": "मैं {{subject}} से संबंधित व्यंजनों पर चर्चा करना चाहता/चाहती हूँ।"
+    },
+    "RecommendDrink": {
+        "description": "{{npc}} से {{subject}} के लिए एक पेय की सिफारिश करने को कहें",
+        "answer": "क्या आप {{subject}} के लिए एक पेय की सिफारिश कर सकते हैं?"
+    },
+    "DiscussMenu": {
+        "description": "{{location}} के मेनू पर {{subject}} के बारे में चर्चा करें",
+        "answer": "मैं {{subject}} के बारे में मेनू पर चर्चा करना चाहता/चाहती हूँ।"
+    },
+    "NegotiatePrices": {
+        "description": "{{npc}} के साथ {{subject}} की कीमत पर बातचीत करें",
+        "answer": "मैं आपके साथ {{subject}} की कीमत पर बातचीत करना चाहता/चाहती हूँ।"
+    },
+    "ExplainIngredients": {
+        "description": "{{npc}} से {{subject}} के सामग्री की व्याख्या करने को कहें",
+        "answer": "क्या आप {{subject}} के सामग्री की व्याख्या कर सकते हैं?"
+    },
+    "PlanEvent": {
+        "description": "{{location}} पर किसी से {{subject}} की योजना बनाने के बारे में पूछें",
+        "answer": "मैं यहाँ {{subject}} की योजना बनाने के बारे में और जानना चाहता/चाहती हूँ।"
+    },
+    "OrderMeal": {
+        "description": "{{npc}} से {{subject}} का ऑर्डर दें",
+        "answer": "मैं {{subject}} का ऑर्डर देना चाहता/चाहती हूँ।"
+    },
+    "RateDishes": {
+        "description": "{{npc}} से {{subject}} की रेटिंग करने को कहें",
+        "answer": "आप {{subject}} की रेटिंग कैसे करेंगे?"
+    },
+    "SeekAdvice": {
+        "description": "{{npc}} से {{subject}} के बारे में सलाह लें",
+        "answer": "{{subject}} के बारे में आपकी क्या सलाह है?"
+    },
+    "RequestMedicine": {
+        "description": "{{npc}} से {{subject}} का अनुरोध करें",
+        "answer": "क्या मुझे कुछ {{subject}} मिल सकता है?"
+    },
+    "DiscussHealth": {
+        "description": "{{npc}} के साथ {{subject}} पर चर्चा करें",
+        "answer": "क्या हम {{subject}} के बारे में बात कर सकते हैं?"
+    },
+    "RequestRefill": {
+        "description": "{{npc}} से {{subject}} के लिए रिफिल का अनुरोध करें",
+        "answer": "क्या मुझे {{subject}} के लिए रिफिल मिल सकता है?"
+    },
+    "AskSpecials": {
+        "description": "{{npc}} से {{subject}} के विशेष ऑफर के बारे में पूछें",
+        "answer": "{{subject}} के लिए आपके पास क्या विशेष ऑफर हैं?"
+    },
+    "DiscussPolicy": {
+        "description": "{{npc}} के साथ {{subject}} की नीति पर चर्चा करें",
+        "answer": "क्या हम {{subject}} की नीति पर चर्चा कर सकते हैं?"
+    },
+    "SeekApproval": {
+        "description": "{{npc}} से {{subject}} के लिए अनुमोदन प्राप्त करें",
+        "answer": "क्या आप {{subject}} को मंजूरी दे सकते हैं?"
+    },
+    "DebateIssues": {
+        "description": "{{npc}} के साथ {{subject}} के मुद्दों पर बहस करें",
+        "answer": "क्या हम {{subject}} के मुद्दों पर बहस कर सकते हैं?"
+    },
+    "AskAvailability": {
+        "description": "{{npc}} से {{subject}} की उपलब्धता के बारे में पूछें",
+        "answer": "क्या {{subject}} उपलब्ध है?"
+    },
+    "ReportIssue": {
+        "description": "{{npc}} को {{subject}} की समस्या की रिपोर्ट करें",
+        "answer": "मैं {{subject}} की समस्या की रिपोर्ट करना चाहता/चाहती हूँ।"
+    },
+    "AskForHelp": {
+        "description": "{{npc}} से {{subject}} के लिए मदद मांगें",
+        "answer": "क्या आप मुझे {{subject}} में मदद कर सकते हैं?"
+    },
+    "SeekAssistance": {
+        "description": "{{npc}} से {{subject}} के लिए सहायता मांगें",
+        "answer": "क्या आप {{subject}} में सहायता प्रदान कर सकते हैं?"
+    },
+    "SAMPLE": {
+        "description": "नमूना {{subject}} नमूना NPC {{npc}} नमूना स्थान {{location}}",
+        "answer": "नमूना विषय {{subject}}।"
+    }
+}

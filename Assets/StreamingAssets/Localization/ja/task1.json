@@ -1,18 +1,42 @@
 {
-    "Buy": {
-      "description": "買う {{subject}} から {{npc}}",
-      "answer": "いくつか購入したいのですが {{subject}}。"
+    "Buy":  
+    {
+        "description":"{{npc}}から{{subject}}を購入する",
+        "answer":"{{subject}}を購入したいです。"
     },
-    "AskNPC": {
-      "description": "聞く {{npc}} について {{subject}}",
-      "answer": "どう思いますか {{subject}}?"
+    "AskNPC":  
+    {
+        "description":"{{npc}}に{{subject}}について尋ねる",
+        "answer":"{{subject}}についてどう思いますか？"
     },
-    "AskLoc": {
-      "description": "の誰かに聞いてください {{location}} について {{subject}}",
-      "answer": "どう思いますか {{subject}}?"
+    "AskLoc":  
+    {
+        "description":"{{location}}の誰かに{{subject}}について尋ねる",
+        "answer":"{{subject}}についてどう思いますか？"
     },
-    "SAMPLE": {
-      "description": "サンプル {{subject}} サンプルNPC {{npc}} サンプルの場所 {{location}}",
-      "answer": "件名例 {{subject}}。"
+    "OrderMeal":  
+    {
+        "description": "{{npc}}に{{subject}}を注文する",
+        "answer": "{{subject}}を注文したいです。"
+    },
+    "SeekAdvice":  
+    {
+        "description": "{{npc}}に{{subject}}について助言を求める",
+        "answer": "{{subject}}についてのアドバイスはありますか？"
+    },
+    "DiscussPolicy":  
+    {
+        "description": "{{npc}}と{{subject}}のポリシーについて話し合う",
+        "answer": "{{subject}}のポリシーについて話し合えますか？"
+    },
+    "ReportIssue":  
+    {
+        "description": "{{npc}}に{{subject}}を報告する",
+        "answer": "{{subject}}を報告したいです。"
+    },
+    "SAMPLE":  
+    {
+        "description":"サンプル {{subject}} サンプル NPC {{npc}} サンプル場所 {{location}}",
+        "answer":"サンプル主題 {{subject}}。"
     }
 }

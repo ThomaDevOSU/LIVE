@@ -1,0 +1,42 @@
+{
+    "Buy":  
+    {
+        "description":"{{npc}} থেকে {{subject}} কিনুন",
+        "answer":"আমি কিছু {{subject}} কিনতে চাই।"
+    },
+    "AskNPC":  
+    {
+        "description":"{{npc}} কে {{subject}} সম্পর্কে জিজ্ঞাসা করুন",
+        "answer":"{{subject}} সম্পর্কে আপনি কী মনে করেন?"
+    },
+    "AskLoc":  
+    {
+        "description":"{{location}} এ যে কাউকে {{subject}} সম্পর্কে জিজ্ঞাসা করুন",
+        "answer":"{{subject}} সম্পর্কে আপনি কী মনে করেন?"
+    },
+    "OrderMeal":  
+    {
+        "description": "{{npc}} থেকে {{subject}} অর্ডার করুন",
+        "answer": "আমি {{subject}} অর্ডার করতে চাই।"
+    },
+    "SeekAdvice":  
+    {
+        "description": "{{npc}} কে {{subject}} সম্পর্কে পরামর্শ চান",
+        "answer": "{{subject}} সম্পর্কে আপনার কী পরামর্শ আছে?"
+    },
+    "DiscussPolicy":  
+    {
+        "description": "{{npc}} এর সাথে {{subject}} নীতি নিয়ে আলোচনা করুন",
+        "answer": "আমরা কি {{subject}} নীতি নিয়ে আলোচনা করতে পারি?"
+    },
+    "ReportIssue":  
+    {
+        "description": "{{npc}} কে {{subject}} রিপোর্ট করুন",
+        "answer": "আমি একটি {{subject}} রিপোর্ট করতে চাই।"
+    },
+    "SAMPLE":  
+    {
+        "description":"নমুনা {{subject}} নমুনা NPC {{npc}} নমুনা অবস্থান {{location}}",
+        "answer":"নমুনা বিষয় {{subject}}।"
+    }
+}

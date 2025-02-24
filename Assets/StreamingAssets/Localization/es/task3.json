@@ -1,42 +1,113 @@
 {
     "Buy": {
-      "description": "Comprar {{subject}} de {{npc}}",
-      "answer": "me gustaria comprar algunos {{subject}}."
+        "description": "Comprar {{subject}} de {{npc}}",
+        "answer": "Me gustaría comprar algo de {{subject}}."
     },
     "AskNPC": {
-      "description": "Preguntar {{npc}} acerca de {{subject}}",
-      "answer": "¿Qué piensas acerca de {{subject}}?"
+        "description": "Preguntarle a {{npc}} sobre {{subject}}",
+        "answer": "¿Qué piensa sobre {{subject}}?"
     },
     "AskLoc": {
-      "description": "Pregúntale a cualquiera en el {{location}} acerca de {{subject}}",
-      "answer": "¿Qué piensas acerca de {{subject}}?"
+        "description": "Preguntar a alguien en {{location}} sobre {{subject}}",
+        "answer": "¿Qué piensa sobre {{subject}}?"
     },
     "DiscussRecipes": {
-      "description": "Discutir recetas con {{npc}} relacionado con {{subject}}",
-      "answer": "Me gustaría discutir recetas sobre {{subject}}."
+        "description": "Discutir recetas con {{npc}} relacionadas con {{subject}}",
+        "answer": "Me gustaría discutir recetas sobre {{subject}}."
     },
     "RecommendDrink": {
-      "description": "Preguntar {{npc}} recomendar una bebida para un {{subject}}",
-      "answer": "¿Podrías recomendarme una bebida para una {{subject}}?"
+        "description": "Pedirle a {{npc}} que recomiende una bebida para un {{subject}}",
+        "answer": "¿Podría recomendarme una bebida para un {{subject}}?"
     },
     "DiscussMenu": {
-      "description": "Discuta el menú en {{location}} acerca de {{subject}}",
-      "answer": "Me gustaría hablar sobre el menú con respecto a {{subject}}."
+        "description": "Discutir el menú en {{location}} respecto a {{subject}}",
+        "answer": "Me gustaría discutir el menú respecto a {{subject}}."
     },
     "NegotiatePrices": {
-      "description": "Negociar precios con {{npc}} para {{subject}}",
-      "answer": "quisiera negociar el precio {{subject}} contigo."
+        "description": "Negociar precios con {{npc}} para {{subject}}",
+        "answer": "Me gustaría negociar el precio para {{subject}} con usted."
     },
     "ExplainIngredients": {
-      "description": "Preguntar {{npc}} para explicar los ingredientes para {{subject}}",
-      "answer": "¿Podrías explicar los ingredientes para {{subject}}?"
+        "description": "Pedirle a {{npc}} que explique los ingredientes para {{subject}}",
+        "answer": "¿Podría explicarme los ingredientes para {{subject}}?"
     },
     "PlanEvent": {
-      "description": "Pregúntale a cualquiera en {{location}} sobre programar una {{subject}}",
-      "answer": "Me gustaría saber más sobre cómo programar una {{subject}} aquí."
+        "description": "Preguntar a alguien en {{location}} sobre la planificación de un {{subject}}",
+        "answer": "Me gustaría saber más sobre la planificación de un {{subject}} aquí."
     },
-    "SAMPLE": {
-      "description": "MUESTRA {{subject}} PNJ DE MUESTRA {{npc}} UBICACIÓN DE LA MUESTRA {{location}}",
-      "answer": "ASUNTO DE MUESTRA {{subject}}."
+    "OrderMeal":  
+    {
+        "description": "Pedir {{subject}} a {{npc}}",
+        "answer": "Me gustaría pedir {{subject}}."
+    },
+    "RateDishes":  
+    {
+        "description": "Pedirle a {{npc}} que califique los {{subject}}",
+        "answer": "¿Cómo calificaría los {{subject}}?"
+    },
+    "SeekAdvice":  
+    {
+        "description": "Buscar consejo de {{npc}} sobre {{subject}}",
+        "answer": "¿Qué consejo tiene sobre {{subject}}?"
+    },
+    "RequestMedicine":  
+    {
+        "description": "Pedirle {{subject}} a {{npc}}",
+        "answer": "¿Puedo obtener algo de {{subject}}?"
+    },
+    "DiscussHealth":  
+    {
+        "description": "Discutir {{subject}} con {{npc}}",
+        "answer": "¿Podemos hablar sobre {{subject}}?"
+    },
+    "RequestRefill":  
+    {
+        "description": "Pedirle a {{npc}} una recarga para {{subject}}",
+        "answer": "¿Puedo obtener una recarga para {{subject}}?"
+    },
+    "AskSpecials":  
+    {
+        "description": "Preguntarle a {{npc}} sobre ofertas especiales de {{subject}}",
+        "answer": "¿Qué ofertas especiales tienen para {{subject}}?"
+    },
+    "DiscussPolicy":  
+    {
+        "description": "Discutir la política de {{subject}} con {{npc}}",
+        "answer": "¿Podemos discutir la política sobre {{subject}}?"
+    },
+    "SeekApproval":  
+    {
+        "description": "Buscar la aprobación de {{npc}} para {{subject}}",
+        "answer": "¿Puede aprobar {{subject}}?"
+    },
+    "DebateIssues":  
+    {
+        "description": "Debatir problemas de {{subject}} con {{npc}}",
+        "answer": "¿Podemos debatir problemas sobre {{subject}}?"
+    },
+    "AskAvailability":  
+    {
+        "description": "Preguntarle a {{npc}} sobre la disponibilidad de {{subject}}",
+        "answer": "¿Está disponible {{subject}}?"
+    },
+    "ReportIssue":  
+    {
+        "description": "Informar un {{subject}} a {{npc}}",
+        "answer": "Me gustaría informar un {{subject}}."
+    },
+    "AskForHelp":  
+    {
+        "description": "Pedirle ayuda a {{npc}} con {{subject}}",
+        "answer": "¿Puede ayudarme con {{subject}}?"
+    },
+    "SeekAssistance":  
+    {
+        "description": "Buscar asistencia de {{npc}} sobre {{subject}}",
+        "answer": "¿Puede proporcionar asistencia con {{subject}}?"
+    },
+    "SAMPLE":  
+    {
+        "description": "SAMPLE {{subject}} SAMPLE NPC {{npc}} SAMPLE LUGAR {{location}}",
+        "answer": "SAMPLE TEMA {{subject}}."
     }
 }

@@ -1,0 +1,113 @@
+{
+    "Buy": {
+        "description": "Comprar {{subject}} de {{npc}}",
+        "answer": "Gostaria de comprar algo de {{subject}}."
+    },
+    "AskNPC": {
+        "description": "Perguntar a {{npc}} sobre {{subject}}",
+        "answer": "O que você acha de {{subject}}?"
+    },
+    "AskLoc": {
+        "description": "Perguntar a alguém em {{location}} sobre {{subject}}",
+        "answer": "O que você acha de {{subject}}?"
+    },
+    "DiscussRecipes": {
+        "description": "Discutir receitas com {{npc}} relacionadas a {{subject}}",
+        "answer": "Gostaria de discutir receitas sobre {{subject}}."
+    },
+    "RecommendDrink": {
+        "description": "Pedir a {{npc}} que recomende uma bebida para um {{subject}}",
+        "answer": "Poderia recomendar uma bebida para um {{subject}}?"
+    },
+    "DiscussMenu": {
+        "description": "Discutir o cardápio em {{location}} sobre {{subject}}",
+        "answer": "Gostaria de discutir o cardápio sobre {{subject}}."
+    },
+    "NegotiatePrices": {
+        "description": "Negociar preços com {{npc}} para {{subject}}",
+        "answer": "Gostaria de negociar o preço para {{subject}} com você."
+    },
+    "ExplainIngredients": {
+        "description": "Pedir a {{npc}} que explique os ingredientes para {{subject}}",
+        "answer": "Poderia explicar os ingredientes para {{subject}}?"
+    },
+    "PlanEvent": {
+        "description": "Perguntar a alguém em {{location}} sobre a organização de um {{subject}}",
+        "answer": "Gostaria de saber mais sobre a organização de um {{subject}} aqui."
+    },
+    "OrderMeal":  
+    {
+        "description": "Pedir {{subject}} a {{npc}}",
+        "answer": "Gostaria de pedir {{subject}}."
+    },
+    "RateDishes":  
+    {
+        "description": "Pedir a {{npc}} que avalie os {{subject}}",
+        "answer": "Como avaliaria os {{subject}}?"
+    },
+    "SeekAdvice":  
+    {
+        "description": "Pedir conselho a {{npc}} sobre {{subject}}",
+        "answer": "Qual é o seu conselho sobre {{subject}}?"
+    },
+    "RequestMedicine":  
+    {
+        "description": "Pedir {{subject}} a {{npc}}",
+        "answer": "Posso obter algo de {{subject}}?"
+    },
+    "DiscussHealth":  
+    {
+        "description": "Discutir {{subject}} com {{npc}}",
+        "answer": "Podemos falar sobre {{subject}}?"
+    },
+    "RequestRefill":  
+    {
+        "description": "Pedir a {{npc}} um reabastecimento para {{subject}}",
+        "answer": "Posso obter um reabastecimento para {{subject}}?"
+    },
+    "AskSpecials":  
+    {
+        "description": "Perguntar a {{npc}} sobre ofertas especiais para {{subject}}",
+        "answer": "Quais ofertas especiais vocês têm para {{subject}}?"
+    },
+    "DiscussPolicy":  
+    {
+        "description": "Discutir a política de {{subject}} com {{npc}}",
+        "answer": "Podemos discutir a política sobre {{subject}}?"
+    },
+    "SeekApproval":  
+    {
+        "description": "Pedir aprovação de {{npc}} para {{subject}}",
+        "answer": "Pode aprovar {{subject}}?"
+    },
+    "DebateIssues":  
+    {
+        "description": "Discutir problemas de {{subject}} com {{npc}}",
+        "answer": "Podemos discutir problemas sobre {{subject}}?"
+    },
+    "AskAvailability":  
+    {
+        "description": "Perguntar a {{npc}} sobre a disponibilidade de {{subject}}",
+        "answer": "Está disponível {{subject}}?"
+    },
+    "ReportIssue":  
+    {
+        "description": "Relatar um {{subject}} a {{npc}}",
+        "answer": "Gostaria de relatar um {{subject}}."
+    },
+    "AskForHelp":  
+    {
+        "description": "Pedir ajuda a {{npc}} para {{subject}}",
+        "answer": "Pode me ajudar com {{subject}}?"
+    },
+    "SeekAssistance":  
+    {
+        "description": "Pedir assistência a {{npc}} sobre {{subject}}",
+        "answer": "Pode fornecer assistência para {{subject}}?"
+    },
+    "SAMPLE":  
+    {
+        "description": "SAMPLE {{subject}} SAMPLE PNJ {{npc}} SAMPLE LOCAL {{location}}",
+        "answer": "SAMPLE ASSUNTO {{subject}}."
+    }
+}

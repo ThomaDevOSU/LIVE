@@ -1,0 +1,62 @@
+{
+    "Buy": {
+        "description": "{{npc}} سے {{subject}} خریدیں",
+        "answer": "میں کچھ {{subject}} خریدنا چاہتا/چاہتی ہوں۔"
+    },
+    "AskNPC": {
+        "description": "{{npc}} سے {{subject}} کے بارے میں پوچھیں",
+        "answer": "آپ {{subject}} کے بارے میں کیا سوچتے ہیں؟"
+    },
+    "AskLoc": {
+        "description": "{{location}} پر کسی سے {{subject}} کے بارے میں پوچھیں",
+        "answer": "آپ {{subject}} کے بارے میں کیا سوچتے ہیں؟"
+    },
+    "DiscussRecipes": {
+        "description": "{{npc}} کے ساتھ {{subject}} سے متعلق ترکیبیں پر بات کریں",
+        "answer": "میں {{subject}} سے متعلق ترکیبوں پر بات کرنا چاہتا/چاہتی ہوں۔"
+    },
+    "RecommendDrink": {
+        "description": "{{npc}} سے {{subject}} کے لیے ایک مشروب کی سفارش کریں",
+        "answer": "کیا آپ {{subject}} کے لیے ایک مشروب کی سفارش کر سکتے ہیں؟"
+    },
+    "DiscussMenu": {
+        "description": "{{location}} کے مینو پر {{subject}} کے بارے میں بات کریں",
+        "answer": "میں {{subject}} کے بارے میں مینو پر بات کرنا چاہتا/چاہتی ہوں۔"
+    },
+    "OrderMeal": {
+        "description": "{{npc}} سے {{subject}} کا آرڈر دیں",
+        "answer": "میں {{subject}} کا آرڈر دینا چاہتا/چاہتی ہوں۔"
+    },
+    "SeekAdvice": {
+        "description": "{{npc}} سے {{subject}} کے بارے میں مشورہ طلب کریں",
+        "answer": "آپ کے پاس {{subject}} کے بارے میں کیا مشورہ ہے؟"
+    },
+    "RequestMedicine": {
+        "description": "{{npc}} سے {{subject}} کی درخواست کریں",
+        "answer": "کیا میں کچھ {{subject}} حاصل کر سکتا/سکتی ہوں؟"
+    },
+    "RequestRefill": {
+        "description": "{{npc}} سے {{subject}} کے لیے ریفِل کی درخواست کریں",
+        "answer": "کیا میں {{subject}} کے لیے ریفِل حاصل کر سکتا/سکتی ہوں؟"
+    },
+    "DiscussPolicy": {
+        "description": "{{npc}} کے ساتھ {{subject}} کی پالیسی پر بات کریں",
+        "answer": "کیا ہم {{subject}} کی پالیسی پر بات کر سکتے ہیں؟"
+    },
+    "SeekApproval": {
+        "description": "{{npc}} سے {{subject}} کی منظوری طلب کریں",
+        "answer": "کیا آپ {{subject}} کو منظور کر سکتے ہیں؟"
+    },
+    "ReportIssue": {
+        "description": "{{npc}} کو {{subject}} کی شکایت کریں",
+        "answer": "میں {{subject}} کی شکایت کرنا چاہتا/چاہتی ہوں۔"
+    },
+    "AskForHelp": {
+        "description": "{{npc}} سے {{subject}} کے لیے مدد طلب کریں",
+        "answer": "کیا آپ مجھے {{subject}} میں مدد کر سکتے ہیں؟"
+    },
+    "SAMPLE": {
+        "description": "مثال {{subject}} مثال NPC {{npc}} مثال مقام {{location}}",
+        "answer": "مثال موضوع {{subject}}۔"
+    }
+}

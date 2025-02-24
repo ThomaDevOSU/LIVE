@@ -1,0 +1,62 @@
+{
+    "Buy": {
+        "description": "{{npc}} থেকে {{subject}} কিনুন",
+        "answer": "আমি কিছু {{subject}} কিনতে চাই।"
+    },
+    "AskNPC": {
+        "description": "{{npc}} কে {{subject}} সম্পর্কে জিজ্ঞাসা করুন",
+        "answer": "{{subject}} সম্পর্কে আপনি কী মনে করেন?"
+    },
+    "AskLoc": {
+        "description": "{{location}} এ যে কাউকে {{subject}} সম্পর্কে জিজ্ঞাসা করুন",
+        "answer": "{{subject}} সম্পর্কে আপনি কী মনে করেন?"
+    },
+    "DiscussRecipes": {
+        "description": "{{npc}} এর সাথে {{subject}} সম্পর্কিত রেসিপি নিয়ে আলোচনা করুন",
+        "answer": "আমি {{subject}} সম্পর্কিত রেসিপি নিয়ে আলোচনা করতে চাই।"
+    },
+    "RecommendDrink": {
+        "description": "{{npc}} কে {{subject}} এর জন্য একটি পানীয় সুপারিশ করতে বলুন",
+        "answer": "আপনি কি {{subject}} এর জন্য একটি পানীয় সুপারিশ করতে পারেন?"
+    },
+    "DiscussMenu": {
+        "description": "{{location}} এ মেনু নিয়ে {{subject}} সম্পর্কে আলোচনা করুন",
+        "answer": "আমি {{subject}} সম্পর্কে মেনু নিয়ে আলোচনা করতে চাই।"
+    },
+    "OrderMeal": {
+        "description": "{{npc}} থেকে {{subject}} অর্ডার করুন",
+        "answer": "আমি {{subject}} অর্ডার করতে চাই।"
+    },
+    "SeekAdvice": {
+        "description": "{{npc}} কে {{subject}} সম্পর্কে পরামর্শ চান",
+        "answer": "{{subject}} সম্পর্কে আপনার কী পরামর্শ আছে?"
+    },
+    "RequestMedicine": {
+        "description": "{{npc}} কে {{subject}} এর জন্য অনুরোধ করুন",
+        "answer": "আমি কিছু {{subject}} পেতে পারি?"
+    },
+    "RequestRefill": {
+        "description": "{{npc}} কে {{subject}} এর জন্য রিফিলের অনুরোধ করুন",
+        "answer": "আমি {{subject}} এর জন্য রিফিল পেতে পারি?"
+    },
+    "DiscussPolicy": {
+        "description": "{{npc}} এর সাথে {{subject}} নীতি নিয়ে আলোচনা করুন",
+        "answer": "আমরা কি {{subject}} নীতি নিয়ে আলোচনা করতে পারি?"
+    },
+    "SeekApproval": {
+        "description": "{{npc}} কে {{subject}} এর জন্য অনুমোদন চান",
+        "answer": "আপনি কি {{subject}} অনুমোদন করতে পারেন?"
+    },
+    "ReportIssue": {
+        "description": "{{npc}} কে {{subject}} এর বিষয়ে রিপোর্ট করুন",
+        "answer": "আমি {{subject}} এর বিষয়ে রিপোর্ট করতে চাই।"
+    },
+    "AskForHelp": {
+        "description": "{{npc}} কে {{subject}} এর জন্য সাহায্য চান",
+        "answer": "আপনি কি {{subject}} এ আমাকে সাহায্য করতে পারেন?"
+    },
+    "SAMPLE": {
+        "description": "নমুনা {{subject}} নমুনা NPC {{npc}} নমুনা অবস্থান {{location}}",
+        "answer": "নমুনা বিষয় {{subject}}।"
+    }
+}
