@@ -1,30 +1,62 @@
 {
     "Buy": {
-      "description": "买 {{subject}} 从 {{npc}}",
-      "answer": "我想买一些 {{subject}}。"
+        "description": "从{{npc}}购买{{subject}}",
+        "answer": "我想买一些{{subject}}。"
     },
     "AskNPC": {
-      "description": "问 {{npc}} 关于 {{subject}}",
-      "answer": "你觉得怎么样 {{subject}}？"
+        "description": "向{{npc}}询问关于{{subject}}",
+        "answer": "你对{{subject}}有什么看法？"
     },
     "AskLoc": {
-      "description": "询问任何人 {{location}} 关于 {{subject}}",
-      "answer": "你觉得怎么样 {{subject}}？"
+        "description": "向{{location}}的任何人询问关于{{subject}}",
+        "answer": "你对{{subject}}有什么看法？"
     },
     "DiscussRecipes": {
-      "description": "与讨论食谱 {{npc}} 相关于 {{subject}}",
-      "answer": "我想讨论一下食谱 {{subject}}。"
+        "description": "与{{npc}}讨论关于{{subject}}的食谱",
+        "answer": "我想讨论关于{{subject}}的食谱。"
     },
     "RecommendDrink": {
-      "description": "问 {{npc}} 为某人推荐一杯饮料 {{subject}}",
-      "answer": "你能推荐一杯饮料吗 {{subject}}？"
+        "description": "请{{npc}}为{{subject}}推荐一种饮品",
+        "answer": "你能为{{subject}}推荐一种饮品吗？"
     },
     "DiscussMenu": {
-      "description": "讨论菜单 {{location}} 关于 {{subject}}",
-      "answer": "我想讨论一下菜单 {{subject}}。"
+        "description": "讨论{{location}}关于{{subject}}的菜单",
+        "answer": "我想讨论关于{{subject}}的菜单。"
+    },
+    "OrderMeal": {
+        "description": "向{{npc}}点{{subject}}",
+        "answer": "我想点{{subject}}。"
+    },
+    "SeekAdvice": {
+        "description": "向{{npc}}寻求关于{{subject}}的建议",
+        "answer": "关于{{subject}}，你有什么建议吗？"
+    },
+    "RequestMedicine": {
+        "description": "向{{npc}}请求{{subject}}",
+        "answer": "我可以拿一些{{subject}}吗？"
+    },
+    "RequestRefill": {
+        "description": "向{{npc}}请求补充{{subject}}",
+        "answer": "我可以补充{{subject}}吗？"
+    },
+    "DiscussPolicy": {
+        "description": "与{{npc}}讨论关于{{subject}}的政策",
+        "answer": "我们可以讨论关于{{subject}}的政策吗？"
+    },
+    "SeekApproval": {
+        "description": "向{{npc}}寻求对{{subject}}的批准",
+        "answer": "你能批准{{subject}}吗？"
+    },
+    "ReportIssue": {
+        "description": "向{{npc}}报告{{subject}}",
+        "answer": "我想报告一个{{subject}}。"
+    },
+    "AskForHelp": {
+        "description": "向{{npc}}寻求帮助，关于{{subject}}",
+        "answer": "你能帮我处理{{subject}}吗？"
     },
     "SAMPLE": {
-      "description": "样本 {{subject}} NPC样本 {{npc}} 样本位置 {{location}}",
-      "answer": "示例主题 {{subject}}。"
+        "description": "示例{{subject}} 示例NPC {{npc}} 示例地点 {{location}}",
+        "answer": "示例主题 {{subject}}。"
     }
 }
