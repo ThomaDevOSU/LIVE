@@ -21,35 +21,37 @@ public class Pattie_Baker : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Pattie_Baker script started");
         Pattie = new NPC
         {
             Greeting = "Hello, dear! Looking for something sweet? Just don’t mention pies.",
             inDialogue = false,
             ID = 1,
-            Name = "Pattie NoPies",
+            Name = "Pattie",
             Job = "Baker",
             Description = "Pattie is a warm and friendly baker who is well-loved in Babel for her delicious treats—except pies, which she refuses to make. " +
             "Once a contestant on a reality cooking show, she suffered a humiliating critique from a famous British chef, leaving her with a deep aversion to pies. " +
             "She finds joy in mentoring young bakers like Alex, even though she pretends to see him as competition. She enjoys community gatherings, " +
             "offering free pastries to those in need, and keeping the town well-fed with her kindness and humor.",
             Personality = new List<string> { "Friendly", "Empathetic", "Loyal", "Avoids talking about pies" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(0, 0),
-                    Location = "Bakery"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(8, 12),
-                    Location = "Town Square"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(15, 5),
-                    Location = "Ronny's Round-Up"
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

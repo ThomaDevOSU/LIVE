@@ -21,7 +21,6 @@ public class Ace_Soccer : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Ace script started");
         Ace = new NPC
         {
             Greeting = "Hey! Wanna play some soccer? Or at least pass the ball back if I kick it to you?",
@@ -34,17 +33,25 @@ public class Ace_Soccer : MonoBehaviour
             "He finds comfort in soccer, playing with Garbanzo, and talking to Mabel. Sheriff Isabella constantly scolds him for jaywalking, which he finds ridiculous." +
             "His Aunt Esmeralda takes care of him but they rarely spend time together.",
             Personality = new List<string> { "Energetic", "Optimistic", "Restless", "Playful" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(5, 5),
-                    Location = "Park"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(10, 10),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
+                },
+                new ()
+                {
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

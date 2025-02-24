@@ -21,7 +21,6 @@ public class Amy_Doctor : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Amy script started");
         Amy = new NPC
         {
             Greeting = "You’re not sick, are you? Make sure you're getting enough rest!",
@@ -34,22 +33,25 @@ public class Amy_Doctor : MonoBehaviour
             "relax, often overworking herself. She loves her husband Mark despite his forgetful and carefree nature, and while she respects her daughter Jessica, " +
             "she wishes Jessica had a clearer plan for the future. Amy has a friendly but skeptical rivalry with Esmeralda over traditional medicine vs. natural remedies.",
             Personality = new List<string> { "Serious", "Compassionate", "Overworks herself", "Highly skilled" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(3, 5),
-                    Location = "Doctor's Office"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(6, 7),
-                    Location = "Park"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(4, 6),
-                    Location = "Overworld"
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

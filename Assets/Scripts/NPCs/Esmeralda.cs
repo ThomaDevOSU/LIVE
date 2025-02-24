@@ -21,7 +21,6 @@ public class Esmeralda_Pharmacist : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Esmeralda script started");
         Esmeralda = new NPC
         {
             Greeting = "You seek knowledge… or perhaps something more? Hmm… interesting.",
@@ -34,17 +33,25 @@ public class Esmeralda_Pharmacist : MonoBehaviour
             "She speaks in cryptic riddles and often knows things she was never told, adding to her air of mystery." +
             "She takes care of her nephew Ace who was sent to Babel to overcome behavioral issues",
             Personality = new List<string> { "Mysterious", "Aloof", "Intelligent", "Cryptic" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(2, 2),
-                    Location = "Pharmacy"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(8, 8),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
+                },
+                new ()
+                {
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

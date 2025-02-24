@@ -21,7 +21,6 @@ public class Isabella_Police : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Isabella script started");
         Isabella = new NPC
         {
             Greeting = "Halt! Wait… never mind, I thought you were someone else. Or maybe you are? Hmm…",
@@ -34,17 +33,25 @@ public class Isabella_Police : MonoBehaviour
             "She is convinced that Teddy the cat is a trained spy and that Esmeralda is running an underground potion lab. " +
             "Despite her eccentric theories, she genuinely wants to protect the town.",
             Personality = new List<string> { "Energetic", "Suspicious", "Dramatic", "Dedicated" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(3, 3),
-                    Location = "Police Station"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(9, 9),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
+                },
+                new ()
+                {
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

@@ -21,7 +21,6 @@ public class Ronny_Chef : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Ronny_Chef script started");
         Ronny = new NPC
         {
             Greeting = "You hungry? If not, you should be.",
@@ -35,22 +34,25 @@ public class Ronny_Chef : MonoBehaviour
             "and refuses to share his exact recipes. Despite his gruff exterior, he cares deeply about his staff, including Jessica, and keeps an eye on Garbanzo and Teddy, " +
             "even if the dog annoys him by running into his kitchen.",
             Personality = new List<string> { "Gruff but kind", "Passionate cook", "Secretly shy", "Protective" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(3, 3),
-                    Location = "Restaurant"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(8, 2),
-                    Location = "Marketplace"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(6, 6),
-                    Location = "Bakery"
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

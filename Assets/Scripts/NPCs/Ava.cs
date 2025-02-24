@@ -21,7 +21,6 @@ public class Ava_Informer : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Ava script started");
         Ava = new NPC
         {
             Greeting = "Oh my gosh, did you hear? Oh wait, let me tell you!",
@@ -38,17 +37,25 @@ public class Ava_Informer : MonoBehaviour
             "She is determined to uncover Jessica’s future plans and believes Ace has a juicy backstory. " +
             "While she finds Esmeralda spooky, she secretly enjoys spreading rumors about her being a witch.",
             Personality = new List<string> { "Talkative", "Nosy", "Energetic", "Observant" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(5, 5),
-                    Location = "Information Center"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(8, 8),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
+                },
+                new()
+                {
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),

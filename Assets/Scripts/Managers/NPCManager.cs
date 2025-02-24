@@ -22,9 +22,10 @@ public class NPCManager : MonoBehaviour
     private Dictionary<string, List<Message>> ConversationHistory;
 
     /// <summary>
-    ///  Gameclock instance
+    ///  Gameclock instance.
+    ///  This is done here because Awake is called before start which cause a null reference.
     /// </summary>
-    GameClock gameClock = GameClock.Instance;
+    GameClock gameClock;
 
     void Awake()
     {
@@ -40,12 +41,18 @@ public class NPCManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        // This is done here because awake is called before start. Null reference.
+        gameClock = GameClock.Instance;
+    }
+
     /// <summary>
     /// Update location of all NPCs.
     /// </summary>
     void Update()
     {
-        // Update location of all NPCs. Not sure how to do this yet
+        MoveNPCs();
     }
 
     /// <summary>
@@ -55,7 +62,24 @@ public class NPCManager : MonoBehaviour
     {
         foreach (NPC npc in NPCs)
         {
-            // Move NPC to next location. Next Sprint.
+            if (npc.ID != 1) { continue; } // Testing with Pattie only  
+            foreach (ScheduleEntry entry in npc.Schedule)
+            {
+                if (GameClock.Instance == null)
+                {
+                    Debug.Log("Game clock is real null\n\n");
+                    continue;
+                }
+                else if (gameClock == null)
+                {
+                    Debug.Log("WTF");
+                }
+
+                if (entry != null && entry.time == gameClock.currentHour)
+                {
+                    // Add logic for moving Patty here  
+                }
+            }
         }
     }
 

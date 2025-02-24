@@ -21,7 +21,6 @@ public class Mark_GeneralStoreOwner : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Mark script started");
         Mark = new NPC
         {
             Greeting = "Oh hey... Need something? Or are we just hanging around?",
@@ -35,22 +34,25 @@ public class Mark_GeneralStoreOwner : MonoBehaviour
             "wishes she spent more time at home. Mark enjoys chatting with customers, even if he forgets what they were buying mid-conversation. " +
             "Garbanzo technically belongs to him, but he lets the dog wander freely, believing in 'free-range' pet ownership.",
             Personality = new List<string> { "Laid-back", "Philosophical", "Forgetful", "Family-oriented" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(2, 4),
-                    Location = "Store"
+                    waypoint = "Bakery Counter",
+                    time = 8,
+                    location = "Bakery"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(6, 7),
-                    Location = "Square"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Park"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(5, 3),
-                    Location = "Park"
+                    waypoint = "Pattie's Home",
+                    time = 14,
+                    location = "Pattie's Home"
                 }
             },
             messages = new List<Message>(),
