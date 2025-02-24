@@ -1,0 +1,62 @@
+{
+    "Buy": {
+        "description": "Купить {{subject}} у {{npc}}",
+        "answer": "Я хотел(а) бы купить {{subject}}."
+    },
+    "AskNPC": {
+        "description": "Спросить {{npc}} о {{subject}}",
+        "answer": "Что вы думаете о {{subject}}?"
+    },
+    "AskLoc": {
+        "description": "Спросить кого-нибудь в {{location}} о {{subject}}",
+        "answer": "Что вы думаете о {{subject}}?"
+    },
+    "DiscussRecipes": {
+        "description": "Обсудить рецепты с {{npc}}, связанные с {{subject}}",
+        "answer": "Я хотел(а) бы обсудить рецепты, связанные с {{subject}}."
+    },
+    "RecommendDrink": {
+        "description": "Попросить {{npc}} порекомендовать напиток для {{subject}}",
+        "answer": "Можете порекомендовать напиток для {{subject}}?"
+    },
+    "DiscussMenu": {
+        "description": "Обсудить меню в {{location}} относительно {{subject}}",
+        "answer": "Я хотел(а) бы обсудить меню относительно {{subject}}."
+    },
+    "OrderMeal": {
+        "description": "Заказать {{subject}} у {{npc}}",
+        "answer": "Я хотел(а) бы заказать {{subject}}."
+    },
+    "SeekAdvice": {
+        "description": "Попросить совета у {{npc}} о {{subject}}",
+        "answer": "Какой совет вы можете дать о {{subject}}?"
+    },
+    "RequestMedicine": {
+        "description": "Запросить {{subject}} у {{npc}}",
+        "answer": "Могу ли я получить {{subject}}?"
+    },
+    "RequestRefill": {
+        "description": "Запросить пополнение для {{subject}} у {{npc}}",
+        "answer": "Могу ли я получить пополнение для {{subject}}?"
+    },
+    "DiscussPolicy": {
+        "description": "Обсудить политику {{subject}} с {{npc}}",
+        "answer": "Можем ли мы обсудить политику {{subject}}?"
+    },
+    "SeekApproval": {
+        "description": "Запросить одобрение {{subject}} у {{npc}}",
+        "answer": "Можете ли вы одобрить {{subject}}?"
+    },
+    "ReportIssue": {
+        "description": "Сообщить о {{subject}} {{npc}}",
+        "answer": "Я хотел(а) бы сообщить о {{subject}}."
+    },
+    "AskForHelp": {
+        "description": "Попросить помощи у {{npc}} с {{subject}}",
+        "answer": "Можете ли вы помочь мне с {{subject}}?"
+    },
+    "SAMPLE": {
+        "description": "ПРИМЕР {{subject}} ПРИМЕР NPC {{npc}} ПРИМЕР МЕСТОПОЛОЖЕНИЯ {{location}}",
+        "answer": "ПРИМЕР ТЕМА {{subject}}."
+    }
+}
