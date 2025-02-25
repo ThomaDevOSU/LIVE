@@ -49,11 +49,11 @@ public class PlayerProgressManager : MonoBehaviour
         }
     }
 
-/// <summary>
-/// Saves the completed task information to track player progress
-/// </summary>
-/// <param name="completedTask">The task that has been completed</param>
-public void SaveCompletedTask(Task completedTask)
+    /// <summary>
+    /// Saves the completed task information to track player progress
+    /// </summary>
+    /// <param name="completedTask">The task that has been completed</param>
+    public void SaveCompletedTask(Task completedTask)
     {
         // Add completed task to the list for tracking
         completedTasks.Add(completedTask);
@@ -142,6 +142,32 @@ public void SaveCompletedTask(Task completedTask)
     public List<Task> GetCompletedTasks()
     {
         return new List<Task>(completedTasks);
+    }
+
+    /// <summary>
+    /// Prints all completed tasks to the console, each on one line separated by '|'.
+    /// If no tasks are completed, it prints a message indicating no completed tasks.
+    /// </summary>
+    public void PrintCompletedTasks()
+    {
+        if (completedTasks.Count > 0)
+        {
+            Debug.Log("----- Completed Tasks -----");
+            Debug.Log("Index | Description | Subject | NPC | Location | Difficulty | Custom Task");
+            Debug.Log("------------------------------------------------------------");
+
+            for (int i = 0; i < completedTasks.Count; i++)
+            {
+                Task task = completedTasks[i];
+                Debug.Log($"{i + 1} | {task.TaskDescription} | {task.TaskSubject} | {task.TaskNPC ?? "N/A"} | {task.TaskLocation ?? "N/A"} | {task.TaskDifficulty} | {task.IsCustom}");
+            }
+
+            Debug.Log("------------------------------------------------------------");
+        }
+        else
+        {
+            Debug.Log("No completed tasks to display.");
+        }
     }
 
     // Save Progress to PlayerData
