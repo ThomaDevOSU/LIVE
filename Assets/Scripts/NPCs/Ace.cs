@@ -40,21 +40,21 @@ public class Ace_Soccer : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "House 1",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Park Bench",
-                    time = 9,
+                    waypoint = "Park Slide",
+                    time = 10,
                     location = "Park"
                 },
                 new ()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "House 1",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),

@@ -71,24 +71,16 @@ public class NPCManager : MonoBehaviour
     private void MoveNPCs()
     {
         foreach (NPC npc in NPCs)
-        {
-            if (npc.ID != 13) { continue; } // Testing with Ace only  
+        { 
             foreach (ScheduleEntry entry in npc.Schedule)
             {
-                Debug.Log(Mathf.FloorToInt(gameClock.currentHour));
                 if (GameClock.Instance == null)
                 {
                     Debug.Log("Game clock null\n\n");
                     continue;
                 }
-                else if (gameClock == null)
+                if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour))
                 {
-                    Debug.Log("WTF");
-                }
-
-if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour))
-                {
-                    Debug.Log("\n\nMoving NPC\n\n");
                     // Get waypoint
                     waypoint = waypointManager.GetWaypoint(entry.waypoint);
                     // Logic for moving

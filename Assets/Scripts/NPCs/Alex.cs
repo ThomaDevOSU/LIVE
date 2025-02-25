@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,7 @@ public class Alex_Barista : MonoBehaviour
     {
         Alex = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
             Greeting = "Hey there! Need a caffeine boost, or just here for the vibes?",
             inDialogue = false,
             ID = 2,
@@ -37,27 +39,29 @@ public class Alex_Barista : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "Cafe Entrance",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new()
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "Greenhouse Entrance",
                     time = 10,
-                    location = "Park"
+                    location = "Overworld"
                 },
                 new()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "Overworld",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Babbling Bean Café",
             CurrentCoordinates = new Vector2(5, 5)
         };
+        Alex.agent.updateRotation = false;
+        Alex.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Alex);
     }
 

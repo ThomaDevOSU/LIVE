@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,8 @@ public class Pattie_Baker : MonoBehaviour
     {
         Pattie = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Hello, dear! Looking for something sweet? Just don’t mention pies.",
             inDialogue = false,
             ID = 1,
@@ -37,27 +40,29 @@ public class Pattie_Baker : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "Bakery Entrance",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "Bakery Table",
                     time = 10,
-                    location = "Park"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "Overworld",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Bakery",
             CurrentCoordinates = new Vector2(0, 0)
         };
+        Pattie.agent.updateRotation = false;
+        Pattie.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Pattie);
     }
 

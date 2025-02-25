@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,7 @@ public class Ronny_Chef : MonoBehaviour
     {
         Ronny = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
             Greeting = "You hungry? If not, you should be.",
             inDialogue = false,
             ID = 3,
@@ -38,27 +40,29 @@ public class Ronny_Chef : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "Bakery Table",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "Bakery Entrance",
                     time = 10,
-                    location = "Park"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "Overworld",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Restaurant",
             CurrentCoordinates = new Vector2(3, 3)
         };
+        Ronny.agent.updateRotation = false;
+        Ronny.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Ronny);
     }
 

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,8 @@ public class Ava_Informer : MonoBehaviour
     {
         Ava = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Oh my gosh, did you hear? Oh wait, let me tell you!",
             inDialogue = false,
             ID = 15,
@@ -41,27 +44,29 @@ public class Ava_Informer : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "House 3",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new()
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "House 2",
                     time = 10,
-                    location = "Park"
+                    location = "Overwold"
                 },
                 new()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "Overworld",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Information Center",
             CurrentCoordinates = new Vector2(5, 5)
         };
+        Ava.agent.updateRotation = false;
+        Ava.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Ava);
     }
 

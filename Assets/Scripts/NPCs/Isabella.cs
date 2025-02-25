@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,8 @@ public class Isabella_Police : MonoBehaviour
     {
         Isabella = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Halt! Wait… never mind, I thought you were someone else. Or maybe you are? Hmm…",
             inDialogue = false,
             ID = 12,
@@ -37,27 +40,29 @@ public class Isabella_Police : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "Park Slide",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "Overworld",
                     time = 10,
-                    location = "Park"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "Overworld",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Police Station",
             CurrentCoordinates = new Vector2(3, 3)
         };
+        Isabella.agent.updateRotation = false;
+        Isabella.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Isabella);
     }
 

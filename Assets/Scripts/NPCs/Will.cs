@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,8 @@ public class Will_Mayor : MonoBehaviour
     {
         Will = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Ah, another fine day in Babel! Have I ever told you about the time we built this town from the ground up?",
             inDialogue = false,
             ID = 9,
@@ -37,27 +40,29 @@ public class Will_Mayor : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "House 2",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "Town Hall Entrance",
                     time = 10,
-                    location = "Park"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "House 4",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Town Hall",
             CurrentCoordinates = new Vector2(4, 4)
         };
+        Will.agent.updateRotation = false;
+        Will.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Will);
     }
 

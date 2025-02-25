@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,8 @@ public class Teddy_Cat : MonoBehaviour
     {
         Teddy = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "What do you want? Make it quick.",
             inDialogue = false,
             ID = 8,
@@ -38,27 +41,29 @@ public class Teddy_Cat : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "Park Swings",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "Post Office Entrance",
                     time = 10,
-                    location = "Park"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "Overworld",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Restaurant",
             CurrentCoordinates = new Vector2(2, 2)
         };
+        Teddy.agent.updateRotation = false;
+        Teddy.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Teddy);
     }
 

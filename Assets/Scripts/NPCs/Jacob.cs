@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,8 @@ public class Jacob_Firefighter : MonoBehaviour
     {
         Jacob = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Stay strong, stay fit! Have you been lifting today?",
             inDialogue = false,
             ID = 16,
@@ -41,27 +44,29 @@ public class Jacob_Firefighter : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "Fire Station Entrance",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "Fire Station Entrance",
                     time = 10,
-                    location = "Park"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "Overworld",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Fire Station",
             CurrentCoordinates = new Vector2(12, 12)
         };
+        Jacob.agent.updateRotation = false;
+        Jacob.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Jacob);
     }
 

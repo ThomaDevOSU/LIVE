@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,8 @@ public class Elijah_Postmaster : MonoBehaviour
     {
         Elijah = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Ah, another letter sent. Another reminder of impermanence.",
             inDialogue = false,
             ID = 14,
@@ -39,24 +42,26 @@ public class Elijah_Postmaster : MonoBehaviour
             {
                 new ScheduleEntry
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "Post Office Entrance",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new ScheduleEntry
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "Cafe Table",
                     time = 10,
-                    location = "Park"
+                    location = "Overworld"
                 },
                 new ScheduleEntry
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "Post Office Entrance",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             }
         };
+        Elijah.agent.updateRotation = false;
+        Elijah.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Elijah);
     }
 

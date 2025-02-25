@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,8 @@ public class Jessica_Waitress : MonoBehaviour
     {
         Jessica = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Hey there! Need anything? Or just here to chill?",
             inDialogue = false,
             ID = 6,
@@ -37,27 +40,29 @@ public class Jessica_Waitress : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "Cafe Table",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "House 3",
                     time = 10,
-                    location = "Park"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "Overworld",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Restaurant",
             CurrentCoordinates = new Vector2(8, 3)
         };
+        Jessica.agent.updateRotation = false;
+        Jessica.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Jessica);
     }
 

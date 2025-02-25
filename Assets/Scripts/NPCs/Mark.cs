@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,8 @@ public class Mark_GeneralStoreOwner : MonoBehaviour
     {
         Mark = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Oh hey... Need something? Or are we just hanging around?",
             inDialogue = false,
             ID = 4,
@@ -38,27 +41,29 @@ public class Mark_GeneralStoreOwner : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "Hospital Entrance",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "Cafe Entrance",
                     time = 10,
-                    location = "Park"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "Overworld",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Store",
             CurrentCoordinates = new Vector2(2, 4)
         };
+        Mark.agent.updateRotation = false;
+        Mark.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Mark);
     }
 

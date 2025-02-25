@@ -28,7 +28,6 @@ public class WaypointManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("\n\nWaypoint Manager OnSceneLoaded: " + scene.name + "\n\n");
 
         // Get all Active Waypoints
         GameObject[] waypointObjects = GameObject.FindGameObjectsWithTag("Waypoint");
@@ -37,8 +36,6 @@ public class WaypointManager : MonoBehaviour
         foreach (var waypointObject in waypointObjects)
         {
             waypoints.Add(waypointObject.transform);
-            Debug.Log("Waypoint added" +  waypointObject.name + "\n\n" + waypointObject.transform);
-            Debug.Log(waypointObject);
         }
     }
 

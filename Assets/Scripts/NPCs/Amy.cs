@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,8 @@ public class Amy_Doctor : MonoBehaviour
     {
         Amy = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "You’re not sick, are you? Make sure you're getting enough rest!",
             inDialogue = false,
             ID = 5,
@@ -37,27 +40,29 @@ public class Amy_Doctor : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Counter",
+                    waypoint = "House 2",
                     time = 8,
-                    location = "Bakery"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Park Bench",
+                    waypoint = "Hospital Entrance",
                     time = 10,
-                    location = "Park"
+                    location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Pattie's Home",
+                    waypoint = "House 2",
                     time = 14,
-                    location = "Pattie's Home"
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Clinic",
             CurrentCoordinates = new Vector2(3, 5)
         };
+        Amy.agent.updateRotation = false;
+        Amy.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Amy);
     }
 
