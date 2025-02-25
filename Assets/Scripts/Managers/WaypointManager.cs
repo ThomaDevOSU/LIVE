@@ -46,5 +46,20 @@ public class WaypointManager : MonoBehaviour
     {
         return waypoints;
     }
+
+    /// <summary>
+    /// Get waypoint by name.
+    /// </summary>
+    public Transform GetWaypoint(string name)
+    {
+        foreach (Transform waypoint in waypoints)
+        {
+            if (waypoint.name == name)
+            {
+                return waypoint;
+            }
+        }
+        return null;
+    }
 }
 

@@ -23,9 +23,18 @@ public class NPCManager : MonoBehaviour
 
     /// <summary>
     ///  Gameclock instance.
-    ///  This is done here because Awake is called before start which cause a null reference.
     /// </summary>
     GameClock gameClock;
+
+    /// <summary>
+    ///  Waypoint Manager instance.
+    /// </summary>
+    WaypointManager waypointManager;
+
+    /// <summary>
+    /// waypoint to move to.
+    /// </summary>
+    Transform waypoint;
 
     void Awake()
     {
@@ -43,8 +52,9 @@ public class NPCManager : MonoBehaviour
 
     private void Start()
     {
-        // This is done here because awake is called before start. Null reference.
+        // This is done here because awake is called before start.
         gameClock = GameClock.Instance;
+        waypointManager = WaypointManager.Instance;
     }
 
     /// <summary>
@@ -62,12 +72,13 @@ public class NPCManager : MonoBehaviour
     {
         foreach (NPC npc in NPCs)
         {
-            if (npc.ID != 1) { continue; } // Testing with Pattie only  
+            if (npc.ID != 13) { continue; } // Testing with Ace only  
             foreach (ScheduleEntry entry in npc.Schedule)
             {
+                Debug.Log(Mathf.FloorToInt(gameClock.currentHour));
                 if (GameClock.Instance == null)
                 {
-                    Debug.Log("Game clock is real null\n\n");
+                    Debug.Log("Game clock null\n\n");
                     continue;
                 }
                 else if (gameClock == null)
@@ -75,9 +86,13 @@ public class NPCManager : MonoBehaviour
                     Debug.Log("WTF");
                 }
 
-                if (entry != null && entry.time == gameClock.currentHour)
+if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour))
                 {
-                    // Add logic for moving Patty here  
+                    Debug.Log("\n\nMoving NPC\n\n");
+                    // Get waypoint
+                    waypoint = waypointManager.GetWaypoint(entry.waypoint);
+                    // Logic for moving
+                    npc.agent.SetDestination(waypoint.position);
                 }
             }
         }

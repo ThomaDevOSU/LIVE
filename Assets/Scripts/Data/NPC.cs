@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 /// <summary>
 /// Represents an NPC.
@@ -19,6 +20,12 @@ public class NPC
     public List<Message> messages;
     public string CurrentLocation { get; set; }
     public Vector2 CurrentCoordinates { get; set; }
+
+    /// <summary>
+    /// NavMesh Stuff
+    /// </summary
+    [SerializeField] Transform target;
+    public NavMeshAgent agent;
 
     /// <summary>
     /// Prints the NPC's data to the debug log.

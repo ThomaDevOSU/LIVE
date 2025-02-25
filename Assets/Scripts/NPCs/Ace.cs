@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -23,6 +24,8 @@ public class Ace_Soccer : MonoBehaviour
     {
         Ace = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+           
             Greeting = "Hey! Wanna play some soccer? Or at least pass the ball back if I kick it to you?",
             inDialogue = false,
             ID = 13,
@@ -44,7 +47,7 @@ public class Ace_Soccer : MonoBehaviour
                 new ()
                 {
                     waypoint = "Park Bench",
-                    time = 10,
+                    time = 9,
                     location = "Park"
                 },
                 new ()
@@ -58,6 +61,10 @@ public class Ace_Soccer : MonoBehaviour
             CurrentLocation = "Park",
             CurrentCoordinates = new Vector2(5, 5)
         };
+
+        // Change these to true (?) after testing
+        Ace.agent.updateRotation = false;
+        Ace.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Ace);
     }
 
