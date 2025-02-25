@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,9 +22,10 @@ public class Elijah_Postmaster : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Elijah script started");
         Elijah = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Ah, another letter sent. Another reminder of impermanence.",
             inDialogue = false,
             ID = 14,
@@ -36,23 +38,30 @@ public class Elijah_Postmaster : MonoBehaviour
             "Esmeralda fascinates him, though he suspects she understands more about the universe than she lets on. " +
             "He is frequently interrogated by Isabella, who is convinced he is hiding something, though he answers only in riddles.",
             Personality = new List<string> { "Philosophical", "Stoic", "Observant", "Minimalist" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
                 new ScheduleEntry
                 {
-                    Coordinates = new Vector2(3, 3),
-                    Location = "Post Office"
+                    waypoint = "Post Office Entrance",
+                    time = 8,
+                    location = "Overworld"
                 },
                 new ScheduleEntry
                 {
-                    Coordinates = new Vector2(7, 7),
-                    Location = "Overworld"
+                    waypoint = "Cafe Table",
+                    time = 10,
+                    location = "Overworld"
+                },
+                new ScheduleEntry
+                {
+                    waypoint = "Post Office Entrance",
+                    time = 14,
+                    location = "Overworld"
                 }
-            },
-            messages = new List<Message>(),
-            CurrentLocation = "Post Office",
-            CurrentCoordinates = new Vector2(3, 3)
+            }
         };
+        Elijah.agent.updateRotation = false;
+        Elijah.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Elijah);
     }
 

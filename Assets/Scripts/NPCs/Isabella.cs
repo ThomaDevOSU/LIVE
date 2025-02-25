@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,9 +22,10 @@ public class Isabella_Police : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Isabella script started");
         Isabella = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Halt! Wait… never mind, I thought you were someone else. Or maybe you are? Hmm…",
             inDialogue = false,
             ID = 12,
@@ -34,23 +36,33 @@ public class Isabella_Police : MonoBehaviour
             "She is convinced that Teddy the cat is a trained spy and that Esmeralda is running an underground potion lab. " +
             "Despite her eccentric theories, she genuinely wants to protect the town.",
             Personality = new List<string> { "Energetic", "Suspicious", "Dramatic", "Dedicated" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(3, 3),
-                    Location = "Police Station"
+                    waypoint = "Park Slide",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(9, 9),
-                    Location = "Overworld"
+                    waypoint = "Overworld",
+                    time = 10,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Police Station",
             CurrentCoordinates = new Vector2(3, 3)
         };
+        Isabella.agent.updateRotation = false;
+        Isabella.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Isabella);
     }
 

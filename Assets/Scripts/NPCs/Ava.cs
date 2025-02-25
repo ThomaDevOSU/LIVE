@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,9 +22,10 @@ public class Ava_Informer : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Ava script started");
         Ava = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Oh my gosh, did you hear? Oh wait, let me tell you!",
             inDialogue = false,
             ID = 15,
@@ -38,23 +40,33 @@ public class Ava_Informer : MonoBehaviour
             "She is determined to uncover Jessica’s future plans and believes Ace has a juicy backstory. " +
             "While she finds Esmeralda spooky, she secretly enjoys spreading rumors about her being a witch.",
             Personality = new List<string> { "Talkative", "Nosy", "Energetic", "Observant" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(5, 5),
-                    Location = "Information Center"
+                    waypoint = "House 3",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(8, 8),
-                    Location = "Overworld"
+                    waypoint = "House 2",
+                    time = 10,
+                    location = "Overwold"
+                },
+                new()
+                {
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Information Center",
             CurrentCoordinates = new Vector2(5, 5)
         };
+        Ava.agent.updateRotation = false;
+        Ava.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Ava);
     }
 

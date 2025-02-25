@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,9 +22,10 @@ public class Mabel_Retired : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Mabel script started");
         Mabel = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "Oh, hello dear! Have I met you before? Oh well, it's always nice to chat!",
             inDialogue = false,
             ID = 10,
@@ -34,23 +36,33 @@ public class Mabel_Retired : MonoBehaviour
             "Though her memory is fading, she still loves reminiscing about the past and enjoys watching the town's young people grow." +
             "Adores her husband Will.",
             Personality = new List<string> { "Gentle", "Forgetful", "Nostalgic", "Caring" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(6, 6),
-                    Location = "Park"
+                    waypoint = "Park Bench",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(4, 4),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Park",
             CurrentCoordinates = new Vector2(6, 6)
         };
+        Mabel.agent.updateRotation = false;
+        Mabel.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Mabel);
     }
 

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,9 +22,9 @@ public class Esmeralda_Pharmacist : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Esmeralda script started");
         Esmeralda = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
             Greeting = "You seek knowledge… or perhaps something more? Hmm… interesting.",
             inDialogue = false,
             ID = 11,
@@ -34,23 +35,33 @@ public class Esmeralda_Pharmacist : MonoBehaviour
             "She speaks in cryptic riddles and often knows things she was never told, adding to her air of mystery." +
             "She takes care of her nephew Ace who was sent to Babel to overcome behavioral issues",
             Personality = new List<string> { "Mysterious", "Aloof", "Intelligent", "Cryptic" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(2, 2),
-                    Location = "Pharmacy"
+                    waypoint = "Greenhouse Entrance",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(8, 8),
-                    Location = "Overworld"
+                    waypoint = "Tire Swing",
+                    time = 10,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Pharmacy",
             CurrentCoordinates = new Vector2(2, 2)
         };
+        Esmeralda.agent.updateRotation = false;
+        Esmeralda.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Esmeralda);
     }
 

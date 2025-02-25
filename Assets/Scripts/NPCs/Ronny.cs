@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,9 +22,9 @@ public class Ronny_Chef : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Ronny_Chef script started");
         Ronny = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
             Greeting = "You hungry? If not, you should be.",
             inDialogue = false,
             ID = 3,
@@ -35,28 +36,33 @@ public class Ronny_Chef : MonoBehaviour
             "and refuses to share his exact recipes. Despite his gruff exterior, he cares deeply about his staff, including Jessica, and keeps an eye on Garbanzo and Teddy, " +
             "even if the dog annoys him by running into his kitchen.",
             Personality = new List<string> { "Gruff but kind", "Passionate cook", "Secretly shy", "Protective" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(3, 3),
-                    Location = "Restaurant"
+                    waypoint = "Bakery Table",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(8, 2),
-                    Location = "Marketplace"
+                    waypoint = "Bakery Entrance",
+                    time = 10,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(6, 6),
-                    Location = "Bakery"
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Restaurant",
             CurrentCoordinates = new Vector2(3, 3)
         };
+        Ronny.agent.updateRotation = false;
+        Ronny.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Ronny);
     }
 

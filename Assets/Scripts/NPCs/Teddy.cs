@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,9 +22,10 @@ public class Teddy_Cat : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Teddy script started");
         Teddy = new NPC
         {
+            agent = GetComponent<NavMeshAgent>(),
+
             Greeting = "What do you want? Make it quick.",
             inDialogue = false,
             ID = 8,
@@ -35,23 +37,33 @@ public class Teddy_Cat : MonoBehaviour
             "get into trouble. Teddy enjoys observing the town, judging humans from a safe distance, and engaging " +
             "in silent intellectual battles with Esmeralda.",
             Personality = new List<string> { "Aloof", "Intelligent", "Secretly Caring", "Judgmental" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(2, 2),
-                    Location = "Restaurant"
+                    waypoint = "Park Swings",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(6, 6),
-                    Location = "Overworld"
+                    waypoint = "Post Office Entrance",
+                    time = 10,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Restaurant",
             CurrentCoordinates = new Vector2(2, 2)
         };
+        Teddy.agent.updateRotation = false;
+        Teddy.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Teddy);
     }
 

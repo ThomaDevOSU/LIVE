@@ -180,7 +180,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.08f); // Typing speed.
+            yield return new WaitForSeconds(0.02f); // Typing speed.
 
             if (skipSentence)
             {

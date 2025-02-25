@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 387551514993796809}
   - component: {fileID: 1402854655587145738}
   m_Layer: 0
-  m_Name: Pattie_NoPies
+  m_Name: Pattie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2109156005929049282}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.47, y: -3.23, z: 0}
+  m_LocalPosition: {x: 0.08, y: -2.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 1276794309
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2999854902540224419, guid: 0ec7a771ea7ef854cae464e4da7e3ed6, type: 3}
+  m_Sprite: {fileID: 1149386278463536509, guid: e164a2cef9ac6884d9011600507a3216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5625, y: 0.6875}
+    oldSize: {x: 0.53125, y: 0.6875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -189,7 +189,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5625, y: 0.6875}
+    oldSize: {x: 0.53125, y: 0.6875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -207,7 +207,7 @@ Animator:
   m_GameObject: {fileID: 2109156005929049282}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: b91e5da3a9232da4ba631fbe984f4450, type: 2}
+  m_Controller: {fileID: 22100000, guid: 2199c53dc4065c84087440eea2a0e017, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

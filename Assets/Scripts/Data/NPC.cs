@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 /// <summary>
 /// Represents an NPC.
@@ -15,10 +16,16 @@ public class NPC
     public string Job;
     public string Description;
     public List<string> Personality;
-    public ScheduleEntry[] Schedule;
+    public List<ScheduleEntry> Schedule;
     public List<Message> messages;
     public string CurrentLocation { get; set; }
     public Vector2 CurrentCoordinates { get; set; }
+
+    /// <summary>
+    /// NavMesh Stuff
+    /// </summary
+    [SerializeField] Transform target;
+    public NavMeshAgent agent;
 
     /// <summary>
     /// Prints the NPC's data to the debug log.
@@ -47,8 +54,9 @@ public class NPC
 /// </summary>
 public class ScheduleEntry
 {
-    public Vector2 Coordinates;
-    public string Location;
+    public string waypoint;
+    public int time;
+    public string location;
 }
 
 /// <summary>

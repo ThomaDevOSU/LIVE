@@ -22,9 +22,19 @@ public class NPCManager : MonoBehaviour
     private Dictionary<string, List<Message>> ConversationHistory;
 
     /// <summary>
-    ///  Gameclock instance
+    ///  Gameclock instance.
     /// </summary>
-    GameClock gameClock = GameClock.Instance;
+    GameClock gameClock;
+
+    /// <summary>
+    ///  Waypoint Manager instance.
+    /// </summary>
+    WaypointManager waypointManager;
+
+    /// <summary>
+    /// waypoint to move to.
+    /// </summary>
+    Transform waypoint;
 
     void Awake()
     {
@@ -40,12 +50,19 @@ public class NPCManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        // This is done here because awake is called before start.
+        gameClock = GameClock.Instance;
+        waypointManager = WaypointManager.Instance;
+    }
+
     /// <summary>
     /// Update location of all NPCs.
     /// </summary>
     void Update()
     {
-        // Update location of all NPCs. Not sure how to do this yet
+        MoveNPCs();
     }
 
     /// <summary>
@@ -54,8 +71,22 @@ public class NPCManager : MonoBehaviour
     private void MoveNPCs()
     {
         foreach (NPC npc in NPCs)
-        {
-            // Move NPC to next location. Next Sprint.
+        { 
+            foreach (ScheduleEntry entry in npc.Schedule)
+            {
+                if (GameClock.Instance == null)
+                {
+                    Debug.Log("Game clock null\n\n");
+                    continue;
+                }
+                if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour))
+                {
+                    // Get waypoint
+                    waypoint = waypointManager.GetWaypoint(entry.waypoint);
+                    // Logic for moving
+                    npc.agent.SetDestination(waypoint.position);
+                }
+            }
         }
     }
 
