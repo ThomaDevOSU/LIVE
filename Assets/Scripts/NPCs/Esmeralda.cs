@@ -25,7 +25,16 @@ public class Esmeralda_Pharmacist : MonoBehaviour
         Esmeralda = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-            Greeting = "You seek knowledge… or perhaps something more? Hmm… interesting.",
+            Greeting = new string[]
+            {
+                "Ah, you've arrived. Fate, or mere coincidence?",
+                "Hmm... I had a feeling you'd stop by.",
+                "Looking for something ordinary, or something... unusual?",
+                "Mmm, I see. The energies are shifting today.",
+                "Careful, traveler. Some answers come with more questions.",
+                "You seem well. Or perhaps, merely well enough?",
+                "A drop of knowledge, a pinch of mystery... what shall I offer today?",
+            },
             inDialogue = false,
             ID = 11,
             Name = "Esmeralda",

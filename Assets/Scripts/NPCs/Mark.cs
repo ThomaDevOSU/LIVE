@@ -26,7 +26,17 @@ public class Mark_GeneralStoreOwner : MonoBehaviour
         {
             agent = GetComponent<NavMeshAgent>(),
 
-            Greeting = "Oh hey... Need something? Or are we just hanging around?",
+            Greeting = new string[]
+            {
+                "Oh hey, need anything?",
+                "Welcome, take your time. I think I had a sale on… something. What was it again?",
+                "Hey there! You ever think about how everything in life is just borrowed?",
+                "If you’re looking for something, I probably have it. Somewhere. We’ll find it… eventually.",
+                "Hey, do you need help or are you just here to bask in the silence?",
+                "I was just about to take a break, but I guess I can work for a bit. What do you need?",
+                "The universe provides, but a general store helps too. What can I get for you?",
+                "If Amy asks, I’m very busy. If you ask, I’m chill. What’s up?",
+            },
             inDialogue = false,
             ID = 4,
             Name = "Mark",

@@ -25,8 +25,16 @@ public class Amy_Doctor : MonoBehaviour
         Amy = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
-            Greeting = "You’re not sick, are you? Make sure you're getting enough rest!",
+            Greeting = new string[]
+            {
+                "Oh, hey! Are you staying hydrated? You should be.",
+                "If you’re here because something hurts, let’s get it checked out.",
+                "Please tell me you’re here for a check-up and not because of another ‘accident.’",
+                "Feeling alright? You look fine, but I ask everyone just in case.",
+                "If you want medical advice, I’m here. If you want life advice… maybe ask someone else.",
+                "Try not to get sick, okay? This town has enough reckless people as it is.",
+                "If you’re here because you saw Esmeralda first… please, just don’t tell me what she gave you.",
+            },
             inDialogue = false,
             ID = 5,
             Name = "Amy",

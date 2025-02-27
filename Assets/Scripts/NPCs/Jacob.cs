@@ -26,7 +26,17 @@ public class Jacob_Firefighter : MonoBehaviour
         {
             agent = GetComponent<NavMeshAgent>(),
 
-            Greeting = "Stay strong, stay fit! Have you been lifting today?",
+            Greeting = new string[]
+            {
+                "Hey! Have you been hitting the gym? No? Well, there's no time like the present!",
+                "Fire safety and gains—two things I take very seriously!",
+                "Need a spot?",
+                "You ever think about how life is like a bench press? You just gotta push through!",
+                "No fires today, which means more time for deadlifts!",
+                "Hydration and protein—two keys to success. You keeping up with both?",
+                "I don’t just fight fires, I fight weakness! You in?",
+                "Strength isn’t just physical—it’s about discipline!",
+            },
             inDialogue = false,
             ID = 16,
             Name = "Jacob",

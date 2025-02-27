@@ -26,7 +26,17 @@ public class Isabella_Police : MonoBehaviour
         {
             agent = GetComponent<NavMeshAgent>(),
 
-            Greeting = "Halt! Wait… never mind, I thought you were someone else. Or maybe you are? Hmm…",
+            Greeting = new string[]
+            {
+                "Halt! State your business… just kidding. Or am I?",
+                "You’re not up to anything suspicious, are you?",
+                "If you see anything unusual, report it to me immediately!",
+                "I've got my eye on you… and everyone else.",
+                "Do you believe in coincidences? Because I don’t.",
+                "The town may seem quiet… too quiet.",
+                "Any leads on the case? No? That’s exactly what they want us to think.",
+                "Stay alert. You never know who—or what—is watching.",
+            },
             inDialogue = false,
             ID = 12,
             Name = "Isabella",

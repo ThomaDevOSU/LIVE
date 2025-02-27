@@ -9,7 +9,7 @@ public class NPC
 {
     public string location;
 
-    public string Greeting;
+    public string[] Greeting;
     public bool inDialogue = false;
     public int ID;
     public string Name;

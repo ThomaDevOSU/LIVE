@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Manages all NPCs in the game, providing methods to add, remove, and retrieve NPCs.
@@ -55,6 +56,22 @@ public class NPCManager : MonoBehaviour
         // This is done here because awake is called before start.
         gameClock = GameClock.Instance;
         waypointManager = WaypointManager.Instance;
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Clear the NPC list. They readd themselves on scene load
+        NPCs.Clear();
     }
 
     /// <summary>

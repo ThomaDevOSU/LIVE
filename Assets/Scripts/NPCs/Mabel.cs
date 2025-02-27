@@ -26,7 +26,17 @@ public class Mabel_Retired : MonoBehaviour
         {
             agent = GetComponent<NavMeshAgent>(),
 
-            Greeting = "Oh, hello dear! Have I met you before? Oh well, it's always nice to chat!",
+            Greeting = new string[]
+            {
+                "Oh, hello dear! Have you eaten today? I have some candies if you’d like one.",
+                "You remind me of someone… oh, never mind, it’ll come to me later.",
+                "What a lovely day, isn’t it? I love watching the town go by.",
+                "Do I know you? I feel like I should… Oh, well! It’s nice to see you anyway!",
+                "Have you seen Will? He was just here a moment ago…",
+                "Come sit with me, dear. I have plenty of stories to share.",
+                "You look like you have a good head on your shoulders. Have I told you about the old general store?",
+                "Oh, I remember you! Or… I think I do. Either way, it’s nice to see a friendly face.",
+            },
             inDialogue = false,
             ID = 10,
             Name = "Mabel",

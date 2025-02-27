@@ -26,7 +26,17 @@ public class Garbanzo_Dog : MonoBehaviour
         {
             agent = GetComponent<NavMeshAgent>(),
 
-            Greeting = "Woof! Play? Stick? Ball? Teddy?",
+            Greeting = new string[]
+            {
+                "Hi! Have snack?",
+                "BALL! WHERE?! Oh… hi!",
+                "Pet? Yes? No? Yes!",
+                "Teddy! No… wait, you’re not Teddy.",
+                "Running? Running now? Let’s go!",
+                "Smells good! Is it food? I hope it's food.",
+                "Hi hi hi hi hi!",
+                "Rub belly? Please?",
+            },
             inDialogue = false,
             ID = 7,
             Name = "Garbanzo",

@@ -26,7 +26,16 @@ public class Teddy_Cat : MonoBehaviour
         {
             agent = GetComponent<NavMeshAgent>(),
 
-            Greeting = "What do you want? Make it quick.",
+            Greeting = new string[]
+            {
+                "Oh, it’s you. Again.",
+                "Unless you brought treats, I fail to see the point of this interaction.",
+                "Speak quickly. My time is valuable.",
+                "What do you want, human?",
+                "You may admire me, but please do so from a respectable distance.",
+                "I was in the middle of something… important. Probably.",
+                "You are, at best, a mild distraction. Proceed.",
+            },
             inDialogue = false,
             ID = 8,
             Name = "Teddy",

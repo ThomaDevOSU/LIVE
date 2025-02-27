@@ -26,7 +26,17 @@ public class Pattie_Baker : MonoBehaviour
         {
             agent = GetComponent<NavMeshAgent>(),
 
-            Greeting = "Hello, dear! Looking for something sweet? Just don’t mention pies.",
+            Greeting = new string[]
+            {
+                "Hello, sweetie! Can I get you something fresh from the oven?",
+                "Oh, hi there! You hungry? I’ve got plenty of treats!",
+                "Welcome in! What can I get you today? Something warm? Something sweet?",
+                "Hey, nice to see you! I just pulled some cookies out of the oven, interested?",
+                "Oh, if it isn’t my favorite customer! Okay, I say that to everyone, but I mean it!",
+                "Come on in, sugar! I always have something good ready. Unless it’s pie. Then no.",
+                "You look like you could use a snack!",
+                "Ah, just in time! I was about to take a break, but I can always chat with a friendly face.",
+            },
             inDialogue = false,
             ID = 1,
             Name = "Pattie",

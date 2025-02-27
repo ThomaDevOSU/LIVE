@@ -26,7 +26,17 @@ public class Will_Mayor : MonoBehaviour
         {
             agent = GetComponent<NavMeshAgent>(),
 
-            Greeting = "Ah, another fine day in Babel! Have I ever told you about the time we built this town from the ground up?",
+            Greeting = new string[]
+            {
+                "Ah, hello there! Always good to see a friendly face.",
+                "Oh! You know, this reminds me of a story… Oh, but where are my manners? How are you?",
+                "Welcome, welcome! How’s your day treating you?",
+                "Ah, another fine day in Babel, wouldn’t you say?",
+                "Good to see you! If you ever need anything, don’t hesitate to ask.",
+                "Oh, you just missed Mabel—she was telling the most wonderful story. But tell me, how are you?",
+                "You know, this town wouldn’t be the same without folks like you.",
+                "Ah, reminds me of the good old days! But enough about me, what’s on your mind?",
+            },
             inDialogue = false,
             ID = 9,
             Name = "Will",

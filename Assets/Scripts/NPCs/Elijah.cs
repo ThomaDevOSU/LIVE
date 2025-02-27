@@ -26,7 +26,17 @@ public class Elijah_Postmaster : MonoBehaviour
         {
             agent = GetComponent<NavMeshAgent>(),
 
-            Greeting = "Ah, another letter sent. Another reminder of impermanence.",
+            Greeting = new string[]
+            {
+                "Ah, another fleeting moment in the grand passage of time.",
+                "Mmm. Have you ever considered the impermanence of all things?",
+                "Oh, it’s you. What brings you to this fleeting intersection of existence?",
+                "Words are but ripples in the vast ocean of thought. What is it you seek?",
+                "Hmph. A visitor. I suppose conversation is inevitable.",
+                "The weight of the world is light when one learns to let go. But I digress…",
+                "Silence is a virtue, but I suppose I can make an exception.",
+                "If you’re here for small talk, I regret to inform you that I am ill-equipped.",
+            },
             inDialogue = false,
             ID = 14,
             Name = "Elijah",

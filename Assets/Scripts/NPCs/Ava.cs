@@ -26,7 +26,17 @@ public class Ava_Informer : MonoBehaviour
         {
             agent = GetComponent<NavMeshAgent>(),
 
-            Greeting = "Oh my gosh, did you hear? Oh wait, let me tell you!",
+            Greeting = new string[]
+            {
+                "Hey, hey! What’s the latest? Spill!",
+                "Oh my gosh, you will NOT believe what I just heard!",
+                "Got any juicy news? No? Okay, fine, I’ll share mine first.",
+                "Oh, it’s you! Perfect timing—I was just about to tell someone something totally fascinating.",
+                "If you need info, I got it! If you don’t… well, you’re getting it anyway.",
+                "You look like you have something interesting to say! Or at least, I hope you do.",
+                "Oh, don’t mind me, I was just casually standing here… waiting to hear something fun.",
+                "I swear, if I don’t talk to someone soon, I might explode. Please, for my safety, chat with me!",
+            },
             inDialogue = false,
             ID = 15,
             Name = "Ava",

@@ -139,7 +139,8 @@ public class DialogueManager : MonoBehaviour
 
         DialogueEntry dialogue = new DialogueEntry
         {
-            sentences = new string[] {  currentNPC.Greeting } // Placeholder greeting
+            // Choose random greeting
+            sentences = new string[] { currentNPC.Greeting[Random.Range(0, currentNPC.Greeting.Length)] }
         };
 
         currentDialogue = dialogue;
