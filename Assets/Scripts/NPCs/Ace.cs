@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,10 +22,20 @@ public class Ace_Soccer : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Ace script started");
         Ace = new NPC
         {
-            Greeting = "Hey! Wanna play some soccer? Or at least pass the ball back if I kick it to you?",
+            agent = GetComponent<NavMeshAgent>(),
+            Greeting = new string[]
+            {
+                "Hey! Wanna play some soccer? Or at least pass the ball back if I kick it to you?",
+                "Yo, you ever try scoring a goal against Garbanzo? He’s got unreal defense.",
+                "What’s up? I’m warming up—wanna join? Or just stand there and admire my footwork?",
+                "I swear, I was THIS close to breaking my juggling record. You believe me, right?",
+                "Oh, it’s you! Thought you were gonna be Isabella for a second—dodged a lecture on jaywalking!",
+                "You know, I bet you’d be pretty decent at soccer if you practiced with me more. Just sayin’.",
+                "Gotta keep moving! Standing still is for people who don’t have dreams. Or at least, for people who don’t have a soccer ball.",
+                "Hey! Ever seen Garbanzo dribble? It’s weirdly impressive. We gotta get him on a team."
+            },
             inDialogue = false,
             ID = 13,
             Name = "Ace",
@@ -34,23 +45,35 @@ public class Ace_Soccer : MonoBehaviour
             "He finds comfort in soccer, playing with Garbanzo, and talking to Mabel. Sheriff Isabella constantly scolds him for jaywalking, which he finds ridiculous." +
             "His Aunt Esmeralda takes care of him but they rarely spend time together.",
             Personality = new List<string> { "Energetic", "Optimistic", "Restless", "Playful" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(5, 5),
-                    Location = "Park"
+                    waypoint = "House 1",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(10, 10),
-                    Location = "Overworld"
+                    waypoint = "Park Slide",
+                    time = 10,
+                    location = "Park"
+                },
+                new ()
+                {
+                    waypoint = "House 1",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Park",
             CurrentCoordinates = new Vector2(5, 5)
         };
+
+        // Change these to true (?) after testing
+        Ace.agent.updateRotation = false;
+        Ace.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Ace);
     }
 

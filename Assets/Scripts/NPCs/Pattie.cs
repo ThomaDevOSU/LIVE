@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,41 +22,57 @@ public class Pattie_Baker : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Pattie_Baker script started");
         Pattie = new NPC
         {
-            Greeting = "Hello, dear! Looking for something sweet? Just don’t mention pies.",
+            agent = GetComponent<NavMeshAgent>(),
+
+            Greeting = new string[]
+            {
+                "Hello, sweetie! Can I get you something fresh from the oven?",
+                "Oh, hi there! You hungry? I’ve got plenty of treats!",
+                "Welcome in! What can I get you today? Something warm? Something sweet?",
+                "Hey, nice to see you! I just pulled some cookies out of the oven, interested?",
+                "Oh, if it isn’t my favorite customer! Okay, I say that to everyone, but I mean it!",
+                "Come on in, sugar! I always have something good ready. Unless it’s pie. Then no.",
+                "You look like you could use a snack!",
+                "Ah, just in time! I was about to take a break, but I can always chat with a friendly face.",
+            },
             inDialogue = false,
             ID = 1,
-            Name = "Pattie NoPies",
+            Name = "Pattie",
             Job = "Baker",
             Description = "Pattie is a warm and friendly baker who is well-loved in Babel for her delicious treats—except pies, which she refuses to make. " +
             "Once a contestant on a reality cooking show, she suffered a humiliating critique from a famous British chef, leaving her with a deep aversion to pies. " +
             "She finds joy in mentoring young bakers like Alex, even though she pretends to see him as competition. She enjoys community gatherings, " +
             "offering free pastries to those in need, and keeping the town well-fed with her kindness and humor.",
             Personality = new List<string> { "Friendly", "Empathetic", "Loyal", "Avoids talking about pies" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(0, 0),
-                    Location = "Bakery"
+                    waypoint = "Bakery Entrance",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(8, 12),
-                    Location = "Town Square"
+                    waypoint = "Bakery Table",
+                    time = 10,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(15, 5),
-                    Location = "Ronny's Round-Up"
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Bakery",
             CurrentCoordinates = new Vector2(0, 0)
         };
+        Pattie.agent.updateRotation = false;
+        Pattie.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Pattie);
     }
 

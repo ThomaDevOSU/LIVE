@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,10 +22,21 @@ public class Ava_Informer : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Ava script started");
         Ava = new NPC
         {
-            Greeting = "Oh my gosh, did you hear? Oh wait, let me tell you!",
+            agent = GetComponent<NavMeshAgent>(),
+
+            Greeting = new string[]
+            {
+                "Hey, hey! What’s the latest? Spill!",
+                "Oh my gosh, you will NOT believe what I just heard!",
+                "Got any juicy news? No? Okay, fine, I’ll share mine first.",
+                "Oh, it’s you! Perfect timing—I was just about to tell someone something totally fascinating.",
+                "If you need info, I got it! If you don’t… well, you’re getting it anyway.",
+                "You look like you have something interesting to say! Or at least, I hope you do.",
+                "Oh, don’t mind me, I was just casually standing here… waiting to hear something fun.",
+                "I swear, if I don’t talk to someone soon, I might explode. Please, for my safety, chat with me!",
+            },
             inDialogue = false,
             ID = 15,
             Name = "Ava",
@@ -38,23 +50,33 @@ public class Ava_Informer : MonoBehaviour
             "She is determined to uncover Jessica’s future plans and believes Ace has a juicy backstory. " +
             "While she finds Esmeralda spooky, she secretly enjoys spreading rumors about her being a witch.",
             Personality = new List<string> { "Talkative", "Nosy", "Energetic", "Observant" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(5, 5),
-                    Location = "Information Center"
+                    waypoint = "House 3",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(8, 8),
-                    Location = "Overworld"
+                    waypoint = "House 2",
+                    time = 10,
+                    location = "Overwold"
+                },
+                new()
+                {
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Information Center",
             CurrentCoordinates = new Vector2(5, 5)
         };
+        Ava.agent.updateRotation = false;
+        Ava.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Ava);
     }
 

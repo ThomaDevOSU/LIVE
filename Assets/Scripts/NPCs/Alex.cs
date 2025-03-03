@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,10 +22,20 @@ public class Alex_Barista : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Alex_Barista script started");
         Alex = new NPC
         {
-            Greeting = "Hey there! Need a caffeine boost, or just here for the vibes?",
+            agent = GetComponent<NavMeshAgent>(),
+            Greeting = new string[]
+            {
+                "Hey there! Need a caffeine fix, or just here for the vibes?",
+                "Welcome to Babbling Bean! What’s your go-to drink?",
+                "Morning! Or afternoon. Time kinda blurs together when you work with coffee all day.",
+                "Hope you’re not here for decaf… I mean, I’ll make it, but I won’t be happy about it.",
+                "You ever just stare into your coffee and contemplate life? No? Just me? Cool, cool.",
+                "If you’re looking for something sweet, I *attempted* to bake again. No guarantees.",
+                "Caffeine limit? What’s that? Nah, I’m kidding. Sort of.",
+                "If you need a pick-me-up, I got coffee. If you need life advice… well, I got coffee.",
+            },
             inDialogue = false,
             ID = 2,
             Name = "Alex",
@@ -34,28 +45,33 @@ public class Alex_Barista : MonoBehaviour
             "He looks up to Pattie for baking guidance but teases her about her refusal to make pies, unaware of her past. " +
             "Friendly and energetic, Alex enjoys chatting with customers and making sure everyone gets just the right drink for their mood.",
             Personality = new List<string> { "Friendly", "Enthusiastic", "Health-conscious", "Passionate about coffee" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(5, 5),
-                    Location = "Babbling Bean Café"
+                    waypoint = "Cafe Entrance",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(10, 10),
-                    Location = "Town Square"
+                    waypoint = "Greenhouse Entrance",
+                    time = 10,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(7, 3),
-                    Location = "Bakery"
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Babbling Bean Café",
             CurrentCoordinates = new Vector2(5, 5)
         };
+        Alex.agent.updateRotation = false;
+        Alex.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Alex);
     }
 

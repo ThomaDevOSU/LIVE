@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,10 +22,19 @@ public class Esmeralda_Pharmacist : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Esmeralda script started");
         Esmeralda = new NPC
         {
-            Greeting = "You seek knowledge… or perhaps something more? Hmm… interesting.",
+            agent = GetComponent<NavMeshAgent>(),
+            Greeting = new string[]
+            {
+                "Ah, you've arrived. Fate, or mere coincidence?",
+                "Hmm... I had a feeling you'd stop by.",
+                "Looking for something ordinary, or something... unusual?",
+                "Mmm, I see. The energies are shifting today.",
+                "Careful, traveler. Some answers come with more questions.",
+                "You seem well. Or perhaps, merely well enough?",
+                "A drop of knowledge, a pinch of mystery... what shall I offer today?",
+            },
             inDialogue = false,
             ID = 11,
             Name = "Esmeralda",
@@ -34,23 +44,33 @@ public class Esmeralda_Pharmacist : MonoBehaviour
             "She speaks in cryptic riddles and often knows things she was never told, adding to her air of mystery." +
             "She takes care of her nephew Ace who was sent to Babel to overcome behavioral issues",
             Personality = new List<string> { "Mysterious", "Aloof", "Intelligent", "Cryptic" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(2, 2),
-                    Location = "Pharmacy"
+                    waypoint = "Greenhouse Entrance",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(8, 8),
-                    Location = "Overworld"
+                    waypoint = "Tire Swing",
+                    time = 10,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Pharmacy",
             CurrentCoordinates = new Vector2(2, 2)
         };
+        Esmeralda.agent.updateRotation = false;
+        Esmeralda.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Esmeralda);
     }
 

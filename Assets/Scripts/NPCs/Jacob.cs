@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,10 +22,21 @@ public class Jacob_Firefighter : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Jacob script started");
         Jacob = new NPC
         {
-            Greeting = "Stay strong, stay fit! Have you been lifting today?",
+            agent = GetComponent<NavMeshAgent>(),
+
+            Greeting = new string[]
+            {
+                "Hey! Have you been hitting the gym? No? Well, there's no time like the present!",
+                "Fire safety and gains—two things I take very seriously!",
+                "Need a spot?",
+                "You ever think about how life is like a bench press? You just gotta push through!",
+                "No fires today, which means more time for deadlifts!",
+                "Hydration and protein—two keys to success. You keeping up with both?",
+                "I don’t just fight fires, I fight weakness! You in?",
+                "Strength isn’t just physical—it’s about discipline!",
+            },
             inDialogue = false,
             ID = 16,
             Name = "Jacob",
@@ -38,23 +50,33 @@ public class Jacob_Firefighter : MonoBehaviour
             "He loves picking up Garbanzo and spinning him, calling him 'Lightweight Champ'. " +
             "He tries to get Ace to lift, but Ace insists soccer is enough exercise.",
             Personality = new List<string> { "Energetic", "Dedicated", "Fitness-Obsessed" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(12, 12),
-                    Location = "Fire Station"
+                    waypoint = "Fire Station Entrance",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(15, 15),
-                    Location = "Overworld"
+                    waypoint = "Fire Station Entrance",
+                    time = 10,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Fire Station",
             CurrentCoordinates = new Vector2(12, 12)
         };
+        Jacob.agent.updateRotation = false;
+        Jacob.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Jacob);
     }
 

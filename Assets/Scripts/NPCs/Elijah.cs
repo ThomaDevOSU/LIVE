@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,10 +22,21 @@ public class Elijah_Postmaster : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Elijah script started");
         Elijah = new NPC
         {
-            Greeting = "Ah, another letter sent. Another reminder of impermanence.",
+            agent = GetComponent<NavMeshAgent>(),
+
+            Greeting = new string[]
+            {
+                "Ah, another fleeting moment in the grand passage of time.",
+                "Mmm. Have you ever considered the impermanence of all things?",
+                "Oh, it’s you. What brings you to this fleeting intersection of existence?",
+                "Words are but ripples in the vast ocean of thought. What is it you seek?",
+                "Hmph. A visitor. I suppose conversation is inevitable.",
+                "The weight of the world is light when one learns to let go. But I digress…",
+                "Silence is a virtue, but I suppose I can make an exception.",
+                "If you’re here for small talk, I regret to inform you that I am ill-equipped.",
+            },
             inDialogue = false,
             ID = 14,
             Name = "Elijah",
@@ -36,23 +48,30 @@ public class Elijah_Postmaster : MonoBehaviour
             "Esmeralda fascinates him, though he suspects she understands more about the universe than she lets on. " +
             "He is frequently interrogated by Isabella, who is convinced he is hiding something, though he answers only in riddles.",
             Personality = new List<string> { "Philosophical", "Stoic", "Observant", "Minimalist" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
                 new ScheduleEntry
                 {
-                    Coordinates = new Vector2(3, 3),
-                    Location = "Post Office"
+                    waypoint = "Post Office Entrance",
+                    time = 8,
+                    location = "Overworld"
                 },
                 new ScheduleEntry
                 {
-                    Coordinates = new Vector2(7, 7),
-                    Location = "Overworld"
+                    waypoint = "Cafe Table",
+                    time = 10,
+                    location = "Overworld"
+                },
+                new ScheduleEntry
+                {
+                    waypoint = "Post Office Entrance",
+                    time = 14,
+                    location = "Overworld"
                 }
-            },
-            messages = new List<Message>(),
-            CurrentLocation = "Post Office",
-            CurrentCoordinates = new Vector2(3, 3)
+            }
         };
+        Elijah.agent.updateRotation = false;
+        Elijah.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Elijah);
     }
 

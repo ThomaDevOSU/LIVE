@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,10 +22,21 @@ public class Garbanzo_Dog : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Garbanzo script started");
         Garbanzo = new NPC
         {
-            Greeting = "Woof! Play? Stick? Ball? Teddy?",
+            agent = GetComponent<NavMeshAgent>(),
+
+            Greeting = new string[]
+            {
+                "Hi! Have snack?",
+                "BALL! WHERE?! Oh… hi!",
+                "Pet? Yes? No? Yes!",
+                "Teddy! No… wait, you’re not Teddy.",
+                "Running? Running now? Let’s go!",
+                "Smells good! Is it food? I hope it's food.",
+                "Hi hi hi hi hi!",
+                "Rub belly? Please?",
+            },
             inDialogue = false,
             ID = 7,
             Name = "Garbanzo",
@@ -35,23 +47,33 @@ public class Garbanzo_Dog : MonoBehaviour
             "playing soccer with Ace, where he mysteriously seems to understand the rules. He rarely speaks " +
             "more than a few words but expresses pure joy in every movement.",
             Personality = new List<string> { "Energetic", "Loyal", "Innocent", "Playful" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(5, 5),
-                    Location = "Park"
+                    waypoint = "Park Top Right",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(3, 3),
-                    Location = "Overworld"
+                    waypoint = "House 4",
+                    time = 10,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Park",
             CurrentCoordinates = new Vector2(5, 5)
         };
+        Garbanzo.agent.updateRotation = false;
+        Garbanzo.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Garbanzo);
     }
 

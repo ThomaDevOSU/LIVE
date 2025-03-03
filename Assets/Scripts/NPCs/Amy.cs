@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,10 +22,19 @@ public class Amy_Doctor : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Amy script started");
         Amy = new NPC
         {
-            Greeting = "You’re not sick, are you? Make sure you're getting enough rest!",
+            agent = GetComponent<NavMeshAgent>(),
+            Greeting = new string[]
+            {
+                "Oh, hey! Are you staying hydrated? You should be.",
+                "If you’re here because something hurts, let’s get it checked out.",
+                "Please tell me you’re here for a check-up and not because of another ‘accident.’",
+                "Feeling alright? You look fine, but I ask everyone just in case.",
+                "If you want medical advice, I’m here. If you want life advice… maybe ask someone else.",
+                "Try not to get sick, okay? This town has enough reckless people as it is.",
+                "If you’re here because you saw Esmeralda first… please, just don’t tell me what she gave you.",
+            },
             inDialogue = false,
             ID = 5,
             Name = "Amy",
@@ -34,28 +44,33 @@ public class Amy_Doctor : MonoBehaviour
             "relax, often overworking herself. She loves her husband Mark despite his forgetful and carefree nature, and while she respects her daughter Jessica, " +
             "she wishes Jessica had a clearer plan for the future. Amy has a friendly but skeptical rivalry with Esmeralda over traditional medicine vs. natural remedies.",
             Personality = new List<string> { "Serious", "Compassionate", "Overworks herself", "Highly skilled" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(3, 5),
-                    Location = "Doctor's Office"
+                    waypoint = "House 2",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(6, 7),
-                    Location = "Park"
+                    waypoint = "Hospital Entrance",
+                    time = 10,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(4, 6),
-                    Location = "Overworld"
+                    waypoint = "House 2",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Clinic",
             CurrentCoordinates = new Vector2(3, 5)
         };
+        Amy.agent.updateRotation = false;
+        Amy.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Amy);
     }
 
