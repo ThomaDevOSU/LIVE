@@ -18,7 +18,7 @@ public class GPTService : MonoBehaviour
     /// <summary>
     /// API key for authenticating requests to the GPT API.
     /// </summary>
-    private readonly string apiKey = "API-KEY";
+    private readonly string apiKey = "";
     private readonly string api_url = "https://api.openai.com/v1/chat/completions";
 
     public string playerInput, prompt, response, request, taskResponse;

@@ -139,7 +139,8 @@ public class DialogueManager : MonoBehaviour
 
         DialogueEntry dialogue = new DialogueEntry
         {
-            sentences = new string[] {  currentNPC.Greeting } // Placeholder greeting
+            // Choose random greeting
+            sentences = new string[] { currentNPC.Greeting[Random.Range(0, currentNPC.Greeting.Length)] }
         };
 
         currentDialogue = dialogue;
@@ -180,7 +181,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.08f); // Typing speed.
+            yield return new WaitForSeconds(0.02f); // Typing speed.
 
             if (skipSentence)
             {
