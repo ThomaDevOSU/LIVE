@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 /// <summary>
 /// Triggers a dialogue interaction when the player stays within a collider and presses the designated button.
@@ -21,10 +22,21 @@ public class Mabel_Retired : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        Debug.Log("Mabel script started");
         Mabel = new NPC
         {
-            Greeting = "Oh, hello dear! Have I met you before? Oh well, it's always nice to chat!",
+            agent = GetComponent<NavMeshAgent>(),
+
+            Greeting = new string[]
+            {
+                "Oh, hello dear! Have you eaten today? I have some candies if you’d like one.",
+                "You remind me of someone… oh, never mind, it’ll come to me later.",
+                "What a lovely day, isn’t it? I love watching the town go by.",
+                "Do I know you? I feel like I should… Oh, well! It’s nice to see you anyway!",
+                "Have you seen Will? He was just here a moment ago…",
+                "Come sit with me, dear. I have plenty of stories to share.",
+                "You look like you have a good head on your shoulders. Have I told you about the old general store?",
+                "Oh, I remember you! Or… I think I do. Either way, it’s nice to see a friendly face.",
+            },
             inDialogue = false,
             ID = 10,
             Name = "Mabel",
@@ -34,23 +46,33 @@ public class Mabel_Retired : MonoBehaviour
             "Though her memory is fading, she still loves reminiscing about the past and enjoys watching the town's young people grow." +
             "Adores her husband Will.",
             Personality = new List<string> { "Gentle", "Forgetful", "Nostalgic", "Caring" },
-            Schedule = new ScheduleEntry[]
+            Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
+                new()
                 {
-                    Coordinates = new Vector2(6, 6),
-                    Location = "Park"
+                    waypoint = "Park Bench",
+                    time = 8,
+                    location = "Overworld"
                 },
-                new ScheduleEntry
+                new ()
                 {
-                    Coordinates = new Vector2(4, 4),
-                    Location = "Overworld"
+                    waypoint = "Park Bench",
+                    time = 10,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "Overworld",
+                    time = 14,
+                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
             CurrentLocation = "Park",
             CurrentCoordinates = new Vector2(6, 6)
         };
+        Mabel.agent.updateRotation = false;
+        Mabel.agent.updateUpAxis = false;
         NPCManager.Instance.AddNPC(Mabel);
     }
 

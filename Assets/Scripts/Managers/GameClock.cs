@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>
 /// GameClock manages the in-game time system, providing a dynamic clock that progresses in real time,
@@ -63,6 +65,11 @@ public class GameClock : MonoBehaviour
 
         LoadGameClockFromSave(GameManager.Instance.CurrentPlayerData);
         Debug.Log($"Loaded Clock Data from Save: Day {currentDay}");
+
+        AssignTintOverlay(); // Reassign TintOverlay dynamically
+
+        // Initialize the tint color based on the current state
+        UpdateTintOverlay(true); // Initialize with instant transition
     }
 
     /// <summary>
@@ -71,6 +78,7 @@ public class GameClock : MonoBehaviour
     private void Update()
     {
         UpdateGameTime(Time.deltaTime); // Progress the game clock by the time elapsed since the last frame
+        UpdateTintOverlay(); // Smoothly update the tint overlay
     }
 
     /// <summary>
@@ -91,6 +99,7 @@ public class GameClock : MonoBehaviour
             if (manualSleepMode)
             {
                 CurrentState = ClockState.SleepPending;
+                UpdateTintOverlay();
                 OnSleepPending?.Invoke();
                 Debug.Log("Time is now frozen in SleepPending state. Player must trigger sleep.");
                 return;
@@ -112,16 +121,19 @@ public class GameClock : MonoBehaviour
         {
             CurrentState = ClockState.Evening;
             OnEveningStart?.Invoke(); // Trigger evening event
+            UpdateTintOverlay();
         }
         else if (currentHour >= 22f && CurrentState != ClockState.Night)
         {
             CurrentState = ClockState.Night;
             OnNightStart?.Invoke(); // Trigger night event
+            UpdateTintOverlay();
         }
         else if (currentHour < 18f && CurrentState != ClockState.Day)
         {
             CurrentState = ClockState.Day;
             OnDayStart?.Invoke(); // Trigger day event
+            UpdateTintOverlay();
         }
     }
 
@@ -150,12 +162,34 @@ public class GameClock : MonoBehaviour
     private void EndDay()
     {
         OnDayEnd?.Invoke(); // Trigger day-end event
+
+        // Start a transition effect before resetting the day
+        if (TransitionManager.Instance != null)
+        {
+            TransitionManager.Instance.StartTransition(SceneManager.GetActiveScene().name, TransitionType.WIPE);
+        }
+        else
+        {
+            Debug.LogWarning("TransitionManager is null! Skipping transition.");
+        }
+
         currentDay++; // Increment the day counter
         elapsedGameTime = 0f; // Reset elapsed game time
         currentHour = 8f; // Reset to the start of the next day (8 AM)
         CurrentState = ClockState.Day; // Reset the clock state to Day
 
         Debug.Log($"Starting new day: {currentDay}");
+
+        // Retrieve and store completed tasks
+        if (TaskManager.Instance != null && PlayerProgressManager.Instance != null)
+        {
+            while (TaskManager.Instance.PeekCompletedTask() != null)
+            {
+                Task completedTask = TaskManager.Instance.GetCompletedTask();
+                PlayerProgressManager.Instance.SaveCompletedTask(completedTask);
+                Debug.Log($"Stored completed task: {completedTask.TaskDescription}");
+            }
+        }
 
         // Ensure GameManager & PlayerData exist before saving
         if (GameManager.Instance != null && GameManager.Instance.CurrentPlayerData != null)
@@ -214,7 +248,9 @@ public class GameClock : MonoBehaviour
             EndDay(); // End the day and reset the clock
         }
     }
-
+    /// <summary>
+    /// Set day number manually. 
+    /// </summary>
     public void SetDay(int dayNumber)
     {
         currentDay = dayNumber;
@@ -276,6 +312,71 @@ public class GameClock : MonoBehaviour
         data.day = currentDay;
     }
 
+    /// <summary>
+    /// Smoothly updates the TintOverlay color for day/night transitions.
+    /// </summary>
+    /// <param name="instant">If true, instantly sets the color without transition.</param>
+    //[SerializeField] private Image tintOverlayPanel;
+    [SerializeField] private Image tintOverlayImage;
+    private Color targetTint;
+    private float transitionSpeed = 0.5f;
+    private void UpdateTintOverlay(bool instant = false)
+    {
+        if (tintOverlayImage == null) return; // Safeguard if the Image component is missing
+
+        // Set the target color based on current state
+        if (CurrentState == ClockState.Day)
+        {
+            targetTint = new Color(0, 0, 0, 0); // Day - Fully transparent
+        }
+        else if (CurrentState == ClockState.Evening)
+        {
+            targetTint = new Color(0, 0, 0, 0.6f); // Evening - Slightly dark
+        }
+        else if (CurrentState == ClockState.Night)
+        {
+            targetTint = new Color(0, 0, 0, 0.9f); // Night - Darker
+        }
+        else if (CurrentState == ClockState.SleepPending)
+        {
+            targetTint = new Color(0, 0, 0, 0.92f); // Full Night - Darkest
+        }
+        else
+        {
+            targetTint = new Color(0, 0, 0, 0); // Default to transparent
+        }
+
+        // Instantly apply the color if requested
+        if (instant)
+        {
+            tintOverlayImage.color = targetTint;
+        }
+        else
+        {
+            // Smooth transition using Color.Lerp()
+            tintOverlayImage.color = Color.Lerp(tintOverlayImage.color, targetTint, transitionSpeed * Time.deltaTime);
+        }
+    }
+
+    public void AssignTintOverlay()
+    {
+        // Find the TintOverlay object dynamically in the new scene
+        GameObject tintObj = GameObject.Find("TintOverlay");
+
+        if (tintObj != null)
+        {
+            tintOverlayImage = tintObj.GetComponent<Image>();
+
+            if (tintOverlayImage == null)
+            {
+                Debug.LogError("No Image component found on TintOverlay!");
+            }
+        }
+        else
+        {
+            Debug.LogError("TintOverlay not found in the current scene!");
+        }
+    }
 
     /// <summary>
     /// How to Access and Use GameClock:

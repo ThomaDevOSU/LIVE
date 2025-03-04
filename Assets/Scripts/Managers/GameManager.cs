@@ -107,6 +107,11 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        if (GameClock.Instance != null)
+        {
+            GameClock.Instance.AssignTintOverlay(); // Ensure GameClock updates TintOverlay
+        }
+
     }
 
     /// <summary>
@@ -159,16 +164,17 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F2))
         {
-            TaskManager.Instance.PrintTaskList();
+            PlayerProgressManager.Instance.PrintCompletedTasks();
         }
         if (Input.GetKeyDown(KeyCode.F3))
         {
             TaskManager.Instance.PrintAllTasksToConsole();
+            TaskManager.Instance.PrintActiveTask();
         }
         if (Input.GetKeyDown(KeyCode.F4))
         {
             GameClock.Instance.GoToSleep();
-        }        
+        }
         if (Input.GetKeyDown(KeyCode.F5))
         {
             GameClock.Instance.SkipTime(1);
@@ -181,6 +187,14 @@ public class GameManager : MonoBehaviour
         {
             GameClock.Instance.SetDay(GameClock.Instance.currentDay + 1);
         }
+        if (Input.GetKeyDown(KeyCode.F10))
+        {
+            ForceCompleteAllTasks();
+        }
+        if (Input.GetKeyDown(KeyCode.F11))
+        {
+            ForceCompleteCurrentTask();
+        }
         if (Input.GetKeyDown(KeyCode.F12))
         {
             GameClock.Instance.ForceSleep();
@@ -190,15 +204,80 @@ public class GameManager : MonoBehaviour
     private void PrintDeveloperHotkeys()
     {
         Debug.Log("Developer Mode Hotkeys:\n" +
-                  "F2 - Print Task List\n" +
-                  "F3 - Print All Tasks\n" +
+                  "F2 - Print Completed List\n" +
+                  "F3 - Print All Current Tasks\n" +
                   "F4 - Go To Sleep (End Day)\n" +
                   "F5 - Skip 1 Hour\n" +
                   "F6 - Skip 4 Hours\n" +
                   "F7 - Set Next Day\n" +
                   "F9 - Toggle Verbose Clock Logging\n" +
+                  "F10 - Force Complete All Tasks\n" +
+                  "F11 - Force Complete Current Tasks\n" +
                   "F12 - Force Sleep & End Day\n");
     }
+
+    /// <summary>
+    /// Force completes all active tasks by calling CompleteTask() on each one.
+    /// </summary>
+    private void ForceCompleteAllTasks()
+    {
+        if (TaskManager.Instance == null)
+        {
+            Debug.LogWarning("TaskManager.Instance is null! Cannot complete tasks.");
+            return;
+        }
+
+        List<Task> allTasks = TaskManager.Instance.GetTaskList();
+        if (allTasks.Count == 0)
+        {
+            Debug.Log("No active tasks to complete.");
+            return;
+        }
+
+        foreach (Task task in allTasks.ToArray()) // Using ToArray() to avoid collection modification issues
+        {
+            bool isCompleted = TaskManager.Instance.CompleteTask(task);
+            if (isCompleted)
+            {
+                Debug.Log($"Force completed task: {task.TaskDescription}");
+            }
+            else
+            {
+                Debug.LogWarning($"Failed to complete task: {task.TaskDescription}");
+            }
+        }
+        Debug.Log("All tasks have been forcefully completed.");
+    }
+
+    /// <summary>
+    /// Force completes the current active task by calling CompleteTask().
+    /// </summary>
+    private void ForceCompleteCurrentTask()
+    {
+        if (TaskManager.Instance == null)
+        {
+            Debug.LogWarning("TaskManager.Instance is null! Cannot complete tasks.");
+            return;
+        }
+
+        Task activeTask = TaskManager.Instance.GetActiveTask();
+        if (activeTask == null)
+        {
+            Debug.Log("No active task to complete.");
+            return;
+        }
+
+        bool isCompleted = TaskManager.Instance.CompleteTask(activeTask);
+        if (isCompleted)
+        {
+            Debug.Log($"Force completed active task: {activeTask.TaskDescription}");
+        }
+        else
+        {
+            Debug.LogWarning($"Failed to complete active task: {activeTask.TaskDescription}");
+        }
+    }
+
 }
 
 

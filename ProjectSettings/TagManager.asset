@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Waypoint
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -11,10 +13,10 @@ TagManager:
   - 
   - Water
   - UI
+  - Tint
   - Player
   - Ground
   - Test
-  - 
   - 
   - 
   - 
@@ -55,6 +57,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1414523411
+    locked: 0
+  - name: Tint
+    uniqueID: 2142659591
     locked: 0
   - name: UI
     uniqueID: 3281148269
