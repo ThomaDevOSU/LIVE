@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
         if (DeveloperModeEnabled)
         {
             HandleDeveloperTools();
+            DevMenu.Instance.HandleDevMenuInput();
         }
     }
     
@@ -144,7 +145,7 @@ public class GameManager : MonoBehaviour
 
     private void HandleDeveloperModeToggle()
     {
-        if (Input.GetKeyDown(KeyCode.F1))
+        if (InputManager.Instance.GetAction("DevMode").WasPressedThisFrame())
         {
             DeveloperModeEnabled = !DeveloperModeEnabled;
             OnDeveloperModeToggled?.Invoke();
@@ -153,44 +154,49 @@ public class GameManager : MonoBehaviour
             {
                 PrintDeveloperHotkeys();
             }
+            // For dev menu
+            if (!DeveloperModeEnabled && DevMenu.Instance.DeveloperMenuOpen)
+            {
+                DevMenu.Instance.ToggleDeveloperMenu();
+            }
         }
     }
     private void HandleDeveloperTools()
     {
-        if (Input.GetKeyDown(KeyCode.F2))
+        if (InputManager.Instance.GetAction("Action1").WasPressedThisFrame())
         {
             PlayerProgressManager.Instance.PrintCompletedTasks();
         }
-        if (Input.GetKeyDown(KeyCode.F3))
+        if (InputManager.Instance.GetAction("Action2").WasPressedThisFrame())
         {
             TaskManager.Instance.PrintAllTasksToConsole();
             TaskManager.Instance.PrintActiveTask();
         }
-        if (Input.GetKeyDown(KeyCode.F4))
+        if (InputManager.Instance.GetAction("Action3").WasPressedThisFrame())
         {
             GameClock.Instance.GoToSleep();
         }
-        if (Input.GetKeyDown(KeyCode.F5))
+        if (InputManager.Instance.GetAction("Action4").WasPressedThisFrame())
         {
             GameClock.Instance.SkipTime(1);
         }
-        if (Input.GetKeyDown(KeyCode.F6))
+        if (InputManager.Instance.GetAction("Action5").WasPressedThisFrame())
         {
             GameClock.Instance.SkipTime(4);
         }
-        if (Input.GetKeyDown(KeyCode.F7))
+        if (InputManager.Instance.GetAction("Action6").WasPressedThisFrame())
         {
             GameClock.Instance.SetDay(GameClock.Instance.currentDay + 1);
         }
-        if (Input.GetKeyDown(KeyCode.F10))
+        if (InputManager.Instance.GetAction("Action9").WasPressedThisFrame())
         {
             ForceCompleteAllTasks();
         }
-        if (Input.GetKeyDown(KeyCode.F11))
+        if (InputManager.Instance.GetAction("Action10").WasPressedThisFrame())
         {
             ForceCompleteCurrentTask();
         }
-        if (Input.GetKeyDown(KeyCode.F12))
+        if (InputManager.Instance.GetAction("Action11").WasPressedThisFrame())
         {
             GameClock.Instance.ForceSleep();
         }
@@ -209,6 +215,21 @@ public class GameManager : MonoBehaviour
                   "F10 - Force Complete All Tasks\n" +
                   "F11 - Force Complete Current Tasks\n" +
                   "F12 - Force Sleep & End Day\n");
+    }
+
+    /// <summary>
+    /// Reference header as force complete should remain private.
+    /// </summary>
+    public void ForceCompleteTasks(bool completeAll)
+    {
+        if (completeAll)
+        {
+            ForceCompleteAllTasks();
+        }
+        else
+        {
+            ForceCompleteCurrentTask();
+        }
     }
 
     /// <summary>
