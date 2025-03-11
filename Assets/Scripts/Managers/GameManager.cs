@@ -107,6 +107,11 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        if (GameClock.Instance != null)
+        {
+            GameClock.Instance.AssignTintOverlay(); // Ensure GameClock updates TintOverlay
+        }
+
     }
 
     /// <summary>
