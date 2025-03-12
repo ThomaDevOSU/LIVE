@@ -13,6 +13,17 @@ public class JournalListUI : MonoBehaviour
         // Added this bad boy to help fix journal freezing when completeing task
     {
         DisplayActiveTasks();
+        GameClock.Instance.OnDayStart += () =>
+        {
+            DisplayActiveTasks();
+            FindFirstObjectByType<TaskListUI>()?.UpdateActiveTaskUI();
+        };
+    }
+
+    private void OnDisable()
+    {
+        // Added this to fix any issues it may have
+        GameClock.Instance.OnDayStart -= DisplayActiveTasks;
     }
 
     void Start()
@@ -73,7 +84,7 @@ public class JournalListUI : MonoBehaviour
             {
                 TaskManager.Instance.SetActiveTask(task);
                 DisplayActiveTasks();
-                FindObjectOfType<TaskListUI>()?.UpdateActiveTaskUI(); // This line fixed the error Devon lol
+                FindFirstObjectByType<TaskListUI>()?.UpdateActiveTaskUI(); // This line fixed the error Devon lol
             });
         }
     }

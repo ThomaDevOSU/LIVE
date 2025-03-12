@@ -27,6 +27,8 @@ public class TaskListUI : MonoBehaviour
     {
         yield return new WaitUntil(() => TaskManager.Instance.GetActiveTask() != null);
         UpdateActiveTaskUI();
+        // Added to fix not updating on day end
+        GameClock.Instance.OnDayStart += () => UpdateActiveTaskUI();
     }
 
     // Wait until load, get active task and display
