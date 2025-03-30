@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5526037994517538787}
   - component: {fileID: 4604161029017019838}
   - component: {fileID: 1210388887295704834}
-  - component: {fileID: 1357883138002671305}
+  - component: {fileID: 8005255654788892395}
   m_Layer: 0
   m_Name: Esmeralda
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4534122650991805228}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.95, y: -2.98, z: 0}
+  m_LocalPosition: {x: -3.91, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -262,7 +262,7 @@ MonoBehaviour:
     agent: {fileID: 0}
     animator: {fileID: 0}
   messages: []
---- !u!195 &1357883138002671305
+--- !u!195 &8005255654788892395
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4665366049760731474}
   - component: {fileID: 6947916096084446362}
   - component: {fileID: 104458765064884412}
-  - component: {fileID: 3051995437036485106}
+  - component: {fileID: 5821157745069040896}
   m_Layer: 0
   m_Name: Jessica
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 384635223082790709}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4, y: -3, z: 0}
+  m_LocalPosition: {x: -2.33, y: -2.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -262,7 +262,7 @@ MonoBehaviour:
     agent: {fileID: 0}
     animator: {fileID: 0}
   messages: []
---- !u!195 &3051995437036485106
+--- !u!195 &5821157745069040896
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

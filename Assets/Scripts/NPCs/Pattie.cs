@@ -72,60 +72,6 @@ public class Pattie_Baker : MonoBehaviour
                     waypoint = "test3",
                     time = 11,
                     location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test4",
-                    time = 12,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test5",
-                    time = 13,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test6",
-                    time = 14,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test7",
-                    time = 15,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test8",
-                    time = 16,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test9",
-                    time = 17,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test10",
-                    time = 18,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test11",
-                    time = 19,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test12",
-                    time = 20,
-                    location = "Overworld"
                 }
             },
             messages = new List<Message>(),
