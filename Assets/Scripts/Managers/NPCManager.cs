@@ -88,7 +88,7 @@ public class NPCManager : MonoBehaviour
     private void MoveNPCs()
     {
         // this is temp code until all NPCs have animations implemented
-        List<string> list = new List<string> { "Pattie", "Alex", "Ronny" };
+        List<string> list = new List<string> { "Pattie", "Alex", "Ronny", "Mark", "Amy", "Jessica", "Will" };
         foreach (NPC npc in NPCs)
         {
             if (list.Contains(npc.Name))

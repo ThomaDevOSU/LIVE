@@ -25,7 +25,7 @@ public class Jessica_Waitress : MonoBehaviour
         Jessica = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Hey! You ever just sit and watch the birds? They live such a simple life.",
