@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &490807253845647072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6753093215237667348}
+  - component: {fileID: 1078415662714028788}
+  - component: {fileID: 283283350362726663}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6753093215237667348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490807253845647072}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.6010478, y: -2.9218204, z: 11.687094}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1078415662714028788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490807253845647072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bc1b308ea92be48a830cafe1e7d2d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &283283350362726663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490807253845647072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
+    m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
+    m_ActionName: 'Player/Interact[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2776c80d-3c14-4091-8c56-d04ced07a2b0
+    m_ActionName: 'Player/Previous[/Keyboard/1]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b7230bb6-fc9b-4f52-8b25-f5e19cb2c2ba
+    m_ActionName: 'Player/Next[/Keyboard/2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 15cef263-9014-4fd5-94d9-4e4a6234a6ef
+    m_ActionName: 'UI/Inventory[/Keyboard/i]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 453d1d88-a0c5-4a01-943e-a674de69c1bc
+    m_ActionName: 'UI/Pause[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fe2f5d40-21c1-4660-852d-2007399b64c8
+    m_ActionName: 'UI/Map[/Keyboard/m]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c95b2375-e6d9-4b88-9c4c-c5e76515df4b
+    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7607c7b6-cd76-4816-beef-bd0341cfe950
+    m_ActionName: 'UI/Submit[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32b35790-4ed0-4e9a-aa41-69ac6d629449
+    m_ActionName: 'UI/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3c7022bf-7922-4f7c-a998-c437916075ad
+    m_ActionName: 'UI/Click[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 44b200b1-1557-4083-816c-b22cbdf77ddf
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dad70c86-b58c-4b17-88ad-f5e53adf419e
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0489e84a-4833-4c40-bfae-cea84b696689
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8b681736-7bd5-4683-b977-82310bb03fe5
+    m_ActionName: 'Developer/DevMode[/Keyboard/f1]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f985395e-01c2-4427-9d42-d2e754bf9de2
+    m_ActionName: 'Developer/DevMenu[/Keyboard/backquote]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1a626759-30b4-4dcf-99e1-a650c92e97e9
+    m_ActionName: 'Developer/Action1[/Keyboard/f2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6b68a704-792e-4364-9737-373e9236a337
+    m_ActionName: 'Developer/Action2[/Keyboard/f3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e4f567ea-e557-4130-9147-e98f6fd0f73f
+    m_ActionName: 'Developer/Action3[/Keyboard/f4]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5677897a-957c-4b90-8f32-5c945afa64ba
+    m_ActionName: 'Developer/Action4[/Keyboard/f5]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b9276658-3293-4c7d-ae59-2672786f99a9
+    m_ActionName: 'Developer/Action5[/Keyboard/f6]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 076d999f-6a39-44da-9670-2585b8befa86
+    m_ActionName: 'Developer/Action6[/Keyboard/f7]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 326fc6c0-7f88-484d-9033-df3eb4b45caf
+    m_ActionName: 'Developer/Action7[/Keyboard/f8]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b0575489-a961-49c1-b0ee-41587d5dedc0
+    m_ActionName: 'Developer/Action8[/Keyboard/f9]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c9e35212-4d95-4607-accb-571c030908ae
+    m_ActionName: 'Developer/Action9[/Keyboard/f10]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 88f5514d-9c5f-43fc-99f4-96d0a27422d2
+    m_ActionName: 'Developer/Action10[/Keyboard/f11]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 15b93f3b-3293-496f-85b2-d45d4961a116
+    m_ActionName: 'Developer/Action11[/Keyboard/f12]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

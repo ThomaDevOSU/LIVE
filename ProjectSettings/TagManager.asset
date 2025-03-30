@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Waypoint
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -47,9 +48,6 @@ TagManager:
     locked: 0
   - name: Object
     uniqueID: 1276794309
-    locked: 0
-  - name: Decorations
-    uniqueID: 2570133515
     locked: 0
   - name: Interactable
     uniqueID: 3941169083

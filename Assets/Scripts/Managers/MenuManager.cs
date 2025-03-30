@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 /// <summary>
 /// Manages the in-game menu and pause functionality.
-/// Allows toggling the menu via the "Cancel" button (typically ESC).
+/// Allows toggling the menu via the "Pause" button (Escape).
 /// Handles pausing and resuming the game clock when the menu is opened or closed.
 /// Implements a cooldown to prevent rapid toggling.
 /// </summary>
@@ -14,13 +14,18 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager Instance; // Singleton instance
 
-    [Tooltip("Reference to the in-game player menu UI.")]
-    public GameObject PlayerMenu;
+    public GameObject PauseMenu;
 
     [Tooltip("Indicates whether the game is currently paused.")]
     public bool isPaused = false;
 
     private bool canToggle = true; // Prevents rapid toggling of the menu
+
+    public GameObject InventoryMenu;
+    private bool isInventoryOpen = false;
+
+    public GameObject MapMenu;
+    private bool isMapOpen = false;
 
     private void Awake()
     {
@@ -38,10 +43,20 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
-        // Check for "Cancel" button (Escape key by default) and ensure dialogue is not active
-        if (Input.GetButtonDown("Cancel") && !DialogueManager.Instance.isTalking)
+        // Setup the get actions and lock them against is talking/paused
+        if (InputManager.Instance.GetAction("Pause").WasPressedThisFrame() && !DialogueManager.Instance.isTalking)
         {
             TogglePause();
+        }
+
+        if (InputManager.Instance.GetAction("Inventory").WasPressedThisFrame() && !DialogueManager.Instance.isTalking && !isPaused)
+        {
+            ToggleInventory();
+        }
+
+        if (InputManager.Instance.GetAction("Map").WasPressedThisFrame() && !DialogueManager.Instance.isTalking && !isPaused)
+        {
+            ToggleMap();
         }
     }
 
@@ -63,9 +78,21 @@ public class MenuManager : MonoBehaviour
     {
         if (!canToggle) return; // Prevent spam-clicking
 
-        bool isMenuOpen = PlayerMenu.activeSelf; // Check if the menu is currently open
-        isPaused = !isMenuOpen; // Update pause state
-        PlayerMenu.SetActive(isPaused); // Show/hide the menu UI
+        // Pause should close all menus
+        if (isInventoryOpen && InventoryMenu != null)
+        {
+            isInventoryOpen = false;
+            InventoryMenu.SetActive(false);
+        }
+        if (isMapOpen && MapMenu != null)
+        {
+            isMapOpen = false;
+            MapMenu.SetActive(false);
+        }
+
+        bool isMenuOpen = PauseMenu.activeSelf; // Check if menu is open
+        isPaused = !isMenuOpen; // Update pause
+        PauseMenu.SetActive(isPaused); // Show/hide based
 
         // Pause or resume the game clock if it exists
         if (GameClock.Instance != null)
@@ -84,8 +111,73 @@ public class MenuManager : MonoBehaviour
     /// Closes the menu and resumes the game.
     /// This is called by the "Close" button inside the UI menu.
     /// </summary>
-    public void unPause()
+    public void UnPause()
     {
         TogglePause();
+    }
+
+    /// <summary>
+    /// Toggles the inventory menu without pausing.
+    /// </summary>
+    private void ToggleInventory()
+    {
+        if (!canToggle) return;
+
+        // If map is open, close it
+        if (isMapOpen && MapMenu != null)
+        {
+            isMapOpen = false;
+            MapMenu.SetActive(false);
+        }
+
+        bool currentlyOpen = (InventoryMenu != null && InventoryMenu.activeSelf);
+        isInventoryOpen = !currentlyOpen;
+
+        if (InventoryMenu != null)
+            InventoryMenu.SetActive(isInventoryOpen);
+
+        StartCoroutine(TogglePauseCooldown());
+    }
+
+    /// <summary>
+    /// Toggles the map menu without pausing.
+    /// </summary>
+    private void ToggleMap()
+    {
+        if (!canToggle) return;
+
+        // If inven is open, close it
+        if (isInventoryOpen && InventoryMenu != null)
+        {
+            isInventoryOpen = false;
+            InventoryMenu.SetActive(false);
+        }
+
+        bool currentlyOpen = (MapMenu != null && MapMenu.activeSelf);
+        isMapOpen = !currentlyOpen;
+
+        if (MapMenu != null)
+            MapMenu.SetActive(isMapOpen);
+
+        StartCoroutine(TogglePauseCooldown());
+    }
+
+    /// <summary>
+    /// This unpauses the menu to prevent game from being locked when closing menu.
+    /// </summary>
+    public void ClosePauseMenu()
+    {
+        // Only do something if we're actually paused
+        if (isPaused)
+        {
+            isPaused = false;
+            PauseMenu.SetActive(false);
+
+            // Resume the clock
+            if (GameClock.Instance != null)
+                GameClock.Instance.ResumeClock();
+
+            StartCoroutine(TogglePauseCooldown());
+        }
     }
 }

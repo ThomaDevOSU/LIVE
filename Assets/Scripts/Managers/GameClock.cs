@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
@@ -65,15 +66,7 @@ public class GameClock : MonoBehaviour
         LoadGameClockFromSave(GameManager.Instance.CurrentPlayerData);
         Debug.Log($"Loaded Clock Data from Save: Day {currentDay}");
 
-        // Get the Image component from the UI Panel
-        if (tintOverlayImage != null)
-        {
-            tintOverlayImage = tintOverlayImage.GetComponent<Image>();
-            if (tintOverlayImage == null)
-            {
-                Debug.LogError("No Image component found on the TintOverlay Panel!");
-            }
-        }
+        AssignTintOverlay(); // Reassign TintOverlay dynamically
 
         // Initialize the tint color based on the current state
         UpdateTintOverlay(true); // Initialize with instant transition
@@ -169,6 +162,17 @@ public class GameClock : MonoBehaviour
     private void EndDay()
     {
         OnDayEnd?.Invoke(); // Trigger day-end event
+
+        // Start a transition effect before resetting the day
+        if (TransitionManager.Instance != null)
+        {
+            TransitionManager.Instance.StartTransition(SceneManager.GetActiveScene().name, TransitionType.WIPE);
+        }
+        else
+        {
+            Debug.LogWarning("TransitionManager is null! Skipping transition.");
+        }
+
         currentDay++; // Increment the day counter
         elapsedGameTime = 0f; // Reset elapsed game time
         currentHour = 8f; // Reset to the start of the next day (8 AM)
@@ -351,6 +355,26 @@ public class GameClock : MonoBehaviour
         {
             // Smooth transition using Color.Lerp()
             tintOverlayImage.color = Color.Lerp(tintOverlayImage.color, targetTint, transitionSpeed * Time.deltaTime);
+        }
+    }
+
+    public void AssignTintOverlay()
+    {
+        // Find the TintOverlay object dynamically in the new scene
+        GameObject tintObj = GameObject.Find("TintOverlay");
+
+        if (tintObj != null)
+        {
+            tintOverlayImage = tintObj.GetComponent<Image>();
+
+            if (tintOverlayImage == null)
+            {
+                Debug.LogError("No Image component found on TintOverlay!");
+            }
+        }
+        else
+        {
+            Debug.LogError("TintOverlay not found in the current scene!");
         }
     }
 
