@@ -12,10 +12,11 @@ public class Pattie_Baker : MonoBehaviour
     /// </summary>
     public NPC Pattie;
 
+
     /// <summary>
     /// List of messages associated with the NPC.
     /// </summary>
-    public List<Message> messages = new List<Message>();
+    public List<Message> messages = new();
 
     /// <summary>
     /// Initializes the NPC instance and adds it to the NPC manager.
@@ -25,7 +26,7 @@ public class Pattie_Baker : MonoBehaviour
         Pattie = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Hello, sweetie! Can I get you something fresh from the oven?",
@@ -50,20 +51,80 @@ public class Pattie_Baker : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Entrance",
+                    waypoint = "test",
                     time = 8,
                     location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Bakery Table",
+                    waypoint = "test1",
+                    time = 9,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "test2",
                     time = 10,
                     location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Overworld",
+                    waypoint = "test3",
+                    time = 11,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "test4",
+                    time = 12,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "test5",
+                    time = 13,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "test6",
                     time = 14,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "test7",
+                    time = 15,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "test8",
+                    time = 16,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "test9",
+                    time = 17,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "test10",
+                    time = 18,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "test11",
+                    time = 19,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "test12",
+                    time = 20,
                     location = "Overworld"
                 }
             },

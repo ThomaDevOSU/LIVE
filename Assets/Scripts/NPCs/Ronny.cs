@@ -25,6 +25,7 @@ public class Ronny_Chef : MonoBehaviour
         Ronny = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Hmph. You again? What do you want?",

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -5,9 +6,20 @@ using UnityEngine.AI;
 /// <summary>
 /// Represents an NPC.
 /// </summary>
+[System.Serializable]
 public class NPC
 {
-    public string location;
+    public enum Direction
+    {
+        Up,
+        Down,
+        Left,
+        Right
+    }
+
+    public Direction movementDirection;
+    public float speed;
+    public Vector3 velocity;
 
     public string[] Greeting;
     public bool inDialogue = false;
@@ -26,6 +38,56 @@ public class NPC
     /// </summary
     [SerializeField] Transform target;
     public NavMeshAgent agent;
+
+    /// <summary>
+    /// Animation stuff
+    /// </summary>
+    public Animator animator;
+
+
+    /// <summary>
+    /// Set direction and speed of NPC. This is for animations.
+    /// </summary>
+    public void UpdateSpeedandDirection()
+    {
+        velocity = agent.velocity;
+        speed = velocity.magnitude;
+
+        animator.SetFloat("Speed", speed);
+        Vector3 directionVector = velocity.normalized;
+
+        if (Mathf.Abs(directionVector.x) > Mathf.Abs(directionVector.y))
+        {
+            movementDirection = directionVector.x > 0 ? Direction.Right : Direction.Left;
+            animator.SetBool("Up", false);
+            animator.SetBool("Down", false);
+            if (movementDirection == Direction.Left)
+            {
+                animator.SetBool("Right", false);
+                animator.SetBool("Left", true);
+            } else
+            {
+                animator.SetBool("Left", false);
+                animator.SetBool("Right", true);
+            }
+            
+        }
+        else
+        {
+            animator.SetBool("Right", false);
+            animator.SetBool("Left", false);
+            movementDirection = directionVector.y > 0 ? Direction.Up : Direction.Down;
+            if (movementDirection == Direction.Up)
+            {
+                animator.SetBool("Down", false);
+                animator.SetBool("Up", true);
+            } else
+            {
+                animator.SetBool("Up", false);
+                animator.SetBool("Down", true);
+            }
+        }
+    }
 
     /// <summary>
     /// Prints the NPC's data to the debug log.
