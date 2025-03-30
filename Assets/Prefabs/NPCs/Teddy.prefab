@@ -245,4 +245,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e16cc5f666c60e41810394977f5b0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Teddy:
+    movementDirection: 0
+    speed: 0
+    velocity: {x: 0, y: 0, z: 0}
+    Greeting: []
+    inDialogue: 0
+    ID: 0
+    Name: 
+    Job: 
+    Description: 
+    Personality: []
+    messages: []
+    target: {fileID: 0}
+    agent: {fileID: 0}
+    animator: {fileID: 0}
   messages: []

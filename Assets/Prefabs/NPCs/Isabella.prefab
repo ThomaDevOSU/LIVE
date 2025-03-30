@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5108164659907438148}
   - component: {fileID: 8926604441728938055}
   - component: {fileID: 1680721528722773371}
+  - component: {fileID: 5336550306687271773}
   m_Layer: 0
   m_Name: Isabella
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4291812132630558744}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.378371, y: -1.4028254, z: 0}
+  m_LocalPosition: {x: -10.287713, y: -23.461851, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,9 +82,9 @@ SpriteRenderer:
   m_SortingLayerID: 1276794309
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1149386278463536509, guid: e164a2cef9ac6884d9011600507a3216, type: 3}
+  m_Sprite: {fileID: -5019718528572193193, guid: 2be997d3da5147d49be31c5f33d559e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.53125, y: 0.6875}
@@ -130,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.53125, y: 0.6875}
+    oldSize: {x: 0.49000004, y: 0.7700752}
     newSize: {x: 0.53125, y: 0.6875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -176,7 +177,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.53125, y: 0.6875}
+    oldSize: {x: 0.49000004, y: 0.7700752}
     newSize: {x: 0.53125, y: 0.6875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -194,7 +195,7 @@ Animator:
   m_GameObject: {fileID: 4291812132630558744}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 2199c53dc4065c84087440eea2a0e017, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2a1ce60aa83a4bd4b85464b330c9f99f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -245,4 +246,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c21841dc6cdbea4594e3c7a26b8afb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Isabella:
+    movementDirection: 0
+    speed: 0
+    velocity: {x: 0, y: 0, z: 0}
+    Greeting: []
+    inDialogue: 0
+    ID: 0
+    Name: 
+    Job: 
+    Description: 
+    Personality: []
+    messages: []
+    target: {fileID: 0}
+    agent: {fileID: 0}
+    animator: {fileID: 0}
   messages: []
+--- !u!195 &5336550306687271773
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4291812132630558744}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.265625
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.6875
+  m_BaseOffset: 0.34375
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

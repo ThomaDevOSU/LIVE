@@ -25,7 +25,7 @@ public class Jacob_Firefighter : MonoBehaviour
         Jacob = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Hey! Have you been hitting the gym? No? Well, there's no time like the present!",

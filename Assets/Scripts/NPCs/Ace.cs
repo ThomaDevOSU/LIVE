@@ -25,6 +25,7 @@ public class Ace_Soccer : MonoBehaviour
         Ace = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Hey! Wanna play some soccer? Or at least pass the ball back if I kick it to you?",

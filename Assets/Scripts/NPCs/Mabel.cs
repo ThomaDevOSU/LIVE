@@ -25,7 +25,7 @@ public class Mabel_Retired : MonoBehaviour
         Mabel = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Oh, hello dear! Have you eaten today? I have some candies if you’d like one.",

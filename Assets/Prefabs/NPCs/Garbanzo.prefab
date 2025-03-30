@@ -245,4 +245,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02f690e8344cd34fb5b6dfa0ff385e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Garbanzo:
+    movementDirection: 0
+    speed: 0
+    velocity: {x: 0, y: 0, z: 0}
+    Greeting: []
+    inDialogue: 0
+    ID: 0
+    Name: 
+    Job: 
+    Description: 
+    Personality: []
+    messages: []
+    target: {fileID: 0}
+    agent: {fileID: 0}
+    animator: {fileID: 0}
   messages: []

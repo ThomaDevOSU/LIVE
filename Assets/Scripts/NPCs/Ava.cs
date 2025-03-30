@@ -25,7 +25,7 @@ public class Ava_Informer : MonoBehaviour
         Ava = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Hey, hey! What’s the latest? Spill!",

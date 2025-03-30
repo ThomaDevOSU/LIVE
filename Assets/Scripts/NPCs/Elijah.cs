@@ -25,7 +25,7 @@ public class Elijah_Postmaster : MonoBehaviour
         Elijah = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Ah, another fleeting moment in the grand passage of time.",
