@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,6 +23,11 @@ public class NPCManager : MonoBehaviour
     /// Dictionary to store NPC conversation history.
     /// </summary>
     private Dictionary<string, List<Message>> ConversationHistory;
+
+    /// <summary>
+    /// Current Scene's name
+    /// </summary>
+    string currentSceneName;
 
     /// <summary>
     ///  Gameclock instance.
@@ -70,8 +77,29 @@ public class NPCManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Clear the NPC list. They readd themselves on scene load
         NPCs.Clear();
+        currentSceneName = SceneManager.GetActiveScene().name;
+
+        // Start a coroutine to delay PlaceNPCs()
+        StartCoroutine(DelayedPlaceNPCs());
+    }
+
+    /// <summary>
+    /// This delays calling PlaceNPCs until after the NPCs are instantiated but before Update() is called. Bit of a hack fix.
+    /// </summary>
+    private IEnumerator DelayedPlaceNPCs()
+    {
+        // Wait until the next frame to ensure all Start() methods have run
+        yield return null;
+
+        if (NPCs.Count == 0)
+        {
+            Debug.LogWarning("NPCs list is still empty after delaying PlaceNPCs().");
+        }
+        else
+        {
+            PlaceNPCs();
+        }
     }
 
     /// <summary>
@@ -83,17 +111,38 @@ public class NPCManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Place all NPCs where they should be.
+    /// </summary>
+    private void PlaceNPCs()
+    {
+        foreach (NPC npc in NPCs)
+        {
+            foreach (ScheduleEntry entry in npc.Schedule)
+            {
+                if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour) && entry.location == currentSceneName)
+                {
+                    var success = npc.agent.Warp(waypointManager.GetWaypoint(entry.waypoint).position);
+
+                    if (success == false)
+                    {
+                        Debug.LogWarning($"{npc.Name} failed to warp to correct position in {currentSceneName}.");
+                    }
+                }
+            }
+        }
+    }
+
+    /// <summary>
     /// Trigger Movement of all NPCs.
     /// </summary>
     private void MoveNPCs()
     {
-        // this is temp code until all NPCs have animations implemented
         foreach (NPC npc in NPCs)
         {
             npc.UpdateSpeedandDirection();
             foreach (ScheduleEntry entry in npc.Schedule)
             {
-                if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour))
+                if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour) && currentSceneName == entry.location)
                 {
                     // Get waypoint
                     waypoint = waypointManager.GetWaypoint(entry.waypoint);
