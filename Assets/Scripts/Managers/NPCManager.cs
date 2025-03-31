@@ -88,13 +88,9 @@ public class NPCManager : MonoBehaviour
     private void MoveNPCs()
     {
         // this is temp code until all NPCs have animations implemented
-        List<string> list = new List<string> { "Pattie", "Alex", "Ronny", "Mark", "Amy", "Jessica", "Will", "Mabel", "Esmeralda", "Isabella", "Ace", "Ava", "Jacob", "Elijah" };
         foreach (NPC npc in NPCs)
         {
-            if (list.Contains(npc.Name))
-            {
-                npc.UpdateSpeedandDirection();
-            }
+            npc.UpdateSpeedandDirection();
             foreach (ScheduleEntry entry in npc.Schedule)
             {
                 if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour))
