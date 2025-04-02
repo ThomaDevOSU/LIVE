@@ -25,6 +25,7 @@ public class Alex_Barista : MonoBehaviour
         Alex = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Hey there! Need a caffeine fix, or just here for the vibes?",

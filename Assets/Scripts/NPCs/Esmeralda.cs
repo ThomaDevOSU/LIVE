@@ -25,6 +25,7 @@ public class Esmeralda_Pharmacist : MonoBehaviour
         Esmeralda = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Ah, you've arrived. Fate, or mere coincidence?",

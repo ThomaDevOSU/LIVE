@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7278587129486018913}
   - component: {fileID: 2430983416781431767}
+  - component: {fileID: 764216478332842507}
   - component: {fileID: 3400243596475555438}
   - component: {fileID: 3523948518565637540}
-  - component: {fileID: 764216478332842507}
   - component: {fileID: 2057061161628568776}
   - component: {fileID: 102869775399182040}
+  - component: {fileID: 8846932399726154291}
   m_Layer: 0
   m_Name: Alex
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1350777437831661568}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.34, y: -3.02, z: 0}
+  m_LocalPosition: {x: -2.33, y: -18.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,9 +82,9 @@ SpriteRenderer:
   m_SortingLayerID: 1276794309
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2999854902540224419, guid: 0ec7a771ea7ef854cae464e4da7e3ed6, type: 3}
+  m_Sprite: {fileID: 5134539684181775235, guid: 0e292dad5484d2f47b9f59f3770155dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -92,6 +93,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &764216478332842507
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350777437831661568}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5482444cc89d0ac41bb5d4d266ec3ab6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &3400243596475555438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -130,7 +153,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5625, y: 0.6875}
+    oldSize: {x: 0.46, y: 0.71006936}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -176,7 +199,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5625, y: 0.6875}
+    oldSize: {x: 0.46, y: 0.71006936}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -184,28 +207,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0
---- !u!95 &764216478332842507
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350777437831661568}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: b91e5da3a9232da4ba631fbe984f4450, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &2057061161628568776
 Rigidbody2D:
   serializedVersion: 5
@@ -245,4 +246,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a6d05e59505d24cb427514ed108d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Alex:
+    movementDirection: 0
+    speed: 0
+    velocity: {x: 0, y: 0, z: 0}
+    Greeting: []
+    inDialogue: 0
+    ID: 0
+    Name: 
+    Job: 
+    Description: 
+    Personality: []
+    messages: []
+    target: {fileID: 0}
+    agent: {fileID: 0}
+    animator: {fileID: 0}
   messages: []
+--- !u!195 &8846932399726154291
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350777437831661568}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.28125
+  m_Speed: 2
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.6875
+  m_BaseOffset: 0.34375
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

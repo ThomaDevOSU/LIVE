@@ -25,6 +25,7 @@ public class Amy_Doctor : MonoBehaviour
         Amy = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Oh, hey! Are you staying hydrated? You should be.",

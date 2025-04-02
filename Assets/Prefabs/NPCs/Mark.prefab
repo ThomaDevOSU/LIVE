@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 588099334032569033}
   - component: {fileID: 4264923235717843919}
   - component: {fileID: 6442365270627594507}
+  - component: {fileID: 2693793014553816283}
   m_Layer: 0
   m_Name: Mark
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 3798973651676026123}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5514746, y: -1.493942, z: 0}
+  m_LocalPosition: {x: -3.24, y: -1.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,9 +82,9 @@ SpriteRenderer:
   m_SortingLayerID: 1276794309
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1149386278463536509, guid: e164a2cef9ac6884d9011600507a3216, type: 3}
+  m_Sprite: {fileID: -2529804286022096062, guid: f18e2b7247b5d07418ecc82d045e54cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.53125, y: 0.6875}
@@ -130,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.53125, y: 0.6875}
+    oldSize: {x: 0.44000003, y: 0.6800664}
     newSize: {x: 0.53125, y: 0.6875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -176,7 +177,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.53125, y: 0.6875}
+    oldSize: {x: 0.44000003, y: 0.6800664}
     newSize: {x: 0.53125, y: 0.6875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -194,7 +195,7 @@ Animator:
   m_GameObject: {fileID: 3798973651676026123}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 2199c53dc4065c84087440eea2a0e017, type: 2}
+  m_Controller: {fileID: 9100000, guid: a50b7f000d8a9e24b94a333b65107b65, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -245,4 +246,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cc70dcf09558546b1e525eccba9354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mark:
+    movementDirection: 0
+    speed: 0
+    velocity: {x: 0, y: 0, z: 0}
+    Greeting: []
+    inDialogue: 0
+    ID: 0
+    Name: 
+    Job: 
+    Description: 
+    Personality: []
+    messages: []
+    target: {fileID: 0}
+    agent: {fileID: 0}
+    animator: {fileID: 0}
   messages: []
+--- !u!195 &2693793014553816283
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798973651676026123}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.265625
+  m_Speed: 2
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.6875
+  m_BaseOffset: 0.34375
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

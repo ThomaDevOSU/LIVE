@@ -12,10 +12,11 @@ public class Pattie_Baker : MonoBehaviour
     /// </summary>
     public NPC Pattie;
 
+
     /// <summary>
     /// List of messages associated with the NPC.
     /// </summary>
-    public List<Message> messages = new List<Message>();
+    public List<Message> messages = new();
 
     /// <summary>
     /// Initializes the NPC instance and adds it to the NPC manager.
@@ -25,7 +26,7 @@ public class Pattie_Baker : MonoBehaviour
         Pattie = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Hello, sweetie! Can I get you something fresh from the oven?",
@@ -50,20 +51,26 @@ public class Pattie_Baker : MonoBehaviour
             {
                 new()
                 {
-                    waypoint = "Bakery Entrance",
+                    waypoint = "test",
                     time = 8,
                     location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Bakery Table",
+                    waypoint = "test1",
+                    time = 9,
+                    location = "Overworld"
+                },
+                new ()
+                {
+                    waypoint = "test2",
                     time = 10,
                     location = "Overworld"
                 },
                 new ()
                 {
-                    waypoint = "Overworld",
-                    time = 14,
+                    waypoint = "test3",
+                    time = 11,
                     location = "Overworld"
                 }
             },

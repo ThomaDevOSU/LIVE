@@ -145,7 +145,7 @@ public class DialogueManager : MonoBehaviour
 
         currentDialogue = dialogue;
 
-        // This queue will be populated with dialogue from the DialogueEntry. This is for offline mode.
+        // This queue will be populated with dialogue from the DialogueEntry. It is this way for now in case we do an offline mode.
         // Currently the dialogue will only contain the most recent response from the GPTService.
         foreach (string s in dialogue.sentences)
         {

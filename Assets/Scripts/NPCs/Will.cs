@@ -25,7 +25,7 @@ public class Will_Mayor : MonoBehaviour
         Will = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Ah, hello there! Always good to see a friendly face.",

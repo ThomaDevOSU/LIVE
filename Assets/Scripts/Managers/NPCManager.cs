@@ -87,15 +87,12 @@ public class NPCManager : MonoBehaviour
     /// </summary>
     private void MoveNPCs()
     {
+        // this is temp code until all NPCs have animations implemented
         foreach (NPC npc in NPCs)
-        { 
+        {
+            npc.UpdateSpeedandDirection();
             foreach (ScheduleEntry entry in npc.Schedule)
             {
-                if (GameClock.Instance == null)
-                {
-                    Debug.Log("Game clock null\n\n");
-                    continue;
-                }
                 if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour))
                 {
                     // Get waypoint
@@ -104,6 +101,7 @@ public class NPCManager : MonoBehaviour
                     npc.agent.SetDestination(waypoint.position);
                 }
             }
+            
         }
     }
 

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 899617606320376260}
   - component: {fileID: 18906370345904635}
   - component: {fileID: 886917767024158886}
+  - component: {fileID: 6485220471432520598}
   m_Layer: 0
   m_Name: Amy
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4817579040895110036}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.41, y: -3.01, z: 0}
+  m_LocalPosition: {x: 1.42, y: -1.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,9 +82,9 @@ SpriteRenderer:
   m_SortingLayerID: 1276794309
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2516868740424540249, guid: 472be9864dfe9c548a4ae3a6a516bd4b, type: 3}
+  m_Sprite: {fileID: -4163231657680843600, guid: 54a5bf08c9d67d74baad408d662c4e7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.53125, y: 0.6875}
@@ -130,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5625, y: 0.6875}
+    oldSize: {x: 0.46, y: 0.71006936}
     newSize: {x: 0.53125, y: 0.6875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -176,7 +177,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5625, y: 0.6875}
+    oldSize: {x: 0.46, y: 0.71006936}
     newSize: {x: 0.53125, y: 0.6875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -194,7 +195,7 @@ Animator:
   m_GameObject: {fileID: 4817579040895110036}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: e20d5dccb7234834d9182612595ae56e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0d61409533e1c4b42ab3f083bc11a91e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -245,4 +246,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc312a329ef3fc4b86a9ec10506bc4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Amy:
+    movementDirection: 0
+    speed: 0
+    velocity: {x: 0, y: 0, z: 0}
+    Greeting: []
+    inDialogue: 0
+    ID: 0
+    Name: 
+    Job: 
+    Description: 
+    Personality: []
+    messages: []
+    target: {fileID: 0}
+    agent: {fileID: 0}
+    animator: {fileID: 0}
   messages: []
+--- !u!195 &6485220471432520598
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4817579040895110036}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.28125
+  m_Speed: 2
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.6875
+  m_BaseOffset: 0.34375
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

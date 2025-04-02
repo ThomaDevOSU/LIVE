@@ -25,7 +25,7 @@ public class Teddy_Cat : MonoBehaviour
         Teddy = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Oh, it’s you. Again.",

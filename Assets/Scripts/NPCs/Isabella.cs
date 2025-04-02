@@ -25,7 +25,7 @@ public class Isabella_Police : MonoBehaviour
         Isabella = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Halt! State your business… just kidding. Or am I?",

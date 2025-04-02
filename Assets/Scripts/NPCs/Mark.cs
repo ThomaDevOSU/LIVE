@@ -25,7 +25,7 @@ public class Mark_GeneralStoreOwner : MonoBehaviour
         Mark = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Oh hey, need anything?",

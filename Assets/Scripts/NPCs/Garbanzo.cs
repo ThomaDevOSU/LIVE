@@ -25,7 +25,7 @@ public class Garbanzo_Dog : MonoBehaviour
         Garbanzo = new NPC
         {
             agent = GetComponent<NavMeshAgent>(),
-
+            animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
                 "Hi! Have snack?",
