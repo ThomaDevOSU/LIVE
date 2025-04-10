@@ -55,7 +55,7 @@ public class Ace_Soccer : MonoBehaviour
                 new() { waypoint = "Bakery Entrance", time = 12, location = "Overworld" },
                 new() { waypoint = "BakeryCounter", time = 13, location = "Bakery" },
                 new() { waypoint = "Cafe Entrance", time = 14, location = "Overworld" },
-                new() { waypoint = "CafeTable", time = 15, location = "Overworld" },
+                new() { waypoint = "Cafe Table", time = 15, location = "Overworld" },
                 new() { waypoint = "Park Bench", time = 16, location = "Overworld" },
                 new() { waypoint = "Overworld", time = 17, location = "Overworld" },
                 new() { waypoint = "House 2", time = 18, location = "Overworld" },
