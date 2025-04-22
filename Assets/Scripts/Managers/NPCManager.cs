@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -60,7 +61,6 @@ public class NPCManager : MonoBehaviour
 
     private void Start()
     {
-        // This is done here because awake is called before start.
         gameClock = GameClock.Instance;
         waypointManager = WaypointManager.Instance;
     }
@@ -81,13 +81,13 @@ public class NPCManager : MonoBehaviour
         currentSceneName = SceneManager.GetActiveScene().name;
 
         // Start a coroutine to delay PlaceNPCs()
-        StartCoroutine(DelayedPlaceNPCs());
+        StartCoroutine(SetupNPCState()); // This also loads conversations
     }
 
     /// <summary>
     /// This delays calling PlaceNPCs until after the NPCs are instantiated but before Update() is called. Bit of a hack fix.
     /// </summary>
-    private IEnumerator DelayedPlaceNPCs()
+    private IEnumerator SetupNPCState()
     {
         // Wait until the next frame to ensure all Start() methods have run
         yield return null;
@@ -99,6 +99,7 @@ public class NPCManager : MonoBehaviour
         else
         {
             PlaceNPCs();
+            LoadConversationHistory();
         }
     }
 
@@ -150,7 +151,6 @@ public class NPCManager : MonoBehaviour
                     npc.agent.SetDestination(waypoint.position);
                 }
             }
-            
         }
     }
 
@@ -161,6 +161,19 @@ public class NPCManager : MonoBehaviour
     public void AddNPC(NPC npc)
     {
         NPCs.Add(npc);
+        npc.messages = null;
+        if (ConversationHistory == null)
+        {
+            ConversationHistory = new Dictionary<string, List<Message>>();
+        }
+
+        if (!ConversationHistory.ContainsKey(npc.Name))
+        {
+            ConversationHistory[npc.Name] = new List<Message>();
+        }
+        
+        // NPCs add there own messages from conversation history. conversation history is set on game load (should at least)
+        npc.messages = ConversationHistory[npc.Name];
     }
 
     /// <summary>
@@ -185,13 +198,6 @@ public class NPCManager : MonoBehaviour
     /// <param name="name">The name of the NPC to retrieve. Optional.</param>
     /// <param name="id">The ID of the NPC to retrieve. Optional.</param>
     /// <returns>The NPC with the specified name or ID, or null if not found.</returns>
-    /// <example>
-    /// <code>
-    /// NPC npcByName = NPCManager.Instance.GetNPC(name: "John");
-    /// NPC npcById = NPCManager.Instance.GetNPC(id: 123);
-    /// NPC npcByNameOrId = NPCManager.Instance.GetNPC(name: "John", id: 123);
-    /// </code>
-    /// </example>
     public NPC GetNPC(string name = null, int? id = null)
     {
         if (name == null && id == null)
@@ -226,22 +232,60 @@ public class NPCManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Store the conversation history of all NPCs.
+    /// </summary>
+    public void StoreConversationHistory()
+    {
+        if (ConversationHistory == null)
+        {
+            ConversationHistory = new Dictionary<string, List<Message>>();
+        }
+
+        foreach (NPC npc in NPCs)
+        {
+            if (string.IsNullOrEmpty(npc.Name))
+            {
+                Debug.LogWarning("NPC name is empty. Skipping conversation history storage.");
+                continue;
+            }
+
+            if (npc.messages == null)
+            {
+                Debug.LogWarning($"NPC {npc.Name} has no messages. Skipping.");
+                continue;
+            }
+
+            PrintConversationHistory();
+            // Update or add the conversation history
+            ConversationHistory[npc.Name] = npc.messages;
+        }
+    }
+
+    /// <summary>
+    /// Load conversation history from ConversationHistory Dictionary. This is to be used between scenes as NPCs are loaded and unloaded.
+    /// </summary>
+    public void LoadConversationHistory()
+    {
+        LoadConversationHistoryFromPlayerData(GameManager.Instance.CurrentPlayerData);
+        foreach (NPC npc in NPCs)
+        {
+            if (!ConversationHistory.ContainsKey(npc.Name))
+            {
+                continue;
+            }
+            npc.messages = ConversationHistory[npc.Name];
+        }
+    }
+
+    /// <summary>
     /// Retrieve a dictionary of all NPC conversation history.
-    /// This data should eventually be summarized before being stored in PlayerData.
     /// </summary>
     /// <returns>
     /// Dictionary with NPC names as keys and lists of conversation history as values.
     /// </returns>
     public Dictionary<string, List<Message>> GetConversationHistory()
     {
-        foreach (NPC npc in NPCs)
-        {
-            if (!ConversationHistory.ContainsKey(npc.Name))
-            {
-                ConversationHistory.Add(npc.Name, npc.messages);
-            }
-        }
-        return ConversationHistory;
+        return ConversationHistory ??= new Dictionary<string, List<Message>>();
     }
 
     /// <summary>
@@ -249,10 +293,8 @@ public class NPCManager : MonoBehaviour
     /// </summary>
     public void LoadConversationHistoryFromPlayerData(PlayerData data)
     {
-        foreach (NPC npc in NPCs)
-        {
-                npc.messages = data.conversationHistory[npc.Name];
-        }
+        ConversationHistory.Clear();
+        ConversationHistory = data.conversationHistory;
     }
 
     /// <summary>
@@ -269,5 +311,26 @@ public class NPCManager : MonoBehaviour
             }
         }
         return null;
+    }
+
+    /// <summary>
+    /// Prints all keys and their corresponding messages in the ConversationHistory dictionary.
+    /// </summary>
+    public void PrintConversationHistory()
+    {
+        if (ConversationHistory == null || ConversationHistory.Count == 0)
+        {
+            Debug.LogWarning("ConversationHistory is empty or null.");
+            return;
+        }
+
+        foreach (var entry in ConversationHistory)
+        {
+            Debug.Log($"NPC Name: {entry.Key} has {entry.Value.Count()} messages");
+            foreach (var message in entry.Value)
+            {
+                Debug.Log($"Message Role: {message.role}, Content: {message.content}");
+            }
+        }
     }
 }
