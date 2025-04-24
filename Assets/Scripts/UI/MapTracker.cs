@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MapTracker : MonoBehaviour
 {
@@ -6,27 +7,54 @@ public class MapTracker : MonoBehaviour
     public RectTransform playerIcon;  
     public RectTransform taskIcon;
 
-    public Transform player;
-    public Transform taskTarget;
+    private Transform player;
+    private Transform taskTarget;
+    private bool isOverworld;
 
     public Rect mapBounds;
 
-    void Update()
+    private void Awake()
     {
-        // For player icon on the map
-        Vector2 playerMapPosition = WorldToMapPosition(player.position);
-        playerIcon.anchoredPosition = playerMapPosition;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        TryFindPlayer();
+    }
 
-        // For task on the map if exists
-        if (taskTarget != null)
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Are we in main world
+        isOverworld = scene.name == "Overworld";
+
+        // Find dat playa
+        TryFindPlayer();
+    }
+
+    private void TryFindPlayer()
+    {
+        var pc = FindObjectOfType<PlayerController>();
+        if (pc != null)
+            player = pc.transform;
+    }
+
+    private void Update()
+    {
+        // Update if in main world
+        if (isOverworld && player != null)
         {
-            taskIcon.gameObject.SetActive(true);
-            Vector2 taskMapPosition = WorldToMapPosition(taskTarget.position);
-            taskIcon.anchoredPosition = taskMapPosition;
-        }
-        else
-        {
-            taskIcon.gameObject.SetActive(false);
+            // Playa icon
+            playerIcon.anchoredPosition = WorldToMapPosition(player.position);
+
+            // Task icon
+            if (taskTarget != null)
+            {
+                taskIcon.gameObject.SetActive(true);
+                taskIcon.anchoredPosition = WorldToMapPosition(taskTarget.position);
+            }
+            else taskIcon.gameObject.SetActive(false);
         }
     }
 
