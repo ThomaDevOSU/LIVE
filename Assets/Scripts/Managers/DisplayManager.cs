@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 /// <summary>
 /// For the Display settings
@@ -18,6 +19,7 @@ public class DisplayManager : MonoBehaviour
     void Start()
     {
         LoadResolutions();
+        LoadFPSOptions();
         LoadSettings();
     }
 
@@ -45,6 +47,27 @@ public class DisplayManager : MonoBehaviour
         resolutionDropdown.value = savedResolutionIndex;
         resolutionDropdown.RefreshShownValue();
         resolutionDropdown.onValueChanged.AddListener(SetResolution);
+    }
+
+    /// <summary>
+    /// Fix the FPS issue
+    /// </summary>
+    void LoadFPSOptions()
+    {
+        fpsLimitDropdown.ClearOptions();
+
+        // Set 1:1
+        var labels = new List<string>
+        {
+            "30 FPS",
+            "60 FPS",
+            "120 FPS",
+            "144 FPS",
+            "240 FPS",
+            "Unlimited"
+        };
+
+        fpsLimitDropdown.AddOptions(labels);
     }
 
     /// <summary>
@@ -108,7 +131,8 @@ public class DisplayManager : MonoBehaviour
 
         // Load FPS limit
         int savedFPSIndex = PlayerPrefs.GetInt("FPSLimit", 1);
-        fpsLimitDropdown.value = savedFPSIndex;
+        fpsLimitDropdown.value = Mathf.Clamp(savedFPSIndex, 0, fpsLimitDropdown.options.Count - 1);
+        fpsLimitDropdown.RefreshShownValue();
         fpsLimitDropdown.onValueChanged.AddListener(SetFPSLimit);
     }
 }
