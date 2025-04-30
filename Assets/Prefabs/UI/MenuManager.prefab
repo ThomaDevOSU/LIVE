@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8986562921324195007}
   - component: {fileID: 7693133380196339450}
   - component: {fileID: 5857788574515287348}
+  - component: {fileID: 5864513143453635780}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -139,6 +140,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeveloperMenu: {fileID: 3208063455495019576}
+--- !u!114 &5864513143453635780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2919772347843678185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67073ef23828b9f43b0914769ccaf86a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelRoot: {fileID: 3588217190759033856}
 --- !u!1001 &6607671813233653985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -413,6 +427,22 @@ PrefabInstance:
     - target: {fileID: 3380225227090510004, guid: 5546908e4a0335044b0f8fa679a602c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679284187091171579, guid: 5546908e4a0335044b0f8fa679a602c0, type: 3}
+      propertyPath: mapBounds.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679284187091171579, guid: 5546908e4a0335044b0f8fa679a602c0, type: 3}
+      propertyPath: mapBounds.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679284187091171579, guid: 5546908e4a0335044b0f8fa679a602c0, type: 3}
+      propertyPath: mapBounds.width
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679284187091171579, guid: 5546908e4a0335044b0f8fa679a602c0, type: 3}
+      propertyPath: mapBounds.height
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 8436283955023784053, guid: 5546908e4a0335044b0f8fa679a602c0, type: 3}
       propertyPath: m_Name
@@ -1020,6 +1050,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5068854801728148783, guid: f698e8afde4452d4d8c5ea0d6d7eb881, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068854801728148783, guid: f698e8afde4452d4d8c5ea0d6d7eb881, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068854801728148783, guid: f698e8afde4452d4d8c5ea0d6d7eb881, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5864513143453635780}
+    - target: {fileID: 5068854801728148783, guid: f698e8afde4452d4d8c5ea0d6d7eb881, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068854801728148783, guid: f698e8afde4452d4d8c5ea0d6d7eb881, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnContinue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068854801728148783, guid: f698e8afde4452d4d8c5ea0d6d7eb881, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EndDayMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068854801728148783, guid: f698e8afde4452d4d8c5ea0d6d7eb881, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6769477256631186021, guid: f698e8afde4452d4d8c5ea0d6d7eb881, type: 3}
       propertyPath: m_Name
       value: EndDayMenu
@@ -1033,6 +1091,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f698e8afde4452d4d8c5ea0d6d7eb881, type: 3}
+--- !u!1 &3588217190759033856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6769477256631186021, guid: f698e8afde4452d4d8c5ea0d6d7eb881, type: 3}
+  m_PrefabInstance: {fileID: 7798522841639558757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6735162594556188254 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3549383542489679931, guid: f698e8afde4452d4d8c5ea0d6d7eb881, type: 3}
