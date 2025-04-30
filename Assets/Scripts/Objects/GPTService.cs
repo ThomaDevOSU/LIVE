@@ -225,15 +225,16 @@ public class GPTService : MonoBehaviour
 
     /// <summary>
     /// Sends a request to the GPT API to summarize all previous dialogue interactions in the NPC's message list.
+    /// This method should be used during a save not load for performance reasons (NPCs load many times during runtime).
     /// </summary>
     /// <param name="NPCData">The data of the NPC whose messages need to be summarized.</param>
     /// <returns>An IEnumerator for coroutine handling.</returns>
     public IEnumerator SummarizeMessagesApiCall(NPC NPCData)
     {
-        // Generate the prompt for summarizing messages
+        // Generate the prompt for summarizing messages. All but the first message which is the system prompt is included.
         string prompt = $@"
     Conversation History:
-    {string.Join("\n", NPCData.messages.Select(m => $"{m.role}: {m.content}"))}
+    {string.Join("\n", NPCData.messages.Skip(1).Select(m => $"{m.role}: {m.content}"))}  
     Instructions:
     Summarize the above conversation history into a single concise paragraph. 
     The summary should cover all important details and ensure no critical information is lost. 
@@ -245,7 +246,7 @@ public class GPTService : MonoBehaviour
         {
             model = "gpt-4o",
             messages = new Message[] { message },
-            max_completion_tokens = 150
+            max_completion_tokens = 500
         };
 
         // Serialize the request body to JSON
@@ -276,7 +277,9 @@ public class GPTService : MonoBehaviour
             if (!string.IsNullOrEmpty(summary))
             {
                 Debug.Log($"Conversation Summary: {summary}");
-                // right now this is just added into the NPC immediately. We will see if this is the best going forward
+                // Remove all but the first message in the list because this is the system message with NPC profile.
+                NPCData.messages.RemoveRange(1, NPCData.messages.Count - 1);
+                // right now this is just added into the NPC immediately
                 NPCData.messages.Add(new Message { role = "system", content = summary });
             }
             else
@@ -285,7 +288,6 @@ public class GPTService : MonoBehaviour
             }
         }
     }
-
 
     /// <summary>
     /// Processes the task response and take call the appropriate method from TaskManager.
