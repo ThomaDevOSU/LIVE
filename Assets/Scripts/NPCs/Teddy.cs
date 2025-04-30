@@ -28,13 +28,13 @@ public class Teddy_Cat : MonoBehaviour
             animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
-                "Oh, it’s you. Again.",
-                "Unless you brought treats, I fail to see the point of this interaction.",
-                "Speak quickly. My time is valuable.",
-                "What do you want, human?",
-                "You may admire me, but please do so from a respectable distance.",
-                "I was in the middle of something… important. Probably.",
-                "You are, at best, a mild distraction. Proceed.",
+                LocalizationManager.Instance.GetLocalizedValue("Teddy_Greeting_1", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Teddy_Greeting_2", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Teddy_Greeting_3", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Teddy_Greeting_4", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Teddy_Greeting_5", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Teddy_Greeting_6", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Teddy_Greeting_7", isUI.NOTUI)
             },
             inDialogue = false,
             ID = 8,

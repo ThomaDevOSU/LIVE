@@ -28,14 +28,14 @@ public class Isabella_Police : MonoBehaviour
             animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
-                "Halt! State your business… just kidding. Or am I?",
-                "You’re not up to anything suspicious, are you?",
-                "If you see anything unusual, report it to me immediately!",
-                "I've got my eye on you… and everyone else.",
-                "Do you believe in coincidences? Because I don’t.",
-                "The town may seem quiet… too quiet.",
-                "Any leads on the case? No? That’s exactly what they want us to think.",
-                "Stay alert. You never know who—or what—is watching.",
+                LocalizationManager.Instance.GetLocalizedValue("Isabella_Greeting_1", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Isabella_Greeting_2", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Isabella_Greeting_3", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Isabella_Greeting_4", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Isabella_Greeting_5", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Isabella_Greeting_6", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Isabella_Greeting_7", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Isabella_Greeting_8", isUI.NOTUI)
             },
             inDialogue = false,
             ID = 12,

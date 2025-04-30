@@ -28,14 +28,14 @@ public class Will_Mayor : MonoBehaviour
             animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
-                "Ah, hello there! Always good to see a friendly face.",
-                "Oh! You know, this reminds me of a story… Oh, but where are my manners? How are you?",
-                "Welcome, welcome! How’s your day treating you?",
-                "Ah, another fine day in Babel, wouldn’t you say?",
-                "Good to see you! If you ever need anything, don’t hesitate to ask.",
-                "Oh, you just missed Mabel—she was telling the most wonderful story. But tell me, how are you?",
-                "You know, this town wouldn’t be the same without folks like you.",
-                "Ah, reminds me of the good old days! But enough about me, what’s on your mind?",
+                LocalizationManager.Instance.GetLocalizedValue("Will_Greeting_1", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Will_Greeting_2", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Will_Greeting_3", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Will_Greeting_4", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Will_Greeting_5", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Will_Greeting_6", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Will_Greeting_7", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Will_Greeting_8", isUI.NOTUI)
             },
             inDialogue = false,
             ID = 9,

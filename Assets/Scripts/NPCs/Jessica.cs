@@ -28,13 +28,13 @@ public class Jessica_Waitress : MonoBehaviour
             animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
-                "Hey! You ever just sit and watch the birds? They live such a simple life.",
-                "What’s up? I just got off work—finally. Ronny runs a tight ship.",
-                "Thinking about the ocean again. One day, I’ll see it for myself.",
-                "You ever wonder what’s out there? Like, beyond this town?",
-                "Ronny’s making me work an extra shift, but at least I get free food.",
-                "Oh, hey! Wanna help me figure out what kind of bird this is?",
-                "It’s nice to just slow down sometimes, you know?",
+                LocalizationManager.Instance.GetLocalizedValue("Jessica_Greeting_1", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Jessica_Greeting_2", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Jessica_Greeting_3", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Jessica_Greeting_4", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Jessica_Greeting_5", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Jessica_Greeting_6", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Jessica_Greeting_7", isUI.NOTUI)
             },
             inDialogue = false,
             ID = 6,

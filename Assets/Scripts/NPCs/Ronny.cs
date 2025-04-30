@@ -28,14 +28,14 @@ public class Ronny_Chef : MonoBehaviour
             animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
-                "Hmph. You again? What do you want?",
-                "Hope you didn’t come looking for small talk.",
-                "You got something to say, or are we just standing here?",
-                "You want advice? Double the butter. Works every time.",
-                "Talk fast, kid. I’m not one for wasting time.",
-                "You checking in on me, or just lost?",
-                "Haven’t scared you off yet, huh?",
-                "Alright, let’s hear it. What’s on your mind?",
+                LocalizationManager.Instance.GetLocalizedValue("Ronny_Greeting_1", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Ronny_Greeting_2", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Ronny_Greeting_3", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Ronny_Greeting_4", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Ronny_Greeting_5", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Ronny_Greeting_6", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Ronny_Greeting_7", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Ronny_Greeting_8", isUI.NOTUI)
             },
             inDialogue = false,
             ID = 3,

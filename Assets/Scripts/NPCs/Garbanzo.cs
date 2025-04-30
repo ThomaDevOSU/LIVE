@@ -28,14 +28,13 @@ public class Garbanzo_Dog : MonoBehaviour
             animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
-                "Hi! Have snack?",
-                "BALL! WHERE?! Oh… hi!",
-                "Pet? Yes? No? Yes!",
-                "Teddy! No… wait, you’re not Teddy.",
-                "Running? Running now? Let’s go!",
-                "Smells good! Is it food? I hope it's food.",
-                "Hi hi hi hi hi!",
-                "Rub belly? Please?",
+                LocalizationManager.Instance.GetLocalizedValue("Garbanzo_Greeting_1", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Garbanzo_Greeting_2", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Garbanzo_Greeting_3", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Garbanzo_Greeting_4", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Garbanzo_Greeting_5", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Garbanzo_Greeting_6", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Garbanzo_Greeting_7", isUI.NOTUI)
             },
             inDialogue = false,
             ID = 7,
