@@ -142,6 +142,7 @@ public class DialogueManager : MonoBehaviour
             // Choose random greeting
             sentences = new string[] { currentNPC.Greeting[Random.Range(0, currentNPC.Greeting.Length)] }
         };
+        currentNPC.messages.Add(new Message { role = "assistant", content = string.Join(",", dialogue.sentences)});
 
         currentDialogue = dialogue;
 

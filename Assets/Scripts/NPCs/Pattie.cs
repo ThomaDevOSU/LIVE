@@ -49,30 +49,19 @@ public class Pattie_Baker : MonoBehaviour
             Personality = new List<string> { "Friendly", "Empathetic", "Loyal", "Avoids talking about pies" },
             Schedule = new List<ScheduleEntry>
             {
-                new()
-                {
-                    waypoint = "test",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test1",
-                    time = 9,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test2",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "test3",
-                    time = 11,
-                    location = "Overworld"
-                }
+                new() { waypoint = "BakeryBack", time = 8, location = "Bakery" },
+                new() { waypoint = "BakeryFry", time = 9, location = "Bakery" },
+                new() { waypoint = "BakeryCounter", time = 10, location = "Bakery" },
+                new() { waypoint = "BakeryClerk", time = 11, location = "Bakery" },
+                new() { waypoint = "BakeryLine", time = 12, location = "Bakery" },
+                new() { waypoint = "Bakery Table", time = 13, location = "Overworld" },
+                new() { waypoint = "Cafe Entrance", time = 14, location = "Overworld" },
+                new() { waypoint = "CafeCounter", time = 15, location = "Cafe" },
+                new() { waypoint = "Park Bench", time = 16, location = "Overworld" },
+                new() { waypoint = "Post Office Entrance", time = 17, location = "Overworld" },
+                new() { waypoint = "Town Hall Entrance", time = 18, location = "Overworld" },
+                new() { waypoint = "House 1", time = 19, location = "Overworld" },
+                new() { waypoint = "House 1", time = 20, location = "Overworld" }
             },
             messages = new List<Message>(),
             CurrentLocation = "Bakery",

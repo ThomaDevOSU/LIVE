@@ -17,6 +17,7 @@ public class PlayerProgressManager : MonoBehaviour
 
     // Rewards tracking
     private List<string> playerRewards;
+    
 
     private void Awake() // Singleton pattern
     {
@@ -177,6 +178,7 @@ public class PlayerProgressManager : MonoBehaviour
         data.completedTasks = GetCompletedTasks();
         data.missionStats = GetAllMissionStats();
         data.playerRewards = GetAllRewards();
+        data.conversationHistory = NPCManager.Instance.GetConversationHistory();
     }
 
     // Load Progress from PlayerData
@@ -186,6 +188,7 @@ public class PlayerProgressManager : MonoBehaviour
         completedTasks = new List<Task>(data.completedTasks);
         missionStats = new Dictionary<string, MissionStats>(data.missionStats);
         playerRewards = new List<string>(data.playerRewards);
+        
     }
 
 }
