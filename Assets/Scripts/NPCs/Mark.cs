@@ -28,14 +28,14 @@ public class Mark_GeneralStoreOwner : MonoBehaviour
             animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
-                "Oh hey, need anything?",
-                "Welcome, take your time. I think I had a sale on… something. What was it again?",
-                "Hey there! You ever think about how everything in life is just borrowed?",
-                "If you’re looking for something, I probably have it. Somewhere. We’ll find it… eventually.",
-                "Hey, do you need help or are you just here to bask in the silence?",
-                "I was just about to take a break, but I guess I can work for a bit. What do you need?",
-                "The universe provides, but a general store helps too. What can I get for you?",
-                "If Amy asks, I’m very busy. If you ask, I’m chill. What’s up?",
+                LocalizationManager.Instance.GetLocalizedValue("Mark_Greeting_1", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Mark_Greeting_2", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Mark_Greeting_3", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Mark_Greeting_4", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Mark_Greeting_5", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Mark_Greeting_6", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Mark_Greeting_7", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Mark_Greeting_8", isUI.NOTUI)
             },
             inDialogue = false,
             ID = 4,
