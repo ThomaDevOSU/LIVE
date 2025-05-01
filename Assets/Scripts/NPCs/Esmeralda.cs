@@ -28,13 +28,13 @@ public class Esmeralda_Pharmacist : MonoBehaviour
             animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
-                "Ah, you've arrived. Fate, or mere coincidence?",
-                "Hmm... I had a feeling you'd stop by.",
-                "Looking for something ordinary, or something... unusual?",
-                "Mmm, I see. The energies are shifting today.",
-                "Careful, traveler. Some answers come with more questions.",
-                "You seem well. Or perhaps, merely well enough?",
-                "A drop of knowledge, a pinch of mystery... what shall I offer today?",
+                LocalizationManager.Instance.GetLocalizedValue("Esmeralda_Greeting_1", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Esmeralda_Greeting_2", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Esmeralda_Greeting_3", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Esmeralda_Greeting_4", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Esmeralda_Greeting_5", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Esmeralda_Greeting_6", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Esmeralda_Greeting_7", isUI.NOTUI)
             },
             inDialogue = false,
             ID = 11,

@@ -28,13 +28,13 @@ public class Amy_Doctor : MonoBehaviour
             animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
-                "Oh, hey! Are you staying hydrated? You should be.",
-                "If you’re here because something hurts, let’s get it checked out.",
-                "Please tell me you’re here for a check-up and not because of another ‘accident.’",
-                "Feeling alright? You look fine, but I ask everyone just in case.",
-                "If you want medical advice, I’m here. If you want life advice… maybe ask someone else.",
-                "Try not to get sick, okay? This town has enough reckless people as it is.",
-                "If you’re here because you saw Esmeralda first… please, just don’t tell me what she gave you.",
+                LocalizationManager.Instance.GetLocalizedValue("Amy_Greeting_1", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Amy_Greeting_2", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Amy_Greeting_3", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Amy_Greeting_4", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Amy_Greeting_5", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Amy_Greeting_6", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Amy_Greeting_7", isUI.NOTUI)
             },
             inDialogue = false,
             ID = 5,

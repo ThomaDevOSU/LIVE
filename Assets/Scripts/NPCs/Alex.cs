@@ -28,14 +28,14 @@ public class Alex_Barista : MonoBehaviour
             animator = GetComponent<Animator>(),
             Greeting = new string[]
             {
-                "Hey there! Need a caffeine fix, or just here for the vibes?",
-                "Welcome to Babbling Bean! What’s your go-to drink?",
-                "Morning! Or afternoon. Time kinda blurs together when you work with coffee all day.",
-                "Hope you’re not here for decaf… I mean, I’ll make it, but I won’t be happy about it.",
-                "You ever just stare into your coffee and contemplate life? No? Just me? Cool, cool.",
-                "If you’re looking for something sweet, I *attempted* to bake again. No guarantees.",
-                "Caffeine limit? What’s that? Nah, I’m kidding. Sort of.",
-                "If you need a pick-me-up, I got coffee. If you need life advice… well, I got coffee.",
+                LocalizationManager.Instance.GetLocalizedValue("Alex_Greeting_1", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Alex_Greeting_2", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Alex_Greeting_3", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Alex_Greeting_4", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Alex_Greeting_5", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Alex_Greeting_6", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Alex_Greeting_7", isUI.NOTUI),
+                LocalizationManager.Instance.GetLocalizedValue("Alex_Greeting_8", isUI.NOTUI)
             },
             inDialogue = false,
             ID = 2,
