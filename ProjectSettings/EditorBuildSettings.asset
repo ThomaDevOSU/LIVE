@@ -32,6 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TownHall.unity
     guid: 0e1b7db4d6b2206498b00f5c67533c1a
+  - enabled: 1
+    path: Assets/Scenes/GroceryStore.unity
+    guid: cc5aeada0dc7fdc4da4dbab8ba8f225b
+  - enabled: 1
+    path: Assets/Scenes/PostOffice.unity
+    guid: c5fc95bdb94b6184bb38e3aa41449e17
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
