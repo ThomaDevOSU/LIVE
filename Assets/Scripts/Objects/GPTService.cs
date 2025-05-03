@@ -229,12 +229,13 @@ public class GPTService : MonoBehaviour
     /// </summary>
     /// <param name="NPCData">The data of the NPC whose messages need to be summarized.</param>
     /// <returns>An IEnumerator for coroutine handling.</returns>
-    public IEnumerator SummarizeMessagesApiCall(NPC NPCData)
+    public IEnumerator SummarizeMessagesApiCall(List<Message> messagelist)
     {
+        Debug.Log($"Starting summary of: {messagelist.Skip(1).Select(m => m.ToString())}");
         // Generate the prompt for summarizing messages. All but the first message which is the system prompt is included.
         string prompt = $@"
     Conversation History:
-    {string.Join("\n", NPCData.messages.Skip(1).Select(m => $"{m.role}: {m.content}"))}  
+    {string.Join("\n", messagelist.Skip(1).Select(m => $"{m.role}: {m.content}"))}  
     Instructions:
     Summarize the above conversation history into a single concise paragraph. 
     The summary should cover all important details and ensure no critical information is lost. 
@@ -273,14 +274,15 @@ public class GPTService : MonoBehaviour
         {
             string summaryResponse = request.downloadHandler.text;
             string summary = ParseDialogueResponse(summaryResponse);
+            Debug.Log($"Summary complete: {messagelist.Skip(1).Select(m => m.ToString())}");
 
             if (!string.IsNullOrEmpty(summary))
             {
                 Debug.Log($"Conversation Summary: {summary}");
                 // Remove all but the first message in the list because this is the system message with NPC profile.
-                NPCData.messages.RemoveRange(1, NPCData.messages.Count - 1);
+                messagelist.RemoveRange(1, messagelist.Count - 1);
                 // right now this is just added into the NPC immediately
-                NPCData.messages.Add(new Message { role = "system", content = summary });
+                messagelist.Add(new Message { role = "system", content = summary });
             }
             else
             {

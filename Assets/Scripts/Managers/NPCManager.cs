@@ -41,6 +41,11 @@ public class NPCManager : MonoBehaviour
     WaypointManager waypointManager;
 
     /// <summary>
+    ///  GPT service instance.
+    /// </summary>
+    GPTService gptService;
+
+    /// <summary>
     /// waypoint to move to.
     /// </summary>
     Transform waypoint;
@@ -63,6 +68,7 @@ public class NPCManager : MonoBehaviour
     {
         gameClock = GameClock.Instance;
         waypointManager = WaypointManager.Instance;
+        gptService = GPTService.Instance;
     }
 
     void OnEnable()
@@ -254,8 +260,8 @@ public class NPCManager : MonoBehaviour
                 Debug.LogWarning($"NPC {npc.Name} has no messages. Skipping.");
                 continue;
             }
-
-            PrintConversationHistory();
+            // Uncomment this for debugging save, load, summary of dialogue.
+            // PrintConversationHistory();
             // Update or add the conversation history
             ConversationHistory[npc.Name] = npc.messages;
         }
@@ -278,13 +284,14 @@ public class NPCManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Retrieve a dictionary of all NPC conversation history.
+    /// Retrieve a dictionary of all NPC conversation history. This is only called before a Save.
     /// </summary>
     /// <returns>
     /// Dictionary with NPC names as keys and lists of conversation history as values.
     /// </returns>
     public Dictionary<string, List<Message>> GetConversationHistory()
     {
+        SummarizeConversationHistory();
         return ConversationHistory ??= new Dictionary<string, List<Message>>();
     }
 
@@ -331,6 +338,31 @@ public class NPCManager : MonoBehaviour
             {
                 Debug.Log($"Message Role: {message.role}, Content: {message.content}");
             }
+        }
+    }
+
+    ///<summary>
+    /// Summarize contents of conversation history using GPTService.
+    /// </summary>
+    public void SummarizeConversationHistory()
+    {
+        // Need to summarize with conversationhistory not NPCs
+        // Send each value (List<Message>) and return and replace that list with the new single entry
+        foreach (var item in ConversationHistory)
+        {
+            //Debug.Log($"Summarizing {item.Key} convo history from {string.Join(", ", item.Value.Select(msg => $"[{msg.role}:\n {msg.content}]\n"))}");
+            if (gptService == null)
+            {
+                Debug.LogError("gptService is null. Ensure GPTService.Instance is properly initialized.");
+            }
+            if (item.Value == null)
+            {
+                Debug.LogError($"item.Value is null for key: {item.Key}. Check ConversationHistory for inconsistencies.");
+            }
+            if ( item.Value == null || item.Value.Count < 2) { continue; }
+            StartCoroutine(gptService.SummarizeMessagesApiCall(item.Value));
+            //Debug.Log($"Finished summary for {item.Key}");
+            //Debug.Log($"To: {string.Join(", ", item.Value.Select(msg => $"[{msg.role}: {msg.content}]"))}");
         }
     }
 }
