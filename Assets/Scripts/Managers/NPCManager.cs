@@ -291,7 +291,7 @@ public class NPCManager : MonoBehaviour
     /// </returns>
     public Dictionary<string, List<Message>> GetConversationHistory()
     {
-        SummarizeConversationHistory();
+        // SummarizeConversationHistory();
         return ConversationHistory ??= new Dictionary<string, List<Message>>();
     }
 
@@ -342,27 +342,28 @@ public class NPCManager : MonoBehaviour
     }
 
     ///<summary>
-    /// Summarize contents of conversation history using GPTService.
+    /// Summarize contents of conversation history using GPTService. 
+    /// Almost works. No longer worth time investment.
     /// </summary>
-    public void SummarizeConversationHistory()
-    {
-        // Need to summarize with conversationhistory not NPCs
-        // Send each value (List<Message>) and return and replace that list with the new single entry
-        foreach (var item in ConversationHistory)
-        {
-            //Debug.Log($"Summarizing {item.Key} convo history from {string.Join(", ", item.Value.Select(msg => $"[{msg.role}:\n {msg.content}]\n"))}");
-            if (gptService == null)
-            {
-                Debug.LogError("gptService is null. Ensure GPTService.Instance is properly initialized.");
-            }
-            if (item.Value == null)
-            {
-                Debug.LogError($"item.Value is null for key: {item.Key}. Check ConversationHistory for inconsistencies.");
-            }
-            if ( item.Value == null || item.Value.Count < 2) { continue; }
-            StartCoroutine(gptService.SummarizeMessagesApiCall(item.Value));
-            //Debug.Log($"Finished summary for {item.Key}");
-            //Debug.Log($"To: {string.Join(", ", item.Value.Select(msg => $"[{msg.role}: {msg.content}]"))}");
-        }
-    }
+//    public void SummarizeConversationHistory()
+//    {
+//        // Need to summarize with conversationhistory not NPCs
+//        // Send each value (List<Message>) and return and replace that list with the new single entry
+//        foreach (var item in ConversationHistory)
+//        {
+//            //Debug.Log($"Summarizing {item.Key} convo history from {string.Join(", ", item.Value.Select(msg => $"[{msg.role}:\n {msg.content}]\n"))}");
+//            if (gptService == null)
+//            {
+//                Debug.LogError("gptService is null. Ensure GPTService.Instance is properly initialized.");
+//            }
+//            if (item.Value == null)
+//            {
+//                Debug.LogError($"item.Value is null for key: {item.Key}. Check ConversationHistory for inconsistencies.");
+//            }
+//            if ( item.Value == null || item.Value.Count < 2) { continue; }
+//            StartCoroutine(gptService.SummarizeMessagesApiCall(item.Value));
+//            //Debug.Log($"Finished summary for {item.Key}");
+//            //Debug.Log($"To: {string.Join(", ", item.Value.Select(msg => $"[{msg.role}: {msg.content}]"))}");
+//        }
+//    }
 }
