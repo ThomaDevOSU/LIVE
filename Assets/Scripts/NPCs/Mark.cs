@@ -48,26 +48,25 @@ public class Mark_GeneralStoreOwner : MonoBehaviour
             "Garbanzo technically belongs to him, but he lets the dog wander freely, believing in 'free-range' pet ownership.",
             Personality = new List<string> { "Laid-back", "Philosophical", "Forgetful", "Family-oriented" },
             Schedule = new List<ScheduleEntry>
-            {
-                new()
-                {
-                    waypoint = "Hospital Entrance",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Cafe Entrance",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Overworld",
-                    time = 14,
-                    location = "Overworld"
-                }
-            },
+                       {
+                          new() { waypoint = "House 4-1", time = 8, location = "Overworld" },
+                          new() { waypoint = "GroceryClerk", time = 9, location = "GroceryStore" },
+                          new() { waypoint = "GroceryClerk", time = 10, location = "GroceryStore" },
+                          new() { waypoint = "GroceryClerk", time = 11, location = "GroceryStore" },
+                          new() { waypoint = "GroceryAisle1", time = 12, location = "GroceryStore" },
+                          new() { waypoint = "GroceryClerk", time = 13, location = "GroceryStore" },
+                          new() { waypoint = "GroceryAisle1", time = 14, location = "GroceryStore" },
+                          new() { waypoint = "GroceryAisle2", time = 15, location = "GroceryStore" },
+                          new() { waypoint = "GroceryClerk", time = 16, location = "GroceryStore" },
+                          new() { waypoint = "GroceryClerk", time = 17, location = "GroceryStore" },
+                          new() { waypoint = "GroceryAisle2", time = 18, location = "GroceryStore" },
+                          new() { waypoint = "GroceryClerk", time = 19, location = "GroceryStore" },
+                          new() { waypoint = "GroceryAisle1", time = 20, location = "GroceryStore" },
+                          new() { waypoint = "House 4-1", time = 21, location = "Overworld" },
+                          new() { waypoint = "House 4-1", time = 22, location = "Overworld" },
+                          new() { waypoint = "House 4-1", time = 23, location = "Overworld" },
+                          new() { waypoint = "House 4-1", time = 24, location = "Overworld" }
+                       },
             messages = new List<Message>(),
             CurrentLocation = "Store",
             CurrentCoordinates = new Vector2(2, 4)

@@ -45,26 +45,26 @@ public class Esmeralda_Pharmacist : MonoBehaviour
             "She speaks in cryptic riddles and often knows things she was never told, adding to her air of mystery." +
             "She takes care of her nephew Ace who was sent to Babel to overcome behavioral issues",
             Personality = new List<string> { "Mysterious", "Aloof", "Intelligent", "Cryptic" },
+
             Schedule = new List<ScheduleEntry>
             {
-                new()
-                {
-                    waypoint = "Greenhouse Entrance",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Tire Swing",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Overworld",
-                    time = 14,
-                    location = "Overworld"
-                }
+               new() { waypoint = "HospitalPharma", time = 8, location = "Hospital" },
+               new() { waypoint = "HospitalPharma", time = 9, location = "Hospital" },
+               new() { waypoint = "Cafe Entrance", time = 10, location = "Overworld" },
+               new() { waypoint = "CafeLine", time = 11, location = "Cafe" },
+               new() { waypoint = "CafeCounter", time = 12, location = "Cafe" },
+               new() { waypoint = "HospitalPharma", time = 13, location = "Hospital" },
+               new() { waypoint = "HospitalEntrance", time = 14, location = "Hospital" },
+               new() { waypoint = "HospitalEntrance", time = 15, location = "Hospital" },
+               new() { waypoint = "HospitalPharma", time = 16, location = "Hospital" },
+               new() { waypoint = "HospitalPharma", time = 17, location = "Hospital" },
+               new() { waypoint = "HospitalPharma", time = 18, location = "Hospital" },
+               new() { waypoint = "GroceryAisle3", time = 19, location = "GroceryStore" },
+               new() { waypoint = "GroceryLine", time = 20, location = "GroceryStore" },
+               new() { waypoint = "GroceryCounter", time = 21, location = "GroceryStore" },
+               new() { waypoint = "House 6-1", time = 22, location = "Overworld" },
+               new() { waypoint = "House 6-1", time = 23, location = "Overworld" },
+               new() { waypoint = "House 6-1", time = 24, location = "Overworld" }
             },
             messages = new List<Message>(),
             CurrentLocation = "Pharmacy",

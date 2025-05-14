@@ -48,24 +48,23 @@ public class Isabella_Police : MonoBehaviour
             Personality = new List<string> { "Energetic", "Suspicious", "Dramatic", "Dedicated" },
             Schedule = new List<ScheduleEntry>
             {
-                new()
-                {
-                    waypoint = "Park Slide",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Overworld",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Overworld",
-                    time = 14,
-                    location = "Overworld"
-                }
+               new() { waypoint = "PoliceStationOffice", time = 8, location = "PoliceStation" },
+               new() { waypoint = "PoliceStationOffice", time = 9, location = "PoliceStation" },
+               new() { waypoint = "Police Patrol 1", time = 10, location = "Overworld" },
+               new() { waypoint = "Police Patrol 2", time = 11, location = "Overworld" },
+               new() { waypoint = "Police Patrol 3", time = 12, location = "Overworld" },
+               new() { waypoint = "Police Patrol 4", time = 13, location = "Overworld" },
+               new() { waypoint = "Police Patrol 3", time = 14, location = "Overworld" },
+               new() { waypoint = "Police Patrol 2", time = 15, location = "Overworld" },
+               new() { waypoint = "Police Patrol 1", time = 16, location = "Overworld" },
+               new() { waypoint = "Police Station Entrance", time = 17, location = "Overworld" },
+               new() { waypoint = "PoliceStationGarage", time = 18, location = "PoliceStation" },
+               new() { waypoint = "TownHallEntrance", time = 19, location = "TownHall" },
+               new() { waypoint = "TownHallOffice2", time = 20, location = "TownHall" },
+               new() { waypoint = "TownHallOffice2", time = 21, location = "TownHall" },
+               new() { waypoint = "House 7", time = 22, location = "Overworld" },
+               new() { waypoint = "Greenhouse Entrance", time = 23, location = "Overworld" },
+               new() { waypoint = "Greenhouse Entrance", time = 24, location = "Overworld" }
             },
             messages = new List<Message>(),
             CurrentLocation = "Police Station",

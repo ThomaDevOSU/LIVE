@@ -48,24 +48,23 @@ public class Will_Mayor : MonoBehaviour
             Personality = new List<string> { "Kind", "Talkative", "Sentimental", "Dedicated" },
             Schedule = new List<ScheduleEntry>
             {
-                new()
-                {
-                    waypoint = "House 2",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Town Hall Entrance",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "House 4",
-                    time = 14,
-                    location = "Overworld"
-                }
+               new() { waypoint = "Cafe Entrance", time = 8, location = "Overworld" },
+               new() { waypoint = "CafeLine", time = 9, location = "Cafe" },
+               new() { waypoint = "CafeCounter", time = 10, location = "Cafe" },
+               new() { waypoint = "TownHallEntrance", time = 11, location = "TownHall" },
+               new() { waypoint = "TownHallOffice1", time = 12, location = "TownHall" },
+               new() { waypoint = "HospitalCounter1", time = 13, location = "Hospital" },
+               new() { waypoint = "HospitalCounter1", time = 14, location = "Hospital" },
+               new() { waypoint = "HospitalOffice2", time = 15, location = "Hospital" },
+               new() { waypoint = "HospitalOffice2", time = 16, location = "Hospital" },
+               new() { waypoint = "HospitalOffice2", time = 17, location = "Hospital" },
+               new() { waypoint = "TownHallOffice1", time = 18, location = "TownHall" },
+               new() { waypoint = "TownHallOffice1", time = 19, location = "TownHall" },
+               new() { waypoint = "TownHallOffice1", time = 20, location = "TownHall" },
+               new() { waypoint = "TownHallOffice1", time = 21, location = "TownHall" },
+               new() { waypoint = "TownHallEntrance", time = 22, location = "TownHall" },
+               new() { waypoint = "House 5-2", time = 23, location = "Overworld" },
+               new() { waypoint = "House 5-2", time = 24, location = "Overworld" }
             },
             messages = new List<Message>(),
             CurrentLocation = "Town Hall",

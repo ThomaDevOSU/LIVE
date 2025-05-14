@@ -50,30 +50,32 @@ public class Elijah_Postmaster : MonoBehaviour
             Personality = new List<string> { "Philosophical", "Stoic", "Observant", "Minimalist" },
             Schedule = new List<ScheduleEntry>
             {
-                new ScheduleEntry
-                {
-                    waypoint = "Post Office Entrance",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ScheduleEntry
-                {
-                    waypoint = "Cafe Table",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ScheduleEntry
-                {
-                    waypoint = "Post Office Entrance",
-                    time = 14,
-                    location = "Overworld"
-                }
-            }
+                new() { waypoint = "House 8", time = 8, location = "House" },
+                new() { waypoint = "PostOffice", time = 9, location = "PostOffice" },
+                new() { waypoint = "PostOffice", time = 10, location = "PostOffice" },
+                new() { waypoint = "PostOffice", time = 11, location = "PostOffice" },
+                new() { waypoint = "PostOffice", time = 12, location = "PostOffice" },
+                new() { waypoint = "PostOffice", time = 13, location = "PostOffice" },
+                new() { waypoint = "PostOffice", time = 14, location = "PostOffice" },
+                new() { waypoint = "PostOffice", time = 15, location = "PostOffice" },
+                new() { waypoint = "PostOffice", time = 16, location = "PostOffice" },
+                new() { waypoint = "PostOffice", time = 17, location = "PostOffice" },
+                new() { waypoint = "PostOffice", time = 18, location = "PostOffice" },
+                new() { waypoint = "PostOffice", time = 19, location = "PostOffice" },
+                new() { waypoint = "PostOffice", time = 20, location = "PostOffice" },
+                new() { waypoint = "House 8", time = 21, location = "House" },
+                new() { waypoint = "House 8", time = 22, location = "House" },
+                new() { waypoint = "House 8", time = 23, location = "House" },
+                new() { waypoint = "House 8", time = 24, location = "House" }
+            },
+            messages = new List<Message>(),
+            CurrentLocation = "Overworld",
+            CurrentCoordinates = new Vector2(5, 5),
         };
-        Elijah.agent.updateRotation = false;
-        Elijah.agent.updateUpAxis = false;
-        NPCManager.Instance.AddNPC(Elijah);
-    }
+            Elijah.agent.updateRotation = false;
+            Elijah.agent.updateUpAxis = false;
+            NPCManager.Instance.AddNPC(Elijah);
+        }
 
     /// <summary>
     /// Triggers the dialogue interaction when the player stays within the collider and presses the designated button.

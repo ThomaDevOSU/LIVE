@@ -52,26 +52,24 @@ public class Ava_Informer : MonoBehaviour
             Personality = new List<string> { "Talkative", "Nosy", "Energetic", "Observant" },
             Schedule = new List<ScheduleEntry>
             {
-                new()
-                {
-                    waypoint = "House 3",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new()
-                {
-                    waypoint = "House 2",
-                    time = 10,
-                    location = "Overwold"
-                },
-                new()
-                {
-                    waypoint = "Overworld",
-                    time = 14,
-                    location = "Overworld"
-                }
+               new() { waypoint = "House 9", time = 8, location = "Overworld" },
+               new() { waypoint = "Bakery Entrance", time = 9, location = "Overworld" },
+               new() { waypoint = "BakeryLine", time = 10, location = "Bakery" },
+               new() { waypoint = "BakeryCounter", time = 11, location = "Bakery" },
+               new() { waypoint = "Cafe Entrance", time = 12, location = "Overworld" },
+               new() { waypoint = "CafeLine", time = 13, location = "Cafe" },
+               new() { waypoint = "CafeCounter", time = 14, location = "Cafe" },
+               new() { waypoint = "Post Office Entrance", time = 15, location = "Overworld" },
+               new() { waypoint = "Town Hall Entrance", time = 16, location = "Overworld" },
+               new() { waypoint = "TownHallCenter", time = 17, location = "TownHall" },
+               new() { waypoint = "TownHallCenter", time = 18, location = "TownHall" },
+               new() { waypoint = "TownHallCenter", time = 19, location = "TownHall" },
+               new() { waypoint = "Cafe Table 1", time = 20, location = "Overworld" },
+               new() { waypoint = "House 9", time = 21, location = "Overworld" },
+               new() { waypoint = "House 9", time = 22, location = "Overworld" },
+               new() { waypoint = "House 9", time = 23, location = "Overworld" },
+               new() { waypoint = "House 9", time = 24, location = "Overworld" }
             },
-            messages = new List<Message>(),
             CurrentLocation = "Information Center",
             CurrentCoordinates = new Vector2(5, 5)
         };
