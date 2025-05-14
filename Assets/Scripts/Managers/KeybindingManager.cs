@@ -31,17 +31,38 @@ public class KeybindingManager : MonoBehaviour
             return;
         }
 
+        // Import player binds
         InputActionMap playerMap = inputActions.FindActionMap("Player", true);
-
         if (playerMap == null)
         {
-            Debug.LogError("Player Action not found!");
+            Debug.LogError("Player ActionMap not found!");
+            return;
+        }
+        foreach (InputAction action in playerMap)
+            CreateKeybindUI(action);
+
+        // Import specific UI binds
+        InputActionMap uiMap = inputActions.FindActionMap("UI", true);
+        if (uiMap == null)
+        {
+            Debug.LogError("UI ActionMap not found!");
             return;
         }
 
-        foreach (InputAction action in playerMap)
+        // Bring in the Map, Journal, and Pause menus. Nothing else.
+        string[] allowed = { "Map", "Journal", "Pause" };
+
+        foreach (string actionName in allowed)
         {
-            CreateKeybindUI(action);
+            InputAction uiAction = uiMap.FindAction(actionName, true);
+            if (uiAction != null)
+            {
+                CreateKeybindUI(uiAction);
+            }
+            else
+            {
+                Debug.LogWarning($"UI action '{actionName}' not found in UI map");
+            }
         }
     }
 

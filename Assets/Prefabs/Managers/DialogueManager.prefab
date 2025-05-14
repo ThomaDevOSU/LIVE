@@ -1100,7 +1100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8546117859037617591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1229,6 +1229,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf639630004e4e48afa5f5126c31277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentNPC:
+    movementDirection: 0
+    speed: 0
+    velocity: {x: 0, y: 0, z: 0}
+    Greeting: []
+    inDialogue: 0
+    ID: 0
+    Name: 
+    Job: 
+    Description: 
+    Personality: []
+    messages: []
+    target: {fileID: 0}
+    agent: {fileID: 0}
+    animator: {fileID: 0}
   DialogueMenu: {fileID: 7716364912710135064}
   dialogueText: {fileID: 9108484979008935672}
   offlinePanel: {fileID: 8311906269477349443}

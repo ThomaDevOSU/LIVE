@@ -49,7 +49,7 @@ public class MenuManager : MonoBehaviour
             TogglePause();
         }
 
-        if (InputManager.Instance.GetAction("Inventory").WasPressedThisFrame() && !DialogueManager.Instance.isTalking && !isPaused)
+        if (InputManager.Instance.GetAction("Journal").WasPressedThisFrame() && !DialogueManager.Instance.isTalking && !isPaused)
         {
             ToggleInventory();
         }
