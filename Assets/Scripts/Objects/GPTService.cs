@@ -223,73 +223,74 @@ public class GPTService : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Sends a request to the GPT API to summarize all previous dialogue interactions in the NPC's message list.
-    /// This method should be used during a save not load for performance reasons (NPCs load many times during runtime).
-    /// </summary>
-    /// <param name="NPCData">The data of the NPC whose messages need to be summarized.</param>
-    /// <returns>An IEnumerator for coroutine handling.</returns>
-    public IEnumerator SummarizeMessagesApiCall(List<Message> messagelist)
-    {
-        Debug.Log($"Starting summary of: {messagelist.Skip(1).Select(m => m.ToString())}");
-        // Generate the prompt for summarizing messages. All but the first message which is the system prompt is included.
-        string prompt = $@"
-    Conversation History:
-    {string.Join("\n", messagelist.Skip(1).Select(m => $"{m.role}: {m.content}"))}  
-    Instructions:
-    Summarize the above conversation history into a single concise paragraph. 
-    The summary should cover all important details and ensure no critical information is lost. 
-    The response should be plain text and should not include any formatting or additional instructions.";
+    ///// <summary>
+    ///// Sends a request to the GPT API to summarize all previous dialogue interactions in the NPC's message list.
+    ///// This method should be used during a save not load for performance reasons (NPCs load many times during runtime).
+    /// This ALMOST works. Not worth the time investment anymore.
+    ///// </summary>
+    ///// <param name="NPCData">The data of the NPC whose messages need to be summarized.</param>
+    ///// <returns>An IEnumerator for coroutine handling.</returns>
+    //public IEnumerator SummarizeMessagesApiCall(List<Message> messagelist)
+    //{
+    //    Debug.Log($"Starting summary of: {messagelist.Skip(1).Select(m => m.ToString())}");
+    //    // Generate the prompt for summarizing messages. All but the first message which is the system prompt is included.
+    //    string prompt = $@"
+    //Conversation History:
+    //{string.Join("\n", messagelist.Skip(1).Select(m => $"{m.role}: {m.content}"))}  
+    //Instructions:
+    //Summarize the above conversation history into a single concise paragraph. 
+    //The summary should cover all important details and ensure no critical information is lost. 
+    //The response should be plain text and should not include any formatting or additional instructions.";
 
-        // Create the request body
-        var message = new Message { role = "system", content = prompt };
-        DialogueRequestBody requestBody = new()
-        {
-            model = "gpt-4o",
-            messages = new Message[] { message },
-            max_completion_tokens = 500
-        };
+    //    // Create the request body
+    //    var message = new Message { role = "system", content = prompt };
+    //    DialogueRequestBody requestBody = new()
+    //    {
+    //        model = "gpt-4o",
+    //        messages = new Message[] { message },
+    //        max_completion_tokens = 500
+    //    };
 
-        // Serialize the request body to JSON
-        string jsonBody = JsonUtility.ToJson(requestBody);
+    //    // Serialize the request body to JSON
+    //    string jsonBody = JsonUtility.ToJson(requestBody);
 
-        // Create the UnityWebRequest
-        UnityWebRequest request = new(api_url, "POST");
-        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonBody);
-        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = new DownloadHandlerBuffer();
-        request.SetRequestHeader("Authorization", "Bearer " + apiKey);
-        request.SetRequestHeader("Content-Type", "application/json");
+    //    // Create the UnityWebRequest
+    //    UnityWebRequest request = new(api_url, "POST");
+    //    byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonBody);
+    //    request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+    //    request.downloadHandler = new DownloadHandlerBuffer();
+    //    request.SetRequestHeader("Authorization", "Bearer " + apiKey);
+    //    request.SetRequestHeader("Content-Type", "application/json");
 
-        // Send the request and wait for the response
-        yield return request.SendWebRequest();
+    //    // Send the request and wait for the response
+    //    yield return request.SendWebRequest();
 
-        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
-        {
-            Debug.LogError($"Error: {request.error}");
-            Debug.LogError($"Response Code: {request.responseCode}");
-            Debug.LogError($"Response: {request.downloadHandler.text}");
-        }
-        else
-        {
-            string summaryResponse = request.downloadHandler.text;
-            string summary = ParseDialogueResponse(summaryResponse);
-            Debug.Log($"Summary complete: {messagelist.Skip(1).Select(m => m.ToString())}");
+    //    if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+    //    {
+    //        Debug.LogError($"Error: {request.error}");
+    //        Debug.LogError($"Response Code: {request.responseCode}");
+    //        Debug.LogError($"Response: {request.downloadHandler.text}");
+    //    }
+    //    else
+    //    {
+    //        string summaryResponse = request.downloadHandler.text;
+    //        string summary = ParseDialogueResponse(summaryResponse);
+    //        Debug.Log($"Summary complete: {messagelist.Select(m => m.ToString())}");
 
-            if (!string.IsNullOrEmpty(summary))
-            {
-                Debug.Log($"Conversation Summary: {summary}");
-                // Remove all but the first message in the list because this is the system message with NPC profile.
-                messagelist.RemoveRange(1, messagelist.Count - 1);
-                // right now this is just added into the NPC immediately
-                messagelist.Add(new Message { role = "system", content = summary });
-            }
-            else
-            {
-                Debug.LogError("Failed to generate a conversation summary.");
-            }
-        }
-    }
+    //        if (!string.IsNullOrEmpty(summary))
+    //        {
+    //            Debug.Log($"Conversation Summary: {summary}");
+    //            // Remove all but the first message in the list because this is the system message with NPC profile.
+    //            messagelist.RemoveRange(1, messagelist.Count - 1);
+    //            // right now this is just added into the NPC immediately
+    //            messagelist.Add(new Message { role = "system", content = summary });
+    //        }
+    //        else
+    //        {
+    //            Debug.LogError("Failed to generate a conversation summary.");
+    //        }
+    //    }
+    //}
 
     /// <summary>
     /// Processes the task response and take call the appropriate method from TaskManager.

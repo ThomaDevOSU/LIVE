@@ -100,7 +100,7 @@ public class NPCManager : MonoBehaviour
 
         if (NPCs.Count == 0)
         {
-            Debug.LogWarning("NPCs list is still empty after delaying PlaceNPCs().");
+            //Debug.LogWarning("NPCs list is still empty after delaying PlaceNPCs().");
         }
         else
         {
@@ -154,9 +154,7 @@ public class NPCManager : MonoBehaviour
                     // Get waypoint
                     waypoint = waypointManager.GetWaypoint(entry.waypoint);
                     // Logic for moving
-                    Debug.Log($"Setting waypoint for {npc.Name}");
                     npc.agent.SetDestination(waypoint.position);
-                    Debug.Log("Success");
                 }
             }
         }

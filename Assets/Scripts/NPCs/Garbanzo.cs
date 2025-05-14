@@ -50,7 +50,7 @@ public class Garbanzo_Dog : MonoBehaviour
             {
                new() { waypoint = "Tire Swing", time = 8, location = "Overworld" },
                new() { waypoint = "Tire Swing", time = 9, location = "Overworld" },
-               new() { waypoint = "Greenhouse Entrance", time = 10, location = "Overworld" },
+               new() { waypoint = "Tire Swing", time = 10, location = "Overworld" },
                new() { waypoint = "Park Bench 2", time = 11, location = "Overworld" },
                new() { waypoint = "Park Bench 2", time = 12, location = "Overworld" },
                new() { waypoint = "Park Bench 2", time = 13, location = "Overworld" },
