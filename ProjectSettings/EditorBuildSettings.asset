@@ -37,6 +37,12 @@ EditorBuildSettings:
     guid: cc5aeada0dc7fdc4da4dbab8ba8f225b
   - enabled: 1
     path: Assets/Scenes/PostOffice.unity
+    guid: 072240f2ad132854a83c2f572b7762c1
+  - enabled: 1
+    path: Assets/Scenes/Restaurant.unity
+    guid: 6ac4cf01ba359c34c9803c20f0311bf7
+  - enabled: 1
+    path: Assets/Scenes/InformationCenter.unity
     guid: c5fc95bdb94b6184bb38e3aa41449e17
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
