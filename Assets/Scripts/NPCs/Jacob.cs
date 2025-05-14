@@ -52,24 +52,23 @@ public class Jacob_Firefighter : MonoBehaviour
             Personality = new List<string> { "Energetic", "Dedicated", "Fitness-Obsessed" },
             Schedule = new List<ScheduleEntry>
             {
-                new()
-                {
-                    waypoint = "Fire Station Entrance",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Fire Station Entrance",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Overworld",
-                    time = 14,
-                    location = "Overworld"
-                }
+              new() { waypoint = "FireBarracks", time = 8, location = "FireStation" },
+              new() { waypoint = "FireBarracks", time = 9, location = "FireStation" },
+              new() { waypoint = "FireEntrance", time = 10, location = "FireStation" },
+              new() { waypoint = "FireTruck", time = 11, location = "FireStation" },
+              new() { waypoint = "FireTruck", time = 12, location = "FireStation" },
+              new() { waypoint = "Cafe Entrance", time = 13, location = "Overworld" },
+              new() { waypoint = "CafeLine", time = 14, location = "Cafe" },
+              new() { waypoint = "CafeCounter", time = 15, location = "Cafe" },
+              new() { waypoint = "Fire Station Entrance", time = 16, location = "Overworld" },
+              new() { waypoint = "Fire Station Entrance", time = 17, location = "Overworld" },
+              new() { waypoint = "FireTruck", time = 18, location = "FireStation" },
+              new() { waypoint = "FireTruck", time = 19, location = "FireStation" },
+              new() { waypoint = "FireTruck", time = 20, location = "FireStation" },
+              new() { waypoint = "FireTruck", time = 21, location = "FireStation" },
+              new() { waypoint = "FireEntrance", time = 22, location = "FireStation" },
+              new() { waypoint = "FireBarracks", time = 23, location = "FireStation" },
+              new() { waypoint = "FireBarracks", time = 24, location = "FireStation" }
             },
             messages = new List<Message>(),
             CurrentLocation = "Fire Station",

@@ -154,7 +154,9 @@ public class NPCManager : MonoBehaviour
                     // Get waypoint
                     waypoint = waypointManager.GetWaypoint(entry.waypoint);
                     // Logic for moving
+                    Debug.Log($"Setting waypoint for {npc.Name}");
                     npc.agent.SetDestination(waypoint.position);
+                    Debug.Log("Success");
                 }
             }
         }

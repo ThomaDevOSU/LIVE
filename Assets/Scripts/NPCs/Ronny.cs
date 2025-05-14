@@ -48,26 +48,25 @@ public class Ronny_Chef : MonoBehaviour
             "even if the dog annoys him by running into his kitchen.",
             Personality = new List<string> { "Gruff but kind", "Passionate cook", "Secretly shy", "Protective" },
             Schedule = new List<ScheduleEntry>
-            {
-                new()
-                {
-                    waypoint = "Bakery Table",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Bakery Entrance",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Overworld",
-                    time = 14,
-                    location = "Overworld"
-                }
-            },
+                       {
+                          new() { waypoint = "House 2-1", time = 8, location = "Overworld" },
+                          new() { waypoint = "Cafe Table 1", time = 9, location = "Overworld" },
+                          new() { waypoint = "Cafe Table 1", time = 10, location = "Overworld" },
+                          new() { waypoint = "Cafe Table 1", time = 11, location = "Overworld" },
+                          new() { waypoint = "Bakery Entrance", time = 12, location = "Overworld" },
+                          new() { waypoint = "Bakery Entrance", time = 13, location = "Overworld" },
+                          new() { waypoint = "BakeryLine", time = 14, location = "Bakery" },
+                          new() { waypoint = "BakeryCounter", time = 15, location = "Bakery" },
+                          new() { waypoint = "GroceryAisle2", time = 16, location = "GroceryStore" },
+                          new() { waypoint = "GroceryAisle2", time = 17, location = "GroceryStore" },
+                          new() { waypoint = "GroceryAisle1", time = 18, location = "GroceryStore" },
+                          new() { waypoint = "GroceryAisle2", time = 19, location = "GroceryStore" },
+                          new() { waypoint = "GroceryAisle2", time = 20, location = "GroceryStore" },
+                          new() { waypoint = "House 2-1", time = 21, location = "Overworld" },
+                          new() { waypoint = "House 2-1", time = 22, location = "Overworld" },
+                          new() { waypoint = "House 2-1", time = 23, location = "Overworld" },
+                          new() { waypoint = "House 2-1", time = 24, location = "Overworld" }
+                       },
             messages = new List<Message>(),
             CurrentLocation = "Restaurant",
             CurrentCoordinates = new Vector2(3, 3)

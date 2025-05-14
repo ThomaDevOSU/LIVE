@@ -47,27 +47,25 @@ public class Amy_Doctor : MonoBehaviour
             Personality = new List<string> { "Serious", "Compassionate", "Overworks herself", "Highly skilled" },
             Schedule = new List<ScheduleEntry>
             {
-                new()
-                {
-                    waypoint = "House 2",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Hospital Entrance",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "House 2",
-                    time = 14,
-                    location = "Overworld"
-                }
+               new() { waypoint = "HospitalEntrance", time = 8, location = "Hospital" },
+               new() { waypoint = "HospitalEntrance", time = 9, location = "Hospital" },
+               new() { waypoint = "HospitalEntrance", time = 10, location = "Hospital" },
+               new() { waypoint = "HospitalEntrance", time = 11, location = "Hospital" },
+               new() { waypoint = "HospitalEntrance", time = 12, location = "Hospital" },
+               new() { waypoint = "HospitalReception", time = 13, location = "Hospital" },
+               new() { waypoint = "HospitalReception", time = 14, location = "Hospital" },
+               new() { waypoint = "HospitalDoctor", time = 15, location = "Hospital" },
+               new() { waypoint = "HospitalDoctor", time = 16, location = "Hospital" },
+               new() { waypoint = "HospitalDoctor", time = 17, location = "Hospital" },
+               new() { waypoint = "HospitalEntrance", time = 18, location = "Hospital" },
+               new() { waypoint = "HospitalEntrance", time = 19, location = "Hospital" },
+               new() { waypoint = "HospitalEntrance", time = 20, location = "Hospital" },
+               new() { waypoint = "HospitalEntrance", time = 21, location = "Hospital" },
+               new() { waypoint = "House 4-2", time = 22, location = "Overworld" },
+               new() { waypoint = "House 4-2", time = 23, location = "Overworld" },
+               new() { waypoint = "House 4-2", time = 24, location = "Overworld" }
             },
-            messages = new List<Message>(),
-            CurrentLocation = "Clinic",
+            CurrentLocation = "Hospital",
             CurrentCoordinates = new Vector2(3, 5)
         };
         Amy.agent.updateRotation = false;

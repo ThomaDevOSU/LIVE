@@ -48,24 +48,23 @@ public class Mabel_Retired : MonoBehaviour
             Personality = new List<string> { "Gentle", "Forgetful", "Nostalgic", "Caring" },
             Schedule = new List<ScheduleEntry>
             {
-                new()
-                {
-                    waypoint = "Park Bench",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Park Bench",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Overworld",
-                    time = 14,
-                    location = "Overworld"
-                }
+              new() { waypoint = "Park Bench 1", time = 8, location = "Overworld" },
+              new() { waypoint = "Park Bench 1", time = 9, location = "Overworld" },
+              new() { waypoint = "Park Bench 1", time = 10, location = "Overworld" },
+              new() { waypoint = "Park Bench 1", time = 11, location = "Overworld" },
+              new() { waypoint = "Park Bench 1", time = 12, location = "Overworld" },
+              new() { waypoint = "HospitalCounter2", time = 13, location = "Hospital" },
+              new() { waypoint = "HospitalCounter2", time = 14, location = "Hospital" },
+              new() { waypoint = "HospitalBed", time = 15, location = "Hospital" },
+              new() { waypoint = "HospitalBed", time = 16, location = "Hospital" },
+              new() { waypoint = "HospitalOffice1", time = 17, location = "Hospital" },
+              new() { waypoint = "Park Bench 1", time = 18, location = "Overworld" },
+              new() { waypoint = "Park Bench 1", time = 19, location = "Overworld" },
+              new() { waypoint = "Park Bench 1", time = 20, location = "Overworld" },
+              new() { waypoint = "House 5-1", time = 21, location = "Overworld" },
+              new() { waypoint = "House 5-1", time = 22, location = "Overworld" },
+              new() { waypoint = "House 5-1", time = 23, location = "Overworld" },
+              new() { waypoint = "House 5-1", time = 24, location = "Overworld" }
             },
             messages = new List<Message>(),
             CurrentLocation = "Park",

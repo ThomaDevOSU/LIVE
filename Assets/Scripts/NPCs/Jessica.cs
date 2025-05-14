@@ -46,26 +46,25 @@ public class Jessica_Waitress : MonoBehaviour
             "with her mother Amy, who wants her to be more structured. She has a friendly and relaxed presence but sometimes feels stuck in her routine.",
             Personality = new List<string> { "Easygoing", "Dreamer", "Curious", "Independent" },
             Schedule = new List<ScheduleEntry>
-            {
-                new()
-                {
-                    waypoint = "Cafe Table",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "House 3",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Overworld",
-                    time = 14,
-                    location = "Overworld"
-                }
-            },
+{
+          new() { waypoint = "Park Swings", time = 8, location = "Overworld" },
+          new() { waypoint = "Park Swings", time = 9, location = "Overworld" },
+          new() { waypoint = "Park Bench 2", time = 10, location = "Overworld" },
+          new() { waypoint = "GroceryAisle1", time = 11, location = "GroceryStore" },
+          new() { waypoint = "GroceryClerk", time = 12, location = "GroceryStore" },
+          new() { waypoint = "GroceryAisle1", time = 13, location = "GroceryStore" },
+          new() { waypoint = "GroceryClerk", time = 14, location = "GroceryStore" },
+          new() { waypoint = "GroceryClerk", time = 15, location = "GroceryStore" },
+          new() { waypoint = "GroceryAisle1", time = 16, location = "GroceryStore" },
+          new() { waypoint = "GroceryAisle1", time = 17, location = "GroceryStore" },
+          new() { waypoint = "GroceryClerk", time = 18, location = "GroceryStore" },
+          new() { waypoint = "GroceryAisle1", time = 19, location = "GroceryStore" },
+          new() { waypoint = "GroceryClerk", time = 20, location = "GroceryStore" },
+          new() { waypoint = "GroceryClerk", time = 21, location = "GroceryStore" },
+          new() { waypoint = "House 4-3", time = 22, location = "Overworld" },
+          new() { waypoint = "House 4-3", time = 23, location = "Overworld" },
+          new() { waypoint = "House 4-3", time = 24, location = "Overworld" }
+    },
             messages = new List<Message>(),
             CurrentLocation = "Restaurant",
             CurrentCoordinates = new Vector2(8, 3)

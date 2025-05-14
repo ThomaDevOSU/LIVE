@@ -48,24 +48,23 @@ public class Garbanzo_Dog : MonoBehaviour
             Personality = new List<string> { "Energetic", "Loyal", "Innocent", "Playful" },
             Schedule = new List<ScheduleEntry>
             {
-                new()
-                {
-                    waypoint = "Park Top Right",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "House 4",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Overworld",
-                    time = 14,
-                    location = "Overworld"
-                }
+               new() { waypoint = "Tire Swing", time = 8, location = "Overworld" },
+               new() { waypoint = "Tire Swing", time = 9, location = "Overworld" },
+               new() { waypoint = "Greenhouse Entrance", time = 10, location = "Overworld" },
+               new() { waypoint = "Park Bench 2", time = 11, location = "Overworld" },
+               new() { waypoint = "Park Bench 2", time = 12, location = "Overworld" },
+               new() { waypoint = "Park Bench 2", time = 13, location = "Overworld" },
+               new() { waypoint = "Park Bench 2", time = 14, location = "Overworld" },
+               new() { waypoint = "Park Top", time = 15, location = "Overworld" },
+               new() { waypoint = "Park Bottom", time = 16, location = "Overworld" },
+               new() { waypoint = "Park Top", time = 17, location = "Overworld" },
+               new() { waypoint = "Park Bottom", time = 18, location = "Overworld" },
+               new() { waypoint = "Park Top", time = 19, location = "Overworld" },
+               new() { waypoint = "Park Bottom", time = 20, location = "Overworld" },
+               new() { waypoint = "Park Top", time = 21, location = "Overworld" },
+               new() { waypoint = "Park Bottom", time = 22, location = "Overworld" },
+               new() { waypoint = "Park Top", time = 23, location = "Overworld" },
+               new() { waypoint = "Park Bottom", time = 24, location = "Overworld" }
             },
             messages = new List<Message>(),
             CurrentLocation = "Park",

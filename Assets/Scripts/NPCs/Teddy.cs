@@ -48,24 +48,23 @@ public class Teddy_Cat : MonoBehaviour
             Personality = new List<string> { "Aloof", "Intelligent", "Secretly Caring", "Judgmental" },
             Schedule = new List<ScheduleEntry>
             {
-                new()
-                {
-                    waypoint = "Park Swings",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Post Office Entrance",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new ()
-                {
-                    waypoint = "Overworld",
-                    time = 14,
-                    location = "Overworld"
-                }
+               new() { waypoint = "Park Top Right", time = 8, location = "Overworld" },
+               new() { waypoint = "Park Top Right", time = 9, location = "Overworld" },
+               new() { waypoint = "Post Office Entrance", time = 10, location = "Overworld" },
+               new() { waypoint = "Park Top Right", time = 11, location = "Overworld" },
+               new() { waypoint = "Park Top Right", time = 12, location = "Overworld" },
+               new() { waypoint = "Grocery Store Entrance", time = 13, location = "GroceryStore" },
+               new() { waypoint = "Bakery Entrance", time = 14, location = "Bakery" },
+               new() { waypoint = "Park Top Right", time = 15, location = "Overworld" },
+               new() { waypoint = "Park Top Right", time = 16, location = "Overworld" },
+               new() { waypoint = "Cafe Entrance", time = 17, location = "Cafe" },
+               new() { waypoint = "Tire Swing", time = 18, location = "Overworld" },
+               new() { waypoint = "Park Top Right", time = 19, location = "Overworld" },
+               new() { waypoint = "Park Top Right", time = 20, location = "Overworld" },
+               new() { waypoint = "Park Top Right", time = 21, location = "Overworld" },
+               new() { waypoint = "Park Top Right", time = 22, location = "Overworld" },
+               new() { waypoint = "Park Top Right", time = 23, location = "Overworld" },
+               new() { waypoint = "Town Hall Entrance", time = 24, location = "Overworld" }
             },
             messages = new List<Message>(),
             CurrentLocation = "Restaurant",

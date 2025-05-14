@@ -48,24 +48,23 @@ public class Alex_Barista : MonoBehaviour
             Personality = new List<string> { "Friendly", "Enthusiastic", "Health-conscious", "Passionate about coffee" },
             Schedule = new List<ScheduleEntry>
             {
-                new()
-                {
-                    waypoint = "Cafe Entrance",
-                    time = 8,
-                    location = "Overworld"
-                },
-                new()
-                {
-                    waypoint = "Greenhouse Entrance",
-                    time = 10,
-                    location = "Overworld"
-                },
-                new()
-                {
-                    waypoint = "Overworld",
-                    time = 14,
-                    location = "Overworld"
-                }
+               new() { waypoint = "CafeBack", time = 8, location = "Cafe" },
+               new() { waypoint = "CafeFridge", time = 9, location = "Cafe" },
+               new() { waypoint = "CafeClerk", time = 10, location = "Cafe" },
+               new() { waypoint = "CafeClerk", time = 11, location = "Cafe" },
+               new() { waypoint = "CafeClerk", time = 12, location = "Cafe" },
+               new() { waypoint = "CafeBack", time = 13, location = "Cafe" },
+               new() { waypoint = "CafeClerk", time = 14, location = "Cafe" },
+               new() { waypoint = "CafeFridge", time = 15, location = "Cafe" },
+               new() { waypoint = "BakeryLine", time = 16, location = "Bakery" },
+               new() { waypoint = "BakeryCounter", time = 17, location = "Bakery" },
+               new() { waypoint = "CafeClerk", time = 18, location = "Cafe" },
+               new() { waypoint = "CafeFridge", time = 19, location = "Cafe" },
+               new() { waypoint = "CafeBack", time = 20, location = "Cafe" },
+               new() { waypoint = "CafeBack", time = 21, location = "Cafe" },
+               new() { waypoint = "House 3", time = 22, location = "Overworld" },
+               new() { waypoint = "House 3", time = 23, location = "Overworld" },
+               new() { waypoint = "House 3", time = 24, location = "Overworld" }
             },
             messages = new List<Message>(),
             CurrentLocation = "Babbling Bean Café",
