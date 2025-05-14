@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,80 +7,92 @@ public class MapTracker : MonoBehaviour
     public RectTransform mapPanel;
     public RectTransform playerIcon;  
     public RectTransform taskIcon;
-
+    public Rect mapBounds;
     private Transform player;
     private Transform taskTarget;
-    private bool isOverworld;
+    private bool      isOverworld;
 
-    public Rect mapBounds;
-
-    private void Awake()
+    void Awake()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         TryFindPlayer();
     }
 
-    private void OnDestroy()
+    void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Are we in main world
         isOverworld = scene.name == "Overworld";
-
-        // Find dat playa
         TryFindPlayer();
+        // Clear
+        taskTarget = null;
+        // Wait for NPCs to spawn
+        StartCoroutine(WaitForNPCsThenRefresh());
     }
 
-    private void TryFindPlayer()
+    IEnumerator WaitForNPCsThenRefresh()
+    {
+        // Wait for it to populate
+        yield return new WaitUntil(() => NPCManager.Instance.GetNPCs().Count > 0);
+        RefreshTaskTarget();
+    }
+
+    void TryFindPlayer()
     {
         var pc = FindObjectOfType<PlayerController>();
-        if (pc != null)
-            player = pc.transform;
+        if (pc != null) player = pc.transform;
     }
 
-    private void Update()
+    void Update()
     {
-        // Update if in main world
-        if (isOverworld && player != null)
-        {
-            // Playa icon
-            playerIcon.anchoredPosition = WorldToMapPosition(player.position);
+        if (!isOverworld || player == null) return;
 
-            // Task icon
-            if (taskTarget != null)
-            {
-                taskIcon.gameObject.SetActive(true);
-                taskIcon.anchoredPosition = WorldToMapPosition(taskTarget.position);
-            }
-            else taskIcon.gameObject.SetActive(false);
+        // Update player icon
+        playerIcon.anchoredPosition = WorldToMapPosition(player.position);
+
+        // Refresh for task changes
+        RefreshTaskTarget();
+
+        // Show/hide and position task icon
+        if (taskTarget != null)
+        {
+            taskIcon.gameObject.SetActive(true);
+            taskIcon.anchoredPosition = WorldToMapPosition(taskTarget.position);
+        }
+        else
+        {
+            taskIcon.gameObject.SetActive(false);
         }
     }
 
-    // For calculating map position
+    /// <summary>
+    /// Grabs the current active Task, gets transform, sends it
+    /// </summary>
+    private void RefreshTaskTarget()
+    {
+        var active = TaskManager.Instance.GetActiveTask();
+        if (active != null && !string.IsNullOrEmpty(active.TaskNPC))
+        {
+            taskTarget = NPCManager.Instance.GetTransformForJob(active.TaskNPC);
+        }
+        else
+        {
+            taskTarget = null;
+        }
+    }
+
+    /// <summary>
+    /// Converts a world location to map
+    /// </summary>
     private Vector2 WorldToMapPosition(Vector3 worldPosition)
     {
-        float normalizedX = (worldPosition.x - mapBounds.x) / mapBounds.width;
-        float normalizedY = (worldPosition.y - mapBounds.y) / mapBounds.height;
+        float nx = (worldPosition.x - mapBounds.x) / mapBounds.width;
+        float ny = (worldPosition.y - mapBounds.y) / mapBounds.height;
 
-        float mapWidth = mapPanel.rect.width;
-        float mapHeight = mapPanel.rect.height;
-
-        return new Vector2(normalizedX * mapWidth, normalizedY * mapHeight);
-    }
-
-    // (For the future) Dynamic targets
-    public void SetTaskTarget(Transform newTaskTarget)
-    {
-        taskTarget = newTaskTarget;
-    }
-
-    // (For the future) Clear target
-    public void ClearTaskTarget()
-    {
-        taskTarget = null;
+        return new Vector2(nx * mapPanel.rect.width,
+                           ny * mapPanel.rect.height);
     }
 }
-

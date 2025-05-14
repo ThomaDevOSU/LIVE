@@ -238,6 +238,20 @@ public class NPCManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Returns the transform of the NPC with the required job.
+    /// </summary>
+    public Transform GetTransformForJob(string job)
+    {
+        // Look for the NPC
+        foreach (var npc in NPCs)
+        {
+            if (npc.Job == job && npc.agent != null)
+                return npc.agent.transform;
+        }
+        return null;
+    }
+
+    /// <summary>
     /// Store the conversation history of all NPCs.
     /// </summary>
     public void StoreConversationHistory()
