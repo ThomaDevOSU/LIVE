@@ -98,7 +98,7 @@
             "id": "272f6d14-89ba-496f-b7ff-215263d3219f",
             "actions": [
                 {
-                    "name": "Inventory",
+                    "name": "Journal",
                     "type": "Button",
                     "id": "15cef263-9014-4fd5-94d9-4e4a6234a6ef",
                     "expectedControlType": "",
@@ -467,11 +467,11 @@
                 {
                     "name": "",
                     "id": "82627dcc-3b13-4ba9-841d-e4b746d6553e",
-                    "path": "<Keyboard>/i",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
-                    "action": "Inventory",
+                    "action": "Journal",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
