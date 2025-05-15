@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class CompassArrow : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class CompassArrow : MonoBehaviour
     private Transform player;
     private Transform taskTarget;
     private bool      isOverworld;
+    private string currentSceneName;
 
     void Awake()
     {
@@ -22,6 +24,7 @@ public class CompassArrow : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        currentSceneName = scene.name;
         // Find player
         TryFindPlayer();
 
@@ -75,9 +78,43 @@ public class CompassArrow : MonoBehaviour
     private void RefreshTaskTarget()
     {
         var active = TaskManager.Instance.GetActiveTask();
-        if (active != null && !string.IsNullOrEmpty(active.TaskNPC))
+        if (active == null || string.IsNullOrEmpty(active.TaskNPC))
         {
-            taskTarget = NPCManager.Instance.GetTransformForJob(active.TaskNPC);
+            taskTarget = null;
+            return;
+        }
+
+        // Find NPC by job
+        var npc = NPCManager.Instance.GetNPCs()
+                      .FirstOrDefault(n => n.Job == active.TaskNPC);
+        if (npc == null)
+        {
+            taskTarget = null;
+            return;
+        }
+
+        // Get NPC's schedule
+        int hour = Mathf.FloorToInt(GameClock.Instance.currentHour);
+        var entry = npc.Schedule.FirstOrDefault(e => e.time == hour);
+        if (entry == null)
+        {
+            taskTarget = null;
+            return;
+        }
+
+        // If on the same scene, find em, and point
+        if (currentSceneName == entry.location)
+        {
+            taskTarget = npc.agent.transform;
+            return;
+        }
+
+        // Otherwise, whats behind that door!
+        var door = FindObjectsOfType<Door>()
+                   .FirstOrDefault(d => d.scene == entry.location);
+        if (door != null)
+        {
+            taskTarget = door.transform;
         }
         else
         {

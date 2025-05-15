@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class MapTracker : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MapTracker : MonoBehaviour
     private Transform player;
     private Transform taskTarget;
     private bool      isOverworld;
+    private string currentSceneName;
 
     void Awake()
     {
@@ -25,6 +27,7 @@ public class MapTracker : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        currentSceneName = scene.name;
         isOverworld = scene.name == "Overworld";
         TryFindPlayer();
         // Clear
@@ -74,9 +77,41 @@ public class MapTracker : MonoBehaviour
     private void RefreshTaskTarget()
     {
         var active = TaskManager.Instance.GetActiveTask();
-        if (active != null && !string.IsNullOrEmpty(active.TaskNPC))
+        if (active == null || string.IsNullOrEmpty(active.TaskNPC))
         {
-            taskTarget = NPCManager.Instance.GetTransformForJob(active.TaskNPC);
+            taskTarget = null;
+            return;
+        }
+
+        var npc = NPCManager.Instance.GetNPCs()
+                      .FirstOrDefault(n => n.Job == active.TaskNPC);
+        if (npc == null)
+        {
+            taskTarget = null;
+            return;
+        }
+
+        int hour = Mathf.FloorToInt(GameClock.Instance.currentHour);
+        var entry = npc.Schedule.FirstOrDefault(e => e.time == hour);
+        if (entry == null)
+        {
+            taskTarget = null;
+            return;
+        }
+
+        // If NPC is in Overworld, find em
+        if (entry.location == "Overworld")
+        {
+            taskTarget = npc.agent.transform;
+            return;
+        }
+
+        // Otherwise, whats behind that door!
+        var door = FindObjectsOfType<Door>()
+                   .FirstOrDefault(d => d.scene == entry.location);
+        if (door != null)
+        {
+            taskTarget = door.transform;
         }
         else
         {

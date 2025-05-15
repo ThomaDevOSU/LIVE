@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Bed : MonoBehaviour
 {
-    public GameObject endDayMenu;
     bool _canSleep = false;     // Added this to prevent the menu from being opened even when not sleeping
 
     private void OnEnable()
@@ -27,15 +26,24 @@ public class Bed : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (! _canSleep) return;
-        if (!collision.CompareTag("Player")) return;
+        if (!_canSleep || !collision.CompareTag("Player")) return;
+        if (!InputManager.Instance.GetAction("Interact").triggered
+            || MenuManager.Instance.isPaused
+            || DialogueManager.Instance.isTalking)
+            return;
 
-        if (InputManager.Instance.GetAction("Interact").triggered
-            && !MenuManager.Instance.isPaused
-            && !DialogueManager.Instance.isTalking)
+        Debug.Log("Player is sleeping…");
+
+        // Get EndDayMenu everytime
+        var mgrGO = MenuManager.Instance.gameObject;
+        var endMenuTrans = mgrGO.transform.Find("EndDayMenu");
+        if (endMenuTrans != null)
         {
-            Debug.Log("Player is sleeping...");
-            endDayMenu.SetActive(true);
+            endMenuTrans.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("Bed: Could not find EndDayMenu!");
         }
     }
 }
