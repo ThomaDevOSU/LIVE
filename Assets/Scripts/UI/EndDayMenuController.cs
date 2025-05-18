@@ -30,9 +30,12 @@ public class EndDayMenuController : MonoBehaviour
         var data = GameManager.Instance.CurrentPlayerData;
         if (data == null) return;
 
-        currencyText.text       = $"{data.currency}";
-        scoreText.text          = $"{data.score}";
-        
+        // Display currency with today's earned amount
+        currencyText.text = $"{data.currency} (+{GameClock.Instance.dailyCoinsEarned})";
+
+        // Display score with today's earned points
+        scoreText.text = $"{data.score} (+{GameClock.Instance.dailyScoreEarned})";
+
         // Grab today's Completed Tasks from GameClock
         List<Task> todaysTasks = GameClock.Instance.GetTodaysCompletedTasks();
 
