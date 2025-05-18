@@ -2,7 +2,6 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using TMPro;
-using System.Collections.Generic;
 
 public class EndDayMenuController : MonoBehaviour
 {
@@ -30,21 +29,34 @@ public class EndDayMenuController : MonoBehaviour
         var data = GameManager.Instance.CurrentPlayerData;
         if (data == null) return;
 
-        // Display currency with today's earned amount
-        currencyText.text = $"{data.currency} (+{GameClock.Instance.dailyCoinsEarned})";
+<<<<<<< Updated upstream
+        currencyText.text       = $"{data.currency}";
+        scoreText.text          = $"{data.score}";
+        if (data.completedTasks != null && data.completedTasks.Count > 0)
+=======
+        // Get current data
+        int baseCurrency = data.currency;
+        int baseScore = data.score;
 
-        // Display score with today's earned points
-        scoreText.text = $"{data.score} (+{GameClock.Instance.dailyScoreEarned})";
+        int earnedCoins = GameClock.Instance.dailyCoinsEarned;
+        int earnedScore = GameClock.Instance.dailyScoreEarned;
+
+        // Display currency with today's earned amount included
+        currencyText.text = $"{baseCurrency + earnedCoins} (+{earnedCoins})";
+
+        // Display score with today's earned points included
+        scoreText.text = $"{baseScore + earnedScore} (+{earnedScore})";
 
         // Grab today's Completed Tasks from GameClock
         List<Task> todaysTasks = GameClock.Instance.GetTodaysCompletedTasks();
 
         if (todaysTasks != null && todaysTasks.Count > 0)
+>>>>>>> Stashed changes
         {
             var sb = new StringBuilder();
-            foreach (var task in todaysTasks)
+            foreach (var t in data.completedTasks)
             {
-                sb.AppendLine("• " + task.TaskDescription);
+                sb.AppendLine("• " + t.TaskDescription);
             }
             tasksCompletedText.text = sb.ToString().TrimEnd();
         }
