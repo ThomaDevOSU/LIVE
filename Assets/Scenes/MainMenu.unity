@@ -13696,6 +13696,10 @@ PrefabInstance:
       propertyPath: eveningTheme
       value: 
       objectReference: {fileID: 8300000, guid: 6892af9905556054e84dc23cf9846268, type: 3}
+    - target: {fileID: 7193254654346750947, guid: 8580992c279af5949b19c2f775d1cae1, type: 3}
+      propertyPath: taskComplete
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ac4cc50f5e8d1841b19d4b19b1af257, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

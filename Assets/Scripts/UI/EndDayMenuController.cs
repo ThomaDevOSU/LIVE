@@ -17,6 +17,12 @@ public class EndDayMenuController : MonoBehaviour
 
     void OnEnable()
     {
+        // Play Day Complete SFX
+        if (AudioLibrary.Instance != null && AudioLibrary.Instance.dayComplete != null)
+        {
+            AudioManager.Instance.PlaySFX(AudioLibrary.Instance.dayComplete);
+        }
+
         // Refresh instantly when enabled
         Populate();
     }
@@ -30,11 +36,18 @@ public class EndDayMenuController : MonoBehaviour
         var data = GameManager.Instance.CurrentPlayerData;
         if (data == null) return;
 
-        // Display currency with today's earned amount
-        currencyText.text = $"{data.currency} (+{GameClock.Instance.dailyCoinsEarned})";
+        // Get current data
+        int baseCurrency = data.currency;
+        int baseScore = data.score;
 
-        // Display score with today's earned points
-        scoreText.text = $"{data.score} (+{GameClock.Instance.dailyScoreEarned})";
+        int earnedCoins = GameClock.Instance.dailyCoinsEarned;
+        int earnedScore = GameClock.Instance.dailyScoreEarned;
+
+        // Display currency with today's earned amount included
+        currencyText.text = $"{baseCurrency + earnedCoins} (+{earnedCoins})";
+
+        // Display score with today's earned points included
+        scoreText.text = $"{baseScore + earnedScore} (+{earnedScore})";
 
         // Grab today's Completed Tasks from GameClock
         List<Task> todaysTasks = GameClock.Instance.GetTodaysCompletedTasks();
