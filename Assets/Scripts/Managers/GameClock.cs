@@ -150,6 +150,7 @@ public class GameClock : MonoBehaviour
     /// </summary>
     public void GoToSleep()
     {
+        //EndDay(); // Over-riding to change end of day functionality. Player may sleep at any time. 
         if (CurrentState == ClockState.SleepPending)
         {
             EndDay();

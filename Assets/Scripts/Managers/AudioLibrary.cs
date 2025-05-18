@@ -32,7 +32,10 @@ public class AudioLibrary : MonoBehaviour
     public AudioClip doorOpen;
     public AudioClip footsteps;
     public AudioClip taskComplete;
+    public AudioClip dayComplete;
     public AudioClip uiClick;
+    public AudioClip uiHover;
+
 
     [Header("Voice Clips")]
     public AudioClip greetingHello;
