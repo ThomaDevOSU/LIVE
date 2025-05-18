@@ -2,6 +2,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class EndDayMenuController : MonoBehaviour
 {
@@ -31,12 +32,16 @@ public class EndDayMenuController : MonoBehaviour
 
         currencyText.text       = $"{data.currency}";
         scoreText.text          = $"{data.score}";
-        if (data.completedTasks != null && data.completedTasks.Count > 0)
+        
+        // Grab today's Completed Tasks from GameClock
+        List<Task> todaysTasks = GameClock.Instance.GetTodaysCompletedTasks();
+
+        if (todaysTasks != null && todaysTasks.Count > 0)
         {
             var sb = new StringBuilder();
-            foreach (var t in data.completedTasks)
+            foreach (var task in todaysTasks)
             {
-                sb.AppendLine("• " + t.TaskDescription);
+                sb.AppendLine("• " + task.TaskDescription);
             }
             tasksCompletedText.text = sb.ToString().TrimEnd();
         }
