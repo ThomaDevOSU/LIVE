@@ -2832,6 +2832,7 @@ GameObject:
   - component: {fileID: 227988703767871941}
   - component: {fileID: 7112819208597299056}
   - component: {fileID: 4132744276976634263}
+  - component: {fileID: 226777858469229183}
   m_Layer: 5
   m_Name: DevMenu
   m_TagString: Untagged
@@ -2922,6 +2923,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &226777858469229183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6491028527074930236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27043754dc065534db858b18b2f07486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSoundOverride: {fileID: 0}
+  clickSoundOverride: {fileID: 0}
 --- !u!1 &6655831231147138817
 GameObject:
   m_ObjectHideFlags: 0
