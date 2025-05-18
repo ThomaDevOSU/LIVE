@@ -2,6 +2,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class EndDayMenuController : MonoBehaviour
 {
@@ -29,11 +30,6 @@ public class EndDayMenuController : MonoBehaviour
         var data = GameManager.Instance.CurrentPlayerData;
         if (data == null) return;
 
-<<<<<<< Updated upstream
-        currencyText.text       = $"{data.currency}";
-        scoreText.text          = $"{data.score}";
-        if (data.completedTasks != null && data.completedTasks.Count > 0)
-=======
         // Get current data
         int baseCurrency = data.currency;
         int baseScore = data.score;
@@ -51,12 +47,11 @@ public class EndDayMenuController : MonoBehaviour
         List<Task> todaysTasks = GameClock.Instance.GetTodaysCompletedTasks();
 
         if (todaysTasks != null && todaysTasks.Count > 0)
->>>>>>> Stashed changes
         {
             var sb = new StringBuilder();
-            foreach (var t in data.completedTasks)
+            foreach (var task in todaysTasks)
             {
-                sb.AppendLine("• " + t.TaskDescription);
+                sb.AppendLine("• " + task.TaskDescription);
             }
             tasksCompletedText.text = sb.ToString().TrimEnd();
         }
