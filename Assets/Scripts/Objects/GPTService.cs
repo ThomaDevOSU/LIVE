@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
+using static APIKeyManager;
+using System.IO;
 
 /// <summary>
 /// Handles communication with the GPT API to generate responses based on player input.
@@ -18,7 +20,32 @@ public class GPTService : MonoBehaviour
     /// <summary>
     /// API key for authenticating requests to the GPT API.
     /// </summary>
-    private readonly string apiKey = "";
+    private string apiKey
+    {
+        get
+        {
+            if (!string.IsNullOrEmpty(APIKeyStore.OpenAIKey))
+                return APIKeyStore.OpenAIKey;
+
+            // Fallback: try to load manually if not already loaded
+            string envPath = Path.Combine(Application.persistentDataPath, ".env");
+            if (File.Exists(envPath))
+            {
+                foreach (var line in File.ReadAllLines(envPath))
+                {
+                    if (line.StartsWith("OPENAI_API_KEY="))
+                    {
+                        var key = line.Substring("OPENAI_API_KEY=".Length).Trim();
+                        APIKeyStore.OpenAIKey = key;
+                        return key;
+                    }
+                }
+            }
+
+            Debug.LogError("OpenAI API Key not found.");
+            return null;
+        }
+    }
     private readonly string api_url = "https://api.openai.com/v1/chat/completions";
 
     public string playerInput, prompt, response, request, taskResponse;

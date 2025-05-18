@@ -25,7 +25,9 @@ public class APIKeyManager : MonoBehaviour
             {
                 if (line.StartsWith("OPENAI_API_KEY="))
                 {
-                    apiKeyInput.text = line.Substring("OPENAI_API_KEY=".Length).Trim();
+                    var key = line.Substring("OPENAI_API_KEY=".Length).Trim();
+                    apiKeyInput.text = key;
+                    APIKeyStore.OpenAIKey = key;  // <-- Store globally
                     break;
                 }
             }
@@ -40,22 +42,19 @@ public class APIKeyManager : MonoBehaviour
 
     private void OnApiKeyChanged(string newKey)
     {
-        bool success = false;
+        var trimmed = newKey.Trim();
+        APIKeyStore.OpenAIKey = trimmed;
+
         try
         {
-            // Write to the env
-            File.WriteAllText(envPath, $"OPENAI_API_KEY={newKey.Trim()}");
-            success = true;
+            File.WriteAllText(envPath, $"OPENAI_API_KEY={trimmed}");
+            ShowPopup("API Key Saved Successfully!");
         }
         catch (IOException e)
         {
             Debug.LogError($"Failed to write API key: {e}");
+            ShowPopup("Failed To Save API Key!");
         }
-
-        // Confirm or Fail
-        ShowPopup(success
-            ? "API Key Saved Successfully!"
-            : "Failed To Save API Key!");
     }
 
     private void ShowPopup(string message)
@@ -69,6 +68,13 @@ public class APIKeyManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(HidePopupAfterDelay());
     }
+
+    // expose the key globally
+    public static class APIKeyStore
+    {
+        public static string OpenAIKey { get; set; }
+    }
+
 
     private IEnumerator HidePopupAfterDelay()
     {

@@ -32,6 +32,9 @@ public class Bed : MonoBehaviour
             || DialogueManager.Instance.isTalking)
             return;
 
+        // Capture today's tasks for use in End of Day Summary
+        GameClock.Instance.CaptureTodaysCompletedTasks();
+
         Debug.Log("Player is sleeping…");
 
         // Get EndDayMenu everytime

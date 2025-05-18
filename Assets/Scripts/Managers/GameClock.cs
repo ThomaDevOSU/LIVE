@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -150,10 +151,60 @@ public class GameClock : MonoBehaviour
     /// </summary>
     public void GoToSleep()
     {
+        //EndDay(); // Over-riding to change end of day functionality. Player may sleep at any time. 
         if (CurrentState == ClockState.SleepPending)
         {
             EndDay();
         }
+    }
+
+    // Temp List for todays Completed Tasks. Used by UI before EndDay() can be called
+    public List<Task> todaysCompletedTasks = new List<Task>();
+
+    // And Store Rewards Temp
+    public int dailyCoinsEarned = 0;
+    public int dailyScoreEarned = 0;
+
+
+    /// <summary>
+    /// Prepares the daily summary by pulling all tasks completed today from TaskManager.
+    /// This should be called BEFORE EndDay() is triggered.
+    /// </summary>
+    public void CaptureTodaysCompletedTasks()
+    {
+        todaysCompletedTasks.Clear();
+        dailyCoinsEarned = 0;
+        dailyScoreEarned = 0;
+
+        if (TaskManager.Instance == null) return;
+
+        while (TaskManager.Instance.PeekCompletedTask() != null)
+        {
+            var task = TaskManager.Instance.GetCompletedTask();
+            todaysCompletedTasks.Add(task);
+
+            // Reward logic
+            dailyCoinsEarned += 10 * task.TaskDifficulty;
+            dailyScoreEarned += 1;
+        }
+
+        // Bonus for completing all tasks
+        if (todaysCompletedTasks.Count >= 5)
+        {
+            dailyCoinsEarned += 25; // Completion bonus
+            dailyScoreEarned += 3;  // Score bonus
+        }
+
+        Debug.Log($"Captured {todaysCompletedTasks.Count} tasks for daily summary.");
+        Debug.Log($"Earned {dailyCoinsEarned} coins and {dailyScoreEarned} score.");
+    }
+
+    /// <summary>
+    /// Returns the tasks captured for the current day's summary.
+    /// </summary>
+    public List<Task> GetTodaysCompletedTasks()
+    {
+        return todaysCompletedTasks;
     }
 
     /// <summary>
@@ -180,16 +231,32 @@ public class GameClock : MonoBehaviour
 
         Debug.Log($"Starting new day: {currentDay}");
 
+
+
         // Retrieve and store completed tasks
-        if (TaskManager.Instance != null && PlayerProgressManager.Instance != null)
+        if (PlayerProgressManager.Instance != null && todaysCompletedTasks != null)
         {
-            while (TaskManager.Instance.PeekCompletedTask() != null)
+            foreach (Task completedTask in todaysCompletedTasks)
             {
-                Task completedTask = TaskManager.Instance.GetCompletedTask();
                 PlayerProgressManager.Instance.SaveCompletedTask(completedTask);
                 Debug.Log($"Stored completed task: {completedTask.TaskDescription}");
             }
+            todaysCompletedTasks.Clear(); // Clear after saving to avoid reuse
         }
+        else
+        {
+            Debug.LogWarning("PlayerProgressManager or todaysCompletedTasks is null. No tasks were saved.");
+        }
+
+        // Apply Daily Rewards
+        if (PlayerProgressManager.Instance != null)
+        {
+            PlayerProgressManager.Instance.AddCurrency(dailyCoinsEarned);
+            if (GameManager.Instance.CurrentPlayerData != null)
+                GameManager.Instance.CurrentPlayerData.score += dailyScoreEarned;
+        }
+
+
 
         // Ensure GameManager & PlayerData exist before saving
         if (GameManager.Instance != null && GameManager.Instance.CurrentPlayerData != null)

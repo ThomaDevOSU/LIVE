@@ -10130,6 +10130,7 @@ GameObject:
   - component: {fileID: 5133355079076795742}
   - component: {fileID: 7798247104241742093}
   - component: {fileID: 5831462760689634398}
+  - component: {fileID: 1034617735583312152}
   m_Layer: 5
   m_Name: OptionsMenu
   m_TagString: Untagged
@@ -10188,6 +10189,20 @@ MonoBehaviour:
   popupPanel: {fileID: 2450484617368544756}
   popupText: {fileID: 6843210718123515313}
   popupDuration: 3
+--- !u!114 &1034617735583312152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7175561831377902549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27043754dc065534db858b18b2f07486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSoundOverride: {fileID: 0}
+  clickSoundOverride: {fileID: 0}
 --- !u!1 &7228331808408169007
 GameObject:
   m_ObjectHideFlags: 0
