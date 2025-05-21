@@ -125,7 +125,7 @@ public class TaskManager : MonoBehaviour
 
         //TestTaskManager();
         // GENERATES 5 TASKS from the Level 3 Task pool, DISABLE THIS IF YOU WANT AN EMPTY TASK LIST
-        GenerateTasks(5 , GameManager.Instance.CurrentPlayerData.preferredDifficulty);
+        if(TaskList.Count <= 0) GenerateTasks(5 , GameManager.Instance.CurrentPlayerData.preferredDifficulty);
         //PrintTaskList();
         
     }

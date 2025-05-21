@@ -161,6 +161,7 @@ public class GameClock : MonoBehaviour
         CaptureTodaysCompletedTasks();
 
         Debug.Log("Player is sleeping…");
+        _cansleep = false;
 
         CurrentState = ClockState.SleepPending;
 
@@ -224,7 +225,7 @@ public class GameClock : MonoBehaviour
 
             // Reward logic
             dailyCoinsEarned += 10 * task.TaskDifficulty;
-            dailyScoreEarned += 1;
+            dailyScoreEarned += 1 * task.TaskDifficulty;
         }
 
         // Bonus for completing all tasks
@@ -292,7 +293,12 @@ public class GameClock : MonoBehaviour
         {
             PlayerProgressManager.Instance.AddCurrency(dailyCoinsEarned);
             if (GameManager.Instance.CurrentPlayerData != null)
+            {
                 GameManager.Instance.CurrentPlayerData.score += dailyScoreEarned;
+
+                //Calculating player level based on score
+                GameManager.Instance.CurrentPlayerData.preferredDifficulty = Math.Clamp(GameManager.Instance.CurrentPlayerData.score/(25* GameManager.Instance.CurrentPlayerData.preferredDifficulty), GameManager.Instance.CurrentPlayerData.preferredDifficulty, 3);
+            }
         }
 
 
