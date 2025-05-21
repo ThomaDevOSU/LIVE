@@ -93,7 +93,7 @@ public class PlayerProgressManager : MonoBehaviour
     // Mission Completion Tracking Functions
     public void RecordMissionCompletion(Task completedTask, bool success)
     {
-        string taskId = completedTask.ToString();
+        string taskId = completedTask.TaskDescription;
 
         if (!missionStats.ContainsKey(taskId))
         {

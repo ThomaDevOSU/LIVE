@@ -39,6 +39,8 @@ public class GameClock : MonoBehaviour
     public event Action OnDayEnd; // Triggered when the day ends
     public event Action OnSleepPending; // Triggered when game day time stops
 
+    public bool _cansleep; // This determines whether the player can sleep
+
     /// <summary>
     /// Ensures the GameClock is a singleton and persists across scenes.
     /// </summary>
@@ -47,6 +49,7 @@ public class GameClock : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            _cansleep = false;
             DontDestroyOnLoad(gameObject); // Ensure this object persists across scenes
         }
         else
@@ -95,6 +98,9 @@ public class GameClock : MonoBehaviour
 
         UpdateClockState(); // Check and trigger state transitions
 
+        if (currentHour > 18f) _cansleep = true;
+
+
         if (currentHour >= 24f) // End the day if the hour exceeds 24
         {
             if (manualSleepMode)
@@ -134,7 +140,40 @@ public class GameClock : MonoBehaviour
         {
             CurrentState = ClockState.Day;
             OnDayStart?.Invoke(); // Trigger day event
+            _cansleep = false;
             UpdateTintOverlay();
+        }
+    }
+
+    /// <summary>
+    /// The player will attempt to sleep here
+    /// </summary>
+    public void TrySleep() 
+    {
+        if (!_cansleep
+            || MenuManager.Instance.isPaused
+            || DialogueManager.Instance.isTalking)
+        {
+            Debug.Log("The Player cannot Sleep!");
+            return;
+        }
+        // Capture today's tasks for use in End of Day Summary
+        CaptureTodaysCompletedTasks();
+
+        Debug.Log("Player is sleeping…");
+
+        CurrentState = ClockState.SleepPending;
+
+        // Get EndDayMenu everytime
+        var mgrGO = MenuManager.Instance.gameObject;
+        var endMenuTrans = mgrGO.transform.Find("EndDayMenu");
+        if (endMenuTrans != null)
+        {
+            endMenuTrans.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("Bed: Could not find EndDayMenu!");
         }
     }
 
@@ -441,7 +480,7 @@ public class GameClock : MonoBehaviour
         }
         else
         {
-            Debug.LogError("TintOverlay not found in the current scene!");
+            Debug.LogWarning("TintOverlay not found in the current scene!");
         }
     }
 

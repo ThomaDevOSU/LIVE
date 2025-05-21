@@ -17,8 +17,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitToMainMenu() // Quits to main menu
     {
-
-        if (menuCanvas != null) {menuCanvas.SetActive(false);}
+        Destroy(MenuManager.Instance.gameObject);
         TransitionManager.Instance.StartTransition("MainMenu", TransitionType.FADE);
     }
 }

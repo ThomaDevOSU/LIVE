@@ -149,13 +149,17 @@ public class NPCManager : MonoBehaviour
             npc.UpdateSpeedandDirection();
             foreach (ScheduleEntry entry in npc.Schedule)
             {
-                if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour) && currentSceneName == entry.location)
+                try
                 {
-                    // Get waypoint
-                    waypoint = waypointManager.GetWaypoint(entry.waypoint);
-                    // Logic for moving
-                    npc.agent.SetDestination(waypoint.position);
+                    if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour) && currentSceneName == entry.location)
+                    {
+                        // Get waypoint
+                        waypoint = waypointManager.GetWaypoint(entry.waypoint);
+                        // Logic for moving
+                        npc.agent.SetDestination(waypoint.position);
+                    }
                 }
+                catch { }
             }
         }
     }
