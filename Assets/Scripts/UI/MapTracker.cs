@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class MapTracker : MonoBehaviour
 {
@@ -77,7 +78,7 @@ public class MapTracker : MonoBehaviour
     private void RefreshTaskTarget()
     {
         var active = TaskManager.Instance.GetActiveTask();
-        if (active == null || string.IsNullOrEmpty(active.TaskNPC))
+        if (active == null)
         {
             taskTarget = null;
             return;
@@ -85,37 +86,48 @@ public class MapTracker : MonoBehaviour
 
         var npc = NPCManager.Instance.GetNPCs()
                       .FirstOrDefault(n => n.Job == active.TaskNPC);
-        if (npc == null)
+        if (npc != null) // This is an NPC
         {
-            taskTarget = null;
-            return;
-        }
 
-        int hour = Mathf.FloorToInt(GameClock.Instance.currentHour);
-        var entry = npc.Schedule.FirstOrDefault(e => e.time == hour);
-        if (entry == null)
-        {
-            taskTarget = null;
-            return;
-        }
+            int hour = Mathf.FloorToInt(GameClock.Instance.currentHour);
+            var entry = npc.Schedule.FirstOrDefault(e => e.time == hour);
+            if (entry == null)
+            {
+                taskTarget = null;
+                return;
+            }
 
-        // If NPC is in Overworld, find em
-        if (entry.location == "Overworld")
-        {
-            taskTarget = npc.agent.transform;
-            return;
-        }
+            // If NPC is in Overworld, find em
+            if (entry.location == "Overworld")
+            {
+                taskTarget = npc.agent.transform;
+                return;
+            }
 
-        // Otherwise, whats behind that door!
-        var door = FindObjectsOfType<Door>()
-                   .FirstOrDefault(d => d.scene == entry.location);
-        if (door != null)
-        {
-            taskTarget = door.transform;
+            // Otherwise, whats behind that door!
+            var door = FindObjectsOfType<Door>()
+                       .FirstOrDefault(d => d.scene == entry.location);
+            if (door != null)
+            {
+                taskTarget = door.transform;
+            }
+            else
+            {
+                taskTarget = null;
+            }
         }
-        else
+        else    //  This is a location
         {
-            taskTarget = null;
+            var door = FindObjectsByType<Door>(FindObjectsSortMode.None)
+                        .FirstOrDefault(d => d.scene == active.TaskLocation);
+            if (door != null)
+            {
+                taskTarget = door.transform;
+            }
+            else
+            {
+                taskTarget = null;
+            }
         }
     }
 
