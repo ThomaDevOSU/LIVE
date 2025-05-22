@@ -47,6 +47,7 @@ public class LoadMenu : MonoBehaviour
     public void setDelete(int slot) // Brings up the delete checker and sets the event for deletion
     {
         deleteChecker.SetActive(true);
+        deleteButton.onClick.RemoveAllListeners();
         deleteButton.onClick.AddListener(() => deleteSave(slot));
     }
 
@@ -82,6 +83,7 @@ public class LoadMenu : MonoBehaviour
 
     public void CreateChar(int slot) // I know it's dirty passing the int slot over like this
     {
+        GameManager.Instance.CurrentSaveSlot = slot;    // Set slot
         startCharacterCreator();
         loadButtons.SetActive(false);
         createCharacter.SetActive(true);

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
+using System.Reflection;
 
 public class JournalListUI : MonoBehaviour
 {
@@ -13,17 +15,14 @@ public class JournalListUI : MonoBehaviour
         // Added this bad boy to help fix journal freezing when completeing task
     {
         DisplayActiveTasks();
-        GameClock.Instance.OnDayStart += () =>
-        {
-            DisplayActiveTasks();
-            FindFirstObjectByType<TaskListUI>()?.UpdateActiveTaskUI();
-        };
+        GameClock.Instance.OnDayStart += DisplayAndUpdate;
     }
+
 
     private void OnDisable()
     {
         // Added this to fix any issues it may have
-        GameClock.Instance.OnDayStart -= DisplayActiveTasks;
+        GameClock.Instance.OnDayStart -= DisplayAndUpdate;
     }
 
     void Start()
@@ -42,6 +41,15 @@ public class JournalListUI : MonoBehaviour
     {
         yield return new WaitUntil(() => TaskManager.Instance.GetTaskList().Count > 0);
         DisplayActiveTasks();
+    }
+
+    /// <summary>
+    /// Function used to display active tasks and update the TaskUI
+    /// </summary>
+    private void DisplayAndUpdate()
+    {
+        DisplayActiveTasks();
+        FindFirstObjectByType<TaskListUI>()?.UpdateActiveTaskUI();
     }
 
     // Wait until load, get list of tasks and include as buttons, organize active to top with pink highlight

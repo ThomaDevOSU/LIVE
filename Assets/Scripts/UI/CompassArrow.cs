@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class CompassArrow : MonoBehaviour
 {
@@ -78,7 +79,7 @@ public class CompassArrow : MonoBehaviour
     private void RefreshTaskTarget()
     {
         var active = TaskManager.Instance.GetActiveTask();
-        if (active == null || string.IsNullOrEmpty(active.TaskNPC))
+        if (active == null)
         {
             taskTarget = null;
             return;
@@ -87,38 +88,56 @@ public class CompassArrow : MonoBehaviour
         // Find NPC by job
         var npc = NPCManager.Instance.GetNPCs()
                       .FirstOrDefault(n => n.Job == active.TaskNPC);
-        if (npc == null)
+        if (npc != null)    // This task targets an NPC
         {
-            taskTarget = null;
-            return;
-        }
+            // Get NPC's schedule
+            int hour = Mathf.FloorToInt(GameClock.Instance.currentHour);
+            var entry = npc.Schedule.FirstOrDefault(e => e.time == hour);
+            if (entry == null)
+            {
+                taskTarget = null;
+                return;
+            }
 
-        // Get NPC's schedule
-        int hour = Mathf.FloorToInt(GameClock.Instance.currentHour);
-        var entry = npc.Schedule.FirstOrDefault(e => e.time == hour);
-        if (entry == null)
-        {
-            taskTarget = null;
-            return;
-        }
+            // If on the same scene, find em, and point
+            if (currentSceneName == entry.location)
+            {
+                taskTarget = npc.agent.transform;
+                return;
+            }
 
-        // If on the same scene, find em, and point
-        if (currentSceneName == entry.location)
-        {
-            taskTarget = npc.agent.transform;
-            return;
+            // Otherwise, whats behind that door!
+            var door = FindObjectsOfType<Door>()
+                       .FirstOrDefault(d => d.scene == entry.location);
+            if (door != null)
+            {
+                taskTarget = door.transform;
+            }
+            else
+            {
+                taskTarget = null;
+            }
         }
-
-        // Otherwise, whats behind that door!
-        var door = FindObjectsOfType<Door>()
-                   .FirstOrDefault(d => d.scene == entry.location);
-        if (door != null)
+        else    //  This task targets a location
         {
-            taskTarget = door.transform;
-        }
-        else
-        {
-            taskTarget = null;
+            if (currentSceneName == active.TaskLocation)    //  We are at the location!
+            {
+                taskTarget = null;
+                return;
+            }
+            else 
+            {
+                var door = FindObjectsByType<Door>(FindObjectsSortMode.None)
+                           .FirstOrDefault(d => d.scene == active.TaskLocation);
+                if (door != null)   //  We found the door leading to our task!
+                {
+                    taskTarget = door.transform;
+                }
+                else    //  We could not find the door
+                {
+                    taskTarget = null;  //  We are truly lost...
+                }
+            }
         }
     }
 
