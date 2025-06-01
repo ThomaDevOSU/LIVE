@@ -40,7 +40,6 @@ public class TransitionManager : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("NPCManager is not present in the current scene.");
             }
             transitioning = true;
             StartCoroutine(TransitionRoutine(sceneName, transition));

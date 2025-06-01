@@ -89,6 +89,8 @@ public class NPC
         }
     }
 
+
+
     /// <summary>
     /// Prints the NPC's data to the debug log.
     /// </summary>
@@ -107,6 +109,28 @@ public class NPC
         foreach (Message message in messages)
         {
             Debug.Log($"Role: {message.role}\n" + $"Content: {message.content}");
+        }
+    }
+
+    /// <summary>  
+    /// Stops the NPC's movement by halting the NavMeshAgent.  
+    /// </summary>  
+    public void StopNPCMovement()
+    {
+        if (agent != null && agent.isActiveAndEnabled && inDialogue)
+        {
+            agent.isStopped = true;
+        }
+    }
+
+    /// <summary>  
+    /// Stops the NPC's movement by halting the NavMeshAgent.  
+    /// </summary>  
+    public void StartNPCMovement()
+    {
+        if (agent != null && agent.isActiveAndEnabled && !inDialogue)
+        {
+            agent.isStopped = false;
         }
     }
 }
