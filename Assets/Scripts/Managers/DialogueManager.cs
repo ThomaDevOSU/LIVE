@@ -105,7 +105,7 @@ public class DialogueManager : MonoBehaviour
             inputField.text = "";
             sendData(input);
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && currentNPC != null)
+        if (currentNPC != null && (Input.GetKeyDown(KeyCode.Escape) || !DialogueMenu.activeSelf))
         {
             StopDialogue();
         }
@@ -133,6 +133,7 @@ public class DialogueManager : MonoBehaviour
         currentNPC = npc;
         Debug.Log("Starting dialogue with " + currentNPC.Name);
         isTalking = true;
+        npc.StopNPCMovement();
         DialogueMenu.SetActive(true);
         destroyChildren();
 

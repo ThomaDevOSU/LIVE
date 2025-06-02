@@ -122,11 +122,13 @@ public class NPCManager : MonoBehaviour
     /// </summary>
     private void PlaceNPCs()
     {
+        int currentTime;
         foreach (NPC npc in NPCs)
         {
+            currentTime = Mathf.FloorToInt(gameClock.currentHour);
             foreach (ScheduleEntry entry in npc.Schedule)
             {
-                if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour) && entry.location == currentSceneName)
+                if (entry != null && entry.time == currentTime && entry.location == currentSceneName && currentTime < 24)
                 {
                     var success = npc.agent.Warp(waypointManager.GetWaypoint(entry.waypoint).position);
 
@@ -144,22 +146,26 @@ public class NPCManager : MonoBehaviour
     /// </summary>
     private void MoveNPCs()
     {
+        int currentTime;
         foreach (NPC npc in NPCs)
         {
             npc.UpdateSpeedandDirection();
             foreach (ScheduleEntry entry in npc.Schedule)
             {
-                try
+                currentTime = Mathf.FloorToInt(gameClock.currentHour);
+                //try
                 {
-                    if (entry != null && entry.time == Mathf.FloorToInt(gameClock.currentHour) && currentSceneName == entry.location)
+                    if (entry != null && entry.time == currentTime && currentTime < 24 && currentSceneName == entry.location && !npc.inDialogue)
                     {
+                        // Reactivate movement for NPC just in case they were interrupted by dialogue
+                        npc.StartNPCMovement();
                         // Get waypoint
                         waypoint = waypointManager.GetWaypoint(entry.waypoint);
                         // Logic for moving
                         npc.agent.SetDestination(waypoint.position);
                     }
                 }
-                catch { }
+                //catch { }
             }
         }
     }
