@@ -67,6 +67,7 @@ public class LoadMenu : MonoBehaviour
     /// <param name="slot"></param>
     public void LoadGame(int slot) // Loads the playerdata from the provided save slot and sets our language
     {
+        if (TaskManager.Instance != null) Destroy(TaskManager.Instance.gameObject);
         PlayerData data = SaveSystem.LoadGame(slot);
         if (data != null)
         {
@@ -92,6 +93,7 @@ public class LoadMenu : MonoBehaviour
 
     public void startCharacterCreator() // Sets default values for playerdaya
     {
+        GameManager.Instance.CurrentPlayerData = new PlayerData();
         GameManager.Instance.CurrentPlayerData.language = "zh";
         GameManager.Instance.CurrentPlayerData.name = "Bob";
         GameManager.Instance.CurrentPlayerData.gender = Gender.male;
@@ -139,6 +141,7 @@ public class LoadMenu : MonoBehaviour
 
     public void NewGame(int slot) 
     {
+        if (TaskManager.Instance != null) Destroy(TaskManager.Instance.gameObject);
         SaveSystem.SaveGame(GameManager.Instance.CurrentPlayerData, slot);
         LocalizationManager.Instance.LoadLocalizedLearningText(GameManager.Instance.CurrentPlayerData.language); // Load our language
         GameManager.Instance.setLocation("HOME_SPAWN");
